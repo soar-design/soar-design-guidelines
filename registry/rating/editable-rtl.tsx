@@ -1,0 +1,37 @@
+'use client';
+
+import { useState } from 'react';
+import { Alert, AlertIcon, AlertTitle } from '@soar-design/soar-react-components';
+import { Rating } from '@soar-design/soar-react-components';
+import { CircleAlert } from 'lucide-react';
+import { toast } from '@soar-design/soar-react-components';
+
+export default function RatingEditableDemo() {
+  const [productRating, setProductRating] = useState(0);
+  const handleRatingChange = (rating: number) => {
+    setProductRating(rating);
+
+    toast.custom(
+      (t) => (
+        <Alert variant="mono" icon="success" close={true} onClose={() => toast.dismiss(t)}>
+          <AlertIcon>
+            <CircleAlert />
+          </AlertIcon>
+          <AlertTitle>
+            تم التقييم <span className="font-bold">{rating}</span> من 5
+          </AlertTitle>
+        </Alert>
+      ),
+      {
+        duration: 5000,
+      },
+    );
+  };
+
+  return (
+    <div className="space-y-8" dir="rtl">
+      <Rating rating={productRating} editable={true} onRatingChange={handleRatingChange} showValue={true} />
+    </div>
+  );
+}
+

@@ -1,0 +1,12 @@
+import { TextReveal } from '@soar-design/soar-react-components';
+
+export default function Component() {
+  return (
+    <div className="flex items-center justify-center min-h-[200px]" dir="rtl">
+      <TextReveal variant="fade" className="text-xl font-bold text-foreground">
+        رسوم متحركة جميلة لكشف النص
+      </TextReveal>
+    </div>
+  );
+}
+

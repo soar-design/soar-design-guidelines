@@ -1,0 +1,152 @@
+'use client';
+
+import { useId } from 'react';
+import { useSliderInput } from '@/hooks/use-slider-input';
+import { Alert, AlertIcon, AlertTitle } from '@soar-design/soar-react-components';
+import { Button } from '@soar-design/soar-react-components';
+import { Form, FormField, FormItem, FormLabel, FormMessage } from '@soar-design/soar-react-components';
+import { Input } from '@soar-design/soar-react-components';
+import { Label } from '@soar-design/soar-react-components';
+import { Slider, SliderThumb } from '@soar-design/soar-react-components';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { CheckCircle } from 'lucide-react';
+import { useForm } from 'react-hook-form';
+import { toast } from 'sonner';
+import { z } from 'zod';
+
+// Mock data
+const items = [
+  { id: 1, price: 80 },
+  { id: 2, price: 95 },
+  { id: 3, price: 110 },
+  { id: 120, price: 900 },
+];
+
+// Form schema using zod
+const FormSchema = z.object({
+  range: z
+    .array(z.number())
+    .length(2, 'يجب عليك اختيار القيمتين الدنيا والعليا.')
+    .refine(([min, max]) => max > min, {
+      message: 'يجب أن تكون القيمة العليا أكبر من القيمة الدنيا.',
+    })
+    .refine(([min, max]) => min >= 100 && max <= 600, {
+      message: 'يجب أن تكون القيم ضمن النطاق من 100 إلى 600.',
+    }),
+});
+
+export default function PriceRangeForm() {
+  const id = useId();
+  const minValue = Math.min(...items.map((item) => item.price));
+  const maxValue = Math.max(...items.map((item) => item.price));
+
+  const { sliderValues, setSliderValues, inputValues, handleSliderChange, handleInputChange, validateAndUpdateValue } =
+    useSliderInput({
+      minValue,
+      maxValue,
+      initialValue: [200, 500],
+    });
+
+  const form = useForm<z.infer<typeof FormSchema>>({
+    resolver: zodResolver(FormSchema),
+    defaultValues: { range: [100, 450] },
+  });
+
+  // Handle form submission
+  function onSubmit(data: z.infer<typeof FormSchema>) {
+    toast.custom((t) => (
+      <Alert variant="mono" icon="primary" onClose={() => toast.dismiss(t)}>
+        <AlertIcon>
+          <CheckCircle />
+        </AlertIcon>
+        <AlertTitle>{`تم إرسال النموذج! النطاق: ${data.range[0]} - ${data.range[1]}`}</AlertTitle>
+      </Alert>
+    ));
+  }
+
+  // Updated handleSliderChange to reset form errors
+  const handleSliderChangeWithValidation = (values: number[]) => {
+    const newValues = values as [number, number];
+    handleSliderChange(values); // Update slider values
+    form.setValue('range', newValues); // Update form values
+    form.trigger('range'); // Trigger validation to reset errors
+  };
+
+  return (
+    <Form {...form}>
+      <form
+        onSubmit={form.handleSubmit((data) => {
+          // Update slider range in the form value before submission
+          form.setValue('range', sliderValues);
+          onSubmit(data);
+        })}
+        className="w-full md:w-[400px] space-y-6"
+        dir="rtl"
+      >
+        {/* Slider and Inputs */}
+        <FormField
+          control={form.control}
+          name="range"
+          render={() => (
+            <FormItem>
+              <FormLabel>اختر نطاق السعر</FormLabel>
+              {/* Slider */}
+              <Slider
+                value={sliderValues}
+                onValueChange={handleSliderChangeWithValidation} // Use the updated handler
+                min={minValue}
+                max={maxValue}
+                step={10}
+              >
+                <SliderThumb />
+                <SliderThumb />
+              </Slider>
+
+              {/* Inputs as indicators */}
+              <div className="flex items-center justify-between mt-4 gap-4">
+                <div>
+                  <Label htmlFor={`${id}-min`}>الحد الأدنى</Label>
+                  <Input
+                    id={`${id}-min`}
+                    type="number"
+                    value={inputValues[0]}
+                    onChange={(e) => handleInputChange(e, 0)}
+                    onBlur={() => validateAndUpdateValue(inputValues[0], 0)}
+                  />
+                </div>
+                <div>
+                  <Label htmlFor={`${id}-max`}>الحد الأقصى</Label>
+                  <Input
+                    id={`${id}-max`}
+                    type="number"
+                    value={inputValues[1]}
+                    onChange={(e) => handleInputChange(e, 1)}
+                    onBlur={() => validateAndUpdateValue(inputValues[1], 1)}
+                  />
+                </div>
+              </div>
+
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        {/* Submit and Reset */}
+        <div className="flex justify-end gap-2">
+          <Button
+            type="reset"
+            variant="outline"
+            onClick={() => {
+              form.reset();
+              setSliderValues([100, 450]);
+            }}
+          >
+            إعادة تعيين
+          </Button>
+          <Button type="submit">إرسال</Button>
+        </div>
+      </form>
+    </Form>
+  );
+}
+

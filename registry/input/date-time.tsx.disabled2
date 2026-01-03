@@ -1,0 +1,19 @@
+"use client";
+
+import { DateField, DateInput } from "@mostaphaqammari/soar-ds";
+import { InputWrapper } from "@mostaphaqammari/soar-ds";
+import { CalendarDays } from "lucide-react";
+
+export default function InputDateTime() {
+  return (
+    <div className="w-80">
+      <InputWrapper>
+        <CalendarDays />
+        <DateField granularity="minute" hourCycle={24}>
+          <DateInput />
+        </DateField>
+      </InputWrapper>
+    </div>
+  );
+}
+

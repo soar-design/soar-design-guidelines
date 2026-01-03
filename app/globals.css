@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@import "@soar-design/soar-react-components/dist/globals.css";
+
+/* Syntax highlighting theme switching - only for code blocks inside <pre> */
+pre code[data-theme*=" "],
+pre code[data-theme*=" "] span {
+  @apply bg-transparent text-(--shiki-light) dark:text-(--shiki-dark) font-mono text-sm;
+}
+
+/* Inline code styling - rehype-pretty-code wraps it in span[data-rehype-pretty-code-figure] */
+/* Inline code gets data-language="plaintext" */
+span[data-rehype-pretty-code-figure] > code[data-language="plaintext"] {
+  @apply relative rounded bg-muted px-1.5 py-1 font-mono text-sm before:content-none after:content-none;
+}
+
+/* Inline code should not have syntax highlighting colors */
+code[data-language="plaintext"] span {
+  @apply text-inherit;
+}
+
+/* Line numbers for code blocks */
+code[data-line-numbers] {
+  counter-reset: line;
+}
+
+code[data-line-numbers] > [data-line]::before {
+  counter-increment: line;
+  content: counter(line);
+  @apply inline-block w-4 mr-4 text-right text-muted-foreground;
+}
+
+/* Hide scrollbar while maintaining scroll functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

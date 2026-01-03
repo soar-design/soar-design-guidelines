@@ -1,0 +1,25 @@
+import { Badge } from "@soar-design/soar-react-components";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@soar-design/soar-react-components";
+import { Bell, UserRound } from "lucide-react";
+
+export default function TabsDemo() {
+  return (
+    <Tabs defaultValue="profile" className="w-[375px] text-sm text-muted-foreground">
+      <TabsList className="grid w-full grid-cols-2" shape="pill">
+        <TabsTrigger value="profile">
+          <UserRound /> Profile
+        </TabsTrigger>
+        <TabsTrigger value="notifications">
+          <Bell />
+          Notifications
+          <Badge variant="destructive" shape="circle" size="xs">
+            5
+          </Badge>
+        </TabsTrigger>
+      </TabsList>
+      <TabsContent value="profile">Content for Profile</TabsContent>
+      <TabsContent value="notifications">Content for Notifications</TabsContent>
+    </Tabs>
+  );
+}
+

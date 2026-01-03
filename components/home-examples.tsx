@@ -1,0 +1,194 @@
+"use client"
+
+import {
+  Button,
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardHeading,
+  CardTitle,
+  CardToolbar,
+  Input,
+  Label,
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+  Checkbox,
+  Textarea,
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+  Switch,
+} from "@soar-design/soar-react-components"
+import { Plus, CheckCircle2, Info, Star, Send, Search } from "lucide-react"
+
+export function HomeExamples() {
+  return (
+    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7 lg:gap-8 items-start">
+      {/* Payment Method - Takes up 4 columns on large screens */}
+      <Card className="lg:col-span-4 shadow-xl">
+        <CardHeader>
+          <CardHeading>
+            <div>
+              <CardTitle>Payment Method</CardTitle>
+              <CardDescription>All transactions are secure and encrypted</CardDescription>
+            </div>
+          </CardHeading>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <div className="space-y-2">
+            <Label htmlFor="name">Name on Card</Label>
+            <Input id="name" placeholder="John Doe" defaultValue="John Doe" />
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <Label htmlFor="card">Card Number</Label>
+              <Input id="card" placeholder="1234 5678 9012 3456" />
+              <p className="text-xs text-muted-foreground">Enter your 16-digit number.</p>
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="cvv">CVV</Label>
+              <Input id="cvv" placeholder="123" maxLength={3} />
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <Label htmlFor="month">Month</Label>
+              <Select defaultValue="12">
+                <SelectTrigger id="month">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  {Array.from({ length: 12 }, (_, i) => (
+                    <SelectItem key={i + 1} value={String(i + 1)}>
+                      {String(i + 1).padStart(2, "0")}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="year">Year</Label>
+              <Select defaultValue="2025">
+                <SelectTrigger id="year">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  {Array.from({ length: 10 }, (_, i) => (
+                    <SelectItem key={2025 + i} value={String(2025 + i)}>
+                      {2025 + i}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+          <div className="space-y-4">
+            <p className="text-sm text-muted-foreground">
+              The billing address associated with your payment method
+            </p>
+            <div className="flex items-center space-x-2">
+              <Checkbox id="same-address" defaultChecked />
+              <Label htmlFor="same-address" className="text-sm font-normal cursor-pointer">
+                Same as shipping address
+              </Label>
+            </div>
+          </div>
+        </CardContent>
+        <CardFooter className="flex justify-end gap-2">
+          <Button variant="outline">Cancel</Button>
+          <Button variant="primary">Submit</Button>
+        </CardFooter>
+      </Card>
+
+      {/* Right Column - Takes up 3 columns */}
+      <div className="lg:col-span-3 space-y-4 lg:space-y-8">
+        {/* Team Members Card */}
+        <Card className="shadow-xl">
+          <CardHeader>
+            <CardHeading>
+              <div>
+                <CardTitle>Team Members</CardTitle>
+                <CardDescription>Invite your team to collaborate.</CardDescription>
+              </div>
+            </CardHeading>
+            <CardToolbar>
+              <Button size="sm" variant="primary">
+                <Plus className="h-4 w-4 mr-2" />
+                Invite
+              </Button>
+            </CardToolbar>
+          </CardHeader>
+          <CardContent>
+            <div className="flex -space-x-2">
+              <Avatar className="border-2 border-background">
+                <AvatarImage src="https://api.dicebear.com/7.x/avataaars/svg?seed=John" alt="John" />
+                <AvatarFallback>JD</AvatarFallback>
+              </Avatar>
+              <Avatar className="border-2 border-background">
+                <AvatarImage src="https://api.dicebear.com/7.x/avataaars/svg?seed=Jane" alt="Jane" />
+                <AvatarFallback>JS</AvatarFallback>
+              </Avatar>
+              <Avatar className="border-2 border-background">
+                <AvatarImage src="https://api.dicebear.com/7.x/avataaars/svg?seed=Bob" alt="Bob" />
+                <AvatarFallback>BJ</AvatarFallback>
+              </Avatar>
+              <Avatar className="border-2 border-background">
+                <AvatarFallback>+5</AvatarFallback>
+              </Avatar>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Settings Card (Cookie/Security style) */}
+        <Card className="shadow-xl">
+          <CardHeader>
+             <CardHeading>
+               <div>
+                  <CardTitle>Settings</CardTitle>
+                  <CardDescription>Manage your preferences.</CardDescription>
+               </div>
+             </CardHeading>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <div className="flex items-center justify-between">
+              <div className="space-y-0.5">
+                <Label htmlFor="2fa">Two-factor auth</Label>
+                <p className="text-sm text-muted-foreground">Verify via email.</p>
+              </div>
+              <Switch id="2fa" defaultChecked />
+            </div>
+            <div className="flex items-center gap-2 text-sm">
+              <CheckCircle2 className="h-4 w-4 text-green-600" />
+              <span>Verified profile</span>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Search/Chat mockup */}
+        <div className="rounded-lg border bg-card text-card-foreground shadow-xl">
+           <div className="p-4 space-y-4">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                <Input placeholder="Search..." className="pl-9" />
+              </div>
+              <div className="relative">
+                 <Textarea placeholder="Type a message..." rows={2} className="pr-12 resize-none" />
+                 <Button size="icon" variant="primary" className="absolute right-2 bottom-2 h-7 w-7">
+                    <Send className="h-3 w-3" />
+                 </Button>
+              </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+
+
+

@@ -1,0 +1,139 @@
+export const properties = [
+  {
+    id: 1,
+    title: "Corinthia Residences 3 Bed Room Apartment",
+    location: "Al-Dereiyah, Al-Riyadh",
+    price: "SAR 3,000,000",
+    type: "Apartment",
+    readyToMove: true,
+    bedrooms: 3,
+    bathrooms: 2,
+    area: 145,
+    description:
+      "Luxurious 3-bedroom apartment in the heart of Al-Dereiyah with modern amenities and stunning city views.",
+    images: [
+      "https://uat-client.soar.inc/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fsoar-inc%2Fimage%2Fupload%2Fv1764944805%2Favatars%2Fe341753d-20cc-4b6d-9b0e-9070c53d6b7b_67ce9f687ffa4719a57b5ae73f6fdee3.png.png&w=750&q=75",
+      "https://uat-client.soar.inc/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fsoar-inc%2Fimage%2Fupload%2Fv1765091816%2Favatars%2F1a79e534-4164-4edf-a66e-b15a8894660b_7.jpg.jpg&w=750&q=75",
+    ],
+  },
+  {
+    id: 2,
+    title: "Raffles Residences 2",
+    location: "Al-Dereiyah, Al-Riyadh",
+    price: "SAR 2,340,970",
+    type: "Villa",
+    readyToMove: true,
+    bedrooms: 4,
+    bathrooms: 3,
+    area: 280,
+    description:
+      "Spacious 4-bedroom villa featuring elegant design, private garden, and premium finishes throughout.",
+    images: [
+      "https://uat-client.soar.inc/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fsoar-inc%2Fimage%2Fupload%2Fv1765091816%2Favatars%2F1a79e534-4164-4edf-a66e-b15a8894660b_7.jpg.jpg&w=750&q=75",
+      "https://uat-client.soar.inc/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fsoar-inc%2Fimage%2Fupload%2Fv1765093744%2Favatars%2F785038be-438c-494e-ba5d-6b0d160c7d47_7.jpeg.jpg&w=750&q=75",
+    ],
+  },
+  {
+    id: 3,
+    title: "The Ritz Carlton Residences 2",
+    location: "Al-Jubail, Eastern Region",
+    price: "SAR 3,500,000",
+    type: "Villa",
+    readyToMove: false,
+    bedrooms: 5,
+    bathrooms: 4,
+    area: 350,
+    description:
+      "Premium 5-bedroom villa in a prestigious development with world-class amenities and exceptional architecture.",
+    images: [
+      "https://uat-client.soar.inc/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fsoar-inc%2Fimage%2Fupload%2Fv1765093744%2Favatars%2F785038be-438c-494e-ba5d-6b0d160c7d47_7.jpeg.jpg&w=750&q=75",
+      "https://uat-client.soar.inc/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fsoar-inc%2Fimage%2Fupload%2Fv1765095605%2Favatars%2F85818762-bb0b-4e86-b0c2-68b088dee101_compound-riyadh.jpg.jpg&w=750&q=75",
+    ],
+  },
+  {
+    id: 4,
+    title: "Nakhla Resort Apartment 3",
+    location: "Afeef, Al-Riyadh",
+    price: "SAR 3,199,998",
+    type: "Apartment",
+    readyToMove: true,
+    bedrooms: 3,
+    bathrooms: 2,
+    area: 165,
+    description:
+      "Modern 3-bedroom apartment in a resort-style community with access to recreational facilities and pools.",
+    images: [
+      "https://uat-client.soar.inc/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fsoar-inc%2Fimage%2Fupload%2Fv1765095605%2Favatars%2F85818762-bb0b-4e86-b0c2-68b088dee101_compound-riyadh.jpg.jpg&w=750&q=75",
+      "https://uat-client.soar.inc/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fsoar-inc%2Fimage%2Fupload%2Fv1765097064%2Favatars%2F79928b26-908c-4ef6-adb9-b88c8e4887a8_1806_J_02_S3_District_Retail_Eyelevel_R6_8_K_1_bceae63e40%25281%2529.png.png&w=750&q=75",
+    ],
+  },
+  {
+    id: 5,
+    title: "Roshn Sedra B10",
+    location: "Al-Dawadmi, Al-Riyadh",
+    price: "SAR 3,250,000",
+    type: "Villa",
+    readyToMove: false,
+    bedrooms: 4,
+    bathrooms: 3,
+    area: 295,
+    description:
+      "Contemporary 4-bedroom villa in a master-planned community with smart home features and landscaped gardens.",
+    images: [
+      "https://uat-client.soar.inc/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fsoar-inc%2Fimage%2Fupload%2Fv1765097064%2Favatars%2F79928b26-908c-4ef6-adb9-b88c8e4887a8_1806_J_02_S3_District_Retail_Eyelevel_R6_8_K_1_bceae63e40%25281%2529.png.png&w=750&q=75",
+      "https://uat-client.soar.inc/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fsoar-inc%2Fimage%2Fupload%2Fv1765102233%2Favatars%2F8f6b58c0-a076-4879-ac48-93a3f5b39465_26.jpg.jpg&w=750&q=75",
+    ],
+  },
+  {
+    id: 6,
+    title: "Azure, Hittin, 3 Bedroom APT",
+    location: "Al-Dereiyah, Al-Riyadh",
+    price: "SAR 3,300,000",
+    type: "Apartment",
+    readyToMove: true,
+    bedrooms: 3,
+    bathrooms: 2,
+    area: 150,
+    description:
+      "Stylish 3-bedroom apartment with open-plan living, high-end appliances, and panoramic views of the city.",
+    images: [
+      "https://uat-client.soar.inc/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fsoar-inc%2Fimage%2Fupload%2Fv1765102233%2Favatars%2F8f6b58c0-a076-4879-ac48-93a3f5b39465_26.jpg.jpg&w=750&q=75",
+      "https://uat-client.soar.inc/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fsoar-inc%2Fimage%2Fupload%2Fv1765103497%2Favatars%2F3c8262e0-91ee-4265-b20b-fa4d5f4f7aed_3e755e834490d73ba3aa9d3048e8d7fe.pdf-image-024.jpg.jpg&w=750&q=75",
+    ],
+  },
+  {
+    id: 7,
+    title: "Family Home in Azure , Lamar",
+    location: "Al-Dereiyah, Al-Riyadh",
+    price: "SAR 3,300,000",
+    type: "Villa",
+    readyToMove: true,
+    bedrooms: 5,
+    bathrooms: 4,
+    area: 320,
+    description:
+      "Perfect family home with 5 bedrooms, spacious interiors, private pool, and beautifully designed outdoor spaces.",
+    images: [
+      "https://uat-client.soar.inc/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fsoar-inc%2Fimage%2Fupload%2Fv1765103497%2Favatars%2F3c8262e0-91ee-4265-b20b-fa4d5f4f7aed_3e755e834490d73ba3aa9d3048e8d7fe.pdf-image-024.jpg.jpg&w=750&q=75",
+      "https://uat-client.soar.inc/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fsoar-inc%2Fimage%2Fupload%2Fv1765104367%2Favatars%2Fc9a1f5e1-b457-4421-a6a2-bd578bcc33a0_30.jpg.jpg&w=750&q=75",
+    ],
+  },
+  {
+    id: 8,
+    title: "3 Bedroom Apartment In Qairwan Azure",
+    location: "Al-Khurma, Makkah",
+    price: "SAR 3,170,000",
+    type: "Villa",
+    readyToMove: false,
+    bedrooms: 3,
+    bathrooms: 2,
+    area: 200,
+    description:
+      "Comfortable 3-bedroom apartment in a vibrant neighborhood with easy access to shopping and dining.",
+    images: [
+      "https://uat-client.soar.inc/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fsoar-inc%2Fimage%2Fupload%2Fv1765104367%2Favatars%2Fc9a1f5e1-b457-4421-a6a2-bd578bcc33a0_30.jpg.jpg&w=750&q=75",
+      "https://uat-client.soar.inc/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fsoar-inc%2Fimage%2Fupload%2Fv1764944805%2Favatars%2Fe341753d-20cc-4b6d-9b0e-9070c53d6b7b_67ce9f687ffa4719a57b5ae73f6fdee3.png.png&w=750&q=75",
+    ],
+  },
+];
+

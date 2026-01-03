@@ -1,0 +1,77 @@
+'use client';
+
+import { Alert, AlertIcon, AlertTitle } from '@soar-design/soar-react-components';
+import { Button } from '@soar-design/soar-react-components';
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@soar-design/soar-react-components';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@soar-design/soar-react-components';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { CheckCircle } from 'lucide-react';
+import { useForm } from 'react-hook-form';
+import { toast } from '@soar-design/soar-react-components';
+import { z } from 'zod';
+
+export default function SelectForm() {
+  const FormSchema = z.object({
+    email: z.email('يرجى إدخال عنوان بريد إلكتروني صحيح.'),
+  });
+
+  const form = useForm<z.infer<typeof FormSchema>>({
+    resolver: zodResolver(FormSchema),
+  });
+
+  function onSubmit() {
+    toast.custom((t) => (
+      <Alert variant="mono" icon="primary" onClose={() => toast.dismiss(t)}>
+        <AlertIcon>
+          <CheckCircle />
+        </AlertIcon>
+        <AlertTitle>تم إرسال النموذج بنجاح</AlertTitle>
+      </Alert>
+    ));
+  }
+
+  return (
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="w-[300px] space-y-6" dir="rtl">
+        <FormField
+          control={form.control}
+          name="email"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>البريد الإلكتروني</FormLabel>
+              <FormControl>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="اختر عنوان بريد إلكتروني" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="m@example.com">hello@reui.com</SelectItem>
+                    <SelectItem value="m@google.com">support@reui.com</SelectItem>
+                    <SelectItem value="m@support.com">finance@reui.com</SelectItem>
+                  </SelectContent>
+                </Select>
+              </FormControl>
+              <FormDescription>قم بتعيين عنوان بريدك الإلكتروني الأساسي</FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <div className="flex items-center justify-end gap-2.5">
+          <Button type="reset" variant="outline">
+            إعادة تعيين
+          </Button>
+          <Button type="submit">إرسال</Button>
+        </div>
+      </form>
+    </Form>
+  );
+}
+

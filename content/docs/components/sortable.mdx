@@ -1,0 +1,162 @@
+---
+title: Sortable
+description: A drag-and-drop sortable component designed for seamless item organization across customizable columns.
+---
+
+<ComponentPreview name="sortable-demo" />
+
+## Examples
+
+### Grid
+
+<ComponentPreview name="sortable-grid" />
+
+### Nested
+
+<ComponentPreview name="sortable-nested" />
+
+## API Reference
+
+The Sortable component is a flexible drag-and-drop component for organizing items in lists. Below is the complete API reference:
+
+### Sortable
+
+The root Sortable component includes the following props:
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell className="font-mono text-xs">value</TableCell>
+      <TableCell className="font-mono text-xs">T[]</TableCell>
+      <TableCell className="font-mono text-xs"></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-mono text-xs">onValueChange</TableCell>
+      <TableCell className="font-mono text-xs">(value: T[]) => void</TableCell>
+      <TableCell className="font-mono text-xs"></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-mono text-xs">getItemValue</TableCell>
+      <TableCell className="font-mono text-xs">(item: T) => string</TableCell>
+      <TableCell className="font-mono text-xs"></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-mono text-xs">children</TableCell>
+      <TableCell className="font-mono text-xs">React.ReactNode</TableCell>
+      <TableCell className="font-mono text-xs"></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-mono text-xs">className</TableCell>
+      <TableCell className="font-mono text-xs">string</TableCell>
+      <TableCell className="font-mono text-xs"></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-mono text-xs">onMove</TableCell>
+      <TableCell className="font-mono text-xs">(event: SortableMoveEvent) => void</TableCell>
+      <TableCell className="font-mono text-xs"></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-mono text-xs">strategy</TableCell>
+      <TableCell className="font-mono text-xs">'horizontal' | 'vertical' | 'grid'</TableCell>
+      <TableCell className="font-mono text-xs">'vertical'</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-mono text-xs">onDragStart</TableCell>
+      <TableCell className="font-mono text-xs">(event: DragStartEvent) => void</TableCell>
+      <TableCell className="font-mono text-xs"></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-mono text-xs">onDragEnd</TableCell>
+      <TableCell className="font-mono text-xs">(event: DragEndEvent) => void</TableCell>
+      <TableCell className="font-mono text-xs"></TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+### SortableItem
+
+A draggable item in the sortable list.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell className="font-mono text-xs">value</TableCell>
+      <TableCell className="font-mono text-xs">string</TableCell>
+      <TableCell className="font-mono text-xs"></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-mono text-xs">asChild</TableCell>
+      <TableCell className="font-mono text-xs">boolean</TableCell>
+      <TableCell className="font-mono text-xs">false</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-mono text-xs">className</TableCell>
+      <TableCell className="font-mono text-xs">string</TableCell>
+      <TableCell className="font-mono text-xs"></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-mono text-xs">children</TableCell>
+      <TableCell className="font-mono text-xs">ReactNode</TableCell>
+      <TableCell className="font-mono text-xs"></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-mono text-xs">disabled</TableCell>
+      <TableCell className="font-mono text-xs">boolean</TableCell>
+      <TableCell className="font-mono text-xs">false</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+### SortableItemHandle
+
+A drag handle for an item.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell className="font-mono text-xs">asChild</TableCell>
+      <TableCell className="font-mono text-xs">boolean</TableCell>
+      <TableCell className="font-mono text-xs">false</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-mono text-xs">className</TableCell>
+      <TableCell className="font-mono text-xs">string</TableCell>
+      <TableCell className="font-mono text-xs"></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-mono text-xs">children</TableCell>
+      <TableCell className="font-mono text-xs">ReactNode</TableCell>
+      <TableCell className="font-mono text-xs"></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-mono text-xs">cursor</TableCell>
+      <TableCell className="font-mono text-xs">boolean</TableCell>
+      <TableCell className="font-mono text-xs">true</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+## Credits
+
+* Built with DndKit.
