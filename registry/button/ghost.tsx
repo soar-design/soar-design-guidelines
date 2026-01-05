@@ -1,15 +1,5 @@
-import { Button } from "@soar-design/soar-react-components";
+import { Button } from "@soar-design/soar-react-components"
 
-export default function ButtonDemo() {
-  return (
-    <div className="flex items-center gap-2.5">
-      <Button variant="ghost">Default</Button>
-      <Button variant="primary" appearance="ghost">
-        Primary
-      </Button>
-      <Button variant="destructive" appearance="ghost">
-        Destructive
-      </Button>
-    </div>
-  );
+export function ButtonGhost() {
+  return <Button variant="ghost">Ghost</Button>
 }

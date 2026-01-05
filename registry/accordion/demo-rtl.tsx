@@ -1,46 +1,58 @@
-"use client";
-
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@soar-design/soar-react-components";
+} from "@soar-design/soar-react-components"
 
-export default function AccordionDemo() {
+export function AccordionDemoRTL() {
   return (
-    <Accordion type="single" collapsible className="w-full lg:w-[75%]">
+    <Accordion
+      type="single"
+      collapsible
+      className="w-full"
+      defaultValue="item-1"
+    >
       <AccordionItem value="item-1">
-        <AccordionTrigger>هل يمكن الوصول إليه؟</AccordionTrigger>
-        <AccordionContent>
-          نعم. يلتزم مكون الأكورديون بنمط تصميم WAI-ARIA ويوفر دعمًا كاملاً للتنقل
-          بلوحة المفاتيح. يتضمن سمات ARIA المناسبة وإعلانات قارئ الشاشة ويتبع أفضل
-          ممارسات إمكانية الوصول. يمكن للمستخدمين التنقل عبر عناصر الأكورديون باستخدام
-          مفاتيح الأسهم، وتوسيع وطي العناصر باستخدام Space أو Enter، وجميع العناصر
-          التفاعلية قابلة للتركيز بشكل صحيح.
+        <AccordionTrigger>معلومات المنتج</AccordionTrigger>
+        <AccordionContent className="flex flex-col gap-4 text-balance">
+          <p>
+            يجمع منتجنا الرائد بين التكنولوجيا المتطورة والتصميم الأنيق. مصنوع من
+            مواد عالية الجودة، يقدم أداءً وموثوقية لا مثيل لهما.
+          </p>
+          <p>
+            تشمل الميزات الرئيسية قدرات معالجة متقدمة، وواجهة مستخدم بديهية مصممة
+            لكل من المبتدئين والخبراء.
+          </p>
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-2">
-        <AccordionTrigger>هل هو مصمم؟</AccordionTrigger>
-        <AccordionContent>
-          نعم. يأتي الأكورديون بأنماط افتراضية تتطابق مع المكونات الأخرى في نظام
-          التصميم. يتضمن ثلاثة متغيرات بصرية: الافتراضي والحدودي والصلب. يمكنك تخصيص
-          المظهر باستخدام خاصية المتغير، وجميع الأنماط قابلة للتخصيص بالكامل من خلال
-          فئات CSS. يدعم المكون أيضًا مؤشرات مخصصة (سهم أو علامة زائد) لتتناسب مع لغة
-          التصميم الخاصة بك.
+        <AccordionTrigger>تفاصيل الشحن</AccordionTrigger>
+        <AccordionContent className="flex flex-col gap-4 text-balance">
+          <p>
+            نقدم شحنًا عالميًا من خلال شركاء النقل الموثوقين. يستغرق التسليم
+            القياسي من 3 إلى 5 أيام عمل، بينما يضمن الشحن السريع التسليم خلال
+            يوم إلى يومين عمل.
+          </p>
+          <p>
+            جميع الطلبات معبأة بعناية ومؤمنة بالكامل. تتبع شحنتك في الوقت الفعلي
+            من خلال بوابة التتبع المخصصة لدينا.
+          </p>
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-3">
-        <AccordionTrigger>هل هو متحرك؟</AccordionTrigger>
-        <AccordionContent>
-          نعم. الأكورديون متحرك افتراضيًا مع انتقالات سلسة للتوسيع والطي. الرسوم
-          المتحركة عالية الأداء وتستخدم انتقالات CSS للأداء الأمثل. يمكنك تخصيص توقيت
-          الرسوم المتحركة ووظائف التخفيف، أو تعطيل الرسوم المتحركة بالكامل إذا كنت تفضل
-          تفاعلًا فوريًا. يتعامل المكون مع حالات الرسوم المتحركة تلقائيًا، مما يضمن
-          تجربة مستخدم مصقولة.
+        <AccordionTrigger>سياسة الإرجاع</AccordionTrigger>
+        <AccordionContent className="flex flex-col gap-4 text-balance">
+          <p>
+            ندعم منتجاتنا بسياسة إرجاع شاملة لمدة 30 يومًا. إذا لم تكن راضيًا
+            تمامًا، ما عليك سوى إرجاع العنصر في حالته الأصلية.
+          </p>
+          <p>
+            تتضمن عملية الإرجاع الخالية من المتاعب شحن إرجاع مجاني واسترداد كامل
+            للمبلغ تتم معالجته خلال 48 ساعة من استلام العنصر المرتجع.
+          </p>
         </AccordionContent>
       </AccordionItem>
     </Accordion>
-  );
+  )
 }
-

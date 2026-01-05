@@ -1,85 +1,17 @@
 ---
 title: Avatar
 description: An image element with a fallback for representing the user.
-featured: true
-links:
-  doc: https://www.radix-ui.com/docs/primitives/components/avatar
-  api: https://www.radix-ui.com/docs/primitives/components/avatar#api-reference
 ---
 
 <ComponentPreview name="avatar-demo" />
 
-## Examples
+## Usage
 
-### Fallback
+```tsx
+import { Avatar, AvatarFallback, AvatarImage } from "@soar-design/soar-react-components"
 
-<ComponentPreview name="avatar-fallback" />
-
-### Indicator
-
-<ComponentPreview name="avatar-indicator" />
-
-### Status
-
-<ComponentPreview name="avatar-status" />
-
-### Badge
-
-<ComponentPreview name="avatar-badge" />
-
-### Size
-
-<ComponentPreview name="avatar-sizes" />
-
-### Group
-
-<ComponentPreview name="avatar-group" />
-
-### Users
-
-<ComponentPreview name="avatar-users" />
-
-## API Reference
-
-This component builds on the Radix UI Avatar primitives, adding customization options such as indicators and status.
-
-### Avatar
-
-This component is based on the Avatar.Root primitive.
-
-| **Prop**  | **Type**   | **Default** |
-| --------- | ---------- | ----------- |
-| className | ~~string~~ |             |
-
-### AvatarImage
-
-This component is based on the Avatar.Image primitive.
-
-| **Prop**  | **Type**   | **Default** |
-| --------- | ---------- | ----------- |
-| className | ~~string~~ |             |
-
-### AvatarFallback
-
-This component is based on the Avatar.Fallback primitive.
-
-| **Prop**  | **Type**   | **Default** |
-| --------- | ---------- | ----------- |
-| className | ~~string~~ |             |
-
-### AvatarIndicator
-
-This is a custom component used to display an indicator within the avatar.
-
-| **Prop**  | **Type**   | **Default** |
-| --------- | ---------- | ----------- |
-| className | ~~string~~ |             |
-
-### AvatarStatus
-
-This is a custom component for displaying a status indicator on the avatar.
-
-| **Prop**  | **Type**   | **Default** |
-| --------- | ---------- | ----------- |
-| variant   | ~~enum~~   | online      |
-| className | ~~string~~ |             |
+<Avatar>
+  <AvatarImage src="https://github.com/shadcn.png" />
+  <AvatarFallback>CN</AvatarFallback>
+</Avatar>
+```

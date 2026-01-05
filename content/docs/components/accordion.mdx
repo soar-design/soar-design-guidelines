@@ -1,77 +1,26 @@
 ---
 title: Accordion
-description: A collapsible panel that can be expanded or collapsed.
+description: A vertically stacked set of interactive headings that each reveal a section of content.
 ---
 
 <ComponentPreview name="accordion-demo" />
 
-## Examples
+## Usage
 
-### Outline
+```tsx
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@soar-design/soar-react-components"
 
-<ComponentPreview name="accordion-outline" />
-
-### Solid
-
-<ComponentPreview name="accordion-solid" />
-
-### Indicator
-
-<ComponentPreview name="accordion-indicator" />
-
-### Nested
-
-<ComponentPreview name="accordion-nested" />
-
-## API Reference
-
-### Accordion
-
-This component is based on the Radix UI Accordion primitive and includes the following custom props:
-
-<PropsTable>
-  <TableHeader>
-    <TableRow>
-      <TableHead>Prop</TableHead>
-      <TableHead>Type</TableHead>
-      <TableHead>Default</TableHead>
-    </TableRow>
-  </TableHeader>
-  <TableBody>
-    <TableRow>
-      <TableCell className="font-mono text-xs">variant</TableCell>
-      <TableCell className="font-mono text-xs">enum</TableCell>
-      <TableCell className="font-mono text-xs">default</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-mono text-xs">indicator</TableCell>
-      <TableCell className="font-mono text-xs">enum</TableCell>
-      <TableCell className="font-mono text-xs">arrow</TableCell>
-    </TableRow>
-  </TableBody>
-</PropsTable>
-
-### AccordionTrigger
-
-This component is based on the Accordion.Trigger primitive and includes the following custom props:
-
-<PropsTable>
-  <TableHeader>
-    <TableRow>
-      <TableHead>Prop</TableHead>
-      <TableHead>Type</TableHead>
-      <TableHead>Default</TableHead>
-    </TableRow>
-  </TableHeader>
-  <TableBody>
-    <TableRow>
-      <TableCell className="font-mono text-xs">indicator</TableCell>
-      <TableCell className="font-mono text-xs">enum</TableCell>
-      <TableCell className="font-mono text-xs">arrow</TableCell>
-    </TableRow>
-  </TableBody>
-</PropsTable>
-
-## Credits
-
-* Built with Radix UI Accordion.
+<Accordion type="single" collapsible>
+  <AccordionItem value="item-1">
+    <AccordionTrigger>Is it accessible?</AccordionTrigger>
+    <AccordionContent>
+      Yes. It adheres to the WAI-ARIA design pattern.
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
+```

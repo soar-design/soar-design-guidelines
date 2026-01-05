@@ -1,5 +1,5 @@
-import { Button } from "@soar-design/soar-react-components";
+import { Button } from "@soar-design/soar-react-components"
 
-export default function ButtonDemo() {
-  return <Button variant="destructive">Button</Button>;
+export function ButtonDestructive() {
+  return <Button variant="destructive">Destructive</Button>
 }

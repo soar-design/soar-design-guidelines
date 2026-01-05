@@ -1,27 +1,29 @@
-"use client";
+"use client"
 
-import { Calendar } from "@soar-design/soar-react-components";
-import { useState } from "react";
-import type { DateRange } from "react-day-picker";
-import { ar } from "date-fns/locale";
+import * as React from "react"
+import { type DateRange } from "react-day-picker"
 
-const arabicWeekdayAbbreviations = ["أح", "اث", "ثل", "أرب", "خم", "جم", "سب"];
+import { Calendar } from "@soar-design/soar-react-components"
+import { CalendarDayButton } from "./day-button"
 
-export default function CalendarRange() {
-  const [range, setRange] = useState<DateRange | undefined>();
+export function CalendarRangeRTL() {
+  const [dateRange, setDateRange] = React.useState<DateRange | undefined>({
+    from: new Date(2025, 5, 12),
+    to: new Date(2025, 6, 15),
+  })
 
   return (
     <Calendar
       mode="range"
-      selected={range}
-      onSelect={setRange}
+      defaultMonth={dateRange?.from}
+      selected={dateRange}
+      onSelect={setDateRange}
       numberOfMonths={2}
-      locale={ar}
-      formatters={{
-        formatWeekdayName: (date) => arabicWeekdayAbbreviations[date.getDay()],
+      className="rounded-lg border shadow-sm"
+      components={{
+        DayButton: CalendarDayButton,
       }}
-      className="rounded-md border"
     />
-  );
+  )
 }
 

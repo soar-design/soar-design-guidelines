@@ -1,11 +1,8 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import { Alert, AlertIcon, AlertTitle } from "@soar-design/soar-react-components";
-import { Button } from "@soar-design/soar-react-components";
+import { Button } from "@soar-design/soar-react-components"
 import {
   Dialog,
-  DialogBody,
   DialogClose,
   DialogContent,
   DialogDescription,
@@ -13,96 +10,43 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@soar-design/soar-react-components";
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormMessage,
-} from "@soar-design/soar-react-components";
-import { Textarea } from "@soar-design/soar-react-components";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { CheckCircle } from "lucide-react";
-import { useForm } from "react-hook-form";
-import { toast } from "@soar-design/soar-react-components";
-import { z } from "zod";
+} from "@soar-design/soar-react-components"
+import { Input } from "@soar-design/soar-react-components"
+import { Label } from "@soar-design/soar-react-components"
 
-export default function DialogDemo() {
-  const [open, setOpen] = useState(false);
-
-  const FormSchema = z.object({
-    feedback: z
-      .string()
-      .min(1, "الملاحظات مطلوبة")
-      .max(200, "لا يمكن أن تتجاوز الملاحظات 200 حرف"),
-  });
-
-  const form = useForm<z.infer<typeof FormSchema>>({
-    resolver: zodResolver(FormSchema),
-    defaultValues: { feedback: "" },
-    mode: "onSubmit",
-  });
-
-  function onSubmit() {
-    toast.custom((t) => (
-      <Alert variant="mono" icon="primary" onClose={() => toast.dismiss(t)}>
-        <AlertIcon>
-          <CheckCircle />
-        </AlertIcon>
-        <AlertTitle>تم إرسال ملاحظاتك بنجاح</AlertTitle>
-      </Alert>
-    ));
-
-    form.reset();
-    setOpen(false);
-  }
-
+export function DialogDemoRTL() {
   return (
-    <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild>
-        <Button variant="outline">عرض الحوار</Button>
-      </DialogTrigger>
-      <DialogContent className="sm:max-w-md" dir="rtl">
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)}>
-            <DialogHeader>
-              <DialogTitle>اقترح فكرة</DialogTitle>
-              <DialogDescription>اوصف اقتراحك.</DialogDescription>
-            </DialogHeader>
-            <DialogBody>
-              <FormField
-                control={form.control}
-                name="feedback"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormControl>
-                      <Textarea
-                        placeholder="أخبرنا كيف يمكننا تحسين منتجنا"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormDescription>
-                      يرجى عدم تضمين أي معلومات حساسة
-                    </FormDescription>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            </DialogBody>
-            <DialogFooter>
-              <DialogClose asChild>
-                <Button type="button" variant="outline">
-                  إغلاق
-                </Button>
-              </DialogClose>
-              <Button type="submit">إرسال</Button>
-            </DialogFooter>
-          </form>
-        </Form>
-      </DialogContent>
+    <Dialog>
+      <form>
+        <DialogTrigger asChild>
+          <Button variant="outline">فتح الحوار</Button>
+        </DialogTrigger>
+        <DialogContent className="max-w-[425px]">
+          <DialogHeader>
+            <DialogTitle>تعديل الملف الشخصي</DialogTitle>
+            <DialogDescription>
+              قم بإجراء تغييرات على ملفك الشخصي هنا. انقر فوق حفظ عند الانتهاء.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="grid gap-4">
+            <div className="grid gap-3">
+              <Label htmlFor="name-1">الاسم</Label>
+              <Input id="name-1" name="name" defaultValue="أحمد محمد" />
+            </div>
+            <div className="grid gap-3">
+              <Label htmlFor="username-1">اسم المستخدم</Label>
+              <Input id="username-1" name="username" defaultValue="@ahmed" />
+            </div>
+          </div>
+          <DialogFooter>
+            <DialogClose asChild>
+              <Button variant="outline">إلغاء</Button>
+            </DialogClose>
+            <Button type="submit">حفظ التغييرات</Button>
+          </DialogFooter>
+        </DialogContent>
+      </form>
     </Dialog>
-  );
+  )
 }
 

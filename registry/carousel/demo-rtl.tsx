@@ -1,14 +1,15 @@
-import * as React from "react";
-import { Card, CardContent } from "@soar-design/soar-react-components";
+import * as React from "react"
+
+import { Card, CardContent } from "@soar-design/soar-react-components"
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@soar-design/soar-react-components";
+} from "@soar-design/soar-react-components"
 
-export default function Component() {
+export function CarouselDemoRTL() {
   return (
     <Carousel className="w-full max-w-xs">
       <CarouselContent>
@@ -27,6 +28,5 @@ export default function Component() {
       <CarouselPrevious />
       <CarouselNext />
     </Carousel>
-  );
+  )
 }
-

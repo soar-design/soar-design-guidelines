@@ -1,46 +1,50 @@
-'use client';
+"use client"
 
-import * as React from 'react';
-import { Button } from '@soar-design/soar-react-components';
-import { Calendar } from '@soar-design/soar-react-components';
-import { Popover, PopoverContent, PopoverTrigger } from '@soar-design/soar-react-components';
-import { format } from 'date-fns';
-import { Calendar as CalendarIcon, X } from 'lucide-react';
+import * as React from "react"
+import { ChevronDownIcon } from "lucide-react"
 
-export default function DatePickerDemo() {
-  const [date, setDate] = React.useState<Date>();
+import { Button } from "@soar-design/soar-react-components"
+import { Calendar } from "@soar-design/soar-react-components"
+import { Label } from "@soar-design/soar-react-components"
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@soar-design/soar-react-components"
 
-  const handleReset = (e: React.MouseEvent<HTMLElement>) => {
-    setDate(undefined);
-    e.preventDefault();
-  };
+export function DatePickerDemo() {
+  const [open, setOpen] = React.useState(false)
+  const [date, setDate] = React.useState<Date | undefined>(undefined)
 
   return (
-    <Popover>
-      <PopoverTrigger asChild>
-        <div className="relative w-[250px]">
-          <Button type="button" variant="outline" mode="input" placeholder={!date} className="w-full">
-            <CalendarIcon />
-            {date ? format(date, 'PPP') : <span>Pick a date</span>}
+    <div className="flex flex-col gap-3">
+      <Label htmlFor="date" className="px-1">
+        Date of birth
+      </Label>
+      <Popover open={open} onOpenChange={setOpen}>
+        <PopoverTrigger asChild>
+          <Button
+            variant="outline"
+            id="date"
+            className="w-48 justify-between font-normal"
+          >
+            {date ? date.toLocaleDateString() : "Select date"}
+            <ChevronDownIcon />
           </Button>
-          {date && (
-            <Button
-              type="button"
-              variant="dim"
-              size="sm"
-              className="absolute top-1/2 -end-0 -translate-y-1/2"
-              onClick={handleReset}
-            >
-              <X />
-            </Button>
-          )}
-        </div>
-      </PopoverTrigger>
-      <PopoverContent className="w-auto p-0" align="start">
-        <Calendar mode="single" selected={date} onSelect={setDate} autoFocus />
-      </PopoverContent>
-    </Popover>
-  );
+        </PopoverTrigger>
+        <PopoverContent className="w-auto overflow-hidden p-0" align="start">
+          <Calendar
+            mode="single"
+            selected={date}
+            captionLayout="dropdown"
+            onSelect={(date) => {
+              setDate(date)
+              setOpen(false)
+            }}
+          />
+        </PopoverContent>
+      </Popover>
+    </div>
+  )
 }
-
 

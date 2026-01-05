@@ -1,38 +1,135 @@
+"use client"
+
+import * as React from "react"
+import Link from "next/link"
+
+import { useMediaQuery } from "@/hooks/use-media-query"
 import {
   Breadcrumb,
-  BreadcrumbList,
+  BreadcrumbEllipsis,
   BreadcrumbItem,
   BreadcrumbLink,
+  BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-  BreadcrumbEllipsis,
-} from "@soar-design/soar-react-components";
+} from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components"
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@soar-design/soar-react-components"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@soar-design/soar-react-components"
 
-export default function BreadcrumbResponsive() {
+const items = [
+  { href: "#", label: "الرئيسية" },
+  { href: "#", label: "التوثيق" },
+  { href: "#", label: "بناء تطبيقك" },
+  { href: "#", label: "جلب البيانات" },
+  { label: "التخزين المؤقت وإعادة التحقق" },
+]
+
+const ITEMS_TO_DISPLAY = 3
+
+export function BreadcrumbResponsiveRTL() {
+  const [open, setOpen] = React.useState(false)
+  const isDesktop = useMediaQuery("(min-width: 768px)")
+
   return (
     <Breadcrumb>
       <BreadcrumbList>
         <BreadcrumbItem>
-          <BreadcrumbLink href="/">الرئيسية</BreadcrumbLink>
+          <BreadcrumbLink asChild>
+            <Link href={items[0].href ?? "#"}>{items[0].label}</Link>
+          </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
-        <BreadcrumbItem className="hidden md:block">
-          <BreadcrumbLink href="/docs">التوثيق</BreadcrumbLink>
-        </BreadcrumbItem>
-        <BreadcrumbSeparator className="hidden md:block" />
-        <BreadcrumbItem className="hidden md:block">
-          <BreadcrumbLink href="/docs/components">المكونات</BreadcrumbLink>
-        </BreadcrumbItem>
-        <BreadcrumbSeparator className="hidden md:block" />
-        <BreadcrumbItem className="block md:hidden">
-          <BreadcrumbEllipsis />
-        </BreadcrumbItem>
-        <BreadcrumbSeparator className="block md:hidden" />
-        <BreadcrumbItem>
-          <BreadcrumbPage>مسار التنقل</BreadcrumbPage>
-        </BreadcrumbItem>
+        {items.length > ITEMS_TO_DISPLAY ? (
+          <>
+            <BreadcrumbItem>
+              {isDesktop ? (
+                <DropdownMenu open={open} onOpenChange={setOpen}>
+                  <DropdownMenuTrigger
+                    className="flex items-center gap-1"
+                    aria-label="تبديل القائمة"
+                  >
+                    <BreadcrumbEllipsis className="size-4" />
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="start">
+                    {items.slice(1, -2).map((item, index) => (
+                      <DropdownMenuItem key={index}>
+                        <Link href={item.href ? item.href : "#"}>
+                          {item.label}
+                        </Link>
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              ) : (
+                <Drawer open={open} onOpenChange={setOpen}>
+                  <DrawerTrigger aria-label="تبديل القائمة">
+                    <BreadcrumbEllipsis className="h-4 w-4" />
+                  </DrawerTrigger>
+                  <DrawerContent>
+                    <DrawerHeader className="text-left">
+                      <DrawerTitle>انتقل إلى</DrawerTitle>
+                      <DrawerDescription>
+                        اختر صفحة للانتقال إليها.
+                      </DrawerDescription>
+                    </DrawerHeader>
+                    <div className="grid gap-1 px-4">
+                      {items.slice(1, -2).map((item, index) => (
+                        <Link
+                          key={index}
+                          href={item.href ? item.href : "#"}
+                          className="py-1 text-sm"
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                    <DrawerFooter className="pt-4">
+                      <DrawerClose asChild>
+                        <Button variant="outline">إغلاق</Button>
+                      </DrawerClose>
+                    </DrawerFooter>
+                  </DrawerContent>
+                </Drawer>
+              )}
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+          </>
+        ) : null}
+        {items.slice(-ITEMS_TO_DISPLAY + 1).map((item, index, array) => (
+          <React.Fragment key={index}>
+            <BreadcrumbItem>
+              {item.href ? (
+                <BreadcrumbLink
+                  asChild
+                  className="max-w-20 truncate md:max-w-none"
+                >
+                  <Link href={item.href}>{item.label}</Link>
+                </BreadcrumbLink>
+              ) : (
+                <BreadcrumbPage className="max-w-20 truncate md:max-w-none">
+                  {item.label}
+                </BreadcrumbPage>
+              )}
+            </BreadcrumbItem>
+            {index < array.length - 1 && <BreadcrumbSeparator />}
+          </React.Fragment>
+        ))}
       </BreadcrumbList>
     </Breadcrumb>
-  );
+  )
 }
-

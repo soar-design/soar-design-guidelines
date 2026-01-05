@@ -8,33 +8,28 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@soar-design/soar-react-components";
-import { Button } from "@soar-design/soar-react-components";
-import { useDirection } from "@/hooks/use-direction";
+} from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components"
 
-export default function ConfirmationDialog() {
-  const { ref, isRTL } = useDirection();
-
+export function AlertDialogDemoRTL() {
   return (
-    <div ref={ref}>
-      <AlertDialog>
-        <AlertDialogTrigger asChild>
-          <Button variant="outline">عرض الحوار</Button>
-        </AlertDialogTrigger>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>تأكيد إجراءك</AlertDialogTitle>
-            <AlertDialogDescription>
-              بمجرد التأكيد، لا يمكن عكس هذا الإجراء. سيحذف حسابك ويزيل جميع البيانات المرتبطة.
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel>العودة</AlertDialogCancel>
-            <AlertDialogAction>المتابعة</AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
-    </div>
-  );
+    <AlertDialog>
+      <AlertDialogTrigger asChild>
+        <Button variant="outline">إظهار الحوار</Button>
+      </AlertDialogTrigger>
+      <AlertDialogContent>
+        <AlertDialogHeader>
+          <AlertDialogTitle>هل أنت متأكد تمامًا؟</AlertDialogTitle>
+          <AlertDialogDescription>
+            لا يمكن التراجع عن هذا الإجراء. سيؤدي هذا إلى حذف حسابك بشكل دائم
+            وإزالة بياناتك من خوادمنا.
+          </AlertDialogDescription>
+        </AlertDialogHeader>
+        <AlertDialogFooter>
+          <AlertDialogCancel>إلغاء</AlertDialogCancel>
+          <AlertDialogAction>متابعة</AlertDialogAction>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
+  )
 }
-

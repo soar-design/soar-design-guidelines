@@ -1,24 +1,48 @@
-import Link from "next/link";
+import Link from "next/link"
+
 import {
   Breadcrumb,
+  BreadcrumbEllipsis,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@soar-design/soar-react-components";
+} from "@soar-design/soar-react-components"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@soar-design/soar-react-components"
 
-export default function BreadcrumbDemo() {
+export function BreadcrumbDemoRTL() {
   return (
     <Breadcrumb>
       <BreadcrumbList>
         <BreadcrumbItem>
-          <BreadcrumbLink href="/">الرئيسية</BreadcrumbLink>
+          <BreadcrumbLink asChild>
+            <Link href="#">الرئيسية</Link>
+          </BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbSeparator />
+        <BreadcrumbItem>
+          <DropdownMenu>
+            <DropdownMenuTrigger className="flex items-center gap-1">
+              <BreadcrumbEllipsis className="size-4" />
+              <span className="sr-only">تبديل القائمة</span>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start">
+              <DropdownMenuItem>التوثيق</DropdownMenuItem>
+              <DropdownMenuItem>السمات</DropdownMenuItem>
+              <DropdownMenuItem>جيت هاب</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
           <BreadcrumbLink asChild>
-            <Link href="/">المكونات</Link>
+            <Link href="#">المكونات</Link>
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
@@ -27,6 +51,5 @@ export default function BreadcrumbDemo() {
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>
-  );
+  )
 }
-

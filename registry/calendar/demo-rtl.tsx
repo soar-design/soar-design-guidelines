@@ -1,25 +1,23 @@
-"use client";
+"use client"
 
-import * as React from "react";
-import { Calendar } from "@soar-design/soar-react-components";
-import { ar } from "date-fns/locale";
+import * as React from "react"
 
-const arabicWeekdayAbbreviations = ["أح", "اث", "ثل", "أرب", "خم", "جم", "سب"];
+import { Calendar } from "@soar-design/soar-react-components"
+import { CalendarDayButton } from "./day-button"
 
-export default function CalendarDemo() {
-  const [date, setDate] = React.useState<Date | undefined>(new Date());
+export function CalendarDemoRTL() {
+  const [date, setDate] = React.useState<Date | undefined>(new Date())
 
   return (
     <Calendar
       mode="single"
       selected={date}
       onSelect={setDate}
-      locale={ar}
-      formatters={{
-        formatWeekdayName: (date) => arabicWeekdayAbbreviations[date.getDay()],
+      className="rounded-md border shadow-sm"
+      captionLayout="dropdown"
+      components={{
+        DayButton: CalendarDayButton,
       }}
-      className="rounded-md border border-border shadow-xs"
     />
-  );
+  )
 }
-

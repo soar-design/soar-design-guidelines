@@ -1,111 +1,63 @@
-"use client";
-
-import Link from "next/link";
-import { Avatar, AvatarFallback, AvatarImage } from "@soar-design/soar-react-components";
-import { Badge } from "@soar-design/soar-react-components";
-import { Button } from "@soar-design/soar-react-components";
+import { Button } from "@soar-design/soar-react-components"
 import {
   Card,
+  CardAction,
   CardContent,
+  CardDescription,
   CardFooter,
   CardHeader,
-  CardHeading,
   CardTitle,
-  CardToolbar,
-} from "@soar-design/soar-react-components";
-import { Settings } from "lucide-react";
+} from "@soar-design/soar-react-components"
+import { Input } from "@soar-design/soar-react-components"
+import { Label } from "@soar-design/soar-react-components"
 
-// User data
-const users = [
-  {
-    id: "1",
-    name: "كاثرين كامبل",
-    availability: "online",
-    avatar: "https://randomuser.me/api/portraits/women/32.jpg",
-    status: "active",
-    email: "kathryn@apple.com",
-  },
-  {
-    id: "2",
-    name: "روبرت سميث",
-    availability: "away",
-    avatar: "https://randomuser.me/api/portraits/men/51.jpg",
-    status: "inactive",
-    email: "robert@openai.com",
-  },
-  {
-    id: "3",
-    name: "صوفيا جونسون",
-    availability: "busy",
-    avatar: "https://randomuser.me/api/portraits/women/68.jpg",
-    status: "active",
-    email: "sophia@meta.com",
-  },
-  {
-    id: "4",
-    name: "لوكاس ووكر",
-    availability: "offline",
-    avatar: "https://randomuser.me/api/portraits/men/33.jpg",
-    status: "inactive",
-    flag: "🇦🇺",
-    email: "lucas@tesla.com",
-  },
-  {
-    id: "5",
-    name: "إيميلي ديفيس",
-    availability: "online",
-    avatar: "https://randomuser.me/api/portraits/women/53.jpg",
-    status: "active",
-    email: "emily@sap.com",
-  },
-];
-
-export default function CardDemo() {
+export function CardDemoRTL() {
   return (
-    <Card className="w-[400px]">
+    <Card className="w-full max-w-sm">
       <CardHeader>
-        <CardHeading>
-          <CardTitle>المستخدمون الأخيرون</CardTitle>
-        </CardHeading>
-        <CardToolbar>
-          <Button mode="icon" variant="outline" size="sm">
-            <Settings />
-          </Button>
-        </CardToolbar>
+        <CardTitle>تسجيل الدخول إلى حسابك</CardTitle>
+        <CardDescription>
+          أدخل بريدك الإلكتروني أدناه لتسجيل الدخول إلى حسابك
+        </CardDescription>
+        <CardAction>
+          <Button variant="link">إنشاء حساب</Button>
+        </CardAction>
       </CardHeader>
-      <CardContent className="py-1">
-        {users.map((user) => {
-          return (
-            <div
-              key={user.id}
-              className="flex items-center justify-between gap-2 py-2 border-b border-dashed last:border-none"
-            >
-              {/* Left: Avatar and User Info */}
-              <div className="flex items-center gap-3">
-                <Avatar className="size-8">
-                  <AvatarImage src={user.avatar} alt={user.name} />
-                  <AvatarFallback>AS</AvatarFallback>
-                </Avatar>
-                <div>
-                  <Link href="#" className="text-sm font-medium text-foreground hover:text-primary">
-                    {user.name}
-                  </Link>
-                  <div className="text-sm font-normal text-muted-foreground">{user.email}</div>
-                </div>
-              </div>
-              {/* Right: Status Badge */}
-              <Badge appearance="light" variant={user.status === "active" ? "primary" : "secondary"}>
-                {user.status === "active" ? "نشط" : "غير نشط"}
-              </Badge>
+      <CardContent>
+        <form>
+          <div className="flex flex-col gap-6">
+            <div className="grid gap-2">
+              <Label htmlFor="email">البريد الإلكتروني</Label>
+              <Input
+                id="email"
+                type="email"
+                placeholder="m@example.com"
+                required
+              />
             </div>
-          );
-        })}
+            <div className="grid gap-2">
+              <div className="flex items-center">
+                <Label htmlFor="password">كلمة المرور</Label>
+                <a
+                  href="#"
+                  className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
+                >
+                  نسيت كلمة المرور؟
+                </a>
+              </div>
+              <Input id="password" type="password" required />
+            </div>
+          </div>
+        </form>
       </CardContent>
-      <CardFooter className="justify-center">
-        <Button mode="link" underlined="dashed" asChild>
-          <Link href="#">اعرف المزيد</Link>
+      <CardFooter className="flex-col gap-2">
+        <Button type="submit" className="w-full">
+          تسجيل الدخول
+        </Button>
+        <Button variant="outline" className="w-full">
+          تسجيل الدخول باستخدام Google
         </Button>
       </CardFooter>
     </Card>
-  );
+  )
 }

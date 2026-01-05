@@ -1,5 +1,14 @@
-import { Button } from "@soar-design/soar-react-components";
+import { ArrowUpIcon } from "lucide-react"
 
-export default function Component() {
-  return <Button>Button</Button>;
+import { Button } from "@soar-design/soar-react-components"
+
+export function ButtonDemo() {
+  return (
+    <div className="flex flex-wrap items-center gap-2 md:flex-row">
+      <Button variant="outline">Button</Button>
+      <Button variant="outline" size="icon" aria-label="Submit">
+        <ArrowUpIcon />
+      </Button>
+    </div>
+  )
 }

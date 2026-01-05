@@ -1,191 +1,148 @@
 ---
 title: Breadcrumb
-description: Displays a hierarchy of links to the current page or resource in an application.
-featured: true
+description: Displays the path to the current resource using a hierarchy of links.
 ---
 
 <ComponentPreview name="breadcrumb-demo" />
 
+## Usage
+
+```tsx
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@soar-design/soar-react-components"
+
+<Breadcrumb>
+  <BreadcrumbList>
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/">Home</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/components">Components</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+    </BreadcrumbItem>
+  </BreadcrumbList>
+</Breadcrumb>
+```
+
 ## Examples
 
-### Icon
+### Custom separator
 
-<ComponentPreview name="breadcrumb-icon" />
+Use a custom component as `children` for `<BreadcrumbSeparator />` to create a custom separator.
 
-### Separator
+<ComponentPreview name="breadcrumb-custom-separator" />
 
-<ComponentPreview name="breadcrumb-separator" />
+```tsx
+import Link from "next/link"
+import { SlashIcon } from "lucide-react"
+
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@soar-design/soar-react-components"
+
+<Breadcrumb>
+  <BreadcrumbList>
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/">Home</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator>
+      <SlashIcon />
+    </BreadcrumbSeparator>
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/components">Components</BreadcrumbLink>
+    </BreadcrumbItem>
+  </BreadcrumbList>
+</Breadcrumb>
+```
 
 ### Dropdown
 
+You can compose `<BreadcrumbItem />` with a `<DropdownMenu />` to create a dropdown in the breadcrumb.
+
 <ComponentPreview name="breadcrumb-dropdown" />
 
-### Card
+```tsx
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@soar-design/soar-react-components"
+ 
+<BreadcrumbItem>
+  <DropdownMenu>
+    <DropdownMenuTrigger>
+      Components
+    </DropdownMenuTrigger>
+    <DropdownMenuContent align="start">
+      <DropdownMenuItem>Documentation</DropdownMenuItem>
+      <DropdownMenuItem>Themes</DropdownMenuItem>
+      <DropdownMenuItem>GitHub</DropdownMenuItem>
+    </DropdownMenuContent>
+  </DropdownMenu>
+</BreadcrumbItem>
+```
 
-<ComponentPreview name="breadcrumb-card" />
+### Collapsed
 
-## API Reference
+We provide a `<BreadcrumbEllipsis />` component to show a collapsed state when the breadcrumb is too long.
 
-This component provides a customizable breadcrumb system for displaying a hierarchy of links.
+<ComponentPreview name="breadcrumb-collapsed" />
 
-### Breadcrumb
+```tsx
+import { BreadcrumbEllipsis } from "@soar-design/soar-react-components"
+ 
+<Breadcrumb>
+  <BreadcrumbList>
+    {/* ... */}
+    <BreadcrumbItem>
+      <BreadcrumbEllipsis />
+    </BreadcrumbItem>
+    {/* ... */}
+  </BreadcrumbList>
+</Breadcrumb>
+```
 
-This component is a flexible container for displaying breadcrumb items.
+### Link component
 
-<PropsTable>
-  <TableHeader>
-    <TableRow>
-      <TableHead>Prop</TableHead>
-      <TableHead>Type</TableHead>
-      <TableHead>Default</TableHead>
-    </TableRow>
-  </TableHeader>
-  <TableBody>
-    <TableRow>
-      <TableCell className="font-mono text-xs">className</TableCell>
-      <TableCell className="font-mono text-xs">string</TableCell>
-      <TableCell className="font-mono text-xs">-</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-mono text-xs">separator</TableCell>
-      <TableCell className="font-mono text-xs">React.ReactNode</TableCell>
-      <TableCell className="font-mono text-xs">&lt;ChevronRight/&gt;</TableCell>
-    </TableRow>
-  </TableBody>
-</PropsTable>
+To use a custom link component from your routing library, you can use the `asChild` prop on `<BreadcrumbLink />`.
 
-### BreadcrumbList
+<ComponentPreview name="breadcrumb-link" />
 
-This component is used to display a list of breadcrumb items.
+```tsx
+import Link from "next/link"
+ 
+<Breadcrumb>
+  <BreadcrumbList>
+    <BreadcrumbItem>
+      <BreadcrumbLink asChild>
+        <Link href="/">Home</Link>
+      </BreadcrumbLink>
+    </BreadcrumbItem>
+    {/* ... */}
+  </BreadcrumbList>
+</Breadcrumb>
+```
 
-<PropsTable>
-  <TableHeader>
-    <TableRow>
-      <TableHead>Prop</TableHead>
-      <TableHead>Type</TableHead>
-      <TableHead>Default</TableHead>
-    </TableRow>
-  </TableHeader>
-  <TableBody>
-    <TableRow>
-      <TableCell className="font-mono text-xs">className</TableCell>
-      <TableCell className="font-mono text-xs">string</TableCell>
-      <TableCell className="font-mono text-xs">-</TableCell>
-    </TableRow>
-  </TableBody>
-</PropsTable>
+### Responsive
 
-### BreadcrumbItem
+Here's an example of a responsive breadcrumb that composes `<BreadcrumbItem />` with `<BreadcrumbEllipsis />`, `<DropdownMenu />`, and `<Drawer />`.
 
-This component is used to display an individual breadcrumb item.
+It displays a dropdown on desktop and a drawer on mobile.
 
-<PropsTable>
-  <TableHeader>
-    <TableRow>
-      <TableHead>Prop</TableHead>
-      <TableHead>Type</TableHead>
-      <TableHead>Default</TableHead>
-    </TableRow>
-  </TableHeader>
-  <TableBody>
-    <TableRow>
-      <TableCell className="font-mono text-xs">className</TableCell>
-      <TableCell className="font-mono text-xs">string</TableCell>
-      <TableCell className="font-mono text-xs">-</TableCell>
-    </TableRow>
-  </TableBody>
-</PropsTable>
-
-### BreadcrumbLink
-
-This component is used to display a link within a breadcrumb item.
-
-<PropsTable>
-  <TableHeader>
-    <TableRow>
-      <TableHead>Prop</TableHead>
-      <TableHead>Type</TableHead>
-      <TableHead>Default</TableHead>
-    </TableRow>
-  </TableHeader>
-  <TableBody>
-    <TableRow>
-      <TableCell className="font-mono text-xs">className</TableCell>
-      <TableCell className="font-mono text-xs">string</TableCell>
-      <TableCell className="font-mono text-xs">-</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-mono text-xs">href</TableCell>
-      <TableCell className="font-mono text-xs">string</TableCell>
-      <TableCell className="font-mono text-xs">#</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-mono text-xs">asChild</TableCell>
-      <TableCell className="font-mono text-xs">boolean</TableCell>
-      <TableCell className="font-mono text-xs">false</TableCell>
-    </TableRow>
-  </TableBody>
-</PropsTable>
-
-### BreadcrumbPage
-
-This component is used to display the current page in the breadcrumb.
-
-<PropsTable>
-  <TableHeader>
-    <TableRow>
-      <TableHead>Prop</TableHead>
-      <TableHead>Type</TableHead>
-      <TableHead>Default</TableHead>
-    </TableRow>
-  </TableHeader>
-  <TableBody>
-    <TableRow>
-      <TableCell className="font-mono text-xs">className</TableCell>
-      <TableCell className="font-mono text-xs">string</TableCell>
-      <TableCell className="font-mono text-xs">-</TableCell>
-    </TableRow>
-  </TableBody>
-</PropsTable>
-
-### BreadcrumbSeparator
-
-This component is used to display a separator between breadcrumb items.
-
-<PropsTable>
-  <TableHeader>
-    <TableRow>
-      <TableHead>Prop</TableHead>
-      <TableHead>Type</TableHead>
-      <TableHead>Default</TableHead>
-    </TableRow>
-  </TableHeader>
-  <TableBody>
-    <TableRow>
-      <TableCell className="font-mono text-xs">className</TableCell>
-      <TableCell className="font-mono text-xs">string</TableCell>
-      <TableCell className="font-mono text-xs">-</TableCell>
-    </TableRow>
-  </TableBody>
-</PropsTable>
-
-### BreadcrumbEllipsis
-
-This component is used to display an ellipsis in the breadcrumb.
-
-<PropsTable>
-  <TableHeader>
-    <TableRow>
-      <TableHead>Prop</TableHead>
-      <TableHead>Type</TableHead>
-      <TableHead>Default</TableHead>
-    </TableRow>
-  </TableHeader>
-  <TableBody>
-    <TableRow>
-      <TableCell className="font-mono text-xs">className</TableCell>
-      <TableCell className="font-mono text-xs">string</TableCell>
-      <TableCell className="font-mono text-xs">-</TableCell>
-    </TableRow>
-  </TableBody>
-</PropsTable>
+<ComponentPreview name="breadcrumb-responsive" />

@@ -1,116 +1,65 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import { Button } from "@soar-design/soar-react-components";
-import { Calendar } from "@soar-design/soar-react-components";
-import { Popover, PopoverContent, PopoverTrigger } from "@soar-design/soar-react-components";
-import { ScrollArea } from "@soar-design/soar-react-components";
-import { format } from "date-fns";
-import { CalendarIcon } from "lucide-react";
+import * as React from "react"
+import { ChevronDownIcon } from "lucide-react"
 
-export default function DatePickerDateTime() {
-  const today = new Date();
-  const [date, setDate] = useState<Date | undefined>(today);
-  const [time, setTime] = useState<string | undefined>("10:00");
+import { Button } from "@soar-design/soar-react-components"
+import { Calendar } from "@soar-design/soar-react-components"
+import { Input } from "@soar-design/soar-react-components"
+import { Label } from "@soar-design/soar-react-components"
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@soar-design/soar-react-components"
 
-  // Mock time slots data
-  const timeSlots = [
-    { time: "09:00", available: false },
-    { time: "09:30", available: false },
-    { time: "10:00", available: true },
-    { time: "10:30", available: true },
-    { time: "11:00", available: true },
-    { time: "11:30", available: true },
-    { time: "12:00", available: false },
-    { time: "12:30", available: true },
-    { time: "13:00", available: true },
-    { time: "13:30", available: true },
-    { time: "14:00", available: true },
-    { time: "14:30", available: false },
-    { time: "15:00", available: false },
-    { time: "15:30", available: true },
-    { time: "16:00", available: true },
-    { time: "16:30", available: true },
-    { time: "17:00", available: true },
-    { time: "17:30", available: true },
-    { time: "18:00", available: true },
-    { time: "18:30", available: true },
-    { time: "19:00", available: true },
-    { time: "19:30", available: true },
-    { time: "20:00", available: true },
-    { time: "20:30", available: true },
-    { time: "21:00", available: true },
-    { time: "21:30", available: true },
-    { time: "22:00", available: true },
-    { time: "22:30", available: true },
-    { time: "23:00", available: true },
-    { time: "23:30", available: true },
-    { time: "24:00", available: true },
-  ];
+export function DatePickerDateTime() {
+  const [open, setOpen] = React.useState(false)
+  const [date, setDate] = React.useState<Date | undefined>(undefined)
 
   return (
-    <Popover>
-      <PopoverTrigger asChild>
-        <div className="relative w-[250px]">
-          <Button
-            type="button"
-            variant="outline"
-            mode="input"
-            placeholder={!date}
-            className="w-full"
-          >
-            <CalendarIcon />
-            {date ? (
-              format(date, "PPP") + (time ? ` - ${time}` : "")
-            ) : (
-              <span>Pick a date and time</span>
-            )}
-          </Button>
-        </div>
-      </PopoverTrigger>
-      <PopoverContent className="w-auto p-0" align="start">
-        <div className="flex max-sm:flex-col">
-          <Calendar
-            mode="single"
-            selected={date}
-            onSelect={(newDate) => {
-              if (newDate) {
-                setDate(newDate);
-                setTime(undefined);
-              }
-            }}
-            className="p-2 sm:pe-5"
-            disabled={[{ before: today }]}
-          />
-          <div className="relative border-border max-sm:order-1 max-sm:h-48 max-sm:border-t sm:w-40">
-            <div className="h-full border-border sm:border-s py-4">
-              <ScrollArea className="h-[254px]">
-                <div className="space-y-3">
-                  <div className="flex h-5 shrink-0 items-center px-5">
-                    <p className="text-sm font-medium">
-                      {date ? format(date, "EEEE, d") : "Pick a date"}
-                    </p>
-                  </div>
-                  <div className="grid gap-1.5 px-5 max-sm:grid-cols-2">
-                    {timeSlots.map(({ time: timeSlot, available }) => (
-                      <Button
-                        key={timeSlot}
-                        variant={time === timeSlot ? "primary" : "outline"}
-                        size="sm"
-                        className="w-full"
-                        onClick={() => setTime(timeSlot)}
-                        disabled={!available}
-                      >
-                        {timeSlot}
-                      </Button>
-                    ))}
-                  </div>
-                </div>
-              </ScrollArea>
-            </div>
-          </div>
-        </div>
-      </PopoverContent>
-    </Popover>
-  );
+    <div className="flex gap-4">
+      <div className="flex flex-col gap-3">
+        <Label htmlFor="date-picker" className="px-1">
+          Date
+        </Label>
+        <Popover open={open} onOpenChange={setOpen}>
+          <PopoverTrigger asChild>
+            <Button
+              variant="outline"
+              id="date-picker"
+              className="w-32 justify-between font-normal"
+            >
+              {date ? date.toLocaleDateString() : "Select date"}
+              <ChevronDownIcon />
+            </Button>
+          </PopoverTrigger>
+          <PopoverContent className="w-auto overflow-hidden p-0" align="start">
+            <Calendar
+              mode="single"
+              selected={date}
+              captionLayout="dropdown"
+              onSelect={(date) => {
+                setDate(date)
+                setOpen(false)
+              }}
+            />
+          </PopoverContent>
+        </Popover>
+      </div>
+      <div className="flex flex-col gap-3">
+        <Label htmlFor="time-picker" className="px-1">
+          Time
+        </Label>
+        <Input
+          type="time"
+          id="time-picker"
+          step="1"
+          defaultValue="10:30:00"
+          className="bg-background appearance-none [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-calendar-picker-indicator]:appearance-none"
+        />
+      </div>
+    </div>
+  )
 }
+

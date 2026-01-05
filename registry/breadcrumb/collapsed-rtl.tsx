@@ -1,19 +1,23 @@
+import Link from "next/link"
+
 import {
   Breadcrumb,
-  BreadcrumbList,
+  BreadcrumbEllipsis,
   BreadcrumbItem,
   BreadcrumbLink,
+  BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-  BreadcrumbEllipsis,
-} from "@soar-design/soar-react-components";
+} from "@soar-design/soar-react-components"
 
-export default function BreadcrumbCollapsed() {
+export function BreadcrumbCollapsedRTL() {
   return (
     <Breadcrumb>
       <BreadcrumbList>
         <BreadcrumbItem>
-          <BreadcrumbLink href="/">الرئيسية</BreadcrumbLink>
+          <BreadcrumbLink asChild>
+            <Link href="#">الرئيسية</Link>
+          </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
@@ -21,7 +25,9 @@ export default function BreadcrumbCollapsed() {
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <BreadcrumbLink href="/docs/components">المكونات</BreadcrumbLink>
+          <BreadcrumbLink asChild>
+            <Link href="#">المكونات</Link>
+          </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
@@ -29,6 +35,5 @@ export default function BreadcrumbCollapsed() {
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>
-  );
+  )
 }
-

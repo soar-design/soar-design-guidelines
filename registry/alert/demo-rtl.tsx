@@ -1,30 +1,39 @@
-"use client";
+import { AlertCircleIcon, CheckCircle2Icon, PopcornIcon } from "lucide-react"
 
-import { Alert, AlertIcon, AlertTitle, AlertToolbar } from "@soar-design/soar-react-components";
-import { Button } from "@soar-design/soar-react-components";
-import { Bell } from "lucide-react";
+import {
+  Alert,
+  AlertDescription,
+  AlertTitle,
+} from "@soar-design/soar-react-components"
 
-export default function Component() {
+export function AlertDemoRTL() {
   return (
-    <div className="flex flex-col items-center w-full lg:max-w-[75%] gap-6">
-      <Alert close={true}>
-        <AlertIcon>
-          <Bell />
-        </AlertIcon>
-        <AlertTitle>هذا تنبيه أساسي</AlertTitle>
-        <AlertToolbar>
-          <Button
-            variant="inverse"
-            mode="link"
-            underlined="solid"
-            size="sm"
-            className="flex mt-0.5"
-          >
-            ترقية
-          </Button>
-        </AlertToolbar>
+    <div className="grid w-full max-w-xl items-start gap-4">
+      <Alert>
+        <CheckCircle2Icon />
+        <AlertTitle>نجاح! تم حفظ التغييرات الخاصة بك</AlertTitle>
+        <AlertDescription>
+          هذا تنبيه يحتوي على أيقونة وعنوان ووصف.
+        </AlertDescription>
+      </Alert>
+      <Alert>
+        <PopcornIcon />
+        <AlertTitle>
+          يحتوي هذا التنبيه على عنوان وأيقونة. بدون وصف.
+        </AlertTitle>
+      </Alert>
+      <Alert variant="destructive">
+        <AlertCircleIcon />
+        <AlertTitle>تعذر معالجة الدفع الخاص بك.</AlertTitle>
+        <AlertDescription>
+          <p>يرجى التحقق من معلومات الفوترة والمحاولة مرة أخرى.</p>
+          <ul className="list-inside list-disc text-sm">
+            <li>تحقق من تفاصيل بطاقتك</li>
+            <li>تأكد من وجود أموال كافية</li>
+            <li>تحقق من عنوان الفوترة</li>
+          </ul>
+        </AlertDescription>
       </Alert>
     </div>
-  );
+  )
 }
-

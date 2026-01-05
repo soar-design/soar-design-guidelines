@@ -1,5 +1,5 @@
-import { Button } from "@soar-design/soar-react-components";
+import { Button } from "@soar-design/soar-react-components"
 
-export default function ButtonDemo() {
-  return <Button variant="outline">زر</Button>;
+export function ButtonOutlineRTL() {
+  return <Button variant="outline">محدد</Button>
 }

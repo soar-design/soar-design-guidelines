@@ -15,7 +15,7 @@ try {
   // Debug: Show what we're trying to install
   console.log('==== DEBUGGING INFO ====');
   const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-  console.log('soar-ds dependency URL:', pkg.dependencies['@mostaphaqammari/soar-ds']);
+  console.log('soar-react-components dependency URL:', pkg.dependencies['@soar-design/soar-react-components']);
   
   // Check if there's an existing git config
   try {
