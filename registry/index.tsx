@@ -171,6 +171,30 @@ import { DialogDemo } from "./dialog/demo";
 import { DialogDemoRTL } from "./dialog/demo-rtl";
 import { DialogCloseButton } from "./dialog/close-button";
 import { DialogCloseButtonRTL } from "./dialog/close-button-rtl";
+import { DrawerDemo } from "./drawer/demo";
+import { DrawerDemoRTL } from "./drawer/demo-rtl";
+import { DrawerResponsiveDialog } from "./drawer/responsive-dialog";
+import { DrawerResponsiveDialogRTL } from "./drawer/responsive-dialog-rtl";
+import { DropdownMenuDemo } from "./dropdown-menu/demo";
+import { DropdownMenuDemoRTL } from "./dropdown-menu/demo-rtl";
+import { DropdownMenuCheckboxes } from "./dropdown-menu/checkboxes";
+import { DropdownMenuCheckboxesRTL } from "./dropdown-menu/checkboxes-rtl";
+import { DropdownMenuRadioGroupDemo } from "./dropdown-menu/radio-group";
+import { DropdownMenuRadioGroupDemoRTL } from "./dropdown-menu/radio-group-rtl";
+import { DropdownMenuDialog } from "./dropdown-menu/dialog";
+import { DropdownMenuDialogRTL } from "./dropdown-menu/dialog-rtl";
+import { EmptyDemo } from "./empty/demo";
+import { EmptyDemoRTL } from "./empty/demo-rtl";
+import { EmptyOutline } from "./empty/outline";
+import { EmptyOutlineRTL } from "./empty/outline-rtl";
+import { EmptyMuted } from "./empty/muted";
+import { EmptyMutedRTL } from "./empty/muted-rtl";
+import { EmptyAvatar } from "./empty/avatar";
+import { EmptyAvatarRTL } from "./empty/avatar-rtl";
+import { EmptyAvatarGroup } from "./empty/avatar-group";
+import { EmptyAvatarGroupRTL } from "./empty/avatar-group-rtl";
+import { EmptyInputGroup } from "./empty/input-group";
+import { EmptyInputGroupRTL } from "./empty/input-group-rtl";
 
 export const registry: Record<string, React.ComponentType> = {
   "accordion-demo": AccordionDemo,
@@ -345,4 +369,28 @@ export const registry: Record<string, React.ComponentType> = {
   "dialog-demo-rtl": DialogDemoRTL,
   "dialog-close-button": DialogCloseButton,
   "dialog-close-button-rtl": DialogCloseButtonRTL,
+  "drawer-demo": DrawerDemo,
+  "drawer-demo-rtl": DrawerDemoRTL,
+  "drawer-responsive-dialog": DrawerResponsiveDialog,
+  "drawer-responsive-dialog-rtl": DrawerResponsiveDialogRTL,
+  "dropdown-menu-demo": DropdownMenuDemo,
+  "dropdown-menu-demo-rtl": DropdownMenuDemoRTL,
+  "dropdown-menu-checkboxes": DropdownMenuCheckboxes,
+  "dropdown-menu-checkboxes-rtl": DropdownMenuCheckboxesRTL,
+  "dropdown-menu-radio-group": DropdownMenuRadioGroupDemo,
+  "dropdown-menu-radio-group-rtl": DropdownMenuRadioGroupDemoRTL,
+  "dropdown-menu-dialog": DropdownMenuDialog,
+  "dropdown-menu-dialog-rtl": DropdownMenuDialogRTL,
+  "empty-demo": EmptyDemo,
+  "empty-demo-rtl": EmptyDemoRTL,
+  "empty-outline": EmptyOutline,
+  "empty-outline-rtl": EmptyOutlineRTL,
+  "empty-muted": EmptyMuted,
+  "empty-muted-rtl": EmptyMutedRTL,
+  "empty-avatar": EmptyAvatar,
+  "empty-avatar-rtl": EmptyAvatarRTL,
+  "empty-avatar-group": EmptyAvatarGroup,
+  "empty-avatar-group-rtl": EmptyAvatarGroupRTL,
+  "empty-input-group": EmptyInputGroup,
+  "empty-input-group-rtl": EmptyInputGroupRTL,
 };

@@ -92,6 +92,18 @@ export const docsNavigation: NavItem[] = [
                 title: "Dialog",
                 href: "/docs/components/dialog",
               },
+              {
+                title: "Drawer",
+                href: "/docs/components/drawer",
+              },
+              {
+                title: "Dropdown Menu",
+                href: "/docs/components/dropdown-menu",
+              },
+              {
+                title: "Empty",
+                href: "/docs/components/empty",
+              },
             ],
           },
         ];

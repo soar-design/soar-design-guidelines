@@ -1,0 +1,50 @@
+---
+title: Dropdown Menu
+description: Displays a menu to the user — such as a set of actions or functions — triggered by a button.
+---
+
+<ComponentPreview name="dropdown-menu-demo" />
+
+## Usage
+
+```tsx
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@soar-design/soar-react-components"
+
+<DropdownMenu>
+  <DropdownMenuTrigger>Open</DropdownMenuTrigger>
+  <DropdownMenuContent>
+    <DropdownMenuLabel>My Account</DropdownMenuLabel>
+    <DropdownMenuSeparator />
+    <DropdownMenuItem>Profile</DropdownMenuItem>
+    <DropdownMenuItem>Billing</DropdownMenuItem>
+    <DropdownMenuItem>Team</DropdownMenuItem>
+    <DropdownMenuItem>Subscription</DropdownMenuItem>
+  </DropdownMenuContent>
+</DropdownMenu>
+```
+
+## Examples
+
+### Checkboxes
+
+<ComponentPreview name="dropdown-menu-checkboxes" />
+
+### Radio Group
+
+<ComponentPreview name="dropdown-menu-radio-group" />
+
+### Dialog
+
+This example shows how to open a dialog from a dropdown menu.
+
+Use `modal={false}` on the `DropdownMenu` component.
+
+<ComponentPreview name="dropdown-menu-dialog" />
+
