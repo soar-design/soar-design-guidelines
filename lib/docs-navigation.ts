@@ -104,6 +104,10 @@ export const docsNavigation: NavItem[] = [
                 title: "Empty",
                 href: "/docs/components/empty",
               },
+              {
+                title: "Field",
+                href: "/docs/components/field",
+              },
             ],
           },
         ];

@@ -195,6 +195,30 @@ import { EmptyAvatarGroup } from "./empty/avatar-group";
 import { EmptyAvatarGroupRTL } from "./empty/avatar-group-rtl";
 import { EmptyInputGroup } from "./empty/input-group";
 import { EmptyInputGroupRTL } from "./empty/input-group-rtl";
+import { FieldDemo } from "./field/demo";
+import { FieldDemoRTL } from "./field/demo-rtl";
+import { FieldInput } from "./field/input";
+import { FieldInputRTL } from "./field/input-rtl";
+import { FieldTextarea } from "./field/textarea";
+import { FieldTextareaRTL } from "./field/textarea-rtl";
+import { FieldSelect } from "./field/select";
+import { FieldSelectRTL } from "./field/select-rtl";
+import { FieldSlider } from "./field/slider";
+import { FieldSliderRTL } from "./field/slider-rtl";
+import { FieldFieldset } from "./field/fieldset";
+import { FieldFieldsetRTL } from "./field/fieldset-rtl";
+import { FieldCheckbox } from "./field/checkbox";
+import { FieldCheckboxRTL } from "./field/checkbox-rtl";
+import { FieldRadio } from "./field/radio";
+import { FieldRadioRTL } from "./field/radio-rtl";
+import { FieldSwitch } from "./field/switch";
+import { FieldSwitchRTL } from "./field/switch-rtl";
+import { FieldChoiceCard } from "./field/choice-card";
+import { FieldChoiceCardRTL } from "./field/choice-card-rtl";
+import { FieldGroupExample } from "./field/field-group";
+import { FieldGroupExampleRTL } from "./field/field-group-rtl";
+import { FieldResponsive } from "./field/responsive";
+import { FieldResponsiveRTL } from "./field/responsive-rtl";
 
 export const registry: Record<string, React.ComponentType> = {
   "accordion-demo": AccordionDemo,
@@ -393,4 +417,28 @@ export const registry: Record<string, React.ComponentType> = {
   "empty-avatar-group-rtl": EmptyAvatarGroupRTL,
   "empty-input-group": EmptyInputGroup,
   "empty-input-group-rtl": EmptyInputGroupRTL,
+  "field-demo": FieldDemo,
+  "field-demo-rtl": FieldDemoRTL,
+  "field-input": FieldInput,
+  "field-input-rtl": FieldInputRTL,
+  "field-textarea": FieldTextarea,
+  "field-textarea-rtl": FieldTextareaRTL,
+  "field-select": FieldSelect,
+  "field-select-rtl": FieldSelectRTL,
+  "field-slider": FieldSlider,
+  "field-slider-rtl": FieldSliderRTL,
+  "field-fieldset": FieldFieldset,
+  "field-fieldset-rtl": FieldFieldsetRTL,
+  "field-checkbox": FieldCheckbox,
+  "field-checkbox-rtl": FieldCheckboxRTL,
+  "field-radio": FieldRadio,
+  "field-radio-rtl": FieldRadioRTL,
+  "field-switch": FieldSwitch,
+  "field-switch-rtl": FieldSwitchRTL,
+  "field-choice-card": FieldChoiceCard,
+  "field-choice-card-rtl": FieldChoiceCardRTL,
+  "field-field-group": FieldGroupExample,
+  "field-field-group-rtl": FieldGroupExampleRTL,
+  "field-responsive": FieldResponsive,
+  "field-responsive-rtl": FieldResponsiveRTL,
 };
