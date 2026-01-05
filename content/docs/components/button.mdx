@@ -1,82 +1,106 @@
 ---
 title: Button
-description: Renders a clickable button or an element styled as a button
-featured: true
+description: Displays a button or a component that looks like a button.
 ---
+
+**Updated:** We have updated the button component to add new sizes: `icon-sm` and `icon-lg`. See the changelog for more details. Follow the instructions to update your project.
 
 <ComponentPreview name="button-demo" />
 
+## Usage
+
+```tsx
+import { Button } from "@soar-design/soar-react-components"
+
+<Button variant="outline">Button</Button>
+```
+
+## Cursor
+
+Tailwind v4 switched from `cursor: pointer` to `cursor: default` for the button component.
+
+If you want to keep the `cursor: pointer` behavior, add the following code to your CSS file:
+
+```css
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+```
+
 ## Examples
 
-### Secondary
+### Size
 
-<ComponentPreview name="button-secondary" />
+Set the `size` prop to change the button size.
 
-### Mono
+<ComponentPreview name="button-size" />
 
-<ComponentPreview name="button-mono" />
+### Default
 
-### Destructive
-
-<ComponentPreview name="button-destructive" />
+<ComponentPreview name="button-default" />
 
 ### Outline
 
 <ComponentPreview name="button-outline" />
 
-### Dashed
+### Secondary
 
-<ComponentPreview name="button-dashed" />
+<ComponentPreview name="button-secondary" />
 
 ### Ghost
 
 <ComponentPreview name="button-ghost" />
 
-### With Icon
+### Destructive
 
-<ComponentPreview name="button-with-icon" />
-
-### As Input
-
-<ComponentPreview name="button-as-input" />
-
-### Icon Only
-
-<ComponentPreview name="button-icon-only" />
-
-### Loading
-
-<ComponentPreview name="button-loading" />
-
-### Badge
-
-<ComponentPreview name="button-badge" />
-
-### Size
-
-<ComponentPreview name="button-size" />
+<ComponentPreview name="button-destructive" />
 
 ### Link
 
 <ComponentPreview name="button-link" />
 
-### Full Width
+### Icon
 
-<ComponentPreview name="button-full-width" />
+<ComponentPreview name="button-icon" />
 
-### Disabled
+### With Icon
 
-<ComponentPreview name="button-disabled" />
+The spacing between the icon and the text is automatically adjusted based on the size of the button. You do not need any margin on the icon.
+
+<ComponentPreview name="button-with-icon" />
+
+### Rounded
+
+Use the `rounded-full` class to make the button rounded.
+
+<ComponentPreview name="button-rounded" />
+
+### Spinner
+
+<ComponentPreview name="button-loading" />
+
+### Button Group
+
+To create a button group, use the `ButtonGroup` component. See the Button Group documentation for more details.
+
+<ComponentPreview name="button-group-demo" />
+
+### Link
+
+You can use the `asChild` prop to make another component look like a button. Here's an example of a link that looks like a button.
+
+<ComponentPreview name="button-link-as-button" />
 
 ## API Reference
 
-This component provides a versatile and customizable button system with various styles, appearances, and sizes.
-
 ### Button
 
-This is the root component for creating buttons with multiple variants, appearances, sizes, and shapes.
+The `Button` component is a wrapper around the `button` element that adds a variety of styles and functionality.
 
-<PropsTable>
+<Table>
   <TableHeader>
     <TableRow>
       <TableHead>Prop</TableHead>
@@ -86,53 +110,38 @@ This is the root component for creating buttons with multiple variants, appearan
   </TableHeader>
   <TableBody>
     <TableRow>
-      <TableCell className="font-mono text-xs">variant</TableCell>
-      <TableCell className="font-mono text-xs">enum</TableCell>
-      <TableCell className="font-mono text-xs">primary</TableCell>
+      <TableCell>variant</TableCell>
+      <TableCell>"default" \| "outline" \| "ghost" \| "destructive" \| "secondary" \| "link"</TableCell>
+      <TableCell>"default"</TableCell>
     </TableRow>
     <TableRow>
-      <TableCell className="font-mono text-xs">appearance</TableCell>
-      <TableCell className="font-mono text-xs">enum</TableCell>
-      <TableCell className="font-mono text-xs">-</TableCell>
+      <TableCell>size</TableCell>
+      <TableCell>"default" \| "sm" \| "lg" \| "icon" \| "icon-sm" \| "icon-lg"</TableCell>
+      <TableCell>"default"</TableCell>
     </TableRow>
     <TableRow>
-      <TableCell className="font-mono text-xs">size</TableCell>
-      <TableCell className="font-mono text-xs">enum</TableCell>
-      <TableCell className="font-mono text-xs">md</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-mono text-xs">shape</TableCell>
-      <TableCell className="font-mono text-xs">enum</TableCell>
-      <TableCell className="font-mono text-xs">default</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-mono text-xs">mode</TableCell>
-      <TableCell className="font-mono text-xs">enum</TableCell>
-      <TableCell className="font-mono text-xs">default</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-mono text-xs">underline</TableCell>
-      <TableCell className="font-mono text-xs">enum</TableCell>
-      <TableCell className="font-mono text-xs">-</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-mono text-xs">underlined</TableCell>
-      <TableCell className="font-mono text-xs">enum</TableCell>
-      <TableCell className="font-mono text-xs">-</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-mono text-xs">asChild</TableCell>
-      <TableCell className="font-mono text-xs">boolean</TableCell>
-      <TableCell className="font-mono text-xs">false</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-mono text-xs">className</TableCell>
-      <TableCell className="font-mono text-xs">string</TableCell>
-      <TableCell className="font-mono text-xs">-</TableCell>
+      <TableCell>asChild</TableCell>
+      <TableCell>boolean</TableCell>
+      <TableCell>false</TableCell>
     </TableRow>
   </TableBody>
-</PropsTable>
+</Table>
 
-## Credits
+## Changelog
 
-* Built with Radix UI Slot.
+### 2025-09-24 New sizes
+
+We have added two new sizes to the button component: `icon-sm` and `icon-lg`. These sizes are used to create icon buttons. To add them, edit `button.tsx` and add the following code under `size` in `buttonVariants`:
+
+```tsx
+const buttonVariants = cva("...", {
+  variants: {
+    size: {
+      // ...
+      "icon-sm": "size-8",
+      "icon-lg": "size-10",
+      // ...
+    },
+  },
+})
+```

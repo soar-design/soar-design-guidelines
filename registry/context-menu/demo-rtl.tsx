@@ -1,3 +1,5 @@
+"use client"
+
 import {
   ContextMenu,
   ContextMenuCheckboxItem,
@@ -12,9 +14,9 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger,
-} from "@soar-design/soar-react-components";
+} from "@soar-design/soar-react-components"
 
-export default function ContextMenuDemo() {
+export function ContextMenuDemoRTL() {
   return (
     <ContextMenu>
       <ContextMenuTrigger className="flex h-[150px] w-[300px] items-center justify-center rounded-md border border-dashed text-sm">
@@ -26,7 +28,7 @@ export default function ContextMenuDemo() {
           <ContextMenuShortcut>⌘[</ContextMenuShortcut>
         </ContextMenuItem>
         <ContextMenuItem inset disabled>
-          تقدم
+          إلى الأمام
           <ContextMenuShortcut>⌘]</ContextMenuShortcut>
         </ContextMenuItem>
         <ContextMenuItem inset>
@@ -34,7 +36,7 @@ export default function ContextMenuDemo() {
           <ContextMenuShortcut>⌘R</ContextMenuShortcut>
         </ContextMenuItem>
         <ContextMenuSub>
-          <ContextMenuSubTrigger inset>أدوات إضافية</ContextMenuSubTrigger>
+          <ContextMenuSubTrigger inset>المزيد من الأدوات</ContextMenuSubTrigger>
           <ContextMenuSubContent className="w-44">
             <ContextMenuItem>حفظ الصفحة...</ContextMenuItem>
             <ContextMenuItem>إنشاء اختصار...</ContextMenuItem>
@@ -46,16 +48,20 @@ export default function ContextMenuDemo() {
           </ContextMenuSubContent>
         </ContextMenuSub>
         <ContextMenuSeparator />
-        <ContextMenuCheckboxItem checked>إظهار الإشارات المرجعية</ContextMenuCheckboxItem>
+        <ContextMenuCheckboxItem checked>
+          إظهار الإشارات المرجعية
+        </ContextMenuCheckboxItem>
         <ContextMenuCheckboxItem>إظهار عناوين URL الكاملة</ContextMenuCheckboxItem>
         <ContextMenuSeparator />
         <ContextMenuRadioGroup value="pedro">
           <ContextMenuLabel inset>الأشخاص</ContextMenuLabel>
-          <ContextMenuRadioItem value="pedro">Pedro Duarte</ContextMenuRadioItem>
+          <ContextMenuRadioItem value="pedro">
+            Pedro Duarte
+          </ContextMenuRadioItem>
           <ContextMenuRadioItem value="colm">Colm Tuite</ContextMenuRadioItem>
         </ContextMenuRadioGroup>
       </ContextMenuContent>
     </ContextMenu>
-  );
+  )
 }
 

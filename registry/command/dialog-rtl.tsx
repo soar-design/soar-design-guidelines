@@ -1,6 +1,15 @@
-"use client";
+"use client"
 
-import * as React from "react";
+import * as React from "react"
+import {
+  Calculator,
+  Calendar,
+  CreditCard,
+  Settings,
+  Smile,
+  User,
+} from "lucide-react"
+
 import {
   CommandDialog,
   CommandEmpty,
@@ -10,27 +19,26 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@soar-design/soar-react-components";
-import { Calculator, Calendar, CreditCard, Settings, Smile, User } from "lucide-react";
+} from "@soar-design/soar-react-components"
 
-export default function CommandDialogDemo() {
-  const [open, setOpen] = React.useState(false);
+export function CommandDialogDemoRTL() {
+  const [open, setOpen] = React.useState(false)
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if (e.key === "j" && (e.metaKey || e.ctrlKey)) {
-        e.preventDefault();
-        setOpen((open) => !open);
+        e.preventDefault()
+        setOpen((open) => !open)
       }
-    };
+    }
 
-    document.addEventListener("keydown", down);
-    return () => document.removeEventListener("keydown", down);
-  }, []);
+    document.addEventListener("keydown", down)
+    return () => document.removeEventListener("keydown", down)
+  }, [])
 
   return (
     <>
-      <p className="text-muted-foreground text-sm">
+      <p className="text-muted-foreground text-sm flex items-center gap-1">
         اضغط على{" "}
         <kbd className="bg-muted text-muted-foreground pointer-events-none inline-flex h-5 items-center gap-1 rounded border px-1.5 font-mono text-[10px] font-medium opacity-100 select-none">
           <span className="text-xs">⌘</span>J
@@ -63,7 +71,7 @@ export default function CommandDialogDemo() {
             </CommandItem>
             <CommandItem>
               <CreditCard />
-              <span>الفواتير</span>
+              <span>الفوترة</span>
               <CommandShortcut>⌘B</CommandShortcut>
             </CommandItem>
             <CommandItem>
@@ -75,6 +83,6 @@ export default function CommandDialogDemo() {
         </CommandList>
       </CommandDialog>
     </>
-  );
+  )
 }
 

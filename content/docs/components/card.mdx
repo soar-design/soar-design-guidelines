@@ -1,211 +1,36 @@
 ---
 title: Card
-description: Containers for displaying content and actions about a single subject.
-featured: true
+description: Displays a card with header, content, and footer.
 ---
 
 <ComponentPreview name="card-demo" />
 
-## Examples
+## Usage
 
-### Accent
+```tsx
+import {
+  Card,
+  CardAction,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@soar-design/soar-react-components"
+```
 
-<ComponentPreview name="card-accent" />
-
-## API Reference
-
-This component provides a customizable card system with various sections and styles.
-
-### Card
-
-The main container component that provides context and styling for all card elements.
-
-<PropsTable>
-  <TableHeader>
-    <TableRow>
-      <TableHead>Prop</TableHead>
-      <TableHead>Type</TableHead>
-      <TableHead>Default</TableHead>
-    </TableRow>
-  </TableHeader>
-  <TableBody>
-    <TableRow>
-      <TableCell className="font-mono text-xs">variant</TableCell>
-      <TableCell className="font-mono text-xs">enum</TableCell>
-      <TableCell className="font-mono text-xs">default</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-mono text-xs">className</TableCell>
-      <TableCell className="font-mono text-xs">string</TableCell>
-      <TableCell className="font-mono text-xs">-</TableCell>
-    </TableRow>
-  </TableBody>
-</PropsTable>
-
-### CardHeader
-
-A component for the header section of the card. Inherits variant from Card context.
-
-<PropsTable>
-  <TableHeader>
-    <TableRow>
-      <TableHead>Prop</TableHead>
-      <TableHead>Type</TableHead>
-      <TableHead>Default</TableHead>
-    </TableRow>
-  </TableHeader>
-  <TableBody>
-    <TableRow>
-      <TableCell className="font-mono text-xs">className</TableCell>
-      <TableCell className="font-mono text-xs">string</TableCell>
-      <TableCell className="font-mono text-xs">-</TableCell>
-    </TableRow>
-  </TableBody>
-</PropsTable>
-
-### CardHeading
-
-A container for the card's heading content with consistent spacing.
-
-<PropsTable>
-  <TableHeader>
-    <TableRow>
-      <TableHead>Prop</TableHead>
-      <TableHead>Type</TableHead>
-      <TableHead>Default</TableHead>
-    </TableRow>
-  </TableHeader>
-  <TableBody>
-    <TableRow>
-      <TableCell className="font-mono text-xs">className</TableCell>
-      <TableCell className="font-mono text-xs">string</TableCell>
-      <TableCell className="font-mono text-xs">-</TableCell>
-    </TableRow>
-  </TableBody>
-</PropsTable>
-
-### CardToolbar
-
-A container for action items in the card header with flexbox layout.
-
-<PropsTable>
-  <TableHeader>
-    <TableRow>
-      <TableHead>Prop</TableHead>
-      <TableHead>Type</TableHead>
-      <TableHead>Default</TableHead>
-    </TableRow>
-  </TableHeader>
-  <TableBody>
-    <TableRow>
-      <TableCell className="font-mono text-xs">className</TableCell>
-      <TableCell className="font-mono text-xs">string</TableCell>
-      <TableCell className="font-mono text-xs">-</TableCell>
-    </TableRow>
-  </TableBody>
-</PropsTable>
-
-### CardTitle
-
-A heading component for the card's title with default typography styles.
-
-<PropsTable>
-  <TableHeader>
-    <TableRow>
-      <TableHead>Prop</TableHead>
-      <TableHead>Type</TableHead>
-      <TableHead>Default</TableHead>
-    </TableRow>
-  </TableHeader>
-  <TableBody>
-    <TableRow>
-      <TableCell className="font-mono text-xs">className</TableCell>
-      <TableCell className="font-mono text-xs">string</TableCell>
-      <TableCell className="font-mono text-xs">-</TableCell>
-    </TableRow>
-  </TableBody>
-</PropsTable>
-
-### CardDescription
-
-A component for descriptive text with muted styling.
-
-<PropsTable>
-  <TableHeader>
-    <TableRow>
-      <TableHead>Prop</TableHead>
-      <TableHead>Type</TableHead>
-      <TableHead>Default</TableHead>
-    </TableRow>
-  </TableHeader>
-  <TableBody>
-    <TableRow>
-      <TableCell className="font-mono text-xs">className</TableCell>
-      <TableCell className="font-mono text-xs">string</TableCell>
-      <TableCell className="font-mono text-xs">-</TableCell>
-    </TableRow>
-  </TableBody>
-</PropsTable>
-
-### CardContent
-
-The main content area of the card. Inherits variant from Card context.
-
-<PropsTable>
-  <TableHeader>
-    <TableRow>
-      <TableHead>Prop</TableHead>
-      <TableHead>Type</TableHead>
-      <TableHead>Default</TableHead>
-    </TableRow>
-  </TableHeader>
-  <TableBody>
-    <TableRow>
-      <TableCell className="font-mono text-xs">className</TableCell>
-      <TableCell className="font-mono text-xs">string</TableCell>
-      <TableCell className="font-mono text-xs">-</TableCell>
-    </TableRow>
-  </TableBody>
-</PropsTable>
-
-### CardTable
-
-A grid container for table layouts within the card. Inherits variant from Card context.
-
-<PropsTable>
-  <TableHeader>
-    <TableRow>
-      <TableHead>Prop</TableHead>
-      <TableHead>Type</TableHead>
-      <TableHead>Default</TableHead>
-    </TableRow>
-  </TableHeader>
-  <TableBody>
-    <TableRow>
-      <TableCell className="font-mono text-xs">className</TableCell>
-      <TableCell className="font-mono text-xs">string</TableCell>
-      <TableCell className="font-mono text-xs">-</TableCell>
-    </TableRow>
-  </TableBody>
-</PropsTable>
-
-### CardFooter
-
-The footer section of the card. Inherits variant from Card context.
-
-<PropsTable>
-  <TableHeader>
-    <TableRow>
-      <TableHead>Prop</TableHead>
-      <TableHead>Type</TableHead>
-      <TableHead>Default</TableHead>
-    </TableRow>
-  </TableHeader>
-  <TableBody>
-    <TableRow>
-      <TableCell className="font-mono text-xs">className</TableCell>
-      <TableCell className="font-mono text-xs">string</TableCell>
-      <TableCell className="font-mono text-xs">-</TableCell>
-    </TableRow>
-  </TableBody>
-</PropsTable>
+```tsx
+<Card>
+  <CardHeader>
+    <CardTitle>Card Title</CardTitle>
+    <CardDescription>Card Description</CardDescription>
+    <CardAction>Card Action</CardAction>
+  </CardHeader>
+  <CardContent>
+    <p>Card Content</p>
+  </CardContent>
+  <CardFooter>
+    <p>Card Footer</p>
+  </CardFooter>
+</Card>
+```

@@ -1,3 +1,14 @@
+"use client"
+
+import {
+  Calculator,
+  Calendar,
+  CreditCard,
+  Settings,
+  Smile,
+  User,
+} from "lucide-react"
+
 import {
   Command,
   CommandEmpty,
@@ -7,12 +18,11 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@soar-design/soar-react-components";
-import { Calculator, Calendar, CreditCard, Settings, Smile, User } from "lucide-react";
+} from "@soar-design/soar-react-components"
 
-export default function CommandDemo() {
+export function CommandDemo() {
   return (
-    <Command className="rounded-lg border shadow-md md:min-w-[450px] max-w-[500px]">
+    <Command className="rounded-lg border shadow-md md:min-w-[450px]">
       <CommandInput placeholder="Type a command or search..." />
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>
@@ -50,6 +60,6 @@ export default function CommandDemo() {
         </CommandGroup>
       </CommandList>
     </Command>
-  );
+  )
 }
 

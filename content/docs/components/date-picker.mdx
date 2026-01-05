@@ -1,147 +1,68 @@
 ---
 title: Date Picker
-description: A date input component that combines a calendar popover with an input field.
+description: A date picker component with range and presets.
 ---
 
 <ComponentPreview name="date-picker-demo" />
 
+## Usage
+
+```tsx
+"use client"
+
+import * as React from "react"
+import { format } from "date-fns"
+import { Calendar as CalendarIcon } from "lucide-react"
+
+import { cn } from "@/lib/utils"
+import { Button } from "@soar-design/soar-react-components"
+import { Calendar } from "@soar-design/soar-react-components"
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@soar-design/soar-react-components"
+
+export function DatePickerDemo() {
+  const [date, setDate] = React.useState<Date>()
+
+  return (
+    <Popover>
+      <PopoverTrigger asChild>
+        <Button
+          variant="outline"
+          data-empty={!date}
+          className="data-[empty=true]:text-muted-foreground w-[280px] justify-start text-left font-normal"
+        >
+          <CalendarIcon />
+          {date ? format(date, "PPP") : <span>Pick a date</span>}
+        </Button>
+      </PopoverTrigger>
+      <PopoverContent className="w-auto p-0">
+        <Calendar mode="single" selected={date} onSelect={setDate} />
+      </PopoverContent>
+    </Popover>
+  )
+}
+```
+
 ## Examples
 
-### Date & Time
+### Date of Birth Picker
+
+<ComponentPreview name="date-picker-date-of-birth" />
+
+### Picker with Input
+
+<ComponentPreview name="date-picker-with-input" />
+
+### Date and Time Picker
 
 <ComponentPreview name="date-picker-date-time" />
 
-### Range
+### Natural Language Picker
 
-<ComponentPreview name="date-picker-range" />
+This component uses the `chrono-node` library to parse natural language dates.
 
-### Presets
+<ComponentPreview name="date-picker-natural-language" />
 
-<ComponentPreview name="date-picker-presets" />
-
-### Form
-
-<ComponentPreview name="date-picker-form" />
-
-## API Reference
-
-This component is built using react-day-picker and Radix UI Popover primitives. For detailed information about the calendar functionality, please visit the react-day-picker documentation.
-
-### Calendar
-
-This component is based on the DayPicker component from react-day-picker. For all available props, refer to the react-day-picker documentation. The component includes the following custom styling props:
-
-<PropsTable>
-  <TableHeader>
-    <TableRow>
-      <TableHead>Prop</TableHead>
-      <TableHead>Type</TableHead>
-      <TableHead>Default</TableHead>
-    </TableRow>
-  </TableHeader>
-  <TableBody>
-    <TableRow>
-      <TableCell className="font-mono text-xs">className</TableCell>
-      <TableCell className="font-mono text-xs">string</TableCell>
-      <TableCell className="font-mono text-xs">undefined</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-mono text-xs">classNames</TableCell>
-      <TableCell className="font-mono text-xs">object</TableCell>
-      <TableCell className="font-mono text-xs">See calendar.tsx</TableCell>
-    </TableRow>
-  </TableBody>
-</PropsTable>
-
-### DatePickerTrigger
-
-The trigger button that opens the date picker popover.
-
-<PropsTable>
-  <TableHeader>
-    <TableRow>
-      <TableHead>Prop</TableHead>
-      <TableHead>Type</TableHead>
-      <TableHead>Default</TableHead>
-    </TableRow>
-  </TableHeader>
-  <TableBody>
-    <TableRow>
-      <TableCell className="font-mono text-xs">asInput</TableCell>
-      <TableCell className="font-mono text-xs">boolean</TableCell>
-      <TableCell className="font-mono text-xs">false</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-mono text-xs">placeholder</TableCell>
-      <TableCell className="font-mono text-xs">string</TableCell>
-      <TableCell className="font-mono text-xs">"Pick a date"</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-mono text-xs">className</TableCell>
-      <TableCell className="font-mono text-xs">string</TableCell>
-      <TableCell className="font-mono text-xs">undefined</TableCell>
-    </TableRow>
-  </TableBody>
-</PropsTable>
-
-### DatePickerContent
-
-The popover content that contains the calendar. This component extends Radix UI's Popover.Content.
-
-<PropsTable>
-  <TableHeader>
-    <TableRow>
-      <TableHead>Prop</TableHead>
-      <TableHead>Type</TableHead>
-      <TableHead>Default</TableHead>
-    </TableRow>
-  </TableHeader>
-  <TableBody>
-    <TableRow>
-      <TableCell className="font-mono text-xs">className</TableCell>
-      <TableCell className="font-mono text-xs">string</TableCell>
-      <TableCell className="font-mono text-xs">undefined</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-mono text-xs">align</TableCell>
-      <TableCell className="font-mono text-xs">enum</TableCell>
-      <TableCell className="font-mono text-xs">"center"</TableCell>
-    </TableRow>
-  </TableBody>
-</PropsTable>
-
-### DatePickerPresets
-
-A component for displaying preset date ranges.
-
-<PropsTable>
-  <TableHeader>
-    <TableRow>
-      <TableHead>Prop</TableHead>
-      <TableHead>Type</TableHead>
-      <TableHead>Default</TableHead>
-    </TableRow>
-  </TableHeader>
-  <TableBody>
-    <TableRow>
-      <TableCell className="font-mono text-xs">presets</TableCell>
-      <TableCell className="font-mono text-xs">Array&lt;&#123; label: string; range: DateRange &#125;&gt;</TableCell>
-      <TableCell className="font-mono text-xs">-</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-mono text-xs">onSelect</TableCell>
-      <TableCell className="font-mono text-xs">(range: DateRange) =&gt; void</TableCell>
-      <TableCell className="font-mono text-xs">-</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-mono text-xs">className</TableCell>
-      <TableCell className="font-mono text-xs">string</TableCell>
-      <TableCell className="font-mono text-xs">undefined</TableCell>
-    </TableRow>
-  </TableBody>
-</PropsTable>
-
-## Credits
-
-* Built with React DayPicker.
-* Built with Radix UI Popover.
