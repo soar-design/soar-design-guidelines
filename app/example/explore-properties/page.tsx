@@ -16,7 +16,6 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   Badge,
-  BadgeDot,
   Separator,
   Tabs,
   TabsList,
@@ -288,7 +287,7 @@ export default function ExplorePropertiesPage() {
                   </Badge>
                   {property.readyToMove && (
                     <Badge variant="success" size="lg" appearance="outline">
-                      <BadgeDot /> Ready to Move
+                      <span className="mr-1.5 h-2 w-2 rounded-full bg-current"></span> Ready to Move
                     </Badge>
                   )}
                 </div>
@@ -364,7 +363,7 @@ export default function ExplorePropertiesPage() {
                         </Badge>
                         {selectedProperty.readyToMove && (
                           <Badge variant="success" appearance="outline" size="lg">
-                            <BadgeDot /> Ready to Move
+                            <span className="mr-1.5 h-2 w-2 rounded-full bg-current"></span> Ready to Move
                           </Badge>
                         )}
                       </div>

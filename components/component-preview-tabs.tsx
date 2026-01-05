@@ -67,7 +67,7 @@ export function ComponentPreviewTabs({
       {...props}
     >
       <div className="flex items-center gap-2 mb-3">
-        <TabsList shape="pill">
+        <TabsList>
           <TabsTrigger value="preview">Preview</TabsTrigger>
           <TabsTrigger value="code">Code</TabsTrigger>
         </TabsList>

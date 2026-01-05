@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Badge, BadgeDot } from "@soar-design/soar-react-components";
+import { Badge } from "@soar-design/soar-react-components";
 import packageJson from "@/package.json";
 import { Footer } from "@/components/footer";
 
@@ -36,7 +36,7 @@ export default function Home() {
               shape="circle"
               className="tabular-nums"
             >
-              <BadgeDot></BadgeDot>v{packageJson.version} Alpha
+              <span className="mr-1.5 h-2 w-2 rounded-full bg-current"></span>v{packageJson.version} Alpha
             </Badge>
           </div>
         </Link>

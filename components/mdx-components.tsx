@@ -20,6 +20,9 @@ import {
   StepperSeparator,
   StepperTitle,
   StepperTrigger,
+  Kbd,
+  Alert,
+  AlertDescription,
 } from "@soar-design/soar-react-components";
 import { ComponentPreview as ComponentPreviewBase } from "@/components/component-preview";
 import { getRegistryComponentSource } from "@/lib/registry-utils";
@@ -66,6 +69,16 @@ export function PropsTable({ children }: React.ComponentProps<"table">) {
     <div className="w-full overflow-x-auto">
       <Table className="w-full text-sm">{children}</Table>
     </div>
+  );
+}
+
+export function Callout({ children, ...props }: React.ComponentProps<typeof Alert>) {
+  return (
+    <Alert className="my-4" {...props}>
+      <AlertDescription className="[&>p]:leading-7 [&>p:last-child]:mb-0">
+        {children}
+      </AlertDescription>
+    </Alert>
   );
 }
 
@@ -161,12 +174,14 @@ const components = {
   Steps,
   Step,
   PropsTable,
+  Callout,
   Table,
   TableHeader,
   TableBody,
   TableRow,
   TableHead,
   TableCell,
+  Kbd,
   Tabs: ({ className, ...props }: React.ComponentProps<typeof Tabs>) => (
     <Tabs className={cn("relative w-full", className)} {...props} />
   ),

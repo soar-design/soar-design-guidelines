@@ -34,6 +34,12 @@ function renderCodeBlock(code: string) {
                   }
                 },
                 onVisitHighlightedLine(node: any) {
+                  if (!node.properties) {
+                    node.properties = {};
+                  }
+                  if (!node.properties.className) {
+                    node.properties.className = [];
+                  }
                   node.properties.className.push("highlighted");
                 },
                 onVisitHighlightedChars(node: any) {
@@ -60,8 +66,8 @@ export async function ComponentPreview({
   const rtlName = `${name}-rtl`;
   const rtlCode = await getRegistryComponentSource(rtlName);
   
-  const ltrCodeBlock = ltrCode ? renderCodeBlock(ltrCode) : null;
-  const rtlCodeBlock = rtlCode ? renderCodeBlock(rtlCode) : null;
+  const ltrCodeBlock = ltrCode && ltrCode.trim() ? renderCodeBlock(ltrCode) : null;
+  const rtlCodeBlock = rtlCode && rtlCode.trim() ? renderCodeBlock(rtlCode) : null;
 
   return (
     <ComponentPreviewTabs

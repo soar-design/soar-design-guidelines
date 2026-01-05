@@ -84,6 +84,12 @@ export default async function DocPage({ params }: { params: Promise<{ slug: stri
                           }
                         },
                         onVisitHighlightedLine(node: any) {
+                          if (!node.properties) {
+                            node.properties = {};
+                          }
+                          if (!node.properties.className) {
+                            node.properties.className = [];
+                          }
                           node.properties.className.push("highlighted");
                         },
                         onVisitHighlightedChars(node: any) {

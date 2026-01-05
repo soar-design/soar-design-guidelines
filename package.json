@@ -14,9 +14,10 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
-    "@soar-design/soar-react-components": "github:soar-design/soar-react-components",
     "@rehype-pretty/transformers": "^0.13.2",
+    "@soar-design/soar-react-components": "github:soar-design/soar-react-components",
     "@tanstack/react-table": "^8.21.3",
+    "chrono-node": "^2.9.0",
     "clsx": "^2.1.1",
     "embla-carousel-autoplay": "^8.6.0",
     "github-slugger": "^2.0.0",

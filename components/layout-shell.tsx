@@ -35,7 +35,6 @@ import {
   TabsList,
   TabsTrigger,
   Badge,
-  BadgeDot,
 } from "@soar-design/soar-react-components";
 import { Sun, Moon, Monitor } from "lucide-react";
 import { useTheme } from "next-themes";
@@ -115,7 +114,7 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
                       shape="circle"
                       className="tabular-nums"
                     >
-                      <BadgeDot></BadgeDot>v{packageJson.version} Alpha
+                      <span className="mr-1.5 h-2 w-2 rounded-full bg-current"></span>v{packageJson.version} Alpha
                     </Badge>
                   </div>
                 </Link>

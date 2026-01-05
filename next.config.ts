@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  transpilePackages: ["@mostaphaqammari/soar-ds"],
+  transpilePackages: ["@soar-design/soar-react-components"],
   images: {
     remotePatterns: [
       {
@@ -15,6 +15,10 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "res.cloudinary.com",
+      },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
       },
     ],
   },
