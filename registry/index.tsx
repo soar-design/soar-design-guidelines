@@ -219,6 +219,8 @@ import { FieldGroupExample } from "./field/field-group";
 import { FieldGroupExampleRTL } from "./field/field-group-rtl";
 import { FieldResponsive } from "./field/responsive";
 import { FieldResponsiveRTL } from "./field/responsive-rtl";
+import { HoverCardDemo } from "./hover-card/demo";
+import { HoverCardDemoRTL } from "./hover-card/demo-rtl";
 
 export const registry: Record<string, React.ComponentType> = {
   "accordion-demo": AccordionDemo,
@@ -441,4 +443,6 @@ export const registry: Record<string, React.ComponentType> = {
   "field-field-group-rtl": FieldGroupExampleRTL,
   "field-responsive": FieldResponsive,
   "field-responsive-rtl": FieldResponsiveRTL,
+  "hover-card-demo": HoverCardDemo,
+  "hover-card-demo-rtl": HoverCardDemoRTL,
 };

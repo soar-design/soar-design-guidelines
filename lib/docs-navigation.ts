@@ -108,6 +108,10 @@ export const docsNavigation: NavItem[] = [
                 title: "Field",
                 href: "/docs/components/field",
               },
+              {
+                title: "Hover Card",
+                href: "/docs/components/hover-card",
+              },
             ],
           },
         ];
