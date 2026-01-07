@@ -112,6 +112,14 @@ export const docsNavigation: NavItem[] = [
                 title: "Hover Card",
                 href: "/docs/components/hover-card",
               },
+              {
+                title: "Input Group",
+                href: "/docs/components/input-group",
+              },
+              {
+                title: "Input OTP",
+                href: "/docs/components/input-otp",
+              },
             ],
           },
         ];

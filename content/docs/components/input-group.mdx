@@ -1,0 +1,222 @@
+---
+title: Input Group
+description: Display additional information or actions to an input or textarea.
+---
+
+<ComponentPreview name="input-group-demo" />
+
+## Usage
+
+```tsx
+import {
+  InputGroup,
+  InputGroupAddon,
+  InputGroupButton,
+  InputGroupInput,
+  InputGroupText,
+  InputGroupTextarea,
+} from "@soar-design/soar-react-components"
+
+<InputGroup>
+  <InputGroupInput placeholder="Search..." />
+  <InputGroupAddon>
+    <SearchIcon />
+  </InputGroupAddon>
+  <InputGroupAddon align="inline-end">
+    <InputGroupButton>Search</InputGroupButton>
+  </InputGroupAddon>
+</InputGroup>
+```
+
+## Examples
+
+### Icon
+
+<ComponentPreview name="input-group-icon" />
+
+### Text
+
+Display additional text information alongside inputs.
+
+<ComponentPreview name="input-group-text" />
+
+### Button
+
+Add buttons to perform actions within the input group.
+
+<ComponentPreview name="input-group-button" />
+
+### Tooltip
+
+<ComponentPreview name="input-group-tooltip" />
+
+### Textarea
+
+<ComponentPreview name="input-group-textarea" />
+
+### Spinner
+
+<ComponentPreview name="input-group-spinner" />
+
+### Label
+
+<ComponentPreview name="input-group-label" />
+
+### Dropdown
+
+<ComponentPreview name="input-group-dropdown" />
+
+### Button Group
+
+Wrap input groups with button groups to create prefixes and suffixes.
+
+<ComponentPreview name="input-group-button-group" />
+
+### Custom Input
+
+Add the `data-slot="input-group-control"` attribute to your custom input for automatic behavior and focus state handling.
+
+No style is applied to the custom input. Apply your own styles using the `className` prop.
+
+<ComponentPreview name="input-group-custom" />
+
+## API Reference
+
+### InputGroup
+
+The main component that wraps inputs and addons.
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>`className`</TableCell>
+      <TableCell>`string`</TableCell>
+      <TableCell></TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+
+### InputGroupAddon
+
+Displays icons, text, buttons, or other content alongside inputs.
+
+Focus Navigation
+
+For proper focus navigation, the `InputGroupAddon` component should be placed after the input. Set the `align` prop to position the addon.
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>`align`</TableCell>
+      <TableCell>`"inline-start" | "inline-end" | "block-start" | "block-end"`</TableCell>
+      <TableCell>`"inline-start"`</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>`className`</TableCell>
+      <TableCell>`string`</TableCell>
+      <TableCell></TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+
+**For `<InputGroupInput />`, use the `inline-start` or `inline-end` alignment. For `<InputGroupTextarea />`, use the `block-start` or `block-end` alignment.**
+
+The `InputGroupAddon` component can have multiple `InputGroupButton` components and icons.
+
+### InputGroupButton
+
+Displays buttons within input groups.
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>`size`</TableCell>
+      <TableCell>`"xs" | "icon-xs" | "sm" | "icon-sm"`</TableCell>
+      <TableCell>`"xs"`</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>`variant`</TableCell>
+      <TableCell>`"default" | "destructive" | "outline" | "secondary" | "ghost" | "link"`</TableCell>
+      <TableCell>`"ghost"`</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>`className`</TableCell>
+      <TableCell>`string`</TableCell>
+      <TableCell></TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+
+### InputGroupInput
+
+Replacement for `<Input />` when building input groups. This component has the input group styles pre-applied and uses the unified `data-slot="input-group-control"` for focus state handling.
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>`className`</TableCell>
+      <TableCell>`string`</TableCell>
+      <TableCell></TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+
+All other props are passed through to the underlying `<Input />` component.
+
+### InputGroupTextarea
+
+Replacement for `<Textarea />` when building input groups. This component has the textarea group styles pre-applied and uses the unified `data-slot="input-group-control"` for focus state handling.
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>`className`</TableCell>
+      <TableCell>`string`</TableCell>
+      <TableCell></TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+
+All other props are passed through to the underlying `<Textarea />` component.
+
+## Changelog
+
+### 2025-10-06 `InputGroup`
+
+Add the `min-w-0` class to the `InputGroup` component. See diff.
+
