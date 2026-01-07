@@ -13,7 +13,7 @@ import {
   SelectValue,
 } from "@soar-design/soar-react-components"
 
-export function CalendarMonthYearSelectorRTL() {
+export function CalendarMonthYearSelectorDocsRTL() {
   const [dropdown, setDropdown] =
     React.useState<React.ComponentProps<typeof Calendar>["captionLayout"]>(
       "dropdown"

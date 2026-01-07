@@ -69,7 +69,7 @@ const columns: ColumnDef<Payment>[] = [
   },
 ]
 
-export function DataTableVisibility() {
+export function DataTableVisibilityDocs() {
   const [columnVisibility, setColumnVisibility] =
     React.useState<VisibilityState>({})
 

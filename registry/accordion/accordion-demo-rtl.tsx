@@ -5,7 +5,7 @@ import {
   AccordionTrigger,
 } from "@soar-design/soar-react-components"
 
-export function AccordionDemoRTL() {
+export function AccordionDemoDocsRTL() {
   return (
     <Accordion
       type="single"

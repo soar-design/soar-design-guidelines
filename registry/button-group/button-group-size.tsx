@@ -3,7 +3,7 @@ import { PlusIcon } from "lucide-react"
 import { Button } from "@soar-design/soar-react-components"
 import { ButtonGroup } from "@soar-design/soar-react-components"
 
-export function ButtonGroupSize() {
+export function ButtonGroupSizeDocs() {
   return (
     <div className="flex flex-col items-start gap-8">
       <ButtonGroup>

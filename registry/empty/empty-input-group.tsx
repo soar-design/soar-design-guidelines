@@ -16,7 +16,7 @@ import {
 } from "@soar-design/soar-react-components"
 import { Kbd } from "@soar-design/soar-react-components"
 
-export function EmptyInputGroup() {
+export function EmptyInputGroupDocs() {
   return (
     <Empty>
       <EmptyHeader>

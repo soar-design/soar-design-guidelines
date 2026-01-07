@@ -9,7 +9,7 @@ import {
 } from "@soar-design/soar-react-components"
 import { Input } from "@soar-design/soar-react-components"
 
-export function FieldInputRTL() {
+export function FieldInputDocsRTL() {
   return (
     <div className="w-full max-w-md">
       <FieldSet>

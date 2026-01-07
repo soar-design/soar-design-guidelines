@@ -12,7 +12,7 @@ import {
   EmptyTitle,
 } from "@soar-design/soar-react-components"
 
-export function EmptyOutlineRTL() {
+export function EmptyOutlineDocsRTL() {
   return (
     <Empty className="border border-dashed">
       <EmptyHeader>

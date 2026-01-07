@@ -15,7 +15,7 @@ import {
   InputGroupInput,
 } from "@soar-design/soar-react-components"
 
-export function InputGroupIconRTL() {
+export function InputGroupIconDocsRTL() {
   return (
     <div className="grid w-full max-w-sm gap-6">
       <InputGroup>

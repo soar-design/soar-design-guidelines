@@ -42,7 +42,7 @@ function ProfileForm({ className }: React.ComponentProps<"form">) {
   )
 }
 
-export function DrawerResponsiveDialogRTL() {
+export function DrawerResponsiveDialogDocsRTL() {
   const [open, setOpen] = React.useState(false)
   const isDesktop = useMediaQuery("(min-width: 768px)")
 

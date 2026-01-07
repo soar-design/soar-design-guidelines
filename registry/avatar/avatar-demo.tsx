@@ -4,7 +4,7 @@ import {
   AvatarImage,
 } from "@soar-design/soar-react-components"
 
-export function AvatarDemo() {
+export function AvatarDemoDocs() {
   return (
     <div className="flex flex-row flex-wrap items-center gap-12">
       <Avatar>

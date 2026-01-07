@@ -2,7 +2,7 @@ import Image from "next/image"
 
 import { AspectRatio } from "@soar-design/soar-react-components"
 
-export function AspectRatioDemoRTL() {
+export function AspectRatioDemoDocsRTL() {
   return (
     <AspectRatio ratio={16 / 9} className="bg-muted rounded-lg">
       <Image

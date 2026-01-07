@@ -41,7 +41,7 @@ const items = [
 
 const ITEMS_TO_DISPLAY = 3
 
-export function BreadcrumbResponsiveRTL() {
+export function BreadcrumbResponsiveDocsRTL() {
   const [open, setOpen] = React.useState(false)
   const isDesktop = useMediaQuery("(min-width: 768px)")
 

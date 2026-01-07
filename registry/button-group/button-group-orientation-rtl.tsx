@@ -3,7 +3,7 @@ import { MinusIcon, PlusIcon } from "lucide-react"
 import { Button } from "@soar-design/soar-react-components"
 import { ButtonGroup } from "@soar-design/soar-react-components"
 
-export function ButtonGroupOrientationRTL() {
+export function ButtonGroupOrientationDocsRTL() {
   return (
     <ButtonGroup
       orientation="vertical"

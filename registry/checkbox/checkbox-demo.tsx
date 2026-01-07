@@ -3,7 +3,7 @@
 import { Checkbox } from "@soar-design/soar-react-components"
 import { Label } from "@soar-design/soar-react-components"
 
-export function CheckboxDemo() {
+export function CheckboxDemoDocs() {
   return (
     <div className="flex flex-col gap-6">
       <div className="flex items-center gap-3">

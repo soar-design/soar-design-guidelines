@@ -14,7 +14,7 @@ import {
   PopoverTrigger,
 } from "@soar-design/soar-react-components"
 
-export function CalendarDateTime() {
+export function CalendarDateTimeDocs() {
   const [open, setOpen] = React.useState(false)
   const [date, setDate] = React.useState<Date | undefined>(undefined)
 

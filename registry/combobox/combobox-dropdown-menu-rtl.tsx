@@ -36,7 +36,7 @@ const labels = [
   "صيانة",
 ]
 
-export function ComboboxDropdownMenuRTL() {
+export function ComboboxDropdownMenuDocsRTL() {
   const [label, setLabel] = React.useState("ميزة")
   const [open, setOpen] = React.useState(false)
 

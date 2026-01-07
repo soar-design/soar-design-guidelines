@@ -10,7 +10,7 @@ import {
   BreadcrumbSeparator,
 } from "@soar-design/soar-react-components"
 
-export function BreadcrumbCollapsedRTL() {
+export function BreadcrumbCollapsedDocsRTL() {
   return (
     <Breadcrumb>
       <BreadcrumbList>

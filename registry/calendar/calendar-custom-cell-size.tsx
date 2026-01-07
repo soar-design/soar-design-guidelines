@@ -5,7 +5,7 @@ import * as React from "react"
 import { Calendar } from "@soar-design/soar-react-components"
 import { CalendarDayButton } from "./calendar-day-button"
 
-export function CalendarCustomCellSize() {
+export function CalendarCustomCellSizeDocs() {
   const [date, setDate] = React.useState<Date | undefined>(
     new Date(2025, 5, 12)
   )

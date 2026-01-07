@@ -98,7 +98,7 @@ const columns: ColumnDef<Payment>[] = [
   },
 ]
 
-export function DataTableRowActions() {
+export function DataTableRowActionsDocs() {
   const table = useReactTable({
     data,
     columns,

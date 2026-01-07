@@ -67,7 +67,7 @@ const statusLabels: Record<string, string> = {
   pending: "قيد الانتظار",
 }
 
-export function DataTableBasicRTL() {
+export function DataTableBasicDocsRTL() {
   const table = useReactTable({
     data,
     columns,

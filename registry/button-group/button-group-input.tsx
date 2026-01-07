@@ -4,7 +4,7 @@ import { Button } from "@soar-design/soar-react-components"
 import { ButtonGroup } from "@soar-design/soar-react-components"
 import { Input } from "@soar-design/soar-react-components"
 
-export function ButtonGroupInput() {
+export function ButtonGroupInputDocs() {
   return (
     <ButtonGroup>
       <Input placeholder="Search..." />

@@ -9,7 +9,7 @@ import {
   CarouselPrevious,
 } from "@soar-design/soar-react-components"
 
-export function CarouselSize() {
+export function CarouselSizeDocs() {
   return (
     <Carousel
       opts={{

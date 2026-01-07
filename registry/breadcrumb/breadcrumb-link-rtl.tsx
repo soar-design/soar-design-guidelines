@@ -9,7 +9,7 @@ import {
   BreadcrumbSeparator,
 } from "@soar-design/soar-react-components"
 
-export function BreadcrumbLinkRTL() {
+export function BreadcrumbLinkDocsRTL() {
   return (
     <Breadcrumb>
       <BreadcrumbList>

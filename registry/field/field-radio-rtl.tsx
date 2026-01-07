@@ -11,7 +11,7 @@ import {
   RadioGroupItem,
 } from "@soar-design/soar-react-components"
 
-export function FieldRadioRTL() {
+export function FieldRadioDocsRTL() {
   return (
     <div className="w-full max-w-md">
       <FieldSet>

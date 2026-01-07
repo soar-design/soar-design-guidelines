@@ -15,7 +15,7 @@ import {
   TooltipTrigger,
 } from "@soar-design/soar-react-components"
 
-export function InputGroupTooltip() {
+export function InputGroupTooltipDocs() {
   return (
     <div className="grid w-full max-w-sm gap-6">
       <InputGroup>

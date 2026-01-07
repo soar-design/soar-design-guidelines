@@ -11,28 +11,28 @@ import {
 import {
   InputGroup,
   InputGroupAddon,
-  InputGroupButton as InputGroupButtonComponent,
-  InputGroupText as InputGroupTextComponent,
-  InputGroupTextarea as InputGroupTextareaComponent,
+  InputGroupButton,
+  InputGroupText,
+  InputGroupTextarea,
 } from "@soar-design/soar-react-components"
 import { Separator } from "@soar-design/soar-react-components"
 
-export function InputGroupTextareaRTL() {
+export function InputGroupTextareaDocsRTL() {
   return (
     <div className="grid w-full max-w-sm gap-6">
       <InputGroup>
-        <InputGroupTextareaComponent placeholder="اسأل، ابحث أو دردش..." />
+        <InputGroupTextarea placeholder="اسأل، ابحث أو دردش..." />
         <InputGroupAddon align="block-end">
-          <InputGroupButtonComponent
+          <InputGroupButton
             variant="outline"
             className="rounded-full"
             size="icon-xs"
           >
             <Plus />
-          </InputGroupButtonComponent>
+          </InputGroupButton>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <InputGroupButtonComponent variant="ghost">تلقائي</InputGroupButtonComponent>
+              <InputGroupButton variant="ghost">تلقائي</InputGroupButton>
             </DropdownMenuTrigger>
             <DropdownMenuContent
               side="top"
@@ -44,9 +44,9 @@ export function InputGroupTextareaRTL() {
               <DropdownMenuItem>يدوي</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          <InputGroupTextComponent className="ml-auto">52% مستخدم</InputGroupTextComponent>
+          <InputGroupText className="ml-auto">52% مستخدم</InputGroupText>
           <Separator orientation="vertical" className="!h-4" />
-          <InputGroupButtonComponent
+          <InputGroupButton
             variant="default"
             className="rounded-full"
             size="icon-xs"
@@ -54,7 +54,7 @@ export function InputGroupTextareaRTL() {
           >
             <ArrowUp />
             <span className="sr-only">إرسال</span>
-          </InputGroupButtonComponent>
+          </InputGroupButton>
         </InputGroupAddon>
       </InputGroup>
     </div>

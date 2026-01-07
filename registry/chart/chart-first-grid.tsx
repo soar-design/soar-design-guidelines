@@ -27,7 +27,7 @@ const chartConfig = {
   },
 } satisfies ChartConfig
 
-export function ChartFirstGrid() {
+export function ChartFirstGridDocs() {
   return (
     <ChartContainer config={chartConfig} className="min-h-[200px] w-full">
       <BarChart accessibilityLayer data={chartData}>

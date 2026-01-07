@@ -4,43 +4,43 @@ import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-  InputGroupText as InputGroupTextComponent,
+  InputGroupText,
   InputGroupTextarea as InputGroupTextareaComponent,
 } from "@soar-design/soar-react-components"
 
-export function InputGroupText() {
+export function InputGroupTextDocs() {
   return (
     <div className="grid w-full max-w-sm gap-6">
       <InputGroup>
         <InputGroupAddon>
-          <InputGroupTextComponent>$</InputGroupTextComponent>
+          <InputGroupText>$</InputGroupText>
         </InputGroupAddon>
         <InputGroupInput placeholder="0.00" />
         <InputGroupAddon align="inline-end">
-          <InputGroupTextComponent>USD</InputGroupTextComponent>
+          <InputGroupText>USD</InputGroupText>
         </InputGroupAddon>
       </InputGroup>
       <InputGroup>
         <InputGroupAddon>
-          <InputGroupTextComponent>https://</InputGroupTextComponent>
+          <InputGroupText>https://</InputGroupText>
         </InputGroupAddon>
         <InputGroupInput placeholder="example.com" className="!pl-0.5" />
         <InputGroupAddon align="inline-end">
-          <InputGroupTextComponent>.com</InputGroupTextComponent>
+          <InputGroupText>.com</InputGroupText>
         </InputGroupAddon>
       </InputGroup>
       <InputGroup>
         <InputGroupInput placeholder="Enter your username" />
         <InputGroupAddon align="inline-end">
-          <InputGroupTextComponent>@company.com</InputGroupTextComponent>
+          <InputGroupText>@company.com</InputGroupText>
         </InputGroupAddon>
       </InputGroup>
       <InputGroup>
         <InputGroupTextareaComponent placeholder="Enter your message" />
         <InputGroupAddon align="block-end">
-          <InputGroupTextComponent className="text-muted-foreground text-xs">
+          <InputGroupText className="text-muted-foreground text-xs">
             120 characters left
-          </InputGroupTextComponent>
+          </InputGroupText>
         </InputGroupAddon>
       </InputGroup>
     </div>

@@ -2,7 +2,7 @@ import { AlertCircleIcon, BadgeCheckIcon, CheckIcon } from "lucide-react"
 
 import { Badge } from "@soar-design/soar-react-components"
 
-export function BadgeDemo() {
+export function BadgeDemoDocs() {
   return (
     <div className="flex flex-col items-center gap-2">
       <div className="flex w-full flex-wrap gap-2">

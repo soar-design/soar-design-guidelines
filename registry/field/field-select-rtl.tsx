@@ -13,7 +13,7 @@ import {
   SelectValue,
 } from "@soar-design/soar-react-components"
 
-export function FieldSelectRTL() {
+export function FieldSelectDocsRTL() {
   return (
     <div className="w-full max-w-md">
       <Field>

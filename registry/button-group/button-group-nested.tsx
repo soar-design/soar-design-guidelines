@@ -5,7 +5,7 @@ import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react"
 import { Button } from "@soar-design/soar-react-components"
 import { ButtonGroup } from "@soar-design/soar-react-components"
 
-export function ButtonGroupNested() {
+export function ButtonGroupNestedDocs() {
   return (
     <ButtonGroup>
       <ButtonGroup>

@@ -21,7 +21,7 @@ import {
 } from "@soar-design/soar-react-components"
 import { Textarea } from "@soar-design/soar-react-components"
 
-export function FieldDemoRTL() {
+export function FieldDemoDocsRTL() {
   return (
     <div className="w-full max-w-md">
       <form>

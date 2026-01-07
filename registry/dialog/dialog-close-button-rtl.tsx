@@ -14,7 +14,7 @@ import {
 import { Input } from "@soar-design/soar-react-components"
 import { Label } from "@soar-design/soar-react-components"
 
-export function DialogCloseButtonRTL() {
+export function DialogCloseButtonDocsRTL() {
   return (
     <Dialog>
       <DialogTrigger asChild>

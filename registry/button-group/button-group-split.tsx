@@ -6,7 +6,7 @@ import {
   ButtonGroupSeparator,
 } from "@soar-design/soar-react-components"
 
-export function ButtonGroupSplit() {
+export function ButtonGroupSplitDocs() {
   return (
     <ButtonGroup>
       <Button variant="secondary">Button</Button>

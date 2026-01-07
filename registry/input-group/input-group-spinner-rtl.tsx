@@ -9,7 +9,7 @@ import {
 } from "@soar-design/soar-react-components"
 import { Spinner } from "@soar-design/soar-react-components"
 
-export function InputGroupSpinnerRTL() {
+export function InputGroupSpinnerDocsRTL() {
   return (
     <div className="grid w-full max-w-sm gap-6">
       <InputGroup>

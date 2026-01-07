@@ -12,7 +12,7 @@ import {
   CarouselPrevious,
 } from "@soar-design/soar-react-components"
 
-export function CarouselPlugin() {
+export function CarouselPluginDocs() {
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
   )

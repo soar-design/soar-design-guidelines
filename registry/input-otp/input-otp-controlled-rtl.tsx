@@ -8,7 +8,7 @@ import {
   InputOTPSlot,
 } from "@soar-design/soar-react-components"
 
-export function InputOTPControlledRTL() {
+export function InputOTPControlledDocsRTL() {
   const [value, setValue] = React.useState("")
 
   return (

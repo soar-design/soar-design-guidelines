@@ -78,7 +78,7 @@ const columns: ColumnDef<Payment>[] = [
   },
 ]
 
-export function DataTableFilteringRTL() {
+export function DataTableFilteringDocsRTL() {
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
   )

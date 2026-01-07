@@ -11,28 +11,28 @@ import {
 import {
   InputGroup,
   InputGroupAddon,
-  InputGroupButton as InputGroupButtonComponent,
-  InputGroupText as InputGroupTextComponent,
-  InputGroupTextarea as InputGroupTextareaComponent,
+  InputGroupButton,
+  InputGroupText,
+  InputGroupTextarea,
 } from "@soar-design/soar-react-components"
 import { Separator } from "@soar-design/soar-react-components"
 
-export function InputGroupTextarea() {
+export function InputGroupTextareaDocs() {
   return (
     <div className="grid w-full max-w-sm gap-6">
       <InputGroup>
-        <InputGroupTextareaComponent placeholder="Ask, Search or Chat..." />
+        <InputGroupTextarea placeholder="Ask, Search or Chat..." />
         <InputGroupAddon align="block-end">
-          <InputGroupButtonComponent
+          <InputGroupButton
             variant="outline"
             className="rounded-full"
             size="icon-xs"
           >
             <Plus />
-          </InputGroupButtonComponent>
+          </InputGroupButton>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <InputGroupButtonComponent variant="ghost">Auto</InputGroupButtonComponent>
+              <InputGroupButton variant="ghost">Auto</InputGroupButton>
             </DropdownMenuTrigger>
             <DropdownMenuContent
               side="top"
@@ -44,9 +44,9 @@ export function InputGroupTextarea() {
               <DropdownMenuItem>Manual</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          <InputGroupTextComponent className="ml-auto">52% used</InputGroupTextComponent>
+          <InputGroupText className="ml-auto">52% used</InputGroupText>
           <Separator orientation="vertical" className="!h-4" />
-          <InputGroupButtonComponent
+          <InputGroupButton
             variant="default"
             className="rounded-full"
             size="icon-xs"
@@ -54,7 +54,7 @@ export function InputGroupTextarea() {
           >
             <ArrowUp />
             <span className="sr-only">Send</span>
-          </InputGroupButtonComponent>
+          </InputGroupButton>
         </InputGroupAddon>
       </InputGroup>
     </div>

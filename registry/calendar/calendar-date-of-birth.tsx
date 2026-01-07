@@ -13,7 +13,7 @@ import {
   PopoverTrigger,
 } from "@soar-design/soar-react-components"
 
-export function CalendarDateOfBirth() {
+export function CalendarDateOfBirthDocs() {
   const [open, setOpen] = React.useState(false)
   const [date, setDate] = React.useState<Date | undefined>(undefined)
 

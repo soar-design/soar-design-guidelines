@@ -90,7 +90,7 @@ const columns: ColumnDef<Payment>[] = [
   },
 ]
 
-export function DataTablePaginationRTL() {
+export function DataTablePaginationDocsRTL() {
   const table = useReactTable({
     data,
     columns,

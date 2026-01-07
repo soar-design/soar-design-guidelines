@@ -9,7 +9,7 @@ import {
   CarouselPrevious,
 } from "@soar-design/soar-react-components"
 
-export function CarouselSpacingRTL() {
+export function CarouselSpacingDocsRTL() {
   return (
     <Carousel className="w-full max-w-sm">
       <CarouselContent className="-ml-1">

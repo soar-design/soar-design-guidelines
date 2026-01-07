@@ -6,7 +6,7 @@ import {
   AlertTitle,
 } from "@soar-design/soar-react-components"
 
-export function AlertDemo() {
+export function AlertDemoDocs() {
   return (
     <div className="grid w-full max-w-xl items-start gap-4">
       <Alert>

@@ -16,7 +16,7 @@ import {
   DropdownMenuTrigger,
 } from "@soar-design/soar-react-components"
 
-export function BreadcrumbDemo() {
+export function BreadcrumbDemoDocs() {
   return (
     <Breadcrumb>
       <BreadcrumbList>

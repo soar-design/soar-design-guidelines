@@ -17,7 +17,7 @@ import {
   EmptyTitle,
 } from "@soar-design/soar-react-components"
 
-export function EmptyAvatarGroupRTL() {
+export function EmptyAvatarGroupDocsRTL() {
   return (
     <Empty>
       <EmptyHeader>

@@ -29,7 +29,7 @@ import {
   DropdownMenuTrigger,
 } from "@soar-design/soar-react-components"
 
-export function ButtonGroupDemoRTL() {
+export function ButtonGroupDemoDocsRTL() {
   const [label, setLabel] = React.useState("personal")
 
   return (

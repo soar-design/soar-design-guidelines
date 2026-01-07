@@ -12,7 +12,7 @@ import {
   EmptyTitle,
 } from "@soar-design/soar-react-components"
 
-export function EmptyDemoRTL() {
+export function EmptyDemoDocsRTL() {
   return (
     <Empty>
       <EmptyHeader>

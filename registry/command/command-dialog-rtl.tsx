@@ -21,7 +21,7 @@ import {
   CommandShortcut,
 } from "@soar-design/soar-react-components"
 
-export function CommandDialogRTL() {
+export function CommandDialogDocsRTL() {
   const [open, setOpen] = React.useState(false)
 
   React.useEffect(() => {

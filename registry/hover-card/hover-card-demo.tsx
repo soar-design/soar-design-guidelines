@@ -12,7 +12,7 @@ import {
   HoverCardTrigger,
 } from "@soar-design/soar-react-components"
 
-export function HoverCardDemo() {
+export function HoverCardDemoDocs() {
   return (
     <HoverCard>
       <HoverCardTrigger asChild>

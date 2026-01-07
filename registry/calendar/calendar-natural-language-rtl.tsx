@@ -27,7 +27,7 @@ function formatDate(date: Date | undefined) {
   })
 }
 
-export function CalendarNaturalLanguageRTL() {
+export function CalendarNaturalLanguageDocsRTL() {
   const [open, setOpen] = React.useState(false)
   const [value, setValue] = React.useState("In 2 days")
   const [date, setDate] = React.useState<Date | undefined>(

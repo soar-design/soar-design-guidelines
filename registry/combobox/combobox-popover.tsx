@@ -45,7 +45,7 @@ const statuses: Status[] = [
   },
 ]
 
-export function ComboboxPopover() {
+export function ComboboxPopoverDocs() {
   const [open, setOpen] = React.useState(false)
   const [selectedStatus, setSelectedStatus] = React.useState<Status | null>(
     null

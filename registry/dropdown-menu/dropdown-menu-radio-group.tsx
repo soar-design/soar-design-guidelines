@@ -13,7 +13,7 @@ import {
   DropdownMenuTrigger,
 } from "@soar-design/soar-react-components"
 
-export function DropdownMenuRadioGroup() {
+export function DropdownMenuRadioGroupDocs() {
   const [position, setPosition] = React.useState("bottom")
 
   return (

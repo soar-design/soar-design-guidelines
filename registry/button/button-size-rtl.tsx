@@ -2,7 +2,7 @@ import { ArrowUpRightIcon } from "lucide-react"
 
 import { Button } from "@soar-design/soar-react-components"
 
-export function ButtonSizeRTL() {
+export function ButtonSizeDocsRTL() {
   return (
     <div className="flex flex-col items-start gap-8 sm:flex-row">
       <div className="flex items-start gap-2">

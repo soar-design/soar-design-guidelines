@@ -136,7 +136,7 @@ function ViewOptions<TData>({
   )
 }
 
-export function DataTableViewOptionsRTL() {
+export function DataTableViewOptionsDocsRTL() {
   const [columnVisibility, setColumnVisibility] =
     React.useState<VisibilityState>({})
 

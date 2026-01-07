@@ -26,7 +26,7 @@ function formatDate(date: Date | undefined) {
   })
 }
 
-export function DatePickerNaturalLanguage() {
+export function DatePickerNaturalLanguageDocs() {
   const [open, setOpen] = React.useState(false)
   const [value, setValue] = React.useState("In 2 days")
   const [date, setDate] = React.useState<Date | undefined>(

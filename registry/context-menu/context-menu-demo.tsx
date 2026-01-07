@@ -16,7 +16,7 @@ import {
   ContextMenuTrigger,
 } from "@soar-design/soar-react-components"
 
-export function ContextMenuDemo() {
+export function ContextMenuDemoDocs() {
   return (
     <ContextMenu>
       <ContextMenuTrigger className="flex h-[150px] w-[300px] items-center justify-center rounded-md border border-dashed text-sm">

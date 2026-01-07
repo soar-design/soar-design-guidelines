@@ -8,7 +8,7 @@ import {
   InputOTPSlot,
 } from "@soar-design/soar-react-components"
 
-export function InputOTPPattern() {
+export function InputOTPPatternDocs() {
   return (
     <InputOTP maxLength={6} pattern={REGEXP_ONLY_DIGITS_AND_CHARS}>
       <InputOTPGroup>

@@ -2,7 +2,7 @@ import { ArrowUpIcon } from "lucide-react"
 
 import { Button } from "@soar-design/soar-react-components"
 
-export function ButtonRoundedRTL() {
+export function ButtonRoundedDocsRTL() {
   return (
     <div className="flex flex-col gap-8">
       <Button variant="outline" size="icon" className="rounded-full">

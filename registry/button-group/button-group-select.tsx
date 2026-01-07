@@ -28,7 +28,7 @@ const CURRENCIES = [
   },
 ]
 
-export function ButtonGroupSelect() {
+export function ButtonGroupSelectDocs() {
   const [currency, setCurrency] = React.useState("$")
 
   return (

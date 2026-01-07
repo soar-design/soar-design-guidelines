@@ -7,7 +7,7 @@ import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard"
 import {
   InputGroup,
   InputGroupAddon,
-  InputGroupButton as InputGroupButtonComponent,
+  InputGroupButton,
   InputGroupInput,
 } from "@soar-design/soar-react-components"
 import {
@@ -16,7 +16,7 @@ import {
   PopoverTrigger,
 } from "@soar-design/soar-react-components"
 
-export function InputGroupButton() {
+export function InputGroupButtonDocs() {
   const { copyToClipboard } = useCopyToClipboard()
 
   return (
@@ -24,20 +24,20 @@ export function InputGroupButton() {
       <InputGroup>
         <InputGroupInput placeholder="https://example.com" />
         <InputGroupAddon align="inline-end">
-          <InputGroupButtonComponent
+          <InputGroupButton
             variant="ghost"
             size="icon-xs"
             onClick={() => copyToClipboard("https://example.com")}
           >
             <Copy />
             <span className="sr-only">Copy</span>
-          </InputGroupButtonComponent>
+          </InputGroupButton>
         </InputGroupAddon>
       </InputGroup>
       <InputGroup>
         <InputGroupInput placeholder="Search..." />
         <InputGroupAddon align="inline-end">
-          <InputGroupButtonComponent variant="default">Search</InputGroupButtonComponent>
+          <InputGroupButton variant="default">Search</InputGroupButton>
         </InputGroupAddon>
       </InputGroup>
       <InputGroup>
@@ -45,21 +45,21 @@ export function InputGroupButton() {
         <InputGroupAddon align="inline-end">
           <Popover>
             <PopoverTrigger asChild>
-              <InputGroupButtonComponent variant="ghost" size="icon-xs">
+              <InputGroupButton variant="ghost" size="icon-xs">
                 <Info />
                 <span className="sr-only">Info</span>
-              </InputGroupButtonComponent>
+              </InputGroupButton>
             </PopoverTrigger>
             <PopoverContent>This is a URL input field.</PopoverContent>
           </Popover>
-          <InputGroupButtonComponent variant="ghost" size="icon-xs">
+          <InputGroupButton variant="ghost" size="icon-xs">
             <Star />
             <span className="sr-only">Favorite</span>
-          </InputGroupButtonComponent>
-          <InputGroupButtonComponent variant="ghost" size="icon-xs">
+          </InputGroupButton>
+          <InputGroupButton variant="ghost" size="icon-xs">
             <Check />
             <span className="sr-only">Verified</span>
-          </InputGroupButtonComponent>
+          </InputGroupButton>
         </InputGroupAddon>
       </InputGroup>
     </div>

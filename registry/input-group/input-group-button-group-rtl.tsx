@@ -13,7 +13,7 @@ import {
 } from "@soar-design/soar-react-components"
 import { Label } from "@soar-design/soar-react-components"
 
-export function InputGroupButtonGroupRTL() {
+export function InputGroupButtonGroupDocsRTL() {
   return (
     <div className="grid w-full max-w-sm gap-6">
       <ButtonGroup>

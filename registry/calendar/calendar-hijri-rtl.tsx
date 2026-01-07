@@ -12,7 +12,7 @@ import { DayPicker } from "react-day-picker/persian"
 import { cn } from "@/lib/utils"
 import { Button, buttonVariants } from "@soar-design/soar-react-components"
 
-export function CalendarHijriRTL() {
+export function CalendarHijriDocsRTL() {
   const [date, setDate] = React.useState<Date | undefined>(
     new Date(2025, 5, 12)
   )

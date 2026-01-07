@@ -11,7 +11,7 @@ import {
 import { Input } from "@soar-design/soar-react-components"
 import { Label } from "@soar-design/soar-react-components"
 
-export function CardDemo() {
+export function CardDemoDocs() {
   return (
     <Card className="w-full max-w-sm">
       <CardHeader>

@@ -22,7 +22,7 @@ import {
   DropdownMenuTrigger,
 } from "@soar-design/soar-react-components"
 
-export function ButtonGroupDropdown() {
+export function ButtonGroupDropdownDocs() {
   return (
     <ButtonGroup>
       <Button variant="outline">Follow</Button>

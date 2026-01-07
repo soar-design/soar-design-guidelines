@@ -10,7 +10,7 @@ import {
   CollapsibleTrigger,
 } from "@soar-design/soar-react-components"
 
-export function CollapsibleDemo() {
+export function CollapsibleDemoDocs() {
   const [isOpen, setIsOpen] = React.useState(false)
 
   return (

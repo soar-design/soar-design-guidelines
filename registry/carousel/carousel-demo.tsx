@@ -9,7 +9,7 @@ import {
   CarouselPrevious,
 } from "@soar-design/soar-react-components"
 
-export function CarouselDemo() {
+export function CarouselDemoDocs() {
   return (
     <Carousel className="w-full max-w-xs">
       <CarouselContent>

@@ -84,7 +84,7 @@ const columns: ColumnDef<Payment>[] = [
   },
 ]
 
-export function DataTableSorting() {
+export function DataTableSortingDocs() {
   const [sorting, setSorting] = React.useState<SortingState>([])
 
   const table = useReactTable({

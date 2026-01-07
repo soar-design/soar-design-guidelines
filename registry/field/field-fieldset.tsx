@@ -10,7 +10,7 @@ import {
 } from "@soar-design/soar-react-components"
 import { Input } from "@soar-design/soar-react-components"
 
-export function FieldFieldset() {
+export function FieldFieldsetDocs() {
   return (
     <div className="w-full max-w-md space-y-6">
       <FieldSet>

@@ -8,7 +8,7 @@ import {
 } from "@soar-design/soar-react-components"
 import { Switch } from "@soar-design/soar-react-components"
 
-export function FieldSwitchRTL() {
+export function FieldSwitchDocsRTL() {
   return (
     <div className="w-full max-w-md">
       <Field orientation="horizontal">

@@ -12,7 +12,7 @@ import {
   FieldSet,
 } from "@soar-design/soar-react-components"
 
-export function FieldCheckbox() {
+export function FieldCheckboxDocs() {
   return (
     <div className="w-full max-w-md">
       <FieldGroup>

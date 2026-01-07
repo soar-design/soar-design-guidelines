@@ -22,7 +22,7 @@ function formatDate(date: Date | undefined) {
   return `${day}/${month}/${year}`
 }
 
-export function DatePickerDemoRTL() {
+export function DatePickerDemoDocsRTL() {
   const [open, setOpen] = React.useState(false)
   const [date, setDate] = React.useState<Date | undefined>(undefined)
 

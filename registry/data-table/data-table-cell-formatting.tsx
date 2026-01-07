@@ -63,7 +63,7 @@ const columns: ColumnDef<Payment>[] = [
   },
 ]
 
-export function DataTableCellFormatting() {
+export function DataTableCellFormattingDocs() {
   const table = useReactTable({
     data,
     columns,

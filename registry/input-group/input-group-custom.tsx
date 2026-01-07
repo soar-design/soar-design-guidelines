@@ -8,7 +8,7 @@ import {
   InputGroupButton,
 } from "@soar-design/soar-react-components"
 
-export function InputGroupCustom() {
+export function InputGroupCustomDocs() {
   return (
     <div className="grid w-full max-w-sm gap-6">
       <InputGroup>

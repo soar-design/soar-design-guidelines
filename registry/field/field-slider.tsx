@@ -9,7 +9,7 @@ import {
 } from "@soar-design/soar-react-components"
 import { Slider } from "@soar-design/soar-react-components"
 
-export function FieldSlider() {
+export function FieldSliderDocs() {
   const [value, setValue] = useState([200, 800])
   return (
     <div className="w-full max-w-md">

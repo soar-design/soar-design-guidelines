@@ -11,7 +11,7 @@ import {
 } from "@soar-design/soar-react-components"
 import { Button } from "@soar-design/soar-react-components"
 
-export function AlertDialogDemoRTL() {
+export function AlertDialogDemoDocsRTL() {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>

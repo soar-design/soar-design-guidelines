@@ -14,7 +14,7 @@ import {
 import { Input } from "@soar-design/soar-react-components"
 import { Label } from "@soar-design/soar-react-components"
 
-export function DialogDemo() {
+export function DialogDemoDocs() {
   return (
     <Dialog>
       <form>

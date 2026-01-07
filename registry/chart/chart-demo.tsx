@@ -127,7 +127,7 @@ const chartConfig = {
   },
 } satisfies ChartConfig
 
-export function ChartDemo() {
+export function ChartDemoDocs() {
   const [activeChart, setActiveChart] =
     React.useState<keyof typeof chartConfig>("desktop")
 

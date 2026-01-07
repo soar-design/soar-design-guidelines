@@ -84,7 +84,7 @@ const columns: ColumnDef<Payment>[] = [
   },
 ]
 
-export function DataTableRowSelection() {
+export function DataTableRowSelectionDocs() {
   const [rowSelection, setRowSelection] = React.useState<RowSelectionState>(
     {}
   )

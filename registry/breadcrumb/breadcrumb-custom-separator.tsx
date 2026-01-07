@@ -10,7 +10,7 @@ import {
   BreadcrumbSeparator,
 } from "@soar-design/soar-react-components"
 
-export function BreadcrumbCustomSeparator() {
+export function BreadcrumbCustomSeparatorDocs() {
   return (
     <Breadcrumb>
       <BreadcrumbList>

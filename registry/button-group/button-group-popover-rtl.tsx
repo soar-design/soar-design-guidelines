@@ -10,7 +10,7 @@ import {
 import { Separator } from "@soar-design/soar-react-components"
 import { Textarea } from "@soar-design/soar-react-components"
 
-export function ButtonGroupPopoverRTL() {
+export function ButtonGroupPopoverDocsRTL() {
   return (
     <ButtonGroup>
       <Button variant="outline">

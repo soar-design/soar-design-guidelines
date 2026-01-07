@@ -7,7 +7,7 @@ import {
 } from "@soar-design/soar-react-components"
 import { Label } from "@soar-design/soar-react-components"
 
-export function InputGroupLabelRTL() {
+export function InputGroupLabelDocsRTL() {
   return (
     <div className="grid w-full max-w-sm gap-6">
       <div className="space-y-2">

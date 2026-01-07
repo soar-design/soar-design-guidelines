@@ -10,7 +10,7 @@ import {
   FieldSet,
 } from "@soar-design/soar-react-components"
 
-export function FieldFieldGroup() {
+export function FieldFieldGroupDocs() {
   return (
     <div className="w-full max-w-md">
       <FieldGroupComponent>

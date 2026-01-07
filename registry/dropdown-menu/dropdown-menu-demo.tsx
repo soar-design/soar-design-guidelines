@@ -16,7 +16,7 @@ import {
   DropdownMenuTrigger,
 } from "@soar-design/soar-react-components"
 
-export function DropdownMenuDemo() {
+export function DropdownMenuDemoDocs() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>

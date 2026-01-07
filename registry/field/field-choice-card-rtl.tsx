@@ -14,7 +14,7 @@ import {
   RadioGroupItem,
 } from "@soar-design/soar-react-components"
 
-export function FieldChoiceCardRTL() {
+export function FieldChoiceCardDocsRTL() {
   return (
     <div className="w-full max-w-md">
       <FieldGroup>

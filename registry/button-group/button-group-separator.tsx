@@ -1,16 +1,16 @@
 import { Button } from "@soar-design/soar-react-components"
 import {
   ButtonGroup,
-  ButtonGroupSeparator as ButtonGroupSeparatorComponent,
+  ButtonGroupSeparator,
 } from "@soar-design/soar-react-components"
 
-export function ButtonGroupSeparator() {
+export function ButtonGroupSeparatorDocs() {
   return (
     <ButtonGroup>
       <Button variant="secondary" size="sm">
         Copy
       </Button>
-      <ButtonGroupSeparatorComponent />
+      <ButtonGroupSeparator />
       <Button variant="secondary" size="sm">
         Paste
       </Button>

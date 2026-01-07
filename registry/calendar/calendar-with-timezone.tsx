@@ -5,7 +5,7 @@ import * as React from "react"
 import { Calendar } from "@soar-design/soar-react-components"
 import { CalendarDayButton } from "./calendar-day-button"
 
-export function CalendarWithTimezone() {
+export function CalendarWithTimezoneDocs() {
   const [date, setDate] = React.useState<Date | undefined>(undefined)
   const [timeZone, setTimeZone] = React.useState<string | undefined>(undefined)
 

@@ -77,7 +77,7 @@ const columns: ColumnDef<Payment>[] = [
   },
 ]
 
-export function DataTableCellFormattingRTL() {
+export function DataTableCellFormattingDocsRTL() {
   const table = useReactTable({
     data,
     columns,

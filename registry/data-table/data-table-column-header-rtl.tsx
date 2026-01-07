@@ -146,7 +146,7 @@ const columns: ColumnDef<Payment>[] = [
   },
 ]
 
-export function DataTableColumnHeaderRTL() {
+export function DataTableColumnHeaderDocsRTL() {
   const [sorting, setSorting] = React.useState<SortingState>([])
 
   const table = useReactTable({

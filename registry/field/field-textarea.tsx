@@ -9,7 +9,7 @@ import {
 } from "@soar-design/soar-react-components"
 import { Textarea } from "@soar-design/soar-react-components"
 
-export function FieldTextarea() {
+export function FieldTextareaDocs() {
   return (
     <div className="w-full max-w-md">
       <FieldSet>

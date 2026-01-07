@@ -13,7 +13,7 @@ import {
   PopoverTrigger,
 } from "@soar-design/soar-react-components"
 
-export function DatePickerDateTime() {
+export function DatePickerDateTimeDocs() {
   const [open, setOpen] = React.useState(false)
   const [date, setDate] = React.useState<Date | undefined>(undefined)
 

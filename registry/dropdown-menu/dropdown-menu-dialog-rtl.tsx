@@ -26,7 +26,7 @@ import { Input } from "@soar-design/soar-react-components"
 import { Label } from "@soar-design/soar-react-components"
 import { Textarea } from "@soar-design/soar-react-components"
 
-export function DropdownMenuDialogRTL() {
+export function DropdownMenuDialogDocsRTL() {
   const [showNewDialog, setShowNewDialog] = useState(false)
   const [showShareDialog, setShowShareDialog] = useState(false)
 

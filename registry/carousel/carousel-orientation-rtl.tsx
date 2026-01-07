@@ -9,7 +9,7 @@ import {
   CarouselPrevious,
 } from "@soar-design/soar-react-components"
 
-export function CarouselOrientationRTL() {
+export function CarouselOrientationDocsRTL() {
   return (
     <Carousel
       opts={{

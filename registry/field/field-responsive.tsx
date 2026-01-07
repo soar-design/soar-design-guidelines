@@ -14,7 +14,7 @@ import {
 import { Input } from "@soar-design/soar-react-components"
 import { Textarea } from "@soar-design/soar-react-components"
 
-export function FieldResponsive() {
+export function FieldResponsiveDocs() {
   return (
     <div className="w-full max-w-4xl">
       <form>

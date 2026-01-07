@@ -17,7 +17,7 @@ import {
   TooltipTrigger,
 } from "@soar-design/soar-react-components"
 
-export function ButtonGroupInputGroup() {
+export function ButtonGroupInputGroupDocs() {
   const [voiceEnabled, setVoiceEnabled] = React.useState(false)
 
   return (

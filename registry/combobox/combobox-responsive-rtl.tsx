@@ -51,7 +51,7 @@ const statuses: Status[] = [
   },
 ]
 
-export function ComboboxResponsiveRTL() {
+export function ComboboxResponsiveDocsRTL() {
   const [open, setOpen] = React.useState(false)
   const isDesktop = useMediaQuery("(min-width: 768px)")
   const [selectedStatus, setSelectedStatus] = React.useState<Status | null>(

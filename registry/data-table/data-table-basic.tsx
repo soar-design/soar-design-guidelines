@@ -60,7 +60,7 @@ const columns: ColumnDef<Payment>[] = [
   },
 ]
 
-export function DataTableBasic() {
+export function DataTableBasicDocs() {
   const table = useReactTable({
     data,
     columns,

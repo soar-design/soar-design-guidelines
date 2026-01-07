@@ -2,7 +2,7 @@ import { ArrowUpIcon } from "lucide-react"
 
 import { Button } from "@soar-design/soar-react-components"
 
-export function ButtonDemo() {
+export function ButtonDemoDocs() {
   return (
     <div className="flex flex-wrap items-center gap-2 md:flex-row">
       <Button variant="outline">Button</Button>

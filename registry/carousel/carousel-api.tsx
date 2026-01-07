@@ -12,7 +12,7 @@ import {
   type CarouselApi,
 } from "@soar-design/soar-react-components"
 
-export function CarouselApi() {
+export function CarouselApiDocs() {
   const [api, setApi] = React.useState<CarouselApi>()
   const [current, setCurrent] = React.useState(0)
   const [count, setCount] = React.useState(0)

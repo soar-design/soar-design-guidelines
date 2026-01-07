@@ -173,7 +173,7 @@ function DataTablePagination<TData>({
   )
 }
 
-export function DataTablePaginationComponent() {
+export function DataTablePaginationComponentDocs() {
   const table = useReactTable({
     data,
     columns,

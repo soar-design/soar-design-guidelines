@@ -7,7 +7,7 @@ import {
   InputOTPSlot,
 } from "@soar-design/soar-react-components"
 
-export function InputOTPDemoRTL() {
+export function InputOTPDemoDocsRTL() {
   return (
     <InputOTP maxLength={6}>
       <InputOTPGroup>

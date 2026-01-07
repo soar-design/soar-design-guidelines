@@ -20,7 +20,7 @@ import {
   CommandShortcut,
 } from "@soar-design/soar-react-components"
 
-export function CommandDemoRTL() {
+export function CommandDemoDocsRTL() {
   return (
     <Command className="rounded-lg border shadow-md md:min-w-[450px]">
       <CommandInput placeholder="اكتب أمرًا أو ابحث..." />
