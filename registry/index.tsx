@@ -303,6 +303,16 @@ import { NativeSelectDisabledDocs } from "./native-select/native-select-disabled
 import { NativeSelectDisabledDocsRTL } from "./native-select/native-select-disabled-rtl";
 import { NativeSelectInvalidDocs } from "./native-select/native-select-invalid";
 import { NativeSelectInvalidDocsRTL } from "./native-select/native-select-invalid-rtl";
+import { NavigationMenuDemoDocs } from "./navigation-menu/navigation-menu-demo";
+import { NavigationMenuDemoDocsRTL } from "./navigation-menu/navigation-menu-demo-rtl";
+import { PaginationDemoDocs } from "./pagination/pagination-demo";
+import { PaginationDemoDocsRTL } from "./pagination/pagination-demo-rtl";
+import { PopoverDemoDocs } from "./popover/popover-demo";
+import { PopoverDemoDocsRTL } from "./popover/popover-demo-rtl";
+import { ProgressDemoDocs } from "./progress/progress-demo";
+import { ProgressDemoDocsRTL } from "./progress/progress-demo-rtl";
+import { RadioGroupDemoDocs } from "./radio-group/radio-group-demo";
+import { RadioGroupDemoDocsRTL } from "./radio-group/radio-group-demo-rtl";
 
 export const registry: Record<string, React.ComponentType> = {
   "accordion-demo": AccordionDemoDocs,
@@ -609,4 +619,14 @@ export const registry: Record<string, React.ComponentType> = {
   "native-select-disabled-rtl": NativeSelectDisabledDocsRTL,
   "native-select-invalid": NativeSelectInvalidDocs,
   "native-select-invalid-rtl": NativeSelectInvalidDocsRTL,
+  "navigation-menu-demo": NavigationMenuDemoDocs,
+  "navigation-menu-demo-rtl": NavigationMenuDemoDocsRTL,
+  "pagination-demo": PaginationDemoDocs,
+  "pagination-demo-rtl": PaginationDemoDocsRTL,
+  "popover-demo": PopoverDemoDocs,
+  "popover-demo-rtl": PopoverDemoDocsRTL,
+  "progress-demo": ProgressDemoDocs,
+  "progress-demo-rtl": ProgressDemoDocsRTL,
+  "radio-group-demo": RadioGroupDemoDocs,
+  "radio-group-demo-rtl": RadioGroupDemoDocsRTL,
 };

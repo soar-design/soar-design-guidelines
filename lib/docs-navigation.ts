@@ -144,6 +144,26 @@ export const docsNavigation: NavItem[] = [
                 title: "Native Select",
                 href: "/docs/components/native-select",
               },
+              {
+                title: "Navigation Menu",
+                href: "/docs/components/navigation-menu",
+              },
+              {
+                title: "Pagination",
+                href: "/docs/components/pagination",
+              },
+              {
+                title: "Popover",
+                href: "/docs/components/popover",
+              },
+              {
+                title: "Progress",
+                href: "/docs/components/progress",
+              },
+              {
+                title: "Radio Group",
+                href: "/docs/components/radio-group",
+              },
             ],
           },
         ];
