@@ -293,6 +293,16 @@ import { KbdInputGroupDocs } from "./kbd/kbd-input-group";
 import { KbdInputGroupDocsRTL } from "./kbd/kbd-input-group-rtl";
 import { LabelDemoDocs } from "./label/label-demo";
 import { LabelDemoDocsRTL } from "./label/label-demo-rtl";
+import { MenubarDemoDocs } from "./menubar/menubar-demo";
+import { MenubarDemoDocsRTL } from "./menubar/menubar-demo-rtl";
+import { NativeSelectDemoDocs } from "./native-select/native-select-demo";
+import { NativeSelectDemoDocsRTL } from "./native-select/native-select-demo-rtl";
+import { NativeSelectGroupsDocs } from "./native-select/native-select-groups";
+import { NativeSelectGroupsDocsRTL } from "./native-select/native-select-groups-rtl";
+import { NativeSelectDisabledDocs } from "./native-select/native-select-disabled";
+import { NativeSelectDisabledDocsRTL } from "./native-select/native-select-disabled-rtl";
+import { NativeSelectInvalidDocs } from "./native-select/native-select-invalid";
+import { NativeSelectInvalidDocsRTL } from "./native-select/native-select-invalid-rtl";
 
 export const registry: Record<string, React.ComponentType> = {
   "accordion-demo": AccordionDemoDocs,
@@ -589,4 +599,14 @@ export const registry: Record<string, React.ComponentType> = {
   "kbd-input-group-rtl": KbdInputGroupDocsRTL,
   "label-demo": LabelDemoDocs,
   "label-demo-rtl": LabelDemoDocsRTL,
+  "menubar-demo": MenubarDemoDocs,
+  "menubar-demo-rtl": MenubarDemoDocsRTL,
+  "native-select-demo": NativeSelectDemoDocs,
+  "native-select-demo-rtl": NativeSelectDemoDocsRTL,
+  "native-select-groups": NativeSelectGroupsDocs,
+  "native-select-groups-rtl": NativeSelectGroupsDocsRTL,
+  "native-select-disabled": NativeSelectDisabledDocs,
+  "native-select-disabled-rtl": NativeSelectDisabledDocsRTL,
+  "native-select-invalid": NativeSelectInvalidDocs,
+  "native-select-invalid-rtl": NativeSelectInvalidDocsRTL,
 };

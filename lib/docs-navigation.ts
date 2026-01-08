@@ -136,6 +136,14 @@ export const docsNavigation: NavItem[] = [
                 title: "Label",
                 href: "/docs/components/label",
               },
+              {
+                title: "Menubar",
+                href: "/docs/components/menubar",
+              },
+              {
+                title: "Native Select",
+                href: "/docs/components/native-select",
+              },
             ],
           },
         ];

@@ -1,0 +1,182 @@
+---
+title: Native Select
+description: A styled native HTML select element with consistent design system integration.
+---
+
+<ComponentPreview name="native-select-demo" />
+
+## Usage
+
+```tsx
+import {
+  NativeSelect,
+  NativeSelectOptGroup,
+  NativeSelectOption,
+} from "@soar-design/soar-react-components"
+
+<NativeSelect>
+  <NativeSelectOption value="">Select a fruit</NativeSelectOption>
+  <NativeSelectOption value="apple">Apple</NativeSelectOption>
+  <NativeSelectOption value="banana">Banana</NativeSelectOption>
+  <NativeSelectOption value="blueberry">Blueberry</NativeSelectOption>
+  <NativeSelectOption value="grapes" disabled>
+    Grapes
+  </NativeSelectOption>
+  <NativeSelectOption value="pineapple">Pineapple</NativeSelectOption>
+</NativeSelect>
+```
+
+## Examples
+
+### With Groups
+
+Organize options using `NativeSelectOptGroup` for better categorization.
+
+<ComponentPreview name="native-select-groups" />
+
+### Disabled State
+
+Disable individual options or the entire select component.
+
+<ComponentPreview name="native-select-disabled" />
+
+### Invalid State
+
+Show validation errors with the `aria-invalid` attribute and error styling.
+
+<ComponentPreview name="native-select-invalid" />
+
+## Native Select vs Select
+
+* Use `NativeSelect` when you need native browser behavior, better performance, or mobile-optimized dropdowns.
+* Use `Select` when you need custom styling, animations, or complex interactions.
+
+The `NativeSelect` component provides native HTML select functionality with consistent styling that matches your design system.
+
+## Accessibility
+
+* The component maintains all native HTML select accessibility features.
+* Screen readers can navigate through options using arrow keys.
+* The chevron icon is marked as `aria-hidden="true"` to avoid duplication.
+* Use `aria-label` or `aria-labelledby` for additional context when needed.
+
+```tsx
+<NativeSelect aria-label="Choose your preferred language">
+  <NativeSelectOption value="en">English</NativeSelectOption>
+  <NativeSelectOption value="es">Spanish</NativeSelectOption>
+  <NativeSelectOption value="fr">French</NativeSelectOption>
+</NativeSelect>
+```
+
+## API Reference
+
+### NativeSelect
+
+The main select component that wraps the native HTML select element.
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>`className`</TableCell>
+      <TableCell>`string`</TableCell>
+      <TableCell></TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+
+All other props are passed through to the underlying `<select>` element.
+
+```tsx
+<NativeSelect>
+  <NativeSelectOption value="option1">Option 1</NativeSelectOption>
+  <NativeSelectOption value="option2">Option 2</NativeSelectOption>
+</NativeSelect>
+```
+
+### NativeSelectOption
+
+Represents an individual option within the select.
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>`value`</TableCell>
+      <TableCell>`string`</TableCell>
+      <TableCell></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>`disabled`</TableCell>
+      <TableCell>`boolean`</TableCell>
+      <TableCell>`false`</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>`className`</TableCell>
+      <TableCell>`string`</TableCell>
+      <TableCell></TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+
+All other props are passed through to the underlying `<option>` element.
+
+```tsx
+<NativeSelectOption value="apple">Apple</NativeSelectOption>
+<NativeSelectOption value="banana" disabled>
+  Banana
+</NativeSelectOption>
+```
+
+### NativeSelectOptGroup
+
+Groups related options together for better organization.
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>`label`</TableCell>
+      <TableCell>`string`</TableCell>
+      <TableCell></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>`disabled`</TableCell>
+      <TableCell>`boolean`</TableCell>
+      <TableCell>`false`</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>`className`</TableCell>
+      <TableCell>`string`</TableCell>
+      <TableCell></TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+
+All other props are passed through to the underlying `<optgroup>` element.
+
+```tsx
+<NativeSelectOptGroup label="Fruits">
+  <NativeSelectOption value="apple">Apple</NativeSelectOption>
+  <NativeSelectOption value="banana">Banana</NativeSelectOption>
+</NativeSelectOptGroup>
+```
+
