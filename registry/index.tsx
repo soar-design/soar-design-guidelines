@@ -243,6 +243,16 @@ import { InputGroupButtonGroupDocs } from "./input-group/input-group-button-grou
 import { InputGroupButtonGroupDocsRTL } from "./input-group/input-group-button-group-rtl";
 import { InputGroupCustomDocs } from "./input-group/input-group-custom";
 import { InputGroupCustomDocsRTL } from "./input-group/input-group-custom-rtl";
+import { InputDemoDocs } from "./input/input-demo";
+import { InputDemoDocsRTL } from "./input/input-demo-rtl";
+import { InputFileDocs } from "./input/input-file";
+import { InputFileDocsRTL } from "./input/input-file-rtl";
+import { InputDisabledDocs } from "./input/input-disabled";
+import { InputDisabledDocsRTL } from "./input/input-disabled-rtl";
+import { InputWithLabelDocs } from "./input/input-with-label";
+import { InputWithLabelDocsRTL } from "./input/input-with-label-rtl";
+import { InputWithButtonDocs } from "./input/input-with-button";
+import { InputWithButtonDocsRTL } from "./input/input-with-button-rtl";
 import { InputOTPDemoDocs } from "./input-otp/input-otp-demo";
 import { InputOTPDemoDocsRTL } from "./input-otp/input-otp-demo-rtl";
 import { InputOTPPatternDocs } from "./input-otp/input-otp-pattern";
@@ -497,6 +507,16 @@ export const registry: Record<string, React.ComponentType> = {
   "input-group-button-group-rtl": InputGroupButtonGroupDocsRTL,
   "input-group-custom": InputGroupCustomDocs,
   "input-group-custom-rtl": InputGroupCustomDocsRTL,
+  "input-demo": InputDemoDocs,
+  "input-demo-rtl": InputDemoDocsRTL,
+  "input-file": InputFileDocs,
+  "input-file-rtl": InputFileDocsRTL,
+  "input-disabled": InputDisabledDocs,
+  "input-disabled-rtl": InputDisabledDocsRTL,
+  "input-with-label": InputWithLabelDocs,
+  "input-with-label-rtl": InputWithLabelDocsRTL,
+  "input-with-button": InputWithButtonDocs,
+  "input-with-button-rtl": InputWithButtonDocsRTL,
   "input-otp-demo": InputOTPDemoDocs,
   "input-otp-demo-rtl": InputOTPDemoDocsRTL,
   "input-otp-pattern": InputOTPPatternDocs,
