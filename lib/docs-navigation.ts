@@ -124,6 +124,18 @@ export const docsNavigation: NavItem[] = [
                 title: "Input OTP",
                 href: "/docs/components/input-otp",
               },
+              {
+                title: "Item",
+                href: "/docs/components/item",
+              },
+              {
+                title: "Kbd",
+                href: "/docs/components/kbd",
+              },
+              {
+                title: "Label",
+                href: "/docs/components/label",
+              },
             ],
           },
         ];

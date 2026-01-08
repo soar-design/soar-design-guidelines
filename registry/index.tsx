@@ -261,6 +261,38 @@ import { InputOTPSeparatorDocs } from "./input-otp/input-otp-separator";
 import { InputOTPSeparatorDocsRTL } from "./input-otp/input-otp-separator-rtl";
 import { InputOTPControlledDocs } from "./input-otp/input-otp-controlled";
 import { InputOTPControlledDocsRTL } from "./input-otp/input-otp-controlled-rtl";
+import { ItemDemoDocs } from "./item/item-demo";
+import { ItemDemoDocsRTL } from "./item/item-demo-rtl";
+import { ItemVariantDocs } from "./item/item-variant";
+import { ItemVariantDocsRTL } from "./item/item-variant-rtl";
+import { ItemSizeDocs } from "./item/item-size";
+import { ItemSizeDocsRTL } from "./item/item-size-rtl";
+import { ItemIconDocs } from "./item/item-icon";
+import { ItemIconDocsRTL } from "./item/item-icon-rtl";
+import { ItemAvatarDocs } from "./item/item-avatar";
+import { ItemAvatarDocsRTL } from "./item/item-avatar-rtl";
+import { ItemImageDocs } from "./item/item-image";
+import { ItemImageDocsRTL } from "./item/item-image-rtl";
+import { ItemGroupDocs } from "./item/item-group";
+import { ItemGroupDocsRTL } from "./item/item-group-rtl";
+import { ItemHeaderDocs } from "./item/item-header";
+import { ItemHeaderDocsRTL } from "./item/item-header-rtl";
+import { ItemLinkDocs } from "./item/item-link";
+import { ItemLinkDocsRTL } from "./item/item-link-rtl";
+import { ItemDropdownDocs } from "./item/item-dropdown";
+import { ItemDropdownDocsRTL } from "./item/item-dropdown-rtl";
+import { KbdDemoDocs } from "./kbd/kbd-demo";
+import { KbdDemoDocsRTL } from "./kbd/kbd-demo-rtl";
+import { KbdGroupDocs } from "./kbd/kbd-group";
+import { KbdGroupDocsRTL } from "./kbd/kbd-group-rtl";
+import { KbdButtonDocs } from "./kbd/kbd-button";
+import { KbdButtonDocsRTL } from "./kbd/kbd-button-rtl";
+import { KbdTooltipDocs } from "./kbd/kbd-tooltip";
+import { KbdTooltipDocsRTL } from "./kbd/kbd-tooltip-rtl";
+import { KbdInputGroupDocs } from "./kbd/kbd-input-group";
+import { KbdInputGroupDocsRTL } from "./kbd/kbd-input-group-rtl";
+import { LabelDemoDocs } from "./label/label-demo";
+import { LabelDemoDocsRTL } from "./label/label-demo-rtl";
 
 export const registry: Record<string, React.ComponentType> = {
   "accordion-demo": AccordionDemoDocs,
@@ -525,4 +557,36 @@ export const registry: Record<string, React.ComponentType> = {
   "input-otp-separator-rtl": InputOTPSeparatorDocsRTL,
   "input-otp-controlled": InputOTPControlledDocs,
   "input-otp-controlled-rtl": InputOTPControlledDocsRTL,
+  "item-demo": ItemDemoDocs,
+  "item-demo-rtl": ItemDemoDocsRTL,
+  "item-variant": ItemVariantDocs,
+  "item-variant-rtl": ItemVariantDocsRTL,
+  "item-size": ItemSizeDocs,
+  "item-size-rtl": ItemSizeDocsRTL,
+  "item-icon": ItemIconDocs,
+  "item-icon-rtl": ItemIconDocsRTL,
+  "item-avatar": ItemAvatarDocs,
+  "item-avatar-rtl": ItemAvatarDocsRTL,
+  "item-image": ItemImageDocs,
+  "item-image-rtl": ItemImageDocsRTL,
+  "item-group": ItemGroupDocs,
+  "item-group-rtl": ItemGroupDocsRTL,
+  "item-header": ItemHeaderDocs,
+  "item-header-rtl": ItemHeaderDocsRTL,
+  "item-link": ItemLinkDocs,
+  "item-link-rtl": ItemLinkDocsRTL,
+  "item-dropdown": ItemDropdownDocs,
+  "item-dropdown-rtl": ItemDropdownDocsRTL,
+  "kbd-demo": KbdDemoDocs,
+  "kbd-demo-rtl": KbdDemoDocsRTL,
+  "kbd-group": KbdGroupDocs,
+  "kbd-group-rtl": KbdGroupDocsRTL,
+  "kbd-button": KbdButtonDocs,
+  "kbd-button-rtl": KbdButtonDocsRTL,
+  "kbd-tooltip": KbdTooltipDocs,
+  "kbd-tooltip-rtl": KbdTooltipDocsRTL,
+  "kbd-input-group": KbdInputGroupDocs,
+  "kbd-input-group-rtl": KbdInputGroupDocsRTL,
+  "label-demo": LabelDemoDocs,
+  "label-demo-rtl": LabelDemoDocsRTL,
 };
