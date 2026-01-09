@@ -172,6 +172,50 @@ export const docsNavigation: NavItem[] = [
                 title: "Scroll Area",
                 href: "/docs/components/scroll-area",
               },
+              {
+                title: "Select",
+                href: "/docs/components/select",
+              },
+              {
+                title: "Separator",
+                href: "/docs/components/separator",
+              },
+              {
+                title: "Sheet",
+                href: "/docs/components/sheet",
+              },
+              {
+                title: "Skeleton",
+                href: "/docs/components/skeleton",
+              },
+              {
+                title: "Slider",
+                href: "/docs/components/slider",
+              },
+              {
+                title: "Sonner",
+                href: "/docs/components/sonner",
+              },
+              {
+                title: "Spinner",
+                href: "/docs/components/spinner",
+              },
+      {
+        title: "Switch",
+        href: "/docs/components/switch",
+      },
+      {
+        title: "Table",
+        href: "/docs/components/table",
+      },
+      {
+        title: "Tabs",
+        href: "/docs/components/tabs",
+      },
+      {
+        title: "Textarea",
+        href: "/docs/components/textarea",
+      },
             ],
           },
         ];

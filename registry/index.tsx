@@ -323,6 +323,58 @@ import { ScrollAreaDemoDocs } from "./scroll-area/scroll-area-demo";
 import { ScrollAreaDemoDocsRTL } from "./scroll-area/scroll-area-demo-rtl";
 import { ScrollAreaHorizontalDocs } from "./scroll-area/scroll-area-horizontal";
 import { ScrollAreaHorizontalDocsRTL } from "./scroll-area/scroll-area-horizontal-rtl";
+import { SelectDemoDocs } from "./select/select-demo";
+import { SelectDemoDocsRTL } from "./select/select-demo-rtl";
+import { SelectScrollableDocs } from "./select/select-scrollable";
+import { SelectScrollableDocsRTL } from "./select/select-scrollable-rtl";
+import { SeparatorDemoDocs } from "./separator/separator-demo";
+import { SeparatorDemoDocsRTL } from "./separator/separator-demo-rtl";
+import { SheetDemoDocs } from "./sheet/sheet-demo";
+import { SheetDemoDocsRTL } from "./sheet/sheet-demo-rtl";
+import { SkeletonDemoDocs } from "./skeleton/skeleton-demo";
+import { SkeletonDemoDocsRTL } from "./skeleton/skeleton-demo-rtl";
+import { SkeletonCardDocs } from "./skeleton/skeleton-card";
+import { SkeletonCardDocsRTL } from "./skeleton/skeleton-card-rtl";
+import { SliderDemoDocs } from "./slider/slider-demo";
+import { SliderDemoDocsRTL } from "./slider/slider-demo-rtl";
+import { SonnerDemoDocs } from "./sonner/sonner-demo";
+import { SonnerDemoDocsRTL } from "./sonner/sonner-demo-rtl";
+import { SonnerTypesDocs } from "./sonner/sonner-types";
+import { SonnerTypesDocsRTL } from "./sonner/sonner-types-rtl";
+import { SpinnerDemoDocs } from "./spinner/spinner-demo";
+import { SpinnerDemoDocsRTL } from "./spinner/spinner-demo-rtl";
+import { SpinnerCustomDocs } from "./spinner/spinner-custom";
+import { SpinnerCustomDocsRTL } from "./spinner/spinner-custom-rtl";
+import { SpinnerSizeDocs } from "./spinner/spinner-size";
+import { SpinnerSizeDocsRTL } from "./spinner/spinner-size-rtl";
+import { SpinnerColorDocs } from "./spinner/spinner-color";
+import { SpinnerColorDocsRTL } from "./spinner/spinner-color-rtl";
+import { SpinnerButtonDocs } from "./spinner/spinner-button";
+import { SpinnerButtonDocsRTL } from "./spinner/spinner-button-rtl";
+import { SpinnerBadgeDocs } from "./spinner/spinner-badge";
+import { SpinnerBadgeDocsRTL } from "./spinner/spinner-badge-rtl";
+import { SpinnerInputGroupDocs } from "./spinner/spinner-input-group";
+import { SpinnerInputGroupDocsRTL } from "./spinner/spinner-input-group-rtl";
+import { SpinnerEmptyDocs } from "./spinner/spinner-empty";
+import { SpinnerEmptyDocsRTL } from "./spinner/spinner-empty-rtl";
+import { SpinnerItemDocs } from "./spinner/spinner-item";
+import { SpinnerItemDocsRTL } from "./spinner/spinner-item-rtl";
+import { SwitchDemoDocs } from "./switch/switch-demo";
+import { SwitchDemoDocsRTL } from "./switch/switch-demo-rtl";
+import { TableDemoDocs } from "./table/table-demo";
+import { TableDemoDocsRTL } from "./table/table-demo-rtl";
+import { TabsDemoDocs } from "./tabs/tabs-demo";
+import { TabsDemoDocsRTL } from "./tabs/tabs-demo-rtl";
+import { TextareaDemoDocs } from "./textarea/textarea-demo";
+import { TextareaDemoDocsRTL } from "./textarea/textarea-demo-rtl";
+import { TextareaDisabledDocs } from "./textarea/textarea-disabled";
+import { TextareaDisabledDocsRTL } from "./textarea/textarea-disabled-rtl";
+import { TextareaWithLabelDocs } from "./textarea/textarea-with-label";
+import { TextareaWithLabelDocsRTL } from "./textarea/textarea-with-label-rtl";
+import { TextareaWithTextDocs } from "./textarea/textarea-with-text";
+import { TextareaWithTextDocsRTL } from "./textarea/textarea-with-text-rtl";
+import { TextareaWithButtonDocs } from "./textarea/textarea-with-button";
+import { TextareaWithButtonDocsRTL } from "./textarea/textarea-with-button-rtl";
 
 export const registry: Record<string, React.ComponentType> = {
   "accordion-demo": AccordionDemoDocs,
@@ -649,4 +701,56 @@ export const registry: Record<string, React.ComponentType> = {
   "scroll-area-demo-rtl": ScrollAreaDemoDocsRTL,
   "scroll-area-horizontal": ScrollAreaHorizontalDocs,
   "scroll-area-horizontal-rtl": ScrollAreaHorizontalDocsRTL,
+  "select-demo": SelectDemoDocs,
+  "select-demo-rtl": SelectDemoDocsRTL,
+  "select-scrollable": SelectScrollableDocs,
+  "select-scrollable-rtl": SelectScrollableDocsRTL,
+  "separator-demo": SeparatorDemoDocs,
+  "separator-demo-rtl": SeparatorDemoDocsRTL,
+  "sheet-demo": SheetDemoDocs,
+  "sheet-demo-rtl": SheetDemoDocsRTL,
+  "skeleton-demo": SkeletonDemoDocs,
+  "skeleton-demo-rtl": SkeletonDemoDocsRTL,
+  "skeleton-card": SkeletonCardDocs,
+  "skeleton-card-rtl": SkeletonCardDocsRTL,
+  "slider-demo": SliderDemoDocs,
+  "slider-demo-rtl": SliderDemoDocsRTL,
+  "sonner-demo": SonnerDemoDocs,
+  "sonner-demo-rtl": SonnerDemoDocsRTL,
+  "sonner-types": SonnerTypesDocs,
+  "sonner-types-rtl": SonnerTypesDocsRTL,
+  "spinner-demo": SpinnerDemoDocs,
+  "spinner-demo-rtl": SpinnerDemoDocsRTL,
+  "spinner-custom": SpinnerCustomDocs,
+  "spinner-custom-rtl": SpinnerCustomDocsRTL,
+  "spinner-size": SpinnerSizeDocs,
+  "spinner-size-rtl": SpinnerSizeDocsRTL,
+  "spinner-color": SpinnerColorDocs,
+  "spinner-color-rtl": SpinnerColorDocsRTL,
+  "spinner-button": SpinnerButtonDocs,
+  "spinner-button-rtl": SpinnerButtonDocsRTL,
+  "spinner-badge": SpinnerBadgeDocs,
+  "spinner-badge-rtl": SpinnerBadgeDocsRTL,
+  "spinner-input-group": SpinnerInputGroupDocs,
+  "spinner-input-group-rtl": SpinnerInputGroupDocsRTL,
+  "spinner-empty": SpinnerEmptyDocs,
+  "spinner-empty-rtl": SpinnerEmptyDocsRTL,
+  "spinner-item": SpinnerItemDocs,
+  "spinner-item-rtl": SpinnerItemDocsRTL,
+  "switch-demo": SwitchDemoDocs,
+  "switch-demo-rtl": SwitchDemoDocsRTL,
+  "table-demo": TableDemoDocs,
+  "table-demo-rtl": TableDemoDocsRTL,
+  "tabs-demo": TabsDemoDocs,
+  "tabs-demo-rtl": TabsDemoDocsRTL,
+  "textarea-demo": TextareaDemoDocs,
+  "textarea-demo-rtl": TextareaDemoDocsRTL,
+  "textarea-disabled": TextareaDisabledDocs,
+  "textarea-disabled-rtl": TextareaDisabledDocsRTL,
+  "textarea-with-label": TextareaWithLabelDocs,
+  "textarea-with-label-rtl": TextareaWithLabelDocsRTL,
+  "textarea-with-text": TextareaWithTextDocs,
+  "textarea-with-text-rtl": TextareaWithTextDocsRTL,
+  "textarea-with-button": TextareaWithButtonDocs,
+  "textarea-with-button-rtl": TextareaWithButtonDocsRTL,
 };

@@ -1,7 +1,15 @@
 "use client";
 
-import { Toaster } from "@soar-design/soar-react-components";
+import { useTheme } from "next-themes";
+import { Toaster as Sonner } from "sonner";
 
 export function ToasterProvider() {
-  return <Toaster />;
+  const { theme = "system" } = useTheme();
+
+  return (
+    <Sonner
+      theme={theme as "light" | "dark" | "system"}
+      className="toaster group"
+    />
+  );
 }
