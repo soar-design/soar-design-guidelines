@@ -313,6 +313,16 @@ import { ProgressDemoDocs } from "./progress/progress-demo";
 import { ProgressDemoDocsRTL } from "./progress/progress-demo-rtl";
 import { RadioGroupDemoDocs } from "./radio-group/radio-group-demo";
 import { RadioGroupDemoDocsRTL } from "./radio-group/radio-group-demo-rtl";
+import { ResizableDemoDocs } from "./resizable/resizable-demo";
+import { ResizableDemoDocsRTL } from "./resizable/resizable-demo-rtl";
+import { ResizableVerticalDocs } from "./resizable/resizable-vertical";
+import { ResizableVerticalDocsRTL } from "./resizable/resizable-vertical-rtl";
+import { ResizableHandleDocs } from "./resizable/resizable-handle";
+import { ResizableHandleDocsRTL } from "./resizable/resizable-handle-rtl";
+import { ScrollAreaDemoDocs } from "./scroll-area/scroll-area-demo";
+import { ScrollAreaDemoDocsRTL } from "./scroll-area/scroll-area-demo-rtl";
+import { ScrollAreaHorizontalDocs } from "./scroll-area/scroll-area-horizontal";
+import { ScrollAreaHorizontalDocsRTL } from "./scroll-area/scroll-area-horizontal-rtl";
 
 export const registry: Record<string, React.ComponentType> = {
   "accordion-demo": AccordionDemoDocs,
@@ -629,4 +639,14 @@ export const registry: Record<string, React.ComponentType> = {
   "progress-demo-rtl": ProgressDemoDocsRTL,
   "radio-group-demo": RadioGroupDemoDocs,
   "radio-group-demo-rtl": RadioGroupDemoDocsRTL,
+  "resizable-demo": ResizableDemoDocs,
+  "resizable-demo-rtl": ResizableDemoDocsRTL,
+  "resizable-vertical": ResizableVerticalDocs,
+  "resizable-vertical-rtl": ResizableVerticalDocsRTL,
+  "resizable-handle": ResizableHandleDocs,
+  "resizable-handle-rtl": ResizableHandleDocsRTL,
+  "scroll-area-demo": ScrollAreaDemoDocs,
+  "scroll-area-demo-rtl": ScrollAreaDemoDocsRTL,
+  "scroll-area-horizontal": ScrollAreaHorizontalDocs,
+  "scroll-area-horizontal-rtl": ScrollAreaHorizontalDocsRTL,
 };
