@@ -403,6 +403,8 @@ import { ToggleLargeDocs } from "./toggle/toggle-large";
 import { ToggleLargeDocsRTL } from "./toggle/toggle-large-rtl";
 import { ToggleDisabledDocs } from "./toggle/toggle-disabled";
 import { ToggleDisabledDocsRTL } from "./toggle/toggle-disabled-rtl";
+import { TooltipDemoDocs } from "./tooltip/tooltip-demo";
+import { TooltipDemoDocsRTL } from "./tooltip/tooltip-demo-rtl";
 
 export const registry: Record<string, React.ComponentType> = {
   "accordion-demo": AccordionDemoDocs,
@@ -809,4 +811,6 @@ export const registry: Record<string, React.ComponentType> = {
   "toggle-large-rtl": ToggleLargeDocsRTL,
   "toggle-disabled": ToggleDisabledDocs,
   "toggle-disabled-rtl": ToggleDisabledDocsRTL,
+  "tooltip-demo": TooltipDemoDocs,
+  "tooltip-demo-rtl": TooltipDemoDocsRTL,
 };

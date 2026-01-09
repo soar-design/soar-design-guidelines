@@ -224,6 +224,10 @@ export const docsNavigation: NavItem[] = [
         title: "Toggle",
         href: "/docs/components/toggle",
       },
+      {
+        title: "Tooltip",
+        href: "/docs/components/tooltip",
+      },
             ],
           },
         ];
