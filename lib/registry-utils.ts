@@ -3,8 +3,8 @@ import path from "path";
 
 export async function getRegistryComponentSource(name: string) {
   // Handle component-variant naming convention
-  // e.g., "button-demo" -> "registry/button/demo.tsx"
-  // e.g., "alert-dialog-demo" -> "registry/alert-dialog/demo.tsx"
+  // e.g., "button-demo" -> "registry/button/demo.tsx" OR "registry/button/button-demo.tsx"
+  // e.g., "alert-dialog-demo" -> "registry/alert-dialog/demo.tsx" OR "registry/alert-dialog/alert-dialog-demo.tsx"
   // e.g., "data-grid-cell-border" -> "registry/data-grid/cell-border.tsx"
   
   const parts = name.split("-");
@@ -18,11 +18,19 @@ export async function getRegistryComponentSource(name: string) {
     if (!component || !variant) continue;
     
     const componentDir = path.join(registryPath, component);
-    const filePath = path.join(componentDir, `${variant}.tsx`);
+    
+    // Try variant name first (e.g., "demo.tsx")
+    let filePath = path.join(componentDir, `${variant}.tsx`);
     
     try {
       // Check if the component directory exists and the file exists
       if (fs.existsSync(componentDir) && fs.statSync(componentDir).isDirectory() && fs.existsSync(filePath)) {
+        return fs.readFileSync(filePath, "utf8");
+      }
+      
+      // If not found, try full name (e.g., "button-demo.tsx")
+      filePath = path.join(componentDir, `${name}.tsx`);
+      if (fs.existsSync(filePath)) {
         return fs.readFileSync(filePath, "utf8");
       }
     } catch (error) {
