@@ -375,6 +375,34 @@ import { TextareaWithTextDocs } from "./textarea/textarea-with-text";
 import { TextareaWithTextDocsRTL } from "./textarea/textarea-with-text-rtl";
 import { TextareaWithButtonDocs } from "./textarea/textarea-with-button";
 import { TextareaWithButtonDocsRTL } from "./textarea/textarea-with-button-rtl";
+import { ToggleGroupDemoDocs } from "./toggle-group/toggle-group-demo";
+import { ToggleGroupDemoDocsRTL } from "./toggle-group/toggle-group-demo-rtl";
+import { ToggleGroupOutlineDocs } from "./toggle-group/toggle-group-outline";
+import { ToggleGroupOutlineDocsRTL } from "./toggle-group/toggle-group-outline-rtl";
+import { ToggleGroupSingleDocs } from "./toggle-group/toggle-group-single";
+import { ToggleGroupSingleDocsRTL } from "./toggle-group/toggle-group-single-rtl";
+import { ToggleGroupSmallDocs } from "./toggle-group/toggle-group-small";
+import { ToggleGroupSmallDocsRTL } from "./toggle-group/toggle-group-small-rtl";
+import { ToggleGroupLargeDocs } from "./toggle-group/toggle-group-large";
+import { ToggleGroupLargeDocsRTL } from "./toggle-group/toggle-group-large-rtl";
+import { ToggleGroupDisabledDocs } from "./toggle-group/toggle-group-disabled";
+import { ToggleGroupDisabledDocsRTL } from "./toggle-group/toggle-group-disabled-rtl";
+import { ToggleGroupSpacingDocs } from "./toggle-group/toggle-group-spacing";
+import { ToggleGroupSpacingDocsRTL } from "./toggle-group/toggle-group-spacing-rtl";
+import { ToggleDemoDocs } from "./toggle/toggle-demo";
+import { ToggleDemoDocsRTL } from "./toggle/toggle-demo-rtl";
+import { ToggleDefaultDocs } from "./toggle/toggle-default";
+import { ToggleDefaultDocsRTL } from "./toggle/toggle-default-rtl";
+import { ToggleOutlineDocs } from "./toggle/toggle-outline";
+import { ToggleOutlineDocsRTL } from "./toggle/toggle-outline-rtl";
+import { ToggleWithTextDocs } from "./toggle/toggle-with-text";
+import { ToggleWithTextDocsRTL } from "./toggle/toggle-with-text-rtl";
+import { ToggleSmallDocs } from "./toggle/toggle-small";
+import { ToggleSmallDocsRTL } from "./toggle/toggle-small-rtl";
+import { ToggleLargeDocs } from "./toggle/toggle-large";
+import { ToggleLargeDocsRTL } from "./toggle/toggle-large-rtl";
+import { ToggleDisabledDocs } from "./toggle/toggle-disabled";
+import { ToggleDisabledDocsRTL } from "./toggle/toggle-disabled-rtl";
 
 export const registry: Record<string, React.ComponentType> = {
   "accordion-demo": AccordionDemoDocs,
@@ -753,4 +781,32 @@ export const registry: Record<string, React.ComponentType> = {
   "textarea-with-text-rtl": TextareaWithTextDocsRTL,
   "textarea-with-button": TextareaWithButtonDocs,
   "textarea-with-button-rtl": TextareaWithButtonDocsRTL,
+  "toggle-group-demo": ToggleGroupDemoDocs,
+  "toggle-group-demo-rtl": ToggleGroupDemoDocsRTL,
+  "toggle-group-outline": ToggleGroupOutlineDocs,
+  "toggle-group-outline-rtl": ToggleGroupOutlineDocsRTL,
+  "toggle-group-single": ToggleGroupSingleDocs,
+  "toggle-group-single-rtl": ToggleGroupSingleDocsRTL,
+  "toggle-group-small": ToggleGroupSmallDocs,
+  "toggle-group-small-rtl": ToggleGroupSmallDocsRTL,
+  "toggle-group-large": ToggleGroupLargeDocs,
+  "toggle-group-large-rtl": ToggleGroupLargeDocsRTL,
+  "toggle-group-disabled": ToggleGroupDisabledDocs,
+  "toggle-group-disabled-rtl": ToggleGroupDisabledDocsRTL,
+  "toggle-group-spacing": ToggleGroupSpacingDocs,
+  "toggle-group-spacing-rtl": ToggleGroupSpacingDocsRTL,
+  "toggle-demo": ToggleDemoDocs,
+  "toggle-demo-rtl": ToggleDemoDocsRTL,
+  "toggle-default": ToggleDefaultDocs,
+  "toggle-default-rtl": ToggleDefaultDocsRTL,
+  "toggle-outline": ToggleOutlineDocs,
+  "toggle-outline-rtl": ToggleOutlineDocsRTL,
+  "toggle-with-text": ToggleWithTextDocs,
+  "toggle-with-text-rtl": ToggleWithTextDocsRTL,
+  "toggle-small": ToggleSmallDocs,
+  "toggle-small-rtl": ToggleSmallDocsRTL,
+  "toggle-large": ToggleLargeDocs,
+  "toggle-large-rtl": ToggleLargeDocsRTL,
+  "toggle-disabled": ToggleDisabledDocs,
+  "toggle-disabled-rtl": ToggleDisabledDocsRTL,
 };

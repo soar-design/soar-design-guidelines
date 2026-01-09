@@ -216,6 +216,14 @@ export const docsNavigation: NavItem[] = [
         title: "Textarea",
         href: "/docs/components/textarea",
       },
+      {
+        title: "Toggle Group",
+        href: "/docs/components/toggle-group",
+      },
+      {
+        title: "Toggle",
+        href: "/docs/components/toggle",
+      },
             ],
           },
         ];
