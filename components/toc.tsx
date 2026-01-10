@@ -9,7 +9,11 @@ interface TocProps extends React.ComponentProps<"div"> {
   toc: TocItem[];
 }
 
-export function DashboardTableOfContents({ toc, className, ...props }: TocProps) {
+export function DashboardTableOfContents({
+  toc,
+  className,
+  ...props
+}: TocProps) {
   const itemIds = React.useMemo(() => {
     if (!toc) return [];
 
@@ -31,9 +35,14 @@ export function DashboardTableOfContents({ toc, className, ...props }: TocProps)
   }
 
   return (
-    <div className={cn("flex flex-col gap-2 w-full h-full", className)} {...props}>
-      <p className="font-medium text-xs text-foreground px-6 pt-8">On This Page</p>
-      <div className="flex-1 overflow-y-auto scrollbar-hide px-6 pb-8">
+    <div
+      className={cn("flex h-full w-full flex-col gap-2", className)}
+      {...props}
+    >
+      <p className="text-foreground px-6 pt-8 text-xs font-medium">
+        On This Page
+      </p>
+      <div className="scrollbar-hide flex-1 overflow-y-auto px-6 pb-8">
         <Tree tree={toc} activeItem={activeHeading} />
       </div>
     </div>
@@ -52,7 +61,7 @@ function useActiveItem(itemIds: (string | undefined)[]) {
           }
         });
       },
-      { rootMargin: `0% 0% -80% 0%` }
+      { rootMargin: `0% 0% -80% 0%` },
     );
 
     itemIds?.forEach((id) => {
@@ -102,16 +111,20 @@ function Tree({ tree, level = 1, activeItem }: TreeProps) {
             <a
               href={item.url}
               className={cn(
-                "inline-block no-underline transition-colors hover:text-foreground",
+                "hover:text-foreground inline-block no-underline transition-colors",
                 item.url === `#${activeItem}`
-                  ? "font-medium text-foreground"
-                  : "text-muted-foreground"
+                  ? "text-foreground font-medium"
+                  : "text-muted-foreground",
               )}
             >
               {item.title}
             </a>
             {item.items?.length ? (
-              <Tree tree={item.items} level={level + 1} activeItem={activeItem} />
+              <Tree
+                tree={item.items}
+                level={level + 1}
+                activeItem={activeItem}
+              />
             ) : null}
           </li>
         );

@@ -61,13 +61,15 @@ export async function ComponentPreview({
 }: ComponentPreviewProps) {
   // Fetch LTR code (use provided code or fetch from registry)
   const ltrCode = code || (await getRegistryComponentSource(name)) || "";
-  
+
   // Check if RTL version exists
   const rtlName = `${name}-rtl`;
   const rtlCode = await getRegistryComponentSource(rtlName);
-  
-  const ltrCodeBlock = ltrCode && ltrCode.trim() ? renderCodeBlock(ltrCode) : null;
-  const rtlCodeBlock = rtlCode && rtlCode.trim() ? renderCodeBlock(rtlCode) : null;
+
+  const ltrCodeBlock =
+    ltrCode && ltrCode.trim() ? renderCodeBlock(ltrCode) : null;
+  const rtlCodeBlock =
+    rtlCode && rtlCode.trim() ? renderCodeBlock(rtlCode) : null;
 
   return (
     <ComponentPreviewTabs

@@ -9,12 +9,14 @@ interface SidebarPreviewWrapperProps {
 
 /**
  * Specialized wrapper for Sidebar component previews.
- * 
+ *
  * This wrapper isolates sidebar examples from the site's global SidebarProvider
  * by intercepting keyboard events and preventing them from bubbling up to
  * the site's sidebar context.
  */
-export function SidebarPreviewWrapper({ children }: SidebarPreviewWrapperProps) {
+export function SidebarPreviewWrapper({
+  children,
+}: SidebarPreviewWrapperProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Prevent keyboard shortcuts from affecting the site's sidebar
@@ -52,4 +54,3 @@ export function SidebarPreviewWrapper({ children }: SidebarPreviewWrapperProps) 
     </div>
   );
 }
-

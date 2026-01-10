@@ -456,6 +456,3 @@ For development handoff:
 
 **Last Updated**: December 2024
 **Design System Version**: Soar DS v1.0
-
-
-

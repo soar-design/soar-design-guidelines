@@ -72,7 +72,7 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
         section.items?.map((item) => ({
           ...item,
           section: section.title,
-        })) || []
+        })) || [],
     )
     .find((item) => item.href === pathname);
 
@@ -84,7 +84,7 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
             <SidebarMenuItem>
               <SidebarMenuButton
                 size="lg"
-                className="bg-transparent hover:bg-transparent active:bg-transparent h-auto p-4"
+                className="h-auto bg-transparent p-4 hover:bg-transparent active:bg-transparent"
                 asChild
               >
                 <Link href="/" className="flex flex-col items-start space-y-3">
@@ -99,8 +99,10 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
                   </div>
 
                   <div className="flex flex-col gap-1">
-                    <span className="font-bold text-2xl leading-none">Soar</span>
-                    <span className="font-bold text-2xl text-muted-foreground leading-none">
+                    <span className="text-2xl leading-none font-bold">
+                      Soar
+                    </span>
+                    <span className="text-muted-foreground text-2xl leading-none font-bold">
                       Design
                       <br />
                       Guidelines
@@ -114,7 +116,8 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
                       shape="circle"
                       className="tabular-nums"
                     >
-                      <span className="mr-1.5 h-2 w-2 rounded-full bg-current"></span>v{packageJson.version} Alpha
+                      <span className="mr-1.5 h-2 w-2 rounded-full bg-current"></span>
+                      v{packageJson.version} Alpha
                     </Badge>
                   </div>
                 </Link>
@@ -122,8 +125,8 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
             </SidebarMenuItem>
           </SidebarMenu>
         </SidebarHeader>
-        <SidebarContent className="bg-background px-3 scrollbar-hide max-lg:rounded-b-2xl">
-          <div className="pointer-events-none sticky top-0 z-10 h-[100px] shrink-0 bg-gradient-to-b from-background via-background/50 to-transparent"></div>
+        <SidebarContent className="bg-background scrollbar-hide px-3 max-lg:rounded-b-2xl">
+          <div className="from-background via-background/50 pointer-events-none sticky top-0 z-10 h-[100px] shrink-0 bg-gradient-to-b to-transparent"></div>
           <div className="-mt-[50px]">
             {docsNavigation.map((section) => (
               <SidebarGroup key={section.title}>
@@ -134,9 +137,12 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
                     return (
                       <SidebarMenuItem key={item.href}>
                         <SidebarMenuButton asChild isActive={isActive}>
-                          <Link href={item.href!} className="flex items-center gap-2">
+                          <Link
+                            href={item.href!}
+                            className="flex items-center gap-2"
+                          >
                             {isActive && (
-                              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                              <span className="bg-primary h-1.5 w-1.5 shrink-0 rounded-full" />
                             )}
                             <span>{item.title}</span>
                           </Link>
@@ -148,13 +154,13 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
               </SidebarGroup>
             ))}
           </div>
-          <div className="pointer-events-none sticky bottom-0 z-10 -mt-[20px] h-[100px] shrink-0 bg-gradient-to-t from-background via-background/50 to-transparent"></div>
+          <div className="from-background via-background/50 pointer-events-none sticky bottom-0 z-10 -mt-[20px] h-[100px] shrink-0 bg-gradient-to-t to-transparent"></div>
         </SidebarContent>
       </Sidebar>
       <SidebarInset className="flex flex-col">
-        <header className="sticky top-0 z-50 bg-background lg:pe-72">
+        <header className="bg-background sticky top-0 z-50 lg:pe-72">
           <div className="mx-auto flex h-16 w-full max-w-5xl items-center justify-between px-6">
-            <div className="flex gap-2 items-center">
+            <div className="flex items-center gap-2">
               <SidebarTrigger />
               <Separator orientation="vertical" className="me-2 h-4" />
               <Breadcrumb>
@@ -177,11 +183,11 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
                 </BreadcrumbList>
               </Breadcrumb>
             </div>
-            <div className="flex gap-3 items-center">
+            <div className="flex items-center gap-3">
               <Button
                 size="sm"
                 variant="outline"
-                className="hidden md:flex relative w-full justify-start sm:pe-12 md:w-40 lg:w-64"
+                className="relative hidden w-full justify-start sm:pe-12 md:flex md:w-40 lg:w-64"
                 onClick={() => setOpen(true)}
               >
                 <span>Search documentation...</span>
@@ -198,7 +204,7 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
                   <TabsList
                     variant="button"
                     size="xs"
-                    className="h-9 border border-border bg-none! rounded-full px-1"
+                    className="border-border h-9 rounded-full border bg-none! px-1"
                   >
                     <TabsTrigger value="light" className="rounded-full">
                       <Sun />

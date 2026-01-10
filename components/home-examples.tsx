@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   Button,
@@ -23,19 +23,21 @@ import {
   AvatarFallback,
   AvatarImage,
   Switch,
-} from "@soar-design/soar-react-components"
-import { Plus, CheckCircle2, Info, Star, Send, Search } from "lucide-react"
+} from "@soar-design/soar-react-components";
+import { Plus, CheckCircle2, Info, Star, Send, Search } from "lucide-react";
 
 export function HomeExamples() {
   return (
-    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7 lg:gap-8 items-start">
+    <div className="grid items-start gap-4 md:grid-cols-2 lg:grid-cols-7 lg:gap-8">
       {/* Payment Method - Takes up 4 columns on large screens */}
-      <Card className="lg:col-span-4 shadow-xl">
+      <Card className="shadow-xl lg:col-span-4">
         <CardHeader>
           <CardHeading>
             <div>
               <CardTitle>Payment Method</CardTitle>
-              <CardDescription>All transactions are secure and encrypted</CardDescription>
+              <CardDescription>
+                All transactions are secure and encrypted
+              </CardDescription>
             </div>
           </CardHeading>
         </CardHeader>
@@ -48,7 +50,9 @@ export function HomeExamples() {
             <div className="space-y-2">
               <Label htmlFor="card">Card Number</Label>
               <Input id="card" placeholder="1234 5678 9012 3456" />
-              <p className="text-xs text-muted-foreground">Enter your 16-digit number.</p>
+              <p className="text-muted-foreground text-xs">
+                Enter your 16-digit number.
+              </p>
             </div>
             <div className="space-y-2">
               <Label htmlFor="cvv">CVV</Label>
@@ -88,12 +92,15 @@ export function HomeExamples() {
             </div>
           </div>
           <div className="space-y-4">
-            <p className="text-sm text-muted-foreground">
+            <p className="text-muted-foreground text-sm">
               The billing address associated with your payment method
             </p>
             <div className="flex items-center space-x-2">
               <Checkbox id="same-address" defaultChecked />
-              <Label htmlFor="same-address" className="text-sm font-normal cursor-pointer">
+              <Label
+                htmlFor="same-address"
+                className="cursor-pointer text-sm font-normal"
+              >
                 Same as shipping address
               </Label>
             </div>
@@ -106,38 +113,49 @@ export function HomeExamples() {
       </Card>
 
       {/* Right Column - Takes up 3 columns */}
-      <div className="lg:col-span-3 space-y-4 lg:space-y-8">
+      <div className="space-y-4 lg:col-span-3 lg:space-y-8">
         {/* Team Members Card */}
         <Card className="shadow-xl">
           <CardHeader>
             <CardHeading>
               <div>
                 <CardTitle>Team Members</CardTitle>
-                <CardDescription>Invite your team to collaborate.</CardDescription>
+                <CardDescription>
+                  Invite your team to collaborate.
+                </CardDescription>
               </div>
             </CardHeading>
             <CardToolbar>
               <Button size="sm" variant="primary">
-                <Plus className="h-4 w-4 mr-2" />
+                <Plus className="mr-2 h-4 w-4" />
                 Invite
               </Button>
             </CardToolbar>
           </CardHeader>
           <CardContent>
             <div className="flex -space-x-2">
-              <Avatar className="border-2 border-background">
-                <AvatarImage src="https://api.dicebear.com/7.x/avataaars/svg?seed=John" alt="John" />
+              <Avatar className="border-background border-2">
+                <AvatarImage
+                  src="https://api.dicebear.com/7.x/avataaars/svg?seed=John"
+                  alt="John"
+                />
                 <AvatarFallback>JD</AvatarFallback>
               </Avatar>
-              <Avatar className="border-2 border-background">
-                <AvatarImage src="https://api.dicebear.com/7.x/avataaars/svg?seed=Jane" alt="Jane" />
+              <Avatar className="border-background border-2">
+                <AvatarImage
+                  src="https://api.dicebear.com/7.x/avataaars/svg?seed=Jane"
+                  alt="Jane"
+                />
                 <AvatarFallback>JS</AvatarFallback>
               </Avatar>
-              <Avatar className="border-2 border-background">
-                <AvatarImage src="https://api.dicebear.com/7.x/avataaars/svg?seed=Bob" alt="Bob" />
+              <Avatar className="border-background border-2">
+                <AvatarImage
+                  src="https://api.dicebear.com/7.x/avataaars/svg?seed=Bob"
+                  alt="Bob"
+                />
                 <AvatarFallback>BJ</AvatarFallback>
               </Avatar>
-              <Avatar className="border-2 border-background">
+              <Avatar className="border-background border-2">
                 <AvatarFallback>+5</AvatarFallback>
               </Avatar>
             </div>
@@ -147,18 +165,20 @@ export function HomeExamples() {
         {/* Settings Card (Cookie/Security style) */}
         <Card className="shadow-xl">
           <CardHeader>
-             <CardHeading>
-               <div>
-                  <CardTitle>Settings</CardTitle>
-                  <CardDescription>Manage your preferences.</CardDescription>
-               </div>
-             </CardHeading>
+            <CardHeading>
+              <div>
+                <CardTitle>Settings</CardTitle>
+                <CardDescription>Manage your preferences.</CardDescription>
+              </div>
+            </CardHeading>
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="flex items-center justify-between">
               <div className="space-y-0.5">
                 <Label htmlFor="2fa">Two-factor auth</Label>
-                <p className="text-sm text-muted-foreground">Verify via email.</p>
+                <p className="text-muted-foreground text-sm">
+                  Verify via email.
+                </p>
               </div>
               <Switch id="2fa" defaultChecked />
             </div>
@@ -170,25 +190,29 @@ export function HomeExamples() {
         </Card>
 
         {/* Search/Chat mockup */}
-        <div className="rounded-lg border bg-card text-card-foreground shadow-xl">
-           <div className="p-4 space-y-4">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                <Input placeholder="Search..." className="pl-9" />
-              </div>
-              <div className="relative">
-                 <Textarea placeholder="Type a message..." rows={2} className="pr-12 resize-none" />
-                 <Button size="icon" variant="primary" className="absolute right-2 bottom-2 h-7 w-7">
-                    <Send className="h-3 w-3" />
-                 </Button>
-              </div>
-           </div>
+        <div className="bg-card text-card-foreground rounded-lg border shadow-xl">
+          <div className="space-y-4 p-4">
+            <div className="relative">
+              <Search className="text-muted-foreground absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2" />
+              <Input placeholder="Search..." className="pl-9" />
+            </div>
+            <div className="relative">
+              <Textarea
+                placeholder="Type a message..."
+                rows={2}
+                className="resize-none pr-12"
+              />
+              <Button
+                size="icon"
+                variant="primary"
+                className="absolute right-2 bottom-2 h-7 w-7"
+              >
+                <Send className="h-3 w-3" />
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
-
-
-
-

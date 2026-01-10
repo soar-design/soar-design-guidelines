@@ -66,7 +66,7 @@ export function ComponentPreviewTabs({
       className={cn("group relative my-4 flex flex-col space-y-2", className)}
       {...props}
     >
-      <div className="flex items-center gap-2 mb-3">
+      <div className="mb-3 flex items-center gap-2">
         <TabsList>
           <TabsTrigger value="preview">Preview</TabsTrigger>
           <TabsTrigger value="code">Code</TabsTrigger>
@@ -83,8 +83,8 @@ export function ComponentPreviewTabs({
       <TabsContent
         value="preview"
         className={cn(
-          "relative rounded-[26px] border-4 border-border",
-          isSidebarComponent && "overflow-hidden"
+          "border-border relative rounded-[26px] border-4",
+          isSidebarComponent && "overflow-hidden",
         )}
       >
         <DirectionProvider dir={isRTL ? "rtl" : "ltr"}>
@@ -92,7 +92,9 @@ export function ComponentPreviewTabs({
             ref={previewRef}
             className={cn(
               "min-h-[350px]",
-              isSidebarComponent ? "isolate p-0" : "flex items-center justify-center p-10"
+              isSidebarComponent
+                ? "isolate p-0"
+                : "flex items-center justify-center p-10",
             )}
             dir={isRTL ? "rtl" : "ltr"}
             onKeyDownCapture={
@@ -117,9 +119,9 @@ export function ComponentPreviewTabs({
             {Component ? (
               <Component key={isRTL ? `${name}-rtl` : name} />
             ) : (
-              <div className="text-sm text-muted-foreground">
-                Component <code className="bg-muted p-1 rounded">{name}</code> not found in
-                registry.
+              <div className="text-muted-foreground text-sm">
+                Component <code className="bg-muted rounded p-1">{name}</code>{" "}
+                not found in registry.
               </div>
             )}
           </div>

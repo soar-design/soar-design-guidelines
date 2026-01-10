@@ -10,4 +10,3 @@ interface CodeBlockWrapperProps {
 export function CodeBlockWrapper({ raw }: CodeBlockWrapperProps) {
   return <CopyButton value={raw} />;
 }
-

@@ -2,7 +2,11 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 import { CodeBlockWrapper } from "@/components/code-block-wrapper";
 
-export const pre = ({ className, children, ...props }: React.HTMLAttributes<HTMLPreElement>) => {
+export const pre = ({
+  className,
+  children,
+  ...props
+}: React.HTMLAttributes<HTMLPreElement>) => {
   // Extract raw text content from children for copy functionality
   const extractTextContent = (node: React.ReactNode): string => {
     if (typeof node === "string") return node;
@@ -19,10 +23,13 @@ export const pre = ({ className, children, ...props }: React.HTMLAttributes<HTML
   const raw = extractTextContent(children);
 
   return (
-    <div className="relative group">
+    <div className="group relative">
       <CodeBlockWrapper raw={raw} />
       <pre
-        className={cn("mb-4 p-4 overflow-x-auto rounded-[26px] bg-muted/40", className)}
+        className={cn(
+          "bg-muted/40 mb-4 overflow-x-auto rounded-[26px] p-4",
+          className,
+        )}
         {...props}
       >
         {React.Children.map(children, (child) => {
@@ -38,10 +45,15 @@ export const pre = ({ className, children, ...props }: React.HTMLAttributes<HTML
   );
 };
 
-export const code = ({ className, children, ...props }: React.HTMLAttributes<HTMLElement>) => {
+export const code = ({
+  className,
+  children,
+  ...props
+}: React.HTMLAttributes<HTMLElement>) => {
   // Check if this is a code block (inside <pre>) or inline code
   // Only code blocks have data-language attribute from rehype-pretty-code
-  const isCodeBlock = props["data-language" as keyof typeof props] !== undefined;
+  const isCodeBlock =
+    props["data-language" as keyof typeof props] !== undefined;
 
   if (isCodeBlock) {
     // Code block - minimal styling, let <pre> handle layout
