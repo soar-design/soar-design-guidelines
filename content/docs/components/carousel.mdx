@@ -18,7 +18,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 ```
 
 ```tsx
@@ -131,26 +131,26 @@ Use a state and the `setApi` props to get an instance of the carousel API.
 <ComponentPreview name="carousel-api" />
 
 ```tsx
-import { type CarouselApi } from "@soar-design/soar-react-components"
- 
+import { type CarouselApi } from "@soar-design/soar-react-components";
+
 export function Example() {
-  const [api, setApi] = React.useState<CarouselApi>()
-  const [current, setCurrent] = React.useState(0)
-  const [count, setCount] = React.useState(0)
- 
+  const [api, setApi] = React.useState<CarouselApi>();
+  const [current, setCurrent] = React.useState(0);
+  const [count, setCount] = React.useState(0);
+
   React.useEffect(() => {
     if (!api) {
-      return
+      return;
     }
- 
-    setCount(api.scrollSnapList().length)
-    setCurrent(api.selectedScrollSnap() + 1)
- 
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
+
     api.on("select", () => {
-      setCurrent(api.selectedScrollSnap() + 1)
-    })
-  }, [api])
- 
+      setCurrent(api.selectedScrollSnap() + 1);
+    });
+  }, [api]);
+
   return (
     <Carousel setApi={setApi}>
       <CarouselContent>
@@ -159,7 +159,7 @@ export function Example() {
         <CarouselItem>...</CarouselItem>
       </CarouselContent>
     </Carousel>
-  )
+  );
 }
 ```
 
@@ -168,21 +168,21 @@ export function Example() {
 You can listen to events using the api instance from `setApi`.
 
 ```tsx
-import { type CarouselApi } from "@soar-design/soar-react-components"
- 
+import { type CarouselApi } from "@soar-design/soar-react-components";
+
 export function Example() {
-  const [api, setApi] = React.useState<CarouselApi>()
- 
+  const [api, setApi] = React.useState<CarouselApi>();
+
   React.useEffect(() => {
     if (!api) {
-      return
+      return;
     }
- 
+
     api.on("select", () => {
       // Do something on select.
-    })
-  }, [api])
- 
+    });
+  }, [api]);
+
   return (
     <Carousel setApi={setApi}>
       <CarouselContent>
@@ -191,7 +191,7 @@ export function Example() {
         <CarouselItem>...</CarouselItem>
       </CarouselContent>
     </Carousel>
-  )
+  );
 }
 ```
 
@@ -202,8 +202,8 @@ See the Embla Carousel docs for more information on using events.
 You can use the `plugins` prop to add plugins to the carousel.
 
 ```tsx
-import Autoplay from "embla-carousel-autoplay"
- 
+import Autoplay from "embla-carousel-autoplay";
+
 export function Example() {
   return (
     <Carousel
@@ -215,7 +215,7 @@ export function Example() {
     >
       // ...
     </Carousel>
-  )
+  );
 }
 ```
 

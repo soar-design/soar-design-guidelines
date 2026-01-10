@@ -12,19 +12,19 @@ import {
   ButtonGroup,
   ButtonGroupSeparator,
   ButtonGroupText,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 <ButtonGroup>
   <Button>Button 1</Button>
   <Button>Button 2</Button>
-</ButtonGroup>
+</ButtonGroup>;
 ```
 
 ## Accessibility
 
-* The `ButtonGroup` component has the `role` attribute set to `group`.
-* Use Tab to navigate between the buttons in the group.
-* Use `aria-label` or `aria-labelledby` to label the button group.
+- The `ButtonGroup` component has the `role` attribute set to `group`.
+- Use Tab to navigate between the buttons in the group.
+- Use `aria-label` or `aria-labelledby` to label the button group.
 
 ```tsx
 <ButtonGroup aria-label="Button group">
@@ -35,8 +35,8 @@ import {
 
 ## ButtonGroup vs ToggleGroup
 
-* Use the `ButtonGroup` component when you want to group buttons that perform an action.
-* Use the `ToggleGroup` component when you want to group buttons that toggle a state.
+- Use the `ButtonGroup` component when you want to group buttons that perform an action.
+- Use the `ToggleGroup` component when you want to group buttons that toggle a state.
 
 ## Examples
 
@@ -199,9 +199,9 @@ Use this component to display text within a button group.
 Use the `asChild` prop to render a custom component as the text, for example a label.
 
 ```tsx
-import { ButtonGroupText } from "@soar-design/soar-react-components"
-import { Label } from "@soar-design/soar-react-components"
- 
+import { ButtonGroupText } from "@soar-design/soar-react-components";
+import { Label } from "@soar-design/soar-react-components";
+
 export function ButtonGroupTextDemo() {
   return (
     <ButtonGroup>
@@ -210,6 +210,6 @@ export function ButtonGroupTextDemo() {
       </ButtonGroupText>
       <Input placeholder="Type something here..." id="name" />
     </ButtonGroup>
-  )
+  );
 }
 ```

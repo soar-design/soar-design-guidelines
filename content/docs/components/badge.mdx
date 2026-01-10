@@ -8,9 +8,9 @@ description: Displays a badge or a component that looks like a badge.
 ## Usage
 
 ```tsx
-import { Badge } from "@soar-design/soar-react-components"
+import { Badge } from "@soar-design/soar-react-components";
 
-<Badge variant="default | outline | secondary | destructive">Badge</Badge>
+<Badge variant="default | outline | secondary | destructive">Badge</Badge>;
 ```
 
 ### Link
@@ -18,15 +18,15 @@ import { Badge } from "@soar-design/soar-react-components"
 You can use the `asChild` prop to make another component look like a badge. Here's an example of a link that looks like a badge.
 
 ```tsx
-import Link from "next/link"
- 
-import { Badge } from "@soar-design/soar-react-components"
- 
+import Link from "next/link";
+
+import { Badge } from "@soar-design/soar-react-components";
+
 export function LinkAsBadge() {
   return (
     <Badge asChild>
       <Link href="/">Badge</Link>
     </Badge>
-  )
+  );
 }
 ```

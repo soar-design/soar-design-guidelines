@@ -16,7 +16,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 <Pagination>
   <PaginationContent>
@@ -33,7 +33,7 @@ import {
       <PaginationNext href="#" />
     </PaginationItem>
   </PaginationContent>
-</Pagination>
+</Pagination>;
 ```
 
 ### Next.js
@@ -44,10 +44,10 @@ To use the Next.js `<Link />` component, make the following updates to `paginati
 
 ```tsx
 + import Link from "next/link"
- 
+
 - type PaginationLinkProps = ... & React.ComponentProps<"a">
 + type PaginationLinkProps = ... & React.ComponentProps<typeof Link>
- 
+
 const PaginationLink = ({...props }: ) => (
   <PaginationItem>
 -   <a>
@@ -58,4 +58,3 @@ const PaginationLink = ({...props }: ) => (
   </PaginationItem>
 )
 ```
-

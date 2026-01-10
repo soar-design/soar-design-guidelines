@@ -12,7 +12,7 @@ import {
   NativeSelect,
   NativeSelectOptGroup,
   NativeSelectOption,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 <NativeSelect>
   <NativeSelectOption value="">Select a fruit</NativeSelectOption>
@@ -23,7 +23,7 @@ import {
     Grapes
   </NativeSelectOption>
   <NativeSelectOption value="pineapple">Pineapple</NativeSelectOption>
-</NativeSelect>
+</NativeSelect>;
 ```
 
 ## Examples
@@ -48,17 +48,17 @@ Show validation errors with the `aria-invalid` attribute and error styling.
 
 ## Native Select vs Select
 
-* Use `NativeSelect` when you need native browser behavior, better performance, or mobile-optimized dropdowns.
-* Use `Select` when you need custom styling, animations, or complex interactions.
+- Use `NativeSelect` when you need native browser behavior, better performance, or mobile-optimized dropdowns.
+- Use `Select` when you need custom styling, animations, or complex interactions.
 
 The `NativeSelect` component provides native HTML select functionality with consistent styling that matches your design system.
 
 ## Accessibility
 
-* The component maintains all native HTML select accessibility features.
-* Screen readers can navigate through options using arrow keys.
-* The chevron icon is marked as `aria-hidden="true"` to avoid duplication.
-* Use `aria-label` or `aria-labelledby` for additional context when needed.
+- The component maintains all native HTML select accessibility features.
+- Screen readers can navigate through options using arrow keys.
+- The chevron icon is marked as `aria-hidden="true"` to avoid duplication.
+- Use `aria-label` or `aria-labelledby` for additional context when needed.
 
 ```tsx
 <NativeSelect aria-label="Choose your preferred language">
@@ -179,4 +179,3 @@ All other props are passed through to the underlying `<optgroup>` element.
   <NativeSelectOption value="banana">Banana</NativeSelectOption>
 </NativeSelectOptGroup>
 ```
-

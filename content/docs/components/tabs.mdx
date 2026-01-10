@@ -8,7 +8,12 @@ description: A set of layered sections of content—known as tab panels—that a
 ## Usage
 
 ```tsx
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@soar-design/soar-react-components"
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@soar-design/soar-react-components";
 
 <Tabs defaultValue="account" className="w-[400px]">
   <TabsList>
@@ -17,6 +22,5 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@soar-design/soar-reac
   </TabsList>
   <TabsContent value="account">Make changes to your account here.</TabsContent>
   <TabsContent value="password">Change your password here.</TabsContent>
-</Tabs>
+</Tabs>;
 ```
-

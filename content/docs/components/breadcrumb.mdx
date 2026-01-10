@@ -15,7 +15,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 <Breadcrumb>
   <BreadcrumbList>
@@ -31,7 +31,7 @@ import {
       <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
     </BreadcrumbItem>
   </BreadcrumbList>
-</Breadcrumb>
+</Breadcrumb>;
 ```
 
 ## Examples
@@ -43,8 +43,8 @@ Use a custom component as `children` for `<BreadcrumbSeparator />` to create a c
 <ComponentPreview name="breadcrumb-custom-separator" />
 
 ```tsx
-import Link from "next/link"
-import { SlashIcon } from "lucide-react"
+import Link from "next/link";
+import { SlashIcon } from "lucide-react";
 
 import {
   Breadcrumb,
@@ -53,7 +53,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 <Breadcrumb>
   <BreadcrumbList>
@@ -67,7 +67,7 @@ import {
       <BreadcrumbLink href="/components">Components</BreadcrumbLink>
     </BreadcrumbItem>
   </BreadcrumbList>
-</Breadcrumb>
+</Breadcrumb>;
 ```
 
 ### Dropdown
@@ -82,20 +82,18 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@soar-design/soar-react-components"
- 
+} from "@soar-design/soar-react-components";
+
 <BreadcrumbItem>
   <DropdownMenu>
-    <DropdownMenuTrigger>
-      Components
-    </DropdownMenuTrigger>
+    <DropdownMenuTrigger>Components</DropdownMenuTrigger>
     <DropdownMenuContent align="start">
       <DropdownMenuItem>Documentation</DropdownMenuItem>
       <DropdownMenuItem>Themes</DropdownMenuItem>
       <DropdownMenuItem>GitHub</DropdownMenuItem>
     </DropdownMenuContent>
   </DropdownMenu>
-</BreadcrumbItem>
+</BreadcrumbItem>;
 ```
 
 ### Collapsed
@@ -105,8 +103,8 @@ We provide a `<BreadcrumbEllipsis />` component to show a collapsed state when t
 <ComponentPreview name="breadcrumb-collapsed" />
 
 ```tsx
-import { BreadcrumbEllipsis } from "@soar-design/soar-react-components"
- 
+import { BreadcrumbEllipsis } from "@soar-design/soar-react-components";
+
 <Breadcrumb>
   <BreadcrumbList>
     {/* ... */}
@@ -115,7 +113,7 @@ import { BreadcrumbEllipsis } from "@soar-design/soar-react-components"
     </BreadcrumbItem>
     {/* ... */}
   </BreadcrumbList>
-</Breadcrumb>
+</Breadcrumb>;
 ```
 
 ### Link component
@@ -125,8 +123,8 @@ To use a custom link component from your routing library, you can use the `asChi
 <ComponentPreview name="breadcrumb-link" />
 
 ```tsx
-import Link from "next/link"
- 
+import Link from "next/link";
+
 <Breadcrumb>
   <BreadcrumbList>
     <BreadcrumbItem>
@@ -136,7 +134,7 @@ import Link from "next/link"
     </BreadcrumbItem>
     {/* ... */}
   </BreadcrumbList>
-</Breadcrumb>
+</Breadcrumb>;
 ```
 
 ### Responsive

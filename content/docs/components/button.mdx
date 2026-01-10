@@ -10,9 +10,9 @@ description: Displays a button or a component that looks like a button.
 ## Usage
 
 ```tsx
-import { Button } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
 
-<Button variant="outline">Button</Button>
+<Button variant="outline">Button</Button>;
 ```
 
 ## Cursor
@@ -111,12 +111,16 @@ The `Button` component is a wrapper around the `button` element that adds a vari
   <TableBody>
     <TableRow>
       <TableCell>`variant`</TableCell>
-      <TableCell>`"default" | "outline" | "ghost" | "destructive" | "secondary" | "link"`</TableCell>
+      <TableCell>
+        `"default" | "outline" | "ghost" | "destructive" | "secondary" | "link"`
+      </TableCell>
       <TableCell>`"default"`</TableCell>
     </TableRow>
     <TableRow>
       <TableCell>`size`</TableCell>
-      <TableCell>`"default" | "sm" | "lg" | "icon" | "icon-sm" | "icon-lg"`</TableCell>
+      <TableCell>
+        `"default" | "sm" | "lg" | "icon" | "icon-sm" | "icon-lg"`
+      </TableCell>
       <TableCell>`"default"`</TableCell>
     </TableRow>
     <TableRow>
@@ -143,5 +147,5 @@ const buttonVariants = cva("...", {
       // ...
     },
   },
-})
+});
 ```

@@ -17,7 +17,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   NavigationMenuViewport,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 <NavigationMenu>
   <NavigationMenuList>
@@ -28,7 +28,7 @@ import {
       </NavigationMenuContent>
     </NavigationMenuItem>
   </NavigationMenuList>
-</NavigationMenu>
+</NavigationMenu>;
 ```
 
 ## Link
@@ -36,8 +36,8 @@ import {
 You can use the `asChild` prop to make another component look like a navigation menu trigger. Here's an example of a link that looks like a navigation menu trigger.
 
 ```tsx
-import Link from "next/link"
- 
+import Link from "next/link";
+
 export function NavigationMenuDemo() {
   return (
     <NavigationMenuItem>
@@ -45,7 +45,6 @@ export function NavigationMenuDemo() {
         <Link href="/docs">Documentation</Link>
       </NavigationMenuLink>
     </NavigationMenuItem>
-  )
+  );
 }
 ```
-

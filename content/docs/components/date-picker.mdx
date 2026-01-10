@@ -8,23 +8,23 @@ description: A date picker component with range and presets.
 ## Usage
 
 ```tsx
-"use client"
+"use client";
 
-import * as React from "react"
-import { format } from "date-fns"
-import { Calendar as CalendarIcon } from "lucide-react"
+import * as React from "react";
+import { format } from "date-fns";
+import { Calendar as CalendarIcon } from "lucide-react";
 
-import { cn } from "@/lib/utils"
-import { Button } from "@soar-design/soar-react-components"
-import { Calendar } from "@soar-design/soar-react-components"
+import { cn } from "@/lib/utils";
+import { Button } from "@soar-design/soar-react-components";
+import { Calendar } from "@soar-design/soar-react-components";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function DatePickerDemo() {
-  const [date, setDate] = React.useState<Date>()
+  const [date, setDate] = React.useState<Date>();
 
   return (
     <Popover>
@@ -42,7 +42,7 @@ export function DatePickerDemo() {
         <Calendar mode="single" selected={date} onSelect={setDate} />
       </PopoverContent>
     </Popover>
-  )
+  );
 }
 ```
 
@@ -65,4 +65,3 @@ export function DatePickerDemo() {
 This component uses the `chrono-node` library to parse natural language dates.
 
 <ComponentPreview name="date-picker-natural-language" />
-

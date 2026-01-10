@@ -8,13 +8,13 @@ description: Autocomplete input and command palette with a list of suggestions.
 ## Usage
 
 ```tsx
-"use client"
+"use client";
 
-import * as React from "react"
-import { CheckIcon, ChevronsUpDownIcon } from "lucide-react"
+import * as React from "react";
+import { CheckIcon, ChevronsUpDownIcon } from "lucide-react";
 
-import { cn } from "@/lib/utils"
-import { Button } from "@soar-design/soar-react-components"
+import { cn } from "@/lib/utils";
+import { Button } from "@soar-design/soar-react-components";
 import {
   Command,
   CommandEmpty,
@@ -22,12 +22,12 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 const frameworks = [
   {
@@ -50,11 +50,11 @@ const frameworks = [
     value: "astro",
     label: "Astro",
   },
-]
+];
 
 export function ExampleCombobox() {
-  const [open, setOpen] = React.useState(false)
-  const [value, setValue] = React.useState("")
+  const [open, setOpen] = React.useState(false);
+  const [value, setValue] = React.useState("");
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -82,14 +82,14 @@ export function ExampleCombobox() {
                   key={framework.value}
                   value={framework.value}
                   onSelect={(currentValue) => {
-                    setValue(currentValue === value ? "" : currentValue)
-                    setOpen(false)
+                    setValue(currentValue === value ? "" : currentValue);
+                    setOpen(false);
                   }}
                 >
                   <CheckIcon
                     className={cn(
                       "mr-2 h-4 w-4",
-                      value === framework.value ? "opacity-100" : "opacity-0"
+                      value === framework.value ? "opacity-100" : "opacity-0",
                     )}
                   />
                   {framework.label}
@@ -100,7 +100,7 @@ export function ExampleCombobox() {
         </Command>
       </PopoverContent>
     </Popover>
-  )
+  );
 }
 ```
 
@@ -123,4 +123,3 @@ export function ExampleCombobox() {
 You can create a responsive combobox by using the `<Popover />` on desktop and the `<Drawer />` components on mobile.
 
 <ComponentPreview name="combobox-responsive" />
-

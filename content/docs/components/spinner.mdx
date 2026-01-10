@@ -8,9 +8,9 @@ description: An indicator that can be used to show a loading state.
 ## Usage
 
 ```tsx
-import { Spinner } from "@soar-design/soar-react-components"
+import { Spinner } from "@soar-design/soar-react-components";
 
-<Spinner />
+<Spinner />;
 ```
 
 ## Customization
@@ -20,9 +20,9 @@ You can replace the default spinner icon with any other icon by editing the `Spi
 <ComponentPreview name="spinner-custom" />
 
 ```tsx
-import { LoaderIcon } from "lucide-react"
+import { LoaderIcon } from "lucide-react";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 function Spinner({ className, ...props }: React.ComponentProps<"svg">) {
   return (
@@ -32,7 +32,7 @@ function Spinner({ className, ...props }: React.ComponentProps<"svg">) {
       className={cn("size-4 animate-spin", className)}
       {...props}
     />
-  )
+  );
 }
 
 export function SpinnerCustom() {
@@ -40,7 +40,7 @@ export function SpinnerCustom() {
     <div className="flex items-center gap-4">
       <Spinner />
     </div>
-  )
+  );
 }
 ```
 
@@ -112,4 +112,3 @@ Use the `Spinner` component to display a spinner.
 ```tsx
 <Spinner />
 ```
-
