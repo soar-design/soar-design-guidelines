@@ -10,9 +10,13 @@ interface FiltersContextType {
   selectedTypes: string[];
   setSelectedTypes: (types: string[] | ((prev: string[]) => string[])) => void;
   selectedBedrooms: number[];
-  setSelectedBedrooms: (bedrooms: number[] | ((prev: number[]) => number[])) => void;
+  setSelectedBedrooms: (
+    bedrooms: number[] | ((prev: number[]) => number[]),
+  ) => void;
   selectedBathrooms: number[];
-  setSelectedBathrooms: (bathrooms: number[] | ((prev: number[]) => number[])) => void;
+  setSelectedBathrooms: (
+    bathrooms: number[] | ((prev: number[]) => number[]),
+  ) => void;
   clearFilters: () => void;
 }
 
@@ -60,4 +64,3 @@ export function useFilters() {
   }
   return context;
 }
-

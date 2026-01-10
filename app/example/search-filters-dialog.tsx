@@ -60,11 +60,15 @@ export function SearchFiltersDialog({
   } = useFilters();
 
   const handleAreaChange = (checked: boolean, area: string) => {
-    setSelectedAreas((prev) => (checked ? [...prev, area] : prev.filter((a) => a !== area)));
+    setSelectedAreas((prev) =>
+      checked ? [...prev, area] : prev.filter((a) => a !== area),
+    );
   };
 
   const handleTypeChange = (checked: boolean, type: string) => {
-    setSelectedTypes((prev) => (checked ? [...prev, type] : prev.filter((t) => t !== type)));
+    setSelectedTypes((prev) =>
+      checked ? [...prev, type] : prev.filter((t) => t !== type),
+    );
   };
 
   const handleBedroomChange = (values: string[]) => {
@@ -82,13 +86,15 @@ export function SearchFiltersDialog({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="p-0 sm:max-w-2xl sm:max-h-[min(90vh,800px)]">
-        <DialogHeader className="pt-5 pb-3 m-0 border-b border-border px-6">
+      <DialogContent className="p-0 sm:max-h-[min(90vh,800px)] sm:max-w-2xl">
+        <DialogHeader className="border-border m-0 border-b px-6 pt-5 pb-3">
           <DialogTitle className="text-base">Search & Filters</DialogTitle>
-          <DialogDescription>Find properties that match your interests and refine your search.</DialogDescription>
+          <DialogDescription>
+            Find properties that match your interests and refine your search.
+          </DialogDescription>
         </DialogHeader>
         <DialogBody className="p-0">
-          <ScrollArea className="h-[calc(90vh-200px)] my-3 ps-6 pe-5 me-1">
+          <ScrollArea className="my-3 me-1 h-[calc(90vh-200px)] ps-6 pe-5">
             <div className="space-y-6">
               {/* Search Input */}
               <div>
@@ -115,23 +121,31 @@ export function SearchFiltersDialog({
                       <Card
                         key={type}
                         onClick={() => handleTypeChange(!isSelected, type)}
-                        className={`p-6 transition-all cursor-pointer ${
+                        className={`cursor-pointer p-6 transition-all ${
                           isSelected
                             ? "border-primary bg-primary/5 shadow-sm"
                             : "hover:bg-accent hover:border-border"
                         }`}
                       >
                         <div className="flex flex-col items-center gap-3">
-                          <div className={`p-3 rounded-lg ${
-                            isSelected ? "bg-primary/10" : "bg-muted"
-                          }`}>
-                            <Icon className={`h-8 w-8 ${
-                              isSelected ? "text-primary" : "text-muted-foreground"
-                            }`} />
+                          <div
+                            className={`rounded-lg p-3 ${
+                              isSelected ? "bg-primary/10" : "bg-muted"
+                            }`}
+                          >
+                            <Icon
+                              className={`h-8 w-8 ${
+                                isSelected
+                                  ? "text-primary"
+                                  : "text-muted-foreground"
+                              }`}
+                            />
                           </div>
-                          <span className={`font-semibold text-base ${
-                            isSelected ? "text-primary" : ""
-                          }`}>
+                          <span
+                            className={`text-base font-semibold ${
+                              isSelected ? "text-primary" : ""
+                            }`}
+                          >
                             {type}
                           </span>
                         </div>
@@ -146,15 +160,20 @@ export function SearchFiltersDialog({
               {/* Areas */}
               <div>
                 <h4 className="mb-3 text-sm font-medium">Areas</h4>
-                <div className="space-y-3 max-h-[300px] overflow-y-auto">
+                <div className="max-h-[300px] space-y-3 overflow-y-auto">
                   {uniqueAreas.map((area) => (
                     <div key={area} className="flex items-center gap-2.5">
                       <Checkbox
                         id={area}
                         checked={selectedAreas.includes(area)}
-                        onCheckedChange={(checked) => handleAreaChange(checked === true, area)}
+                        onCheckedChange={(checked) =>
+                          handleAreaChange(checked === true, area)
+                        }
                       />
-                      <Label htmlFor={area} className="grow font-normal cursor-pointer">
+                      <Label
+                        htmlFor={area}
+                        className="grow cursor-pointer font-normal"
+                      >
                         {area}
                       </Label>
                     </div>
@@ -195,7 +214,10 @@ export function SearchFiltersDialog({
                   className="flex-wrap"
                 >
                   {uniqueBathrooms.map((bathrooms) => (
-                    <ToggleGroupItem key={bathrooms} value={bathrooms.toString()}>
+                    <ToggleGroupItem
+                      key={bathrooms}
+                      value={bathrooms.toString()}
+                    >
                       {bathrooms} {bathrooms === 1 ? "Bathroom" : "Bathrooms"}
                     </ToggleGroupItem>
                   ))}
@@ -204,9 +226,13 @@ export function SearchFiltersDialog({
             </div>
           </ScrollArea>
         </DialogBody>
-        <DialogFooter className="px-6 py-4 border-t border-border flex-col sm:flex-row gap-2.5">
+        <DialogFooter className="border-border flex-col gap-2.5 border-t px-6 py-4 sm:flex-row">
           <DialogClose asChild>
-            <Button variant="outline" onClick={handleClearFilters} className="w-full sm:w-auto">
+            <Button
+              variant="outline"
+              onClick={handleClearFilters}
+              className="w-full sm:w-auto"
+            >
               Clear All
             </Button>
           </DialogClose>
@@ -218,4 +244,3 @@ export function SearchFiltersDialog({
     </Dialog>
   );
 }
-

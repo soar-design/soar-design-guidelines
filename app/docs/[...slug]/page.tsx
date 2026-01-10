@@ -9,7 +9,11 @@ import { getTableOfContents } from "@/lib/toc";
 import { DashboardTableOfContents } from "@/components/toc";
 import { getDocGroup } from "@/lib/get-doc-group";
 
-export default async function DocPage({ params }: { params: Promise<{ slug: string[] }> }) {
+export default async function DocPage({
+  params,
+}: {
+  params: Promise<{ slug: string[] }>;
+}) {
   const { slug: slugArray } = await params;
   const slug = slugArray?.join("/") || "";
   const doc = await getDocBySlug(slug);
@@ -23,16 +27,18 @@ export default async function DocPage({ params }: { params: Promise<{ slug: stri
 
   return (
     <div className="flex items-stretch">
-      <div className="flex flex-1 min-w-0 flex-col">
+      <div className="flex min-w-0 flex-1 flex-col">
         <div className="mx-auto flex w-full max-w-5xl min-w-0 flex-1 flex-col gap-8 px-6 py-6 lg:py-8">
           <div className="space-y-2">
             {group && (
-              <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
+              <p className="text-muted-foreground text-sm font-medium tracking-wider uppercase">
                 {group}
               </p>
             )}
             <h1 className="scroll-m-20 text-4xl font-bold">{doc.title}</h1>
-            {doc.description && <p className="text-lg text-muted-foreground">{doc.description}</p>}
+            {doc.description && (
+              <p className="text-muted-foreground text-lg">{doc.description}</p>
+            )}
             {doc.links && (
               <div className="flex items-center gap-2 pt-4">
                 {doc.links.doc && (
@@ -40,7 +46,7 @@ export default async function DocPage({ params }: { params: Promise<{ slug: stri
                     href={doc.links.doc}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground hover:bg-primary/80"
+                    className="focus:ring-ring bg-primary text-primary-foreground hover:bg-primary/80 inline-flex items-center rounded-md border border-transparent px-2.5 py-0.5 text-xs font-semibold transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none"
                   >
                     Docs
                   </a>
@@ -50,7 +56,7 @@ export default async function DocPage({ params }: { params: Promise<{ slug: stri
                     href={doc.links.api}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                    className="focus:ring-ring bg-secondary text-secondary-foreground hover:bg-secondary/80 inline-flex items-center rounded-md border border-transparent px-2.5 py-0.5 text-xs font-semibold transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none"
                   >
                     API Reference
                   </a>
@@ -103,9 +109,9 @@ export default async function DocPage({ params }: { params: Promise<{ slug: stri
             />
           </div>
         </div>
-        <div className="pointer-events-none sticky bottom-0 z-10 -mt-[20px] h-[100px] shrink-0 bg-gradient-to-t from-background via-background/50 to-transparent"></div>
+        <div className="from-background via-background/50 pointer-events-none sticky bottom-0 z-10 -mt-[20px] h-[100px] shrink-0 bg-gradient-to-t to-transparent"></div>
       </div>
-      <div className="hidden lg:flex sticky top-16 z-30 ms-auto w-72 flex-col h-[calc(100vh-4rem)]">
+      <div className="sticky top-16 z-30 ms-auto hidden h-[calc(100vh-4rem)] w-72 flex-col xl:flex">
         <DashboardTableOfContents toc={toc} />
       </div>
     </div>

@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
-import "./globals.css";
-// import "@soar-design/soar-react-components/index.css";
 import { LayoutShell } from "@/components/layout-shell";
 import { ToasterProvider } from "@/components/toaster-provider";
 

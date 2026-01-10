@@ -68,7 +68,9 @@ export default function ExplorePropertiesPage() {
     searchFiltersOpen,
     setSearchFiltersOpen,
   } = useFilters();
-  const [selectedProperty, setSelectedProperty] = useState<(typeof properties)[0] | null>(null);
+  const [selectedProperty, setSelectedProperty] = useState<
+    (typeof properties)[0] | null
+  >(null);
 
   const toggleFavorite = (propertyId: number) => {
     setFavorites((prev) => {
@@ -125,21 +127,30 @@ export default function ExplorePropertiesPage() {
     if (searchQuery.trim()) {
       const query = searchQuery.toLowerCase();
       result = result.filter(
-        (p) => p.title.toLowerCase().includes(query) || p.location.toLowerCase().includes(query)
+        (p) =>
+          p.title.toLowerCase().includes(query) ||
+          p.location.toLowerCase().includes(query),
       );
     }
 
     return result;
-  }, [filter, selectedAreas, selectedTypes, selectedBedrooms, selectedBathrooms, searchQuery]);
+  }, [
+    filter,
+    selectedAreas,
+    selectedTypes,
+    selectedBedrooms,
+    selectedBathrooms,
+    searchQuery,
+  ]);
 
   return (
     <div className="p-6">
-      <h1 className="text-4xl font-bold mb-4">Explore Properties</h1>
-      <p className="text-4xl font-bold text-muted-foreground mb-6">
+      <h1 className="mb-4 text-4xl font-bold">Explore Properties</h1>
+      <p className="text-muted-foreground mb-6 text-4xl font-bold">
         Explore properties content goes here.
       </p>
 
-      <div className="flex items-center gap-4 mb-6 flex-wrap">
+      <div className="mb-6 flex flex-wrap items-center gap-4">
         <Tabs value={filter} onValueChange={setFilter}>
           <TabsList shape="pill">
             <TabsTrigger value="all">All</TabsTrigger>
@@ -149,7 +160,11 @@ export default function ExplorePropertiesPage() {
         </Tabs>
 
         <div className="ml-auto">
-          <Button variant="outline" size="lg" onClick={() => setSearchFiltersOpen(true)}>
+          <Button
+            variant="outline"
+            size="lg"
+            onClick={() => setSearchFiltersOpen(true)}
+          >
             <SlidersHorizontal className="me-2 h-4 w-4" />
             Filters
             {activeFilterCount > 0 && (
@@ -161,14 +176,14 @@ export default function ExplorePropertiesPage() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {filteredProperties.map((property) => (
-          <Card key={property.id} className="bg-transparent border-none p-0">
-            <CardContent className="bg-transparent p-0 space-y-3">
+          <Card key={property.id} className="border-none bg-transparent p-0">
+            <CardContent className="space-y-3 bg-transparent p-0">
               {property.images && property.images.length > 0 && (
-                <div className="relative w-full h-72 rounded-2xl overflow-hidden">
+                <div className="relative h-72 w-full overflow-hidden rounded-2xl">
                   <Carousel
-                    className="w-full h-full"
+                    className="h-full w-full"
                     opts={{
                       duration: 10,
                       dragFree: false,
@@ -177,8 +192,8 @@ export default function ExplorePropertiesPage() {
                   >
                     <CarouselContent className="-ml-0">
                       {property.images.map((image, index) => (
-                        <CarouselItem key={index} className="pl-0 basis-full">
-                          <div className="relative w-full h-72">
+                        <CarouselItem key={index} className="basis-full pl-0">
+                          <div className="relative h-72 w-full">
                             <Image
                               src={image}
                               alt={`${property.title} - Image ${index + 1}`}
@@ -203,11 +218,13 @@ export default function ExplorePropertiesPage() {
                       onPressedChange={() => toggleFavorite(property.id)}
                       aria-label="Add to favorites"
                       variant="outline"
-                      className="bg-background/80 backdrop-blur-sm rounded-full"
+                      className="bg-background/80 rounded-full backdrop-blur-sm"
                     >
                       <Heart
                         className={`h-4 w-4 ${
-                          favorites.has(property.id) ? "fill-red-500 text-red-500" : ""
+                          favorites.has(property.id)
+                            ? "fill-red-500 text-red-500"
+                            : ""
                         }`}
                       />
                     </Toggle>
@@ -224,12 +241,18 @@ export default function ExplorePropertiesPage() {
                           <Bed className="h-3.5 w-3.5" />
                           <span className="text-xs">{property.bedrooms}</span>
                         </div>
-                        <Separator orientation="vertical" className="h-3 bg-muted-foreground" />
+                        <Separator
+                          orientation="vertical"
+                          className="bg-muted-foreground h-3"
+                        />
                         <div className="flex items-center gap-1.5">
                           <Bath className="h-3.5 w-3.5" />
                           <span className="text-xs">{property.bathrooms}</span>
                         </div>
-                        <Separator orientation="vertical" className="h-3 bg-muted-foreground" />
+                        <Separator
+                          orientation="vertical"
+                          className="bg-muted-foreground h-3"
+                        />
                         <div className="flex items-center gap-1.5">
                           <span className="text-xs">{property.area} m²</span>
                         </div>
@@ -240,13 +263,15 @@ export default function ExplorePropertiesPage() {
               )}
               <div>
                 <div className="flex items-start justify-between gap-1">
-                  <div className="flex-1 min-w-0">
-                    <div className="text-foreground text-base font-semibold truncate">
+                  <div className="min-w-0 flex-1">
+                    <div className="text-foreground truncate text-base font-semibold">
                       {property.title}
                     </div>
-                    <div className="text-foreground text-sm mb-1">{property.location}</div>
+                    <div className="text-foreground mb-1 text-sm">
+                      {property.location}
+                    </div>
                     {property.description && (
-                      <div className="text-muted-foreground text-xs mb-3 line-clamp-2">
+                      <div className="text-muted-foreground mb-3 line-clamp-2 text-xs">
                         {property.description}
                       </div>
                     )}
@@ -259,7 +284,9 @@ export default function ExplorePropertiesPage() {
                         </Button>
                       </DropdownMenuTrigger>
                       <DropdownMenuContent align="end">
-                        <DropdownMenuItem onClick={() => setSelectedProperty(property)}>
+                        <DropdownMenuItem
+                          onClick={() => setSelectedProperty(property)}
+                        >
                           <Eye className="me-2 h-4 w-4" />
                           <span>View Details</span>
                         </DropdownMenuItem>
@@ -276,22 +303,23 @@ export default function ExplorePropertiesPage() {
                   </CardToolbar>
                 </div>
 
-                <div className="flex items-center gap-2 mb-3">
+                <div className="mb-3 flex items-center gap-2">
                   <Badge variant="secondary" size="lg" appearance="outline">
                     {property.type === "Apartment" ? (
-                      <Building2 className="h-3 w-3 me-1" />
+                      <Building2 className="me-1 h-3 w-3" />
                     ) : (
-                      <Home className="h-3 w-3 me-1" />
+                      <Home className="me-1 h-3 w-3" />
                     )}
                     {property.type}
                   </Badge>
                   {property.readyToMove && (
                     <Badge variant="success" size="lg" appearance="outline">
-                      <span className="mr-1.5 h-2 w-2 rounded-full bg-current"></span> Ready to Move
+                      <span className="mr-1.5 h-2 w-2 rounded-full bg-current"></span>{" "}
+                      Ready to Move
                     </Badge>
                   )}
                 </div>
-                <div className="text-base font-medium tabular-nums tracking-tight mt-3">
+                <div className="mt-3 text-base font-medium tracking-tight tabular-nums">
                   {property.price}
                 </div>
               </div>
@@ -301,69 +329,86 @@ export default function ExplorePropertiesPage() {
       </div>
 
       {/* Property Details Dialog */}
-      <Dialog open={!!selectedProperty} onOpenChange={(open) => !open && setSelectedProperty(null)}>
-        <DialogContent className="p-0 sm:max-w-4xl sm:max-h-[min(90vh,800px)]">
+      <Dialog
+        open={!!selectedProperty}
+        onOpenChange={(open) => !open && setSelectedProperty(null)}
+      >
+        <DialogContent className="p-0 sm:max-h-[min(90vh,800px)] sm:max-w-4xl">
           {selectedProperty && (
             <Card variant="accent" className="border-none">
               <CardHeader>
                 <DialogHeader className="m-0">
-                  <DialogTitle className="text-xl">{selectedProperty.title}</DialogTitle>
-                  <DialogDescription>{selectedProperty.location}</DialogDescription>
+                  <DialogTitle className="text-xl">
+                    {selectedProperty.title}
+                  </DialogTitle>
+                  <DialogDescription>
+                    {selectedProperty.location}
+                  </DialogDescription>
                 </DialogHeader>
               </CardHeader>
               <CardContent className="p-0">
-                <ScrollArea className="h-[calc(90vh-200px)] my-3 ps-6 pe-5 me-1">
+                <ScrollArea className="my-3 me-1 h-[calc(90vh-200px)] ps-6 pe-5">
                   <div className="space-y-6">
                     {/* Images */}
-                    {selectedProperty.images && selectedProperty.images.length > 0 && (
-                      <Carousel
-                        className="w-full"
-                        opts={{
-                          duration: 25,
-                          dragFree: false,
-                          skipSnaps: false,
-                        }}
-                      >
-                        <CarouselContent>
-                          {selectedProperty.images.map((image, index) => (
-                            <CarouselItem key={index}>
-                              <div className="relative w-full h-96 overflow-hidden rounded-xl">
-                                <Image
-                                  src={image}
-                                  alt={`${selectedProperty.title} - Image ${index + 1}`}
-                                  fill
-                                  className="object-cover"
-                                />
-                              </div>
-                            </CarouselItem>
-                          ))}
-                        </CarouselContent>
-                        {selectedProperty.images.length > 1 && (
-                          <>
-                            <CarouselPrevious />
-                            <CarouselNext />
-                          </>
-                        )}
-                      </Carousel>
-                    )}
+                    {selectedProperty.images &&
+                      selectedProperty.images.length > 0 && (
+                        <Carousel
+                          className="w-full"
+                          opts={{
+                            duration: 25,
+                            dragFree: false,
+                            skipSnaps: false,
+                          }}
+                        >
+                          <CarouselContent>
+                            {selectedProperty.images.map((image, index) => (
+                              <CarouselItem key={index}>
+                                <div className="relative h-96 w-full overflow-hidden rounded-xl">
+                                  <Image
+                                    src={image}
+                                    alt={`${selectedProperty.title} - Image ${index + 1}`}
+                                    fill
+                                    className="object-cover"
+                                  />
+                                </div>
+                              </CarouselItem>
+                            ))}
+                          </CarouselContent>
+                          {selectedProperty.images.length > 1 && (
+                            <>
+                              <CarouselPrevious />
+                              <CarouselNext />
+                            </>
+                          )}
+                        </Carousel>
+                      )}
 
                     {/* Price and Badges */}
-                    <div className="flex items-center justify-between flex-wrap gap-4">
-                      <div className="text-3xl font-bold tabular-nums tracking-tight">
+                    <div className="flex flex-wrap items-center justify-between gap-4">
+                      <div className="text-3xl font-bold tracking-tight tabular-nums">
                         {selectedProperty.price}
                       </div>
                       <div className="flex items-center gap-2">
-                        <Badge variant="secondary" appearance="outline" size="lg">
+                        <Badge
+                          variant="secondary"
+                          appearance="outline"
+                          size="lg"
+                        >
                           {selectedProperty.type === "Apartment" ? (
-                            <Building2 className="h-4 w-4 me-1" />
+                            <Building2 className="me-1 h-4 w-4" />
                           ) : (
-                            <Home className="h-4 w-4 me-1" />
+                            <Home className="me-1 h-4 w-4" />
                           )}
                           {selectedProperty.type}
                         </Badge>
                         {selectedProperty.readyToMove && (
-                          <Badge variant="success" appearance="outline" size="lg">
-                            <span className="mr-1.5 h-2 w-2 rounded-full bg-current"></span> Ready to Move
+                          <Badge
+                            variant="success"
+                            appearance="outline"
+                            size="lg"
+                          >
+                            <span className="mr-1.5 h-2 w-2 rounded-full bg-current"></span>{" "}
+                            Ready to Move
                           </Badge>
                         )}
                       </div>
@@ -374,30 +419,42 @@ export default function ExplorePropertiesPage() {
                     {/* Property Details */}
                     <div className="grid grid-cols-3 gap-6">
                       <div className="flex items-center gap-3">
-                        <div className="p-3 bg-muted rounded-lg">
-                          <Bed className="h-5 w-5 text-muted-foreground" />
+                        <div className="bg-muted rounded-lg p-3">
+                          <Bed className="text-muted-foreground h-5 w-5" />
                         </div>
                         <div>
-                          <div className="text-sm text-muted-foreground">Bedrooms</div>
-                          <div className="text-lg font-semibold">{selectedProperty.bedrooms}</div>
+                          <div className="text-muted-foreground text-sm">
+                            Bedrooms
+                          </div>
+                          <div className="text-lg font-semibold">
+                            {selectedProperty.bedrooms}
+                          </div>
                         </div>
                       </div>
                       <div className="flex items-center gap-3">
-                        <div className="p-3 bg-muted rounded-lg">
-                          <Bath className="h-5 w-5 text-muted-foreground" />
+                        <div className="bg-muted rounded-lg p-3">
+                          <Bath className="text-muted-foreground h-5 w-5" />
                         </div>
                         <div>
-                          <div className="text-sm text-muted-foreground">Bathrooms</div>
-                          <div className="text-lg font-semibold">{selectedProperty.bathrooms}</div>
+                          <div className="text-muted-foreground text-sm">
+                            Bathrooms
+                          </div>
+                          <div className="text-lg font-semibold">
+                            {selectedProperty.bathrooms}
+                          </div>
                         </div>
                       </div>
                       <div className="flex items-center gap-3">
-                        <div className="p-3 bg-muted rounded-lg">
-                          <Maximize2 className="h-5 w-5 text-muted-foreground" />
+                        <div className="bg-muted rounded-lg p-3">
+                          <Maximize2 className="text-muted-foreground h-5 w-5" />
                         </div>
                         <div>
-                          <div className="text-sm text-muted-foreground">Area</div>
-                          <div className="text-lg font-semibold">{selectedProperty.area} m²</div>
+                          <div className="text-muted-foreground text-sm">
+                            Area
+                          </div>
+                          <div className="text-lg font-semibold">
+                            {selectedProperty.area} m²
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -407,7 +464,9 @@ export default function ExplorePropertiesPage() {
                     {/* Description */}
                     {selectedProperty.description && (
                       <div>
-                        <h3 className="text-lg font-semibold mb-2">Description</h3>
+                        <h3 className="mb-2 text-lg font-semibold">
+                          Description
+                        </h3>
                         <p className="text-muted-foreground leading-relaxed">
                           {selectedProperty.description}
                         </p>
@@ -416,14 +475,16 @@ export default function ExplorePropertiesPage() {
 
                     {/* Location */}
                     <div>
-                      <h3 className="text-lg font-semibold mb-2">Location</h3>
-                      <p className="text-muted-foreground">{selectedProperty.location}</p>
+                      <h3 className="mb-2 text-lg font-semibold">Location</h3>
+                      <p className="text-muted-foreground">
+                        {selectedProperty.location}
+                      </p>
                     </div>
                   </div>
                 </ScrollArea>
               </CardContent>
               <CardFooter>
-                <DialogFooter className="p-0 w-full">
+                <DialogFooter className="w-full p-0">
                   <DialogClose asChild>
                     <Button variant="outline">Close</Button>
                   </DialogClose>

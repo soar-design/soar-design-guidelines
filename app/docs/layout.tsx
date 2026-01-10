@@ -1,4 +1,5 @@
 import { LayoutShell } from "@/components/layout-shell";
+import "../globals.css";
 
 export default function DocsLayout({
   children,
@@ -7,4 +8,3 @@ export default function DocsLayout({
 }) {
   return <LayoutShell>{children}</LayoutShell>;
 }
-

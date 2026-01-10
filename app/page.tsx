@@ -8,23 +8,28 @@ import { Footer } from "@/components/footer";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen flex flex-col items-start justify-between bg-background px-6">
-      <div className="flex flex-col w-11/12 items-start justify-start text-left pt-6">
-        <Link href="/docs/components/button" className="flex flex-col items-start space-y-6">
+    <div className="bg-background relative flex min-h-screen flex-col items-start justify-between px-6">
+      <div className="flex w-11/12 flex-col items-start justify-start pt-6 text-left">
+        <Link
+          href="/docs/components/button"
+          className="flex flex-col items-start space-y-6"
+        >
           <div className="flex aspect-square items-center justify-center">
             <Image
               src="/soar-logo.svg"
               alt="Soar DS Logo"
               width={40}
               height={40}
-              className="dark:invert opacity-50"
+              className="opacity-50 dark:invert"
             />
           </div>
 
           <div className="flex flex-col">
-            <span className="font-bold text-5xl leading-none">Soar</span>
-            <span className="font-bold text-5xl text-muted-foreground leading-none">Design</span>
-            <span className="font-bold text-5xl text-muted-foreground leading-none">
+            <span className="text-5xl leading-none font-bold">Soar</span>
+            <span className="text-muted-foreground text-5xl leading-none font-bold">
+              Design
+            </span>
+            <span className="text-muted-foreground text-5xl leading-none font-bold">
               Guidelines
             </span>
           </div>
@@ -36,7 +41,8 @@ export default function Home() {
               shape="circle"
               className="tabular-nums"
             >
-              <span className="mr-1.5 h-2 w-2 rounded-full bg-current"></span>v{packageJson.version} Alpha
+              <span className="mr-1.5 h-2 w-2 rounded-full bg-current"></span>v
+              {packageJson.version} Alpha
             </Badge>
           </div>
         </Link>
