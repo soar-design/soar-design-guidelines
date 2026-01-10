@@ -1,4 +1,4 @@
-import { Kbd, KbdGroup } from "@soar-design/soar-react-components"
+import { Kbd, KbdGroup } from "@soar-design/soar-react-components";
 
 export function KbdDemoDocs() {
   return (
@@ -15,6 +15,5 @@ export function KbdDemoDocs() {
         <Kbd>B</Kbd>
       </KbdGroup>
     </div>
-  )
+  );
 }
-

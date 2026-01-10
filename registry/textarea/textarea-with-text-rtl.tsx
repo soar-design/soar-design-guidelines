@@ -1,5 +1,5 @@
-import { Label } from "@soar-design/soar-react-components"
-import { Textarea } from "@soar-design/soar-react-components"
+import { Label } from "@soar-design/soar-react-components";
+import { Textarea } from "@soar-design/soar-react-components";
 
 export function TextareaWithTextDocsRTL() {
   return (
@@ -10,6 +10,5 @@ export function TextareaWithTextDocsRTL() {
         سيتم نسخ رسالتك إلى فريق الدعم.
       </p>
     </div>
-  )
+  );
 }
-

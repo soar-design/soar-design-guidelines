@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { Cloud } from "lucide-react"
+import { Cloud } from "lucide-react";
 
-import { Button } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
 import {
   Empty,
   EmptyContent,
@@ -10,7 +10,7 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function EmptyOutlineDocs() {
   return (
@@ -30,5 +30,5 @@ export function EmptyOutlineDocs() {
         </Button>
       </EmptyContent>
     </Empty>
-  )
+  );
 }

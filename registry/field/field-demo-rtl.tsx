@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { Button } from "@soar-design/soar-react-components"
-import { Checkbox } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
+import { Checkbox } from "@soar-design/soar-react-components";
 import {
   Field,
   FieldDescription,
@@ -10,16 +10,16 @@ import {
   FieldLegend,
   FieldSeparator,
   FieldSet,
-} from "@soar-design/soar-react-components"
-import { Input } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Input } from "@soar-design/soar-react-components";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@soar-design/soar-react-components"
-import { Textarea } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Textarea } from "@soar-design/soar-react-components";
 
 export function FieldDemoDocsRTL() {
   return (
@@ -28,9 +28,7 @@ export function FieldDemoDocsRTL() {
         <FieldGroup>
           <FieldSet>
             <FieldLegend>طريقة الدفع</FieldLegend>
-            <FieldDescription>
-              جميع المعاملات آمنة ومشفرة
-            </FieldDescription>
+            <FieldDescription>جميع المعاملات آمنة ومشفرة</FieldDescription>
             <FieldGroup>
               <Field>
                 <FieldLabel htmlFor="checkout-7j9-card-name-43j">
@@ -149,5 +147,5 @@ export function FieldDemoDocsRTL() {
         </FieldGroup>
       </form>
     </div>
-  )
+  );
 }

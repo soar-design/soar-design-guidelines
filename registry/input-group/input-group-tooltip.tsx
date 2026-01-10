@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { Info } from "lucide-react"
+import { Info } from "lucide-react";
 
 import {
   InputGroup,
@@ -8,12 +8,12 @@ import {
   InputGroupButton,
   InputGroupInput,
   InputGroupText,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function InputGroupTooltipDocs() {
   return (
@@ -50,5 +50,5 @@ export function InputGroupTooltipDocs() {
         </InputGroupAddon>
       </InputGroup>
     </div>
-  )
+  );
 }

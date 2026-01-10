@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
 import {
   Field,
   FieldContent,
   FieldDescription,
   FieldLabel,
-} from "@soar-design/soar-react-components"
-import { Switch } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Switch } from "@soar-design/soar-react-components";
 
 export function FieldSwitchDocs() {
   return (
@@ -22,5 +22,5 @@ export function FieldSwitchDocs() {
         <Switch id="2fa" />
       </Field>
     </div>
-  )
+  );
 }

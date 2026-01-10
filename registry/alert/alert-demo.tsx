@@ -1,10 +1,10 @@
-import { AlertCircleIcon, CheckCircle2Icon, PopcornIcon } from "lucide-react"
+import { AlertCircleIcon, CheckCircle2Icon, PopcornIcon } from "lucide-react";
 
 import {
   Alert,
   AlertDescription,
   AlertTitle,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function AlertDemoDocs() {
   return (
@@ -35,5 +35,5 @@ export function AlertDemoDocs() {
         </AlertDescription>
       </Alert>
     </div>
-  )
+  );
 }

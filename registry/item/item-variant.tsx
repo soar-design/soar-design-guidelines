@@ -1,11 +1,11 @@
-import { Button } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
 import {
   Item,
   ItemActions,
   ItemContent,
   ItemDescription,
   ItemTitle,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function ItemVariantDocs() {
   return (
@@ -50,6 +50,5 @@ export function ItemVariantDocs() {
         </ItemActions>
       </Item>
     </div>
-  )
+  );
 }
-

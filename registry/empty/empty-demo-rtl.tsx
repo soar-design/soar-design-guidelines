@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { FolderCode, ArrowUpRight } from "lucide-react"
+import { FolderCode, ArrowUpRight } from "lucide-react";
 
-import { Button } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
 import {
   Empty,
   EmptyContent,
@@ -10,7 +10,7 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function EmptyDemoDocsRTL() {
   return (
@@ -41,5 +41,5 @@ export function EmptyDemoDocsRTL() {
         </a>
       </Button>
     </Empty>
-  )
+  );
 }

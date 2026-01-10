@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   Calculator,
@@ -7,7 +7,7 @@ import {
   Settings,
   Smile,
   User,
-} from "lucide-react"
+} from "lucide-react";
 
 import {
   Command,
@@ -18,7 +18,7 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function CommandDemoDocsRTL() {
   return (
@@ -60,6 +60,5 @@ export function CommandDemoDocsRTL() {
         </CommandGroup>
       </CommandList>
     </Command>
-  )
+  );
 }
-

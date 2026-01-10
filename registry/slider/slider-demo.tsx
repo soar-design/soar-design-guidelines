@@ -1,8 +1,8 @@
-import * as React from "react"
-import { cn } from "@/lib/utils"
-import { Slider } from "@soar-design/soar-react-components"
+import * as React from "react";
+import { cn } from "@/lib/utils";
+import { Slider } from "@soar-design/soar-react-components";
 
-type SliderProps = React.ComponentProps<typeof Slider>
+type SliderProps = React.ComponentProps<typeof Slider>;
 
 export function SliderDemoDocs({ className, ...props }: SliderProps) {
   return (
@@ -13,6 +13,5 @@ export function SliderDemoDocs({ className, ...props }: SliderProps) {
       className={cn("w-[60%]", className)}
       {...props}
     />
-  )
+  );
 }
-

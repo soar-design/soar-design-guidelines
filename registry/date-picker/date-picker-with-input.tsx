@@ -1,44 +1,44 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { CalendarIcon } from "lucide-react"
+import * as React from "react";
+import { CalendarIcon } from "lucide-react";
 
-import { Button } from "@soar-design/soar-react-components"
-import { Calendar } from "@soar-design/soar-react-components"
-import { Input } from "@soar-design/soar-react-components"
-import { Label } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
+import { Calendar } from "@soar-design/soar-react-components";
+import { Input } from "@soar-design/soar-react-components";
+import { Label } from "@soar-design/soar-react-components";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 function formatDate(date: Date | undefined) {
   if (!date) {
-    return ""
+    return "";
   }
 
   return date.toLocaleDateString("en-US", {
     day: "2-digit",
     month: "long",
     year: "numeric",
-  })
+  });
 }
 
 function isValidDate(date: Date | undefined) {
   if (!date) {
-    return false
+    return false;
   }
-  return !isNaN(date.getTime())
+  return !isNaN(date.getTime());
 }
 
 export function DatePickerWithInputDocs() {
-  const [open, setOpen] = React.useState(false)
+  const [open, setOpen] = React.useState(false);
   const [date, setDate] = React.useState<Date | undefined>(
-    new Date("2025-06-01")
-  )
-  const [month, setMonth] = React.useState<Date | undefined>(date)
-  const [value, setValue] = React.useState(formatDate(date))
+    new Date("2025-06-01"),
+  );
+  const [month, setMonth] = React.useState<Date | undefined>(date);
+  const [value, setValue] = React.useState(formatDate(date));
 
   return (
     <div className="flex flex-col gap-3">
@@ -52,17 +52,17 @@ export function DatePickerWithInputDocs() {
           placeholder="June 01, 2025"
           className="bg-background pr-10"
           onChange={(e) => {
-            const date = new Date(e.target.value)
-            setValue(e.target.value)
+            const date = new Date(e.target.value);
+            setValue(e.target.value);
             if (isValidDate(date)) {
-              setDate(date)
-              setMonth(date)
+              setDate(date);
+              setMonth(date);
             }
           }}
           onKeyDown={(e) => {
             if (e.key === "ArrowDown") {
-              e.preventDefault()
-              setOpen(true)
+              e.preventDefault();
+              setOpen(true);
             }
           }}
         />
@@ -90,15 +90,14 @@ export function DatePickerWithInputDocs() {
               month={month}
               onMonthChange={setMonth}
               onSelect={(date) => {
-                setDate(date)
-                setValue(formatDate(date))
-                setOpen(false)
+                setDate(date);
+                setValue(formatDate(date));
+                setOpen(false);
               }}
             />
           </PopoverContent>
         </Popover>
       </div>
     </div>
-  )
+  );
 }
-

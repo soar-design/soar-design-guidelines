@@ -1,4 +1,4 @@
-import { Skeleton } from "@soar-design/soar-react-components"
+import { Skeleton } from "@soar-design/soar-react-components";
 
 export function SkeletonCardDocs() {
   return (
@@ -9,6 +9,5 @@ export function SkeletonCardDocs() {
         <Skeleton className="h-4 w-[200px]" />
       </div>
     </div>
-  )
+  );
 }
-

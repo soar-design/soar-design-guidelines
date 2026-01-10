@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@soar-design/soar-react-components"
-import { Button } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Button } from "@soar-design/soar-react-components";
 import {
   Empty,
   EmptyContent,
@@ -13,7 +13,7 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function EmptyAvatarDocsRTL() {
   return (
@@ -30,12 +30,13 @@ export function EmptyAvatarDocsRTL() {
         </EmptyMedia>
         <EmptyTitle>المستخدم غير متصل</EmptyTitle>
         <EmptyDescription>
-          هذا المستخدم غير متصل حالياً. يمكنك ترك رسالة لإشعاره أو المحاولة مرة أخرى لاحقاً.
+          هذا المستخدم غير متصل حالياً. يمكنك ترك رسالة لإشعاره أو المحاولة مرة
+          أخرى لاحقاً.
         </EmptyDescription>
       </EmptyHeader>
       <EmptyContent>
         <Button size="sm">ترك رسالة</Button>
       </EmptyContent>
     </Empty>
-  )
+  );
 }

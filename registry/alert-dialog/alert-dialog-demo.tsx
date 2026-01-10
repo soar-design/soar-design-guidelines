@@ -8,8 +8,8 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@soar-design/soar-react-components"
-import { Button } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Button } from "@soar-design/soar-react-components";
 
 export function AlertDialogDemoDocs() {
   return (
@@ -31,5 +31,5 @@ export function AlertDialogDemoDocs() {
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
-  )
+  );
 }

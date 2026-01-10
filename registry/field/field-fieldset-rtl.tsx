@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   Field,
@@ -7,17 +7,15 @@ import {
   FieldLabel,
   FieldLegend,
   FieldSet,
-} from "@soar-design/soar-react-components"
-import { Input } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Input } from "@soar-design/soar-react-components";
 
 export function FieldFieldsetDocsRTL() {
   return (
     <div className="w-full max-w-md space-y-6">
       <FieldSet>
         <FieldLegend>معلومات العنوان</FieldLegend>
-        <FieldDescription>
-          نحتاج عنوانك لتسليم طلبك.
-        </FieldDescription>
+        <FieldDescription>نحتاج عنوانك لتسليم طلبك.</FieldDescription>
         <FieldGroup>
           <Field>
             <FieldLabel htmlFor="street">عنوان الشارع</FieldLabel>
@@ -36,5 +34,5 @@ export function FieldFieldsetDocsRTL() {
         </FieldGroup>
       </FieldSet>
     </div>
-  )
+  );
 }

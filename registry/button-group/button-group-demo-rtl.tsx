@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 import {
   ArchiveIcon,
   ArrowLeftIcon,
@@ -11,10 +11,10 @@ import {
   MoreHorizontalIcon,
   TagIcon,
   Trash2Icon,
-} from "lucide-react"
+} from "lucide-react";
 
-import { Button } from "@soar-design/soar-react-components"
-import { ButtonGroup } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
+import { ButtonGroup } from "@soar-design/soar-react-components";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -27,10 +27,10 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function ButtonGroupDemoDocsRTL() {
-  const [label, setLabel] = React.useState("personal")
+  const [label, setLabel] = React.useState("personal");
 
   return (
     <ButtonGroup>
@@ -110,5 +110,5 @@ export function ButtonGroupDemoDocsRTL() {
         </DropdownMenu>
       </ButtonGroup>
     </ButtonGroup>
-  )
+  );
 }

@@ -1,24 +1,24 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { AudioLinesIcon, PlusIcon } from "lucide-react"
+import * as React from "react";
+import { AudioLinesIcon, PlusIcon } from "lucide-react";
 
-import { Button } from "@soar-design/soar-react-components"
-import { ButtonGroup } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
+import { ButtonGroup } from "@soar-design/soar-react-components";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupInput,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function ButtonGroupInputGroupDocs() {
-  const [voiceEnabled, setVoiceEnabled] = React.useState(false)
+  const [voiceEnabled, setVoiceEnabled] = React.useState(false);
 
   return (
     <ButtonGroup className="[--radius:9999rem]">
@@ -54,5 +54,5 @@ export function ButtonGroupInputGroupDocs() {
         </InputGroup>
       </ButtonGroup>
     </ButtonGroup>
-  )
+  );
 }

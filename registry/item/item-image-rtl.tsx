@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 
 import {
   Item,
@@ -7,7 +7,7 @@ import {
   ItemGroup,
   ItemMedia,
   ItemTitle,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 const music = [
   {
@@ -28,7 +28,7 @@ const music = [
     album: "إيقاعات ثنائية",
     duration: "3:30",
   },
-]
+];
 
 export function ItemImageDocsRTL() {
   return (
@@ -61,6 +61,5 @@ export function ItemImageDocsRTL() {
         ))}
       </ItemGroup>
     </div>
-  )
+  );
 }
-

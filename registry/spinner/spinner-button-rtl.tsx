@@ -1,5 +1,5 @@
-import { Button } from "@soar-design/soar-react-components"
-import { Spinner } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
+import { Spinner } from "@soar-design/soar-react-components";
 
 export function SpinnerButtonDocsRTL() {
   return (
@@ -17,6 +17,5 @@ export function SpinnerButtonDocsRTL() {
         جاري المعالجة
       </Button>
     </div>
-  )
+  );
 }
-

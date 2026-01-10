@@ -1,21 +1,21 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import Autoplay from "embla-carousel-autoplay"
+import * as React from "react";
+import Autoplay from "embla-carousel-autoplay";
 
-import { Card, CardContent } from "@soar-design/soar-react-components"
+import { Card, CardContent } from "@soar-design/soar-react-components";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function CarouselPluginDocs() {
   const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
-  )
+    Autoplay({ delay: 2000, stopOnInteraction: true }),
+  );
 
   return (
     <Carousel
@@ -40,5 +40,5 @@ export function CarouselPluginDocs() {
       <CarouselPrevious />
       <CarouselNext />
     </Carousel>
-  )
+  );
 }

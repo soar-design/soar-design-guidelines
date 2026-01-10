@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { MoreHorizontalIcon } from "lucide-react"
+import { useState } from "react";
+import { MoreHorizontalIcon } from "lucide-react";
 
-import { Button } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
 import {
   Dialog,
   DialogClose,
@@ -12,7 +12,7 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -20,15 +20,19 @@ import {
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from "@soar-design/soar-react-components"
-import { Field, FieldGroup, FieldLabel } from "@soar-design/soar-react-components"
-import { Input } from "@soar-design/soar-react-components"
-import { Label } from "@soar-design/soar-react-components"
-import { Textarea } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import {
+  Field,
+  FieldGroup,
+  FieldLabel,
+} from "@soar-design/soar-react-components";
+import { Input } from "@soar-design/soar-react-components";
+import { Label } from "@soar-design/soar-react-components";
+import { Textarea } from "@soar-design/soar-react-components";
 
 export function DropdownMenuDialogDocs() {
-  const [showNewDialog, setShowNewDialog] = useState(false)
-  const [showShareDialog, setShowShareDialog] = useState(false)
+  const [showNewDialog, setShowNewDialog] = useState(false);
+  const [showShareDialog, setShowShareDialog] = useState(false);
 
   return (
     <>
@@ -111,5 +115,5 @@ export function DropdownMenuDialogDocs() {
         </DialogContent>
       </Dialog>
     </>
-  )
+  );
 }

@@ -1,21 +1,21 @@
-"use client"
+"use client";
 
-import { ArrowUp, Plus } from "lucide-react"
+import { ArrowUp, Plus } from "lucide-react";
 
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupText,
   InputGroupTextarea,
-} from "@soar-design/soar-react-components"
-import { Separator } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Separator } from "@soar-design/soar-react-components";
 
 export function InputGroupTextareaDocsRTL() {
   return (
@@ -58,5 +58,5 @@ export function InputGroupTextareaDocsRTL() {
         </InputGroupAddon>
       </InputGroup>
     </div>
-  )
+  );
 }

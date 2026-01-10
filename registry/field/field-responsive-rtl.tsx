@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { Button } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
 import {
   Field,
   FieldContent,
@@ -10,9 +10,9 @@ import {
   FieldLegend,
   FieldSeparator,
   FieldSet,
-} from "@soar-design/soar-react-components"
-import { Input } from "@soar-design/soar-react-components"
-import { Textarea } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Input } from "@soar-design/soar-react-components";
+import { Textarea } from "@soar-design/soar-react-components";
 
 export function FieldResponsiveDocsRTL() {
   return (
@@ -26,9 +26,7 @@ export function FieldResponsiveDocsRTL() {
             <Field orientation="responsive">
               <FieldContent>
                 <FieldLabel htmlFor="name">الاسم</FieldLabel>
-                <FieldDescription>
-                  قدم اسمك الكامل للتعريف
-                </FieldDescription>
+                <FieldDescription>قدم اسمك الكامل للتعريف</FieldDescription>
               </FieldContent>
               <Input id="name" placeholder="Evil Rabbit" required />
             </Field>
@@ -37,7 +35,8 @@ export function FieldResponsiveDocsRTL() {
               <FieldContent>
                 <FieldLabel htmlFor="lastName">الرسالة</FieldLabel>
                 <FieldDescription>
-                  يمكنك كتابة رسالتك هنا. اجعلها قصيرة، ويفضل أن تكون أقل من 100 حرف.
+                  يمكنك كتابة رسالتك هنا. اجعلها قصيرة، ويفضل أن تكون أقل من 100
+                  حرف.
                 </FieldDescription>
               </FieldContent>
               <Textarea
@@ -58,5 +57,5 @@ export function FieldResponsiveDocsRTL() {
         </FieldSet>
       </form>
     </div>
-  )
+  );
 }

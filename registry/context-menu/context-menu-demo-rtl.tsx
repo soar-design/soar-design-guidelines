@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   ContextMenu,
@@ -14,7 +14,7 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function ContextMenuDemoDocsRTL() {
   return (
@@ -51,7 +51,9 @@ export function ContextMenuDemoDocsRTL() {
         <ContextMenuCheckboxItem checked>
           إظهار الإشارات المرجعية
         </ContextMenuCheckboxItem>
-        <ContextMenuCheckboxItem>إظهار عناوين URL الكاملة</ContextMenuCheckboxItem>
+        <ContextMenuCheckboxItem>
+          إظهار عناوين URL الكاملة
+        </ContextMenuCheckboxItem>
         <ContextMenuSeparator />
         <ContextMenuRadioGroup value="pedro">
           <ContextMenuLabel inset>الأشخاص</ContextMenuLabel>
@@ -62,6 +64,5 @@ export function ContextMenuDemoDocsRTL() {
         </ContextMenuRadioGroup>
       </ContextMenuContent>
     </ContextMenu>
-  )
+  );
 }
-

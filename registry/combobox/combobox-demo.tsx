@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { Check, ChevronsUpDown } from "lucide-react"
+import * as React from "react";
+import { Check, ChevronsUpDown } from "lucide-react";
 
-import { cn } from "@/lib/utils"
-import { Button } from "@soar-design/soar-react-components"
+import { cn } from "@/lib/utils";
+import { Button } from "@soar-design/soar-react-components";
 import {
   Command,
   CommandEmpty,
@@ -12,12 +12,12 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 const frameworks = [
   {
@@ -40,11 +40,11 @@ const frameworks = [
     value: "astro",
     label: "Astro",
   },
-]
+];
 
 export function ComboboxDemoDocs() {
-  const [open, setOpen] = React.useState(false)
-  const [value, setValue] = React.useState("")
+  const [open, setOpen] = React.useState(false);
+  const [value, setValue] = React.useState("");
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -72,15 +72,15 @@ export function ComboboxDemoDocs() {
                   key={framework.value}
                   value={framework.value}
                   onSelect={(currentValue) => {
-                    setValue(currentValue === value ? "" : currentValue)
-                    setOpen(false)
+                    setValue(currentValue === value ? "" : currentValue);
+                    setOpen(false);
                   }}
                 >
                   {framework.label}
                   <Check
                     className={cn(
                       "ml-auto",
-                      value === framework.value ? "opacity-100" : "opacity-0"
+                      value === framework.value ? "opacity-100" : "opacity-0",
                     )}
                   />
                 </CommandItem>
@@ -90,6 +90,5 @@ export function ComboboxDemoDocs() {
         </Command>
       </PopoverContent>
     </Popover>
-  )
+  );
 }
-

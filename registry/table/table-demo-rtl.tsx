@@ -7,7 +7,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 const invoices = [
   {
@@ -52,7 +52,7 @@ const invoices = [
     totalAmount: "$300.00",
     paymentMethod: "بطاقة ائتمانية",
   },
-]
+];
 
 export function TableDemoDocsRTL() {
   return (
@@ -69,20 +69,27 @@ export function TableDemoDocsRTL() {
       <TableBody>
         {invoices.map((invoice) => (
           <TableRow key={invoice.invoice}>
-            <TableCell className="font-medium text-right">{invoice.invoice}</TableCell>
-            <TableCell className="text-right">{invoice.paymentStatus}</TableCell>
-            <TableCell className="text-right">{invoice.paymentMethod}</TableCell>
+            <TableCell className="text-right font-medium">
+              {invoice.invoice}
+            </TableCell>
+            <TableCell className="text-right">
+              {invoice.paymentStatus}
+            </TableCell>
+            <TableCell className="text-right">
+              {invoice.paymentMethod}
+            </TableCell>
             <TableCell className="text-left">{invoice.totalAmount}</TableCell>
           </TableRow>
         ))}
       </TableBody>
       <TableFooter>
         <TableRow>
-          <TableCell colSpan={3} className="text-right">المجموع</TableCell>
+          <TableCell colSpan={3} className="text-right">
+            المجموع
+          </TableCell>
           <TableCell className="text-left">$2,500.00</TableCell>
         </TableRow>
       </TableFooter>
     </Table>
-  )
+  );
 }
-

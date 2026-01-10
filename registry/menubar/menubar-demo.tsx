@@ -12,7 +12,7 @@ import {
   MenubarSubContent,
   MenubarSubTrigger,
   MenubarTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function MenubarDemoDocs() {
   return (
@@ -103,6 +103,5 @@ export function MenubarDemoDocs() {
         </MenubarContent>
       </MenubarMenu>
     </Menubar>
-  )
+  );
 }
-

@@ -1,11 +1,11 @@
-import { Button } from "@soar-design/soar-react-components"
-import { Input } from "@soar-design/soar-react-components"
-import { Label } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
+import { Input } from "@soar-design/soar-react-components";
+import { Label } from "@soar-design/soar-react-components";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function PopoverDemoDocs() {
   return (
@@ -58,6 +58,5 @@ export function PopoverDemoDocs() {
         </div>
       </PopoverContent>
     </Popover>
-  )
+  );
 }
-

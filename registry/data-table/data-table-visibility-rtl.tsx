@@ -1,22 +1,22 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 import {
   flexRender,
   getCoreRowModel,
   useReactTable,
   type ColumnDef,
   type VisibilityState,
-} from "@tanstack/react-table"
-import { ChevronDown } from "lucide-react"
+} from "@tanstack/react-table";
+import { ChevronDown } from "lucide-react";
 
-import { Button } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 import {
   Table,
   TableBody,
@@ -24,14 +24,14 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 type Payment = {
-  id: string
-  amount: number
-  status: "pending" | "processing" | "success" | "failed"
-  email: string
-}
+  id: string;
+  amount: number;
+  status: "pending" | "processing" | "success" | "failed";
+  email: string;
+};
 
 const data: Payment[] = [
   {
@@ -52,20 +52,20 @@ const data: Payment[] = [
     status: "processing",
     email: "Monserrat44@example.com",
   },
-]
+];
 
 const statusLabels: Record<string, string> = {
   success: "نجح",
   processing: "قيد المعالجة",
   failed: "فشل",
   pending: "قيد الانتظار",
-}
+};
 
 const columnLabels: Record<string, string> = {
   status: "الحالة",
   email: "البريد الإلكتروني",
   amount: "المبلغ",
-}
+};
 
 const columns: ColumnDef<Payment>[] = [
   {
@@ -81,18 +81,18 @@ const columns: ColumnDef<Payment>[] = [
     accessorKey: "amount",
     header: "المبلغ",
     cell: ({ row }) => {
-      const amount = parseFloat(row.getValue("amount"))
+      const amount = parseFloat(row.getValue("amount"));
       return new Intl.NumberFormat("ar-SA", {
         style: "currency",
         currency: "USD",
-      }).format(amount)
+      }).format(amount);
     },
   },
-]
+];
 
 export function DataTableVisibilityDocsRTL() {
   const [columnVisibility, setColumnVisibility] =
-    React.useState<VisibilityState>({})
+    React.useState<VisibilityState>({});
 
   const table = useReactTable({
     data,
@@ -102,7 +102,7 @@ export function DataTableVisibilityDocsRTL() {
     state: {
       columnVisibility,
     },
-  })
+  });
 
   return (
     <div className="w-full space-y-4">
@@ -129,7 +129,7 @@ export function DataTableVisibilityDocsRTL() {
                   >
                     {columnLabels[column.id] || column.id}
                   </DropdownMenuCheckboxItem>
-                )
+                );
               })}
           </DropdownMenuContent>
         </DropdownMenu>
@@ -146,10 +146,10 @@ export function DataTableVisibilityDocsRTL() {
                         ? null
                         : flexRender(
                             header.column.columnDef.header,
-                            header.getContext()
+                            header.getContext(),
                           )}
                     </TableHead>
-                  )
+                  );
                 })}
               </TableRow>
             ))}
@@ -165,7 +165,7 @@ export function DataTableVisibilityDocsRTL() {
                     <TableCell key={cell.id}>
                       {flexRender(
                         cell.column.columnDef.cell,
-                        cell.getContext()
+                        cell.getContext(),
                       )}
                     </TableCell>
                   ))}
@@ -185,6 +185,5 @@ export function DataTableVisibilityDocsRTL() {
         </Table>
       </div>
     </div>
-  )
+  );
 }
-

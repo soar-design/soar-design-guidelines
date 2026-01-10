@@ -1,11 +1,11 @@
-import { Plus } from "lucide-react"
+import { Plus } from "lucide-react";
 
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@soar-design/soar-react-components"
-import { Button } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Button } from "@soar-design/soar-react-components";
 import {
   Item,
   ItemActions,
@@ -13,7 +13,7 @@ import {
   ItemDescription,
   ItemMedia,
   ItemTitle,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function ItemAvatarDocs() {
   return (
@@ -76,6 +76,5 @@ export function ItemAvatarDocs() {
         </ItemActions>
       </Item>
     </div>
-  )
+  );
 }
-

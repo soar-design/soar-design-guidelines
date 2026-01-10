@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { toast } from "sonner"
+import { toast } from "sonner";
 
-import { Button } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
 
 export function SonnerTypesDocs() {
   return (
@@ -44,19 +44,18 @@ export function SonnerTypesDocs() {
           toast.promise<{ name: string }>(
             () =>
               new Promise((resolve) =>
-                setTimeout(() => resolve({ name: "Event" }), 2000)
+                setTimeout(() => resolve({ name: "Event" }), 2000),
               ),
             {
               loading: "Loading...",
               success: (data) => `${data.name} has been created`,
               error: "Error",
-            }
-          )
+            },
+          );
         }}
       >
         Promise
       </Button>
     </div>
-  )
+  );
 }
-

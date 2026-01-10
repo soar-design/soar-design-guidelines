@@ -1,15 +1,12 @@
-"use client"
+"use client";
 
 import {
   Field,
   FieldDescription,
   FieldLabel,
   FieldSet,
-} from "@soar-design/soar-react-components"
-import {
-  RadioGroup,
-  RadioGroupItem,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { RadioGroup, RadioGroupItem } from "@soar-design/soar-react-components";
 
 export function FieldRadioDocs() {
   return (
@@ -41,5 +38,5 @@ export function FieldRadioDocs() {
         </RadioGroup>
       </FieldSet>
     </div>
-  )
+  );
 }

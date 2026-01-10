@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   ContextMenu,
@@ -14,7 +14,7 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function ContextMenuDemoDocs() {
   return (
@@ -62,6 +62,5 @@ export function ContextMenuDemoDocs() {
         </ContextMenuRadioGroup>
       </ContextMenuContent>
     </ContextMenu>
-  )
+  );
 }
-

@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { Button } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
 import {
   Field,
   FieldContent,
@@ -10,9 +10,9 @@ import {
   FieldLegend,
   FieldSeparator,
   FieldSet,
-} from "@soar-design/soar-react-components"
-import { Input } from "@soar-design/soar-react-components"
-import { Textarea } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Input } from "@soar-design/soar-react-components";
+import { Textarea } from "@soar-design/soar-react-components";
 
 export function FieldResponsiveDocs() {
   return (
@@ -59,5 +59,5 @@ export function FieldResponsiveDocs() {
         </FieldSet>
       </form>
     </div>
-  )
+  );
 }

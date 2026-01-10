@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import Link from "next/link"
-import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from "lucide-react"
+import * as React from "react";
+import Link from "next/link";
+import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from "lucide-react";
 
-import { useIsMobile } from "@/hooks/use-mobile"
+import { useIsMobile } from "@/hooks/use-mobile";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -13,20 +13,18 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 const components: { title: string; href: string; description: string }[] = [
   {
     title: "حوار التنبيه",
     href: "/docs/primitives/alert-dialog",
-    description:
-      "حوار نمطي يقاطع المستخدم بمحتوى مهم ويتوقع استجابة.",
+    description: "حوار نمطي يقاطع المستخدم بمحتوى مهم ويتوقع استجابة.",
   },
   {
     title: "بطاقة التحويم",
     href: "/docs/primitives/hover-card",
-    description:
-      "للمستخدمين المبصرين لمعاينة المحتوى المتاح خلف الرابط.",
+    description: "للمستخدمين المبصرين لمعاينة المحتوى المتاح خلف الرابط.",
   },
   {
     title: "التقدم",
@@ -51,10 +49,10 @@ const components: { title: string; href: string; description: string }[] = [
     description:
       "نافذة منبثقة تعرض معلومات متعلقة بعنصر عندما يتلقى العنصر التركيز من لوحة المفاتيح أو عند تحويم الماوس فوقه.",
   },
-]
+];
 
 export function NavigationMenuDemoDocsRTL() {
-  const isMobile = useIsMobile()
+  const isMobile = useIsMobile();
 
   return (
     <NavigationMenu viewport={isMobile} dir="rtl">
@@ -191,7 +189,7 @@ export function NavigationMenuDemoDocsRTL() {
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
-  )
+  );
 }
 
 function ListItem({
@@ -211,6 +209,5 @@ function ListItem({
         </Link>
       </NavigationMenuLink>
     </li>
-  )
+  );
 }
-

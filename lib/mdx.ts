@@ -22,11 +22,11 @@ export interface Doc {
 function removeCreditsSection(content: string): string {
   const creditsRegex = /^## Credits$/gm;
   const match = creditsRegex.exec(content);
-  
+
   if (match) {
     return content.substring(0, match.index).trimEnd();
   }
-  
+
   return content;
 }
 

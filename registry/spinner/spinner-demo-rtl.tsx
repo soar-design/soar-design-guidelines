@@ -3,12 +3,15 @@ import {
   ItemContent,
   ItemMedia,
   ItemTitle,
-} from "@soar-design/soar-react-components"
-import { Spinner } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Spinner } from "@soar-design/soar-react-components";
 
 export function SpinnerDemoDocsRTL() {
   return (
-    <div className="flex w-full max-w-xs flex-col gap-4 [--radius:1rem]" dir="rtl">
+    <div
+      className="flex w-full max-w-xs flex-col gap-4 [--radius:1rem]"
+      dir="rtl"
+    >
       <Item variant="muted">
         <ItemMedia>
           <Spinner />
@@ -21,6 +24,5 @@ export function SpinnerDemoDocsRTL() {
         </ItemContent>
       </Item>
     </div>
-  )
+  );
 }
-

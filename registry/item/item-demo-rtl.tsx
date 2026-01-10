@@ -1,6 +1,6 @@
-import { BadgeCheckIcon, ChevronRightIcon } from "lucide-react"
+import { BadgeCheckIcon, ChevronRightIcon } from "lucide-react";
 
-import { Button } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
 import {
   Item,
   ItemActions,
@@ -8,7 +8,7 @@ import {
   ItemDescription,
   ItemMedia,
   ItemTitle,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function ItemDemoDocsRTL() {
   return (
@@ -16,9 +16,7 @@ export function ItemDemoDocsRTL() {
       <Item variant="outline">
         <ItemContent>
           <ItemTitle>عنصر أساسي</ItemTitle>
-          <ItemDescription>
-            عنصر بسيط يحتوي على عنوان ووصف.
-          </ItemDescription>
+          <ItemDescription>عنصر بسيط يحتوي على عنوان ووصف.</ItemDescription>
         </ItemContent>
         <ItemActions>
           <Button variant="outline" size="sm">
@@ -40,6 +38,5 @@ export function ItemDemoDocsRTL() {
         </a>
       </Item>
     </div>
-  )
+  );
 }
-

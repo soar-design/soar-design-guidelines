@@ -1,5 +1,5 @@
-import { Checkbox } from "@soar-design/soar-react-components"
-import { Label } from "@soar-design/soar-react-components"
+import { Checkbox } from "@soar-design/soar-react-components";
+import { Label } from "@soar-design/soar-react-components";
 
 export function LabelDemoDocs() {
   return (
@@ -9,6 +9,5 @@ export function LabelDemoDocs() {
         <Label htmlFor="terms">Accept terms and conditions</Label>
       </div>
     </div>
-  )
+  );
 }
-

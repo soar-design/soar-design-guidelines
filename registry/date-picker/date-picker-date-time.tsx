@@ -1,21 +1,21 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { ChevronDownIcon } from "lucide-react"
+import * as React from "react";
+import { ChevronDownIcon } from "lucide-react";
 
-import { Button } from "@soar-design/soar-react-components"
-import { Calendar } from "@soar-design/soar-react-components"
-import { Input } from "@soar-design/soar-react-components"
-import { Label } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
+import { Calendar } from "@soar-design/soar-react-components";
+import { Input } from "@soar-design/soar-react-components";
+import { Label } from "@soar-design/soar-react-components";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function DatePickerDateTimeDocs() {
-  const [open, setOpen] = React.useState(false)
-  const [date, setDate] = React.useState<Date | undefined>(undefined)
+  const [open, setOpen] = React.useState(false);
+  const [date, setDate] = React.useState<Date | undefined>(undefined);
 
   return (
     <div className="flex gap-4">
@@ -40,8 +40,8 @@ export function DatePickerDateTimeDocs() {
               selected={date}
               captionLayout="dropdown"
               onSelect={(date) => {
-                setDate(date)
-                setOpen(false)
+                setDate(date);
+                setOpen(false);
               }}
             />
           </PopoverContent>
@@ -60,6 +60,5 @@ export function DatePickerDateTimeDocs() {
         />
       </div>
     </div>
-  )
+  );
 }
-

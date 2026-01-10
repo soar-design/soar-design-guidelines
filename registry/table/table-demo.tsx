@@ -7,7 +7,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 const invoices = [
   {
@@ -52,7 +52,7 @@ const invoices = [
     totalAmount: "$300.00",
     paymentMethod: "Credit Card",
   },
-]
+];
 
 export function TableDemoDocs() {
   return (
@@ -83,6 +83,5 @@ export function TableDemoDocs() {
         </TableRow>
       </TableFooter>
     </Table>
-  )
+  );
 }
-

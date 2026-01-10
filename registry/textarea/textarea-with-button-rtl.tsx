@@ -1,5 +1,5 @@
-import { Button } from "@soar-design/soar-react-components"
-import { Textarea } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
+import { Textarea } from "@soar-design/soar-react-components";
 
 export function TextareaWithButtonDocsRTL() {
   return (
@@ -7,6 +7,5 @@ export function TextareaWithButtonDocsRTL() {
       <Textarea placeholder="اكتب رسالتك هنا." />
       <Button>إرسال الرسالة</Button>
     </div>
-  )
+  );
 }
-

@@ -1,11 +1,11 @@
-import * as React from "react"
+import * as React from "react";
 
-import { ScrollArea } from "@soar-design/soar-react-components"
-import { Separator } from "@soar-design/soar-react-components"
+import { ScrollArea } from "@soar-design/soar-react-components";
+import { Separator } from "@soar-design/soar-react-components";
 
 const tags = Array.from({ length: 50 }).map(
-  (_, i, a) => `v1.2.0-beta.${a.length - i}`
-)
+  (_, i, a) => `v1.2.0-beta.${a.length - i}`,
+);
 
 export function ScrollAreaDemoDocsRTL() {
   return (
@@ -20,6 +20,5 @@ export function ScrollAreaDemoDocsRTL() {
         ))}
       </div>
     </ScrollArea>
-  )
+  );
 }
-

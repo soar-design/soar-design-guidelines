@@ -1,5 +1,5 @@
-import { Label } from "@soar-design/soar-react-components"
-import { Switch } from "@soar-design/soar-react-components"
+import { Label } from "@soar-design/soar-react-components";
+import { Switch } from "@soar-design/soar-react-components";
 
 export function SwitchDemoDocsRTL() {
   return (
@@ -7,6 +7,5 @@ export function SwitchDemoDocsRTL() {
       <Switch id="airplane-mode" />
       <Label htmlFor="airplane-mode">وضع الطيران</Label>
     </div>
-  )
+  );
 }
-

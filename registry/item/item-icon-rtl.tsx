@@ -1,6 +1,6 @@
-import { ShieldAlertIcon } from "lucide-react"
+import { ShieldAlertIcon } from "lucide-react";
 
-import { Button } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
 import {
   Item,
   ItemActions,
@@ -8,7 +8,7 @@ import {
   ItemDescription,
   ItemMedia,
   ItemTitle,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function ItemIconDocsRTL() {
   return (
@@ -30,6 +30,5 @@ export function ItemIconDocsRTL() {
         </ItemActions>
       </Item>
     </div>
-  )
+  );
 }
-

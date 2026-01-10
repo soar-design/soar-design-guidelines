@@ -1,5 +1,5 @@
-import Link from "next/link"
-import { SlashIcon } from "lucide-react"
+import Link from "next/link";
+import { SlashIcon } from "lucide-react";
 
 import {
   Breadcrumb,
@@ -8,7 +8,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function BreadcrumbCustomSeparatorDocs() {
   return (
@@ -35,5 +35,5 @@ export function BreadcrumbCustomSeparatorDocs() {
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>
-  )
+  );
 }

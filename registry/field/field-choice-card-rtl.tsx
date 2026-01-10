@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   Field,
@@ -8,11 +8,8 @@ import {
   FieldLabel,
   FieldSet,
   FieldTitle,
-} from "@soar-design/soar-react-components"
-import {
-  RadioGroup,
-  RadioGroupItem,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { RadioGroup, RadioGroupItem } from "@soar-design/soar-react-components";
 
 export function FieldChoiceCardDocsRTL() {
   return (
@@ -22,9 +19,7 @@ export function FieldChoiceCardDocsRTL() {
           <FieldLabel htmlFor="compute-environment-p8w">
             بيئة الحوسبة
           </FieldLabel>
-          <FieldDescription>
-            اختر بيئة الحوسبة لعنقودك.
-          </FieldDescription>
+          <FieldDescription>اختر بيئة الحوسبة لعنقودك.</FieldDescription>
           <RadioGroup defaultValue="kubernetes">
             <FieldLabel htmlFor="kubernetes-r2h">
               <Field orientation="horizontal">
@@ -52,5 +47,5 @@ export function FieldChoiceCardDocsRTL() {
         </FieldSet>
       </FieldGroup>
     </div>
-  )
+  );
 }

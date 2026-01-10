@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   Field,
@@ -7,8 +7,8 @@ import {
   FieldLabel,
   FieldLegend,
   FieldSet,
-} from "@soar-design/soar-react-components"
-import { Input } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Input } from "@soar-design/soar-react-components";
 
 export function FieldFieldsetDocs() {
   return (
@@ -36,5 +36,5 @@ export function FieldFieldsetDocs() {
         </FieldGroup>
       </FieldSet>
     </div>
-  )
+  );
 }

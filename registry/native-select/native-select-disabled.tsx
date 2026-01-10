@@ -1,7 +1,7 @@
 import {
   NativeSelect,
   NativeSelectOption,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function NativeSelectDisabledDocs() {
   return (
@@ -12,6 +12,5 @@ export function NativeSelectDisabledDocs() {
       <NativeSelectOption value="high">High</NativeSelectOption>
       <NativeSelectOption value="critical">Critical</NativeSelectOption>
     </NativeSelect>
-  )
+  );
 }
-

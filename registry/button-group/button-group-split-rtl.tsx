@@ -1,10 +1,10 @@
-import { PlusIcon } from "lucide-react"
+import { PlusIcon } from "lucide-react";
 
-import { Button } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
 import {
   ButtonGroup,
   ButtonGroupSeparator,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function ButtonGroupSplitDocsRTL() {
   return (
@@ -15,6 +15,5 @@ export function ButtonGroupSplitDocsRTL() {
         <PlusIcon />
       </Button>
     </ButtonGroup>
-  )
+  );
 }
-

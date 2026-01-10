@@ -1,6 +1,6 @@
-import { BookmarkIcon } from "lucide-react"
+import { BookmarkIcon } from "lucide-react";
 
-import { Toggle } from "@soar-design/soar-react-components"
+import { Toggle } from "@soar-design/soar-react-components";
 
 export function ToggleDemoDocsRTL() {
   return (
@@ -13,6 +13,5 @@ export function ToggleDemoDocsRTL() {
       <BookmarkIcon />
       إشارة مرجعية
     </Toggle>
-  )
+  );
 }
-

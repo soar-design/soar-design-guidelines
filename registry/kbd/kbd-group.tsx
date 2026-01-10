@@ -1,4 +1,4 @@
-import { Kbd, KbdGroup } from "@soar-design/soar-react-components"
+import { Kbd, KbdGroup } from "@soar-design/soar-react-components";
 
 export function KbdGroupDocs() {
   return (
@@ -12,6 +12,5 @@ export function KbdGroupDocs() {
         to open the command palette
       </p>
     </div>
-  )
+  );
 }
-

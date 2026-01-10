@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
-import { useMediaQuery } from "@/hooks/use-media-query"
-import { Button } from "@soar-design/soar-react-components"
+import { useMediaQuery } from "@/hooks/use-media-query";
+import { Button } from "@soar-design/soar-react-components";
 import {
   Command,
   CommandEmpty,
@@ -11,22 +11,22 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 import {
   Drawer,
   DrawerContent,
   DrawerTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 type Status = {
-  value: string
-  label: string
-}
+  value: string;
+  label: string;
+};
 
 const statuses: Status[] = [
   {
@@ -49,14 +49,14 @@ const statuses: Status[] = [
     value: "canceled",
     label: "ملغي",
   },
-]
+];
 
 export function ComboboxResponsiveDocsRTL() {
-  const [open, setOpen] = React.useState(false)
-  const isDesktop = useMediaQuery("(min-width: 768px)")
+  const [open, setOpen] = React.useState(false);
+  const isDesktop = useMediaQuery("(min-width: 768px)");
   const [selectedStatus, setSelectedStatus] = React.useState<Status | null>(
-    null
-  )
+    null,
+  );
 
   if (isDesktop) {
     return (
@@ -70,7 +70,7 @@ export function ComboboxResponsiveDocsRTL() {
           <StatusList setOpen={setOpen} setSelectedStatus={setSelectedStatus} />
         </PopoverContent>
       </Popover>
-    )
+    );
   }
 
   return (
@@ -86,15 +86,15 @@ export function ComboboxResponsiveDocsRTL() {
         </div>
       </DrawerContent>
     </Drawer>
-  )
+  );
 }
 
 function StatusList({
   setOpen,
   setSelectedStatus,
 }: {
-  setOpen: (open: boolean) => void
-  setSelectedStatus: (status: Status | null) => void
+  setOpen: (open: boolean) => void;
+  setSelectedStatus: (status: Status | null) => void;
 }) {
   return (
     <Command>
@@ -108,9 +108,9 @@ function StatusList({
               value={status.value}
               onSelect={(value) => {
                 setSelectedStatus(
-                  statuses.find((priority) => priority.value === value) || null
-                )
-                setOpen(false)
+                  statuses.find((priority) => priority.value === value) || null,
+                );
+                setOpen(false);
               }}
             >
               {status.label}
@@ -119,6 +119,5 @@ function StatusList({
         </CommandGroup>
       </CommandList>
     </Command>
-  )
+  );
 }
-

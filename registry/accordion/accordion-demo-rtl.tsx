@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function AccordionDemoDocsRTL() {
   return (
@@ -17,12 +17,12 @@ export function AccordionDemoDocsRTL() {
         <AccordionTrigger>معلومات المنتج</AccordionTrigger>
         <AccordionContent className="flex flex-col gap-4 text-balance">
           <p>
-            يجمع منتجنا الرائد بين التكنولوجيا المتطورة والتصميم الأنيق. مصنوع من
-            مواد عالية الجودة، يقدم أداءً وموثوقية لا مثيل لهما.
+            يجمع منتجنا الرائد بين التكنولوجيا المتطورة والتصميم الأنيق. مصنوع
+            من مواد عالية الجودة، يقدم أداءً وموثوقية لا مثيل لهما.
           </p>
           <p>
-            تشمل الميزات الرئيسية قدرات معالجة متقدمة، وواجهة مستخدم بديهية مصممة
-            لكل من المبتدئين والخبراء.
+            تشمل الميزات الرئيسية قدرات معالجة متقدمة، وواجهة مستخدم بديهية
+            مصممة لكل من المبتدئين والخبراء.
           </p>
         </AccordionContent>
       </AccordionItem>
@@ -54,5 +54,5 @@ export function AccordionDemoDocsRTL() {
         </AccordionContent>
       </AccordionItem>
     </Accordion>
-  )
+  );
 }

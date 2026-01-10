@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 import {
   flexRender,
   getCoreRowModel,
@@ -8,9 +8,9 @@ import {
   useReactTable,
   type ColumnDef,
   type ColumnFiltersState,
-} from "@tanstack/react-table"
+} from "@tanstack/react-table";
 
-import { Input } from "@soar-design/soar-react-components"
+import { Input } from "@soar-design/soar-react-components";
 import {
   Table,
   TableBody,
@@ -18,14 +18,14 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 type Payment = {
-  id: string
-  amount: number
-  status: "pending" | "processing" | "success" | "failed"
-  email: string
-}
+  id: string;
+  amount: number;
+  status: "pending" | "processing" | "success" | "failed";
+  email: string;
+};
 
 const data: Payment[] = [
   {
@@ -46,14 +46,14 @@ const data: Payment[] = [
     status: "processing",
     email: "Monserrat44@example.com",
   },
-]
+];
 
 const statusLabels: Record<string, string> = {
   success: "نجح",
   processing: "قيد المعالجة",
   failed: "فشل",
   pending: "قيد الانتظار",
-}
+};
 
 const columns: ColumnDef<Payment>[] = [
   {
@@ -69,19 +69,19 @@ const columns: ColumnDef<Payment>[] = [
     accessorKey: "amount",
     header: "المبلغ",
     cell: ({ row }) => {
-      const amount = parseFloat(row.getValue("amount"))
+      const amount = parseFloat(row.getValue("amount"));
       return new Intl.NumberFormat("ar-SA", {
         style: "currency",
         currency: "USD",
-      }).format(amount)
+      }).format(amount);
     },
   },
-]
+];
 
 export function DataTableFilteringDocsRTL() {
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
-    []
-  )
+    [],
+  );
 
   const table = useReactTable({
     data,
@@ -92,7 +92,7 @@ export function DataTableFilteringDocsRTL() {
     state: {
       columnFilters,
     },
-  })
+  });
 
   return (
     <div className="w-full space-y-4">
@@ -116,10 +116,10 @@ export function DataTableFilteringDocsRTL() {
                         ? null
                         : flexRender(
                             header.column.columnDef.header,
-                            header.getContext()
+                            header.getContext(),
                           )}
                     </TableHead>
-                  )
+                  );
                 })}
               </TableRow>
             ))}
@@ -135,7 +135,7 @@ export function DataTableFilteringDocsRTL() {
                     <TableCell key={cell.id}>
                       {flexRender(
                         cell.column.columnDef.cell,
-                        cell.getContext()
+                        cell.getContext(),
                       )}
                     </TableCell>
                   ))}
@@ -155,6 +155,5 @@ export function DataTableFilteringDocsRTL() {
         </Table>
       </div>
     </div>
-  )
+  );
 }
-

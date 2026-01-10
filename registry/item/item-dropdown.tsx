@@ -1,26 +1,26 @@
-"use client"
+"use client";
 
-import { ChevronDownIcon } from "lucide-react"
+import { ChevronDownIcon } from "lucide-react";
 
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@soar-design/soar-react-components"
-import { Button } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Button } from "@soar-design/soar-react-components";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 import {
   Item,
   ItemContent,
   ItemDescription,
   ItemMedia,
   ItemTitle,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 const people = [
   {
@@ -38,7 +38,7 @@ const people = [
     avatar: "https://github.com/evilrabbit.png",
     email: "evilrabbit@vercel.com",
   },
-]
+];
 
 export function ItemDropdownDocs() {
   return (
@@ -69,6 +69,5 @@ export function ItemDropdownDocs() {
         </DropdownMenuContent>
       </DropdownMenu>
     </div>
-  )
+  );
 }
-

@@ -1,22 +1,22 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 import {
   flexRender,
   getCoreRowModel,
   useReactTable,
   type ColumnDef,
   type VisibilityState,
-} from "@tanstack/react-table"
-import { ChevronDown } from "lucide-react"
+} from "@tanstack/react-table";
+import { ChevronDown } from "lucide-react";
 
-import { Button } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 import {
   Table,
   TableBody,
@@ -24,14 +24,14 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 type Payment = {
-  id: string
-  amount: number
-  status: "pending" | "processing" | "success" | "failed"
-  email: string
-}
+  id: string;
+  amount: number;
+  status: "pending" | "processing" | "success" | "failed";
+  email: string;
+};
 
 const data: Payment[] = [
   {
@@ -52,7 +52,7 @@ const data: Payment[] = [
     status: "processing",
     email: "Monserrat44@example.com",
   },
-]
+];
 
 const columns: ColumnDef<Payment>[] = [
   {
@@ -67,11 +67,11 @@ const columns: ColumnDef<Payment>[] = [
     accessorKey: "amount",
     header: "Amount",
   },
-]
+];
 
 export function DataTableVisibilityDocs() {
   const [columnVisibility, setColumnVisibility] =
-    React.useState<VisibilityState>({})
+    React.useState<VisibilityState>({});
 
   const table = useReactTable({
     data,
@@ -81,7 +81,7 @@ export function DataTableVisibilityDocs() {
     state: {
       columnVisibility,
     },
-  })
+  });
 
   return (
     <div className="w-full space-y-4">
@@ -108,7 +108,7 @@ export function DataTableVisibilityDocs() {
                   >
                     {column.id}
                   </DropdownMenuCheckboxItem>
-                )
+                );
               })}
           </DropdownMenuContent>
         </DropdownMenu>
@@ -125,10 +125,10 @@ export function DataTableVisibilityDocs() {
                         ? null
                         : flexRender(
                             header.column.columnDef.header,
-                            header.getContext()
+                            header.getContext(),
                           )}
                     </TableHead>
-                  )
+                  );
                 })}
               </TableRow>
             ))}
@@ -144,7 +144,7 @@ export function DataTableVisibilityDocs() {
                     <TableCell key={cell.id}>
                       {flexRender(
                         cell.column.columnDef.cell,
-                        cell.getContext()
+                        cell.getContext(),
                       )}
                     </TableCell>
                   ))}
@@ -164,6 +164,5 @@ export function DataTableVisibilityDocs() {
         </Table>
       </div>
     </div>
-  )
+  );
 }
-

@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
-import { Calendar } from "@soar-design/soar-react-components"
-import { CalendarDayButton } from "./calendar-day-button"
+import { Calendar } from "@soar-design/soar-react-components";
+import { CalendarDayButton } from "./calendar-day-button";
 
 export function CalendarCustomCellSizeDocs() {
   const [date, setDate] = React.useState<Date | undefined>(
-    new Date(2025, 5, 12)
-  )
+    new Date(2025, 5, 12),
+  );
 
   return (
     <Calendar
@@ -21,6 +21,5 @@ export function CalendarCustomCellSizeDocs() {
         DayButton: CalendarDayButton,
       }}
     />
-  )
+  );
 }
-

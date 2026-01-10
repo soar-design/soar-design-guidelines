@@ -1,8 +1,8 @@
-import { SearchIcon } from "lucide-react"
+import { SearchIcon } from "lucide-react";
 
-import { Button } from "@soar-design/soar-react-components"
-import { ButtonGroup } from "@soar-design/soar-react-components"
-import { Input } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
+import { ButtonGroup } from "@soar-design/soar-react-components";
+import { Input } from "@soar-design/soar-react-components";
 
 export function ButtonGroupInputDocsRTL() {
   return (
@@ -12,6 +12,5 @@ export function ButtonGroupInputDocsRTL() {
         <SearchIcon />
       </Button>
     </ButtonGroup>
-  )
+  );
 }
-

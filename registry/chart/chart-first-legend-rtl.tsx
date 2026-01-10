@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { Bar, BarChart, CartesianGrid, XAxis } from "recharts"
+import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
 
 import {
   ChartContainer,
@@ -9,7 +9,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
   type ChartConfig,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 const chartData = [
   { month: "يناير", desktop: 186, mobile: 80 },
@@ -18,7 +18,7 @@ const chartData = [
   { month: "أبريل", desktop: 73, mobile: 190 },
   { month: "مايو", desktop: 209, mobile: 130 },
   { month: "يونيو", desktop: 214, mobile: 140 },
-]
+];
 
 const chartConfig = {
   desktop: {
@@ -29,7 +29,7 @@ const chartConfig = {
     label: "الجوال",
     color: "#60a5fa",
   },
-} satisfies ChartConfig
+} satisfies ChartConfig;
 
 export function ChartFirstLegendDocsRTL() {
   return (
@@ -49,6 +49,5 @@ export function ChartFirstLegendDocsRTL() {
         <Bar dataKey="mobile" fill="var(--color-mobile)" radius={4} />
       </BarChart>
     </ChartContainer>
-  )
+  );
 }
-

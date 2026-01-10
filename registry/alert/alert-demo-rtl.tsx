@@ -1,10 +1,10 @@
-import { AlertCircleIcon, CheckCircle2Icon, PopcornIcon } from "lucide-react"
+import { AlertCircleIcon, CheckCircle2Icon, PopcornIcon } from "lucide-react";
 
 import {
   Alert,
   AlertDescription,
   AlertTitle,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function AlertDemoDocsRTL() {
   return (
@@ -18,9 +18,7 @@ export function AlertDemoDocsRTL() {
       </Alert>
       <Alert>
         <PopcornIcon />
-        <AlertTitle>
-          يحتوي هذا التنبيه على عنوان وأيقونة. بدون وصف.
-        </AlertTitle>
+        <AlertTitle>يحتوي هذا التنبيه على عنوان وأيقونة. بدون وصف.</AlertTitle>
       </Alert>
       <Alert variant="destructive">
         <AlertCircleIcon />
@@ -35,5 +33,5 @@ export function AlertDemoDocsRTL() {
         </AlertDescription>
       </Alert>
     </div>
-  )
+  );
 }

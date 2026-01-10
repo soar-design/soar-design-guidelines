@@ -1,16 +1,16 @@
-"use client"
+"use client";
 
-import { useState } from "react"
+import { useState } from "react";
 
 import {
   Field,
   FieldDescription,
   FieldTitle,
-} from "@soar-design/soar-react-components"
-import { Slider } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Slider } from "@soar-design/soar-react-components";
 
 export function FieldSliderDocs() {
-  const [value, setValue] = useState([200, 800])
+  const [value, setValue] = useState([200, 800]);
   return (
     <div className="w-full max-w-md">
       <Field>
@@ -31,5 +31,5 @@ export function FieldSliderDocs() {
         />
       </Field>
     </div>
-  )
+  );
 }

@@ -1,20 +1,20 @@
-import * as React from "react"
+import * as React from "react";
 
-import { Card, CardContent } from "@soar-design/soar-react-components"
+import { Card, CardContent } from "@soar-design/soar-react-components";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function CarouselSpacingDocsRTL() {
   return (
     <Carousel className="w-full max-w-sm">
       <CarouselContent className="-ml-1">
         {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index} className="pl-1 basis-1/3">
+          <CarouselItem key={index} className="basis-1/3 pl-1">
             <div className="p-1">
               <Card>
                 <CardContent className="flex aspect-square items-center justify-center p-6">
@@ -28,5 +28,5 @@ export function CarouselSpacingDocsRTL() {
       <CarouselPrevious />
       <CarouselNext />
     </Carousel>
-  )
+  );
 }

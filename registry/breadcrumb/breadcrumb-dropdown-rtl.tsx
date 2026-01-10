@@ -1,5 +1,5 @@
-import Link from "next/link"
-import { ChevronDownIcon, SlashIcon } from "lucide-react"
+import Link from "next/link";
+import { ChevronDownIcon, SlashIcon } from "lucide-react";
 
 import {
   Breadcrumb,
@@ -8,13 +8,13 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function BreadcrumbDropdownDocsRTL() {
   return (
@@ -49,5 +49,5 @@ export function BreadcrumbDropdownDocsRTL() {
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>
-  )
+  );
 }

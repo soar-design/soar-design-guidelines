@@ -1,5 +1,5 @@
-import { Button } from "@soar-design/soar-react-components"
-import { Textarea } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
+import { Textarea } from "@soar-design/soar-react-components";
 
 export function TextareaWithButtonDocs() {
   return (
@@ -7,6 +7,5 @@ export function TextareaWithButtonDocs() {
       <Textarea placeholder="Type your message here." />
       <Button>Send message</Button>
     </div>
-  )
+  );
 }
-

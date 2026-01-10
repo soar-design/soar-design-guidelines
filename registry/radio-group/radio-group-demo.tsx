@@ -1,8 +1,5 @@
-import { Label } from "@soar-design/soar-react-components"
-import {
-  RadioGroup,
-  RadioGroupItem,
-} from "@soar-design/soar-react-components"
+import { Label } from "@soar-design/soar-react-components";
+import { RadioGroup, RadioGroupItem } from "@soar-design/soar-react-components";
 
 export function RadioGroupDemoDocs() {
   return (
@@ -20,6 +17,5 @@ export function RadioGroupDemoDocs() {
         <Label htmlFor="r3">Compact</Label>
       </div>
     </RadioGroup>
-  )
+  );
 }
-

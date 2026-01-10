@@ -1,4 +1,4 @@
-import { Button } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
 import {
   Card,
   CardAction,
@@ -7,9 +7,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@soar-design/soar-react-components"
-import { Input } from "@soar-design/soar-react-components"
-import { Label } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Input } from "@soar-design/soar-react-components";
+import { Label } from "@soar-design/soar-react-components";
 
 export function CardDemoDocsRTL() {
   return (
@@ -59,5 +59,5 @@ export function CardDemoDocsRTL() {
         </Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

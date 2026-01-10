@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function AccordionDemoDocs() {
   return (
@@ -57,5 +57,5 @@ export function AccordionDemoDocs() {
         </AccordionContent>
       </AccordionItem>
     </Accordion>
-  )
+  );
 }

@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { ChevronsUpDown } from "lucide-react"
+import * as React from "react";
+import { ChevronsUpDown } from "lucide-react";
 
-import { Button } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function CollapsibleDemoDocs() {
-  const [isOpen, setIsOpen] = React.useState(false)
+  const [isOpen, setIsOpen] = React.useState(false);
 
   return (
     <Collapsible
@@ -42,6 +42,5 @@ export function CollapsibleDemoDocs() {
         </div>
       </CollapsibleContent>
     </Collapsible>
-  )
+  );
 }
-

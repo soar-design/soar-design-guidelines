@@ -1,6 +1,6 @@
-import Image from "next/image"
+import Image from "next/image";
 
-import { AspectRatio } from "@soar-design/soar-react-components"
+import { AspectRatio } from "@soar-design/soar-react-components";
 
 export function AspectRatioDemoDocs() {
   return (
@@ -12,5 +12,5 @@ export function AspectRatioDemoDocs() {
         className="h-full w-full rounded-lg object-cover dark:brightness-[0.2] dark:grayscale"
       />
     </AspectRatio>
-  )
+  );
 }

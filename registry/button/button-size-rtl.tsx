@@ -1,6 +1,6 @@
-import { ArrowUpRightIcon } from "lucide-react"
+import { ArrowUpRightIcon } from "lucide-react";
 
-import { Button } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
 
 export function ButtonSizeDocsRTL() {
   return (
@@ -28,6 +28,5 @@ export function ButtonSizeDocsRTL() {
         </Button>
       </div>
     </div>
-  )
+  );
 }
-

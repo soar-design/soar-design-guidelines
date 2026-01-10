@@ -1,15 +1,15 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 import {
   flexRender,
   getCoreRowModel,
   getPaginationRowModel,
   useReactTable,
   type ColumnDef,
-} from "@tanstack/react-table"
+} from "@tanstack/react-table";
 
-import { Button } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
 import {
   Table,
   TableBody,
@@ -17,14 +17,14 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 type Payment = {
-  id: string
-  amount: number
-  status: "pending" | "processing" | "success" | "failed"
-  email: string
-}
+  id: string;
+  amount: number;
+  status: "pending" | "processing" | "success" | "failed";
+  email: string;
+};
 
 const data: Payment[] = [
   {
@@ -57,7 +57,7 @@ const data: Payment[] = [
     status: "failed",
     email: "carmella@example.com",
   },
-]
+];
 
 const columns: ColumnDef<Payment>[] = [
   {
@@ -72,7 +72,7 @@ const columns: ColumnDef<Payment>[] = [
     accessorKey: "amount",
     header: "Amount",
   },
-]
+];
 
 export function DataTablePaginationDocs() {
   const table = useReactTable({
@@ -85,7 +85,7 @@ export function DataTablePaginationDocs() {
         pageSize: 2,
       },
     },
-  })
+  });
 
   return (
     <div className="w-full space-y-4">
@@ -101,10 +101,10 @@ export function DataTablePaginationDocs() {
                         ? null
                         : flexRender(
                             header.column.columnDef.header,
-                            header.getContext()
+                            header.getContext(),
                           )}
                     </TableHead>
-                  )
+                  );
                 })}
               </TableRow>
             ))}
@@ -120,7 +120,7 @@ export function DataTablePaginationDocs() {
                     <TableCell key={cell.id}>
                       {flexRender(
                         cell.column.columnDef.cell,
-                        cell.getContext()
+                        cell.getContext(),
                       )}
                     </TableCell>
                   ))}
@@ -158,6 +158,5 @@ export function DataTablePaginationDocs() {
         </Button>
       </div>
     </div>
-  )
+  );
 }
-

@@ -1,6 +1,6 @@
-import { BookmarkIcon } from "lucide-react"
+import { BookmarkIcon } from "lucide-react";
 
-import { Toggle } from "@soar-design/soar-react-components"
+import { Toggle } from "@soar-design/soar-react-components";
 
 export function ToggleDemoDocs() {
   return (
@@ -13,6 +13,5 @@ export function ToggleDemoDocs() {
       <BookmarkIcon />
       Bookmark
     </Toggle>
-  )
+  );
 }
-

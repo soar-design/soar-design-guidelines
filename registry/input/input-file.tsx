@@ -1,5 +1,5 @@
-import { Input } from "@soar-design/soar-react-components"
-import { Label } from "@soar-design/soar-react-components"
+import { Input } from "@soar-design/soar-react-components";
+import { Label } from "@soar-design/soar-react-components";
 
 export function InputFileDocs() {
   return (
@@ -7,6 +7,5 @@ export function InputFileDocs() {
       <Label htmlFor="picture">Picture</Label>
       <Input id="picture" type="file" className="max-w-sm" />
     </div>
-  )
+  );
 }
-

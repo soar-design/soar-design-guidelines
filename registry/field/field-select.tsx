@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
 import {
   Field,
   FieldDescription,
   FieldLabel,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function FieldSelectDocs() {
   return (
@@ -38,5 +38,5 @@ export function FieldSelectDocs() {
         </FieldDescription>
       </Field>
     </div>
-  )
+  );
 }

@@ -1,11 +1,11 @@
-import * as React from "react"
-import Image from "next/image"
+import * as React from "react";
+import Image from "next/image";
 
-import { ScrollArea, ScrollBar } from "@soar-design/soar-react-components"
+import { ScrollArea, ScrollBar } from "@soar-design/soar-react-components";
 
 export interface Artwork {
-  artist: string
-  art: string
+  artist: string;
+  art: string;
 }
 
 export const works: Artwork[] = [
@@ -21,7 +21,7 @@ export const works: Artwork[] = [
     artist: "Vladimir Malyavko",
     art: "https://images.unsplash.com/photo-1494337480532-3725c85fd2ab?auto=format&fit=crop&w=300&q=80",
   },
-]
+];
 
 export function ScrollAreaHorizontalDocsRTL() {
   return (
@@ -49,6 +49,5 @@ export function ScrollAreaHorizontalDocsRTL() {
       </div>
       <ScrollBar orientation="horizontal" />
     </ScrollArea>
-  )
+  );
 }
-

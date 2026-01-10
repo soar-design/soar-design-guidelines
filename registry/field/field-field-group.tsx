@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { Checkbox } from "@soar-design/soar-react-components"
+import { Checkbox } from "@soar-design/soar-react-components";
 import {
   Field,
   FieldDescription,
@@ -8,7 +8,7 @@ import {
   FieldLabel,
   FieldSeparator,
   FieldSet,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function FieldFieldGroupDocs() {
   return (
@@ -53,5 +53,5 @@ export function FieldFieldGroupDocs() {
         </FieldSet>
       </FieldGroupComponent>
     </div>
-  )
+  );
 }

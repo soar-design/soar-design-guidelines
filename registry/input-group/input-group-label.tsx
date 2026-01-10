@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@soar-design/soar-react-components"
-import { Label } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Label } from "@soar-design/soar-react-components";
 
 export function InputGroupLabelDocs() {
   return (
@@ -15,7 +15,9 @@ export function InputGroupLabelDocs() {
         <InputGroup>
           <InputGroupInput id="username-input" placeholder="Enter username" />
           <InputGroupAddon align="inline-end">
-            <Label className="text-muted-foreground text-xs">@company.com</Label>
+            <Label className="text-muted-foreground text-xs">
+              @company.com
+            </Label>
           </InputGroupAddon>
         </InputGroup>
       </div>
@@ -38,5 +40,5 @@ export function InputGroupLabelDocs() {
         </InputGroupAddon>
       </InputGroup>
     </div>
-  )
+  );
 }

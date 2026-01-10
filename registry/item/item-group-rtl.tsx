@@ -1,12 +1,12 @@
-import * as React from "react"
-import { PlusIcon } from "lucide-react"
+import * as React from "react";
+import { PlusIcon } from "lucide-react";
 
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@soar-design/soar-react-components"
-import { Button } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Button } from "@soar-design/soar-react-components";
 import {
   Item,
   ItemActions,
@@ -16,7 +16,7 @@ import {
   ItemMedia,
   ItemSeparator,
   ItemTitle,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 const people = [
   {
@@ -34,7 +34,7 @@ const people = [
     avatar: "https://github.com/evilrabbit.png",
     email: "evilrabbit@vercel.com",
   },
-]
+];
 
 export function ItemGroupDocsRTL() {
   return (
@@ -64,6 +64,5 @@ export function ItemGroupDocsRTL() {
         ))}
       </ItemGroup>
     </div>
-  )
+  );
 }
-

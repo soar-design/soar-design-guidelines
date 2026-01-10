@@ -1,4 +1,4 @@
-import { ChevronRightIcon, ExternalLinkIcon } from "lucide-react"
+import { ChevronRightIcon, ExternalLinkIcon } from "lucide-react";
 
 import {
   Item,
@@ -6,7 +6,7 @@ import {
   ItemContent,
   ItemDescription,
   ItemTitle,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function ItemLinkDocsRTL() {
   return (
@@ -15,9 +15,7 @@ export function ItemLinkDocsRTL() {
         <a href="#">
           <ItemContent>
             <ItemTitle>زيارة وثائقنا</ItemTitle>
-            <ItemDescription>
-              تعلم كيفية البدء مع مكوناتنا.
-            </ItemDescription>
+            <ItemDescription>تعلم كيفية البدء مع مكوناتنا.</ItemDescription>
           </ItemContent>
           <ItemActions>
             <ChevronRightIcon className="size-4" />
@@ -38,6 +36,5 @@ export function ItemLinkDocsRTL() {
         </a>
       </Item>
     </div>
-  )
+  );
 }
-

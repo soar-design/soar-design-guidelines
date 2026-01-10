@@ -1,11 +1,11 @@
-import { SearchIcon } from "lucide-react"
+import { SearchIcon } from "lucide-react";
 
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@soar-design/soar-react-components"
-import { Kbd } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Kbd } from "@soar-design/soar-react-components";
 
 export function KbdInputGroupDocs() {
   return (
@@ -21,6 +21,5 @@ export function KbdInputGroupDocs() {
         </InputGroupAddon>
       </InputGroup>
     </div>
-  )
+  );
 }
-

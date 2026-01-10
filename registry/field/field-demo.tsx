@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { Button } from "@soar-design/soar-react-components"
-import { Checkbox } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
+import { Checkbox } from "@soar-design/soar-react-components";
 import {
   Field,
   FieldDescription,
@@ -10,16 +10,16 @@ import {
   FieldLegend,
   FieldSeparator,
   FieldSet,
-} from "@soar-design/soar-react-components"
-import { Input } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Input } from "@soar-design/soar-react-components";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@soar-design/soar-react-components"
-import { Textarea } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Textarea } from "@soar-design/soar-react-components";
 
 export function FieldDemoDocs() {
   return (
@@ -149,5 +149,5 @@ export function FieldDemoDocs() {
         </FieldGroup>
       </form>
     </div>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   Field,
@@ -6,8 +6,8 @@ import {
   FieldGroup,
   FieldLabel,
   FieldSet,
-} from "@soar-design/soar-react-components"
-import { Textarea } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Textarea } from "@soar-design/soar-react-components";
 
 export function FieldTextareaDocs() {
   return (
@@ -28,5 +28,5 @@ export function FieldTextareaDocs() {
         </FieldGroup>
       </FieldSet>
     </div>
-  )
+  );
 }

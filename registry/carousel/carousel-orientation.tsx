@@ -1,13 +1,13 @@
-import * as React from "react"
+import * as React from "react";
 
-import { Card, CardContent } from "@soar-design/soar-react-components"
+import { Card, CardContent } from "@soar-design/soar-react-components";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function CarouselOrientationDocs() {
   return (
@@ -20,7 +20,7 @@ export function CarouselOrientationDocs() {
     >
       <CarouselContent className="-mt-1 h-[200px]">
         {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index} className="pt-1 basis-1/3">
+          <CarouselItem key={index} className="basis-1/3 pt-1">
             <div className="p-1">
               <Card>
                 <CardContent className="flex items-center justify-center p-6">
@@ -34,5 +34,5 @@ export function CarouselOrientationDocs() {
       <CarouselPrevious />
       <CarouselNext />
     </Carousel>
-  )
+  );
 }

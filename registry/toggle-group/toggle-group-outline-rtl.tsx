@@ -1,9 +1,9 @@
-import { Bold, Italic, Underline } from "lucide-react"
+import { Bold, Italic, Underline } from "lucide-react";
 
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function ToggleGroupOutlineDocsRTL() {
   return (
@@ -18,6 +18,5 @@ export function ToggleGroupOutlineDocsRTL() {
         <Underline className="h-4 w-4" />
       </ToggleGroupItem>
     </ToggleGroup>
-  )
+  );
 }
-

@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { ArrowRightIcon } from "lucide-react"
+import * as React from "react";
+import { ArrowRightIcon } from "lucide-react";
 
-import { Button } from "@soar-design/soar-react-components"
-import { ButtonGroup } from "@soar-design/soar-react-components"
-import { Input } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
+import { ButtonGroup } from "@soar-design/soar-react-components";
+import { Input } from "@soar-design/soar-react-components";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 const CURRENCIES = [
   {
@@ -26,10 +26,10 @@ const CURRENCIES = [
     value: "£",
     label: "British Pound",
   },
-]
+];
 
 export function ButtonGroupSelectDocs() {
-  const [currency, setCurrency] = React.useState("$")
+  const [currency, setCurrency] = React.useState("$");
 
   return (
     <ButtonGroup>
@@ -53,5 +53,5 @@ export function ButtonGroupSelectDocs() {
         </Button>
       </ButtonGroup>
     </ButtonGroup>
-  )
+  );
 }

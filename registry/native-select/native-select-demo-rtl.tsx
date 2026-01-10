@@ -1,7 +1,7 @@
 import {
   NativeSelect,
   NativeSelectOption,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function NativeSelectDemoDocsRTL() {
   return (
@@ -12,6 +12,5 @@ export function NativeSelectDemoDocsRTL() {
       <NativeSelectOption value="done">منجز</NativeSelectOption>
       <NativeSelectOption value="cancelled">ملغي</NativeSelectOption>
     </NativeSelect>
-  )
+  );
 }
-

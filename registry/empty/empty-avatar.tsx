@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@soar-design/soar-react-components"
-import { Button } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Button } from "@soar-design/soar-react-components";
 import {
   Empty,
   EmptyContent,
@@ -13,7 +13,7 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function EmptyAvatarDocs() {
   return (
@@ -38,5 +38,5 @@ export function EmptyAvatarDocs() {
         <Button size="sm">Leave Message</Button>
       </EmptyContent>
     </Empty>
-  )
+  );
 }

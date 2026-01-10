@@ -1,4 +1,4 @@
-import { ChevronRightIcon, ExternalLinkIcon } from "lucide-react"
+import { ChevronRightIcon, ExternalLinkIcon } from "lucide-react";
 
 import {
   Item,
@@ -6,7 +6,7 @@ import {
   ItemContent,
   ItemDescription,
   ItemTitle,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function ItemLinkDocs() {
   return (
@@ -38,6 +38,5 @@ export function ItemLinkDocs() {
         </a>
       </Item>
     </div>
-  )
+  );
 }
-

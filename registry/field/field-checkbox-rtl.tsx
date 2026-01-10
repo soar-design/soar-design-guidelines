@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { Checkbox } from "@soar-design/soar-react-components"
+import { Checkbox } from "@soar-design/soar-react-components";
 import {
   Field,
   FieldContent,
@@ -10,7 +10,7 @@ import {
   FieldLegend,
   FieldSeparator,
   FieldSet,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function FieldCheckboxDocsRTL() {
   return (
@@ -71,11 +71,12 @@ export function FieldCheckboxDocsRTL() {
               مزامنة مجلدات سطح المكتب والمستندات
             </FieldLabel>
             <FieldDescription>
-              يتم مزامنة مجلدات سطح المكتب والمستندات مع iCloud Drive. يمكنك الوصول إليها من أجهزة أخرى.
+              يتم مزامنة مجلدات سطح المكتب والمستندات مع iCloud Drive. يمكنك
+              الوصول إليها من أجهزة أخرى.
             </FieldDescription>
           </FieldContent>
         </Field>
       </FieldGroup>
     </div>
-  )
+  );
 }

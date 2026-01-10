@@ -1,5 +1,5 @@
-import { Input } from "@soar-design/soar-react-components"
-import { Label } from "@soar-design/soar-react-components"
+import { Input } from "@soar-design/soar-react-components";
+import { Label } from "@soar-design/soar-react-components";
 
 export function InputWithLabelDocs() {
   return (
@@ -7,6 +7,5 @@ export function InputWithLabelDocs() {
       <Label htmlFor="email">Email</Label>
       <Input type="email" id="email" placeholder="Email" className="max-w-sm" />
     </div>
-  )
+  );
 }
-

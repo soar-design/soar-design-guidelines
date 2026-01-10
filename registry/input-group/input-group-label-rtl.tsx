@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@soar-design/soar-react-components"
-import { Label } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Label } from "@soar-design/soar-react-components";
 
 export function InputGroupLabelDocsRTL() {
   return (
@@ -13,9 +13,14 @@ export function InputGroupLabelDocsRTL() {
       <div className="space-y-2">
         <Label htmlFor="username-input-rtl">اسم المستخدم</Label>
         <InputGroup>
-          <InputGroupInput id="username-input-rtl" placeholder="أدخل اسم المستخدم" />
+          <InputGroupInput
+            id="username-input-rtl"
+            placeholder="أدخل اسم المستخدم"
+          />
           <InputGroupAddon align="inline-end">
-            <Label className="text-muted-foreground text-xs">@company.com</Label>
+            <Label className="text-muted-foreground text-xs">
+              @company.com
+            </Label>
           </InputGroupAddon>
         </InputGroup>
       </div>
@@ -38,5 +43,5 @@ export function InputGroupLabelDocsRTL() {
         </InputGroupAddon>
       </InputGroup>
     </div>
-  )
+  );
 }

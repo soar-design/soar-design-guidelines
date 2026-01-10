@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import { Check, Info, Plus, ArrowUp, Search } from "lucide-react"
+import { Check, Info, Plus, ArrowUp, Search } from "lucide-react";
 
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 import {
   InputGroup,
   InputGroupAddon,
@@ -15,13 +15,13 @@ import {
   InputGroupInput,
   InputGroupText,
   InputGroupTextarea,
-} from "@soar-design/soar-react-components"
-import { Separator } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Separator } from "@soar-design/soar-react-components";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function InputGroupDemoDocsRTL() {
   return (
@@ -95,5 +95,5 @@ export function InputGroupDemoDocsRTL() {
         </InputGroupAddon>
       </InputGroup>
     </div>
-  )
+  );
 }

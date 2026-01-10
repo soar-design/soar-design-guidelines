@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import { Link2 } from "lucide-react"
+import { Link2 } from "lucide-react";
 
 import {
   ButtonGroup,
   ButtonGroupText,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@soar-design/soar-react-components"
-import { Label } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Label } from "@soar-design/soar-react-components";
 
 export function InputGroupButtonGroupDocsRTL() {
   return (
@@ -29,5 +29,5 @@ export function InputGroupButtonGroupDocsRTL() {
         <ButtonGroupText>.com</ButtonGroupText>
       </ButtonGroup>
     </div>
-  )
+  );
 }

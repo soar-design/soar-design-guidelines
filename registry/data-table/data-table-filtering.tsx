@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 import {
   flexRender,
   getCoreRowModel,
@@ -8,9 +8,9 @@ import {
   useReactTable,
   type ColumnDef,
   type ColumnFiltersState,
-} from "@tanstack/react-table"
+} from "@tanstack/react-table";
 
-import { Input } from "@soar-design/soar-react-components"
+import { Input } from "@soar-design/soar-react-components";
 import {
   Table,
   TableBody,
@@ -18,14 +18,14 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 type Payment = {
-  id: string
-  amount: number
-  status: "pending" | "processing" | "success" | "failed"
-  email: string
-}
+  id: string;
+  amount: number;
+  status: "pending" | "processing" | "success" | "failed";
+  email: string;
+};
 
 const data: Payment[] = [
   {
@@ -46,7 +46,7 @@ const data: Payment[] = [
     status: "processing",
     email: "Monserrat44@example.com",
   },
-]
+];
 
 const columns: ColumnDef<Payment>[] = [
   {
@@ -61,12 +61,12 @@ const columns: ColumnDef<Payment>[] = [
     accessorKey: "amount",
     header: "Amount",
   },
-]
+];
 
 export function DataTableFilteringDocs() {
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
-    []
-  )
+    [],
+  );
 
   const table = useReactTable({
     data,
@@ -77,7 +77,7 @@ export function DataTableFilteringDocs() {
     state: {
       columnFilters,
     },
-  })
+  });
 
   return (
     <div className="w-full space-y-4">
@@ -101,10 +101,10 @@ export function DataTableFilteringDocs() {
                         ? null
                         : flexRender(
                             header.column.columnDef.header,
-                            header.getContext()
+                            header.getContext(),
                           )}
                     </TableHead>
-                  )
+                  );
                 })}
               </TableRow>
             ))}
@@ -120,7 +120,7 @@ export function DataTableFilteringDocs() {
                     <TableCell key={cell.id}>
                       {flexRender(
                         cell.column.columnDef.cell,
-                        cell.getContext()
+                        cell.getContext(),
                       )}
                     </TableCell>
                   ))}
@@ -140,6 +140,5 @@ export function DataTableFilteringDocs() {
         </Table>
       </div>
     </div>
-  )
+  );
 }
-

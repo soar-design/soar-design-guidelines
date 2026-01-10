@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import Link from "next/link"
+import * as React from "react";
+import Link from "next/link";
 
-import { useMediaQuery } from "@/hooks/use-media-query"
+import { useMediaQuery } from "@/hooks/use-media-query";
 import {
   Breadcrumb,
   BreadcrumbEllipsis,
@@ -12,8 +12,8 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@soar-design/soar-react-components"
-import { Button } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Button } from "@soar-design/soar-react-components";
 import {
   Drawer,
   DrawerClose,
@@ -23,13 +23,13 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 const items = [
   { href: "#", label: "Home" },
@@ -37,13 +37,13 @@ const items = [
   { href: "#", label: "Building Your Application" },
   { href: "#", label: "Data Fetching" },
   { label: "Caching and Revalidating" },
-]
+];
 
-const ITEMS_TO_DISPLAY = 3
+const ITEMS_TO_DISPLAY = 3;
 
 export function BreadcrumbResponsiveDocs() {
-  const [open, setOpen] = React.useState(false)
-  const isDesktop = useMediaQuery("(min-width: 768px)")
+  const [open, setOpen] = React.useState(false);
+  const isDesktop = useMediaQuery("(min-width: 768px)");
 
   return (
     <Breadcrumb>
@@ -131,5 +131,5 @@ export function BreadcrumbResponsiveDocs() {
         ))}
       </BreadcrumbList>
     </Breadcrumb>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   AlertTriangleIcon,
@@ -9,10 +9,10 @@ import {
   TrashIcon,
   UserRoundXIcon,
   VolumeOffIcon,
-} from "lucide-react"
+} from "lucide-react";
 
-import { Button } from "@soar-design/soar-react-components"
-import { ButtonGroup } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
+import { ButtonGroup } from "@soar-design/soar-react-components";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -20,7 +20,7 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function ButtonGroupDropdownDocs() {
   return (
@@ -69,5 +69,5 @@ export function ButtonGroupDropdownDocs() {
         </DropdownMenuContent>
       </DropdownMenu>
     </ButtonGroup>
-  )
+  );
 }

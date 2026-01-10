@@ -1,15 +1,15 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 import {
   flexRender,
   getCoreRowModel,
   useReactTable,
   type ColumnDef,
   type RowSelectionState,
-} from "@tanstack/react-table"
+} from "@tanstack/react-table";
 
-import { Checkbox } from "@soar-design/soar-react-components"
+import { Checkbox } from "@soar-design/soar-react-components";
 import {
   Table,
   TableBody,
@@ -17,14 +17,14 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 type Payment = {
-  id: string
-  amount: number
-  status: "pending" | "processing" | "success" | "failed"
-  email: string
-}
+  id: string;
+  amount: number;
+  status: "pending" | "processing" | "success" | "failed";
+  email: string;
+};
 
 const data: Payment[] = [
   {
@@ -45,7 +45,7 @@ const data: Payment[] = [
     status: "processing",
     email: "Monserrat44@example.com",
   },
-]
+];
 
 const columns: ColumnDef<Payment>[] = [
   {
@@ -82,12 +82,10 @@ const columns: ColumnDef<Payment>[] = [
     accessorKey: "amount",
     header: "Amount",
   },
-]
+];
 
 export function DataTableRowSelectionDocs() {
-  const [rowSelection, setRowSelection] = React.useState<RowSelectionState>(
-    {}
-  )
+  const [rowSelection, setRowSelection] = React.useState<RowSelectionState>({});
 
   const table = useReactTable({
     data,
@@ -97,7 +95,7 @@ export function DataTableRowSelectionDocs() {
     state: {
       rowSelection,
     },
-  })
+  });
 
   return (
     <div className="w-full space-y-4">
@@ -117,10 +115,10 @@ export function DataTableRowSelectionDocs() {
                         ? null
                         : flexRender(
                             header.column.columnDef.header,
-                            header.getContext()
+                            header.getContext(),
                           )}
                     </TableHead>
-                  )
+                  );
                 })}
               </TableRow>
             ))}
@@ -136,7 +134,7 @@ export function DataTableRowSelectionDocs() {
                     <TableCell key={cell.id}>
                       {flexRender(
                         cell.column.columnDef.cell,
-                        cell.getContext()
+                        cell.getContext(),
                       )}
                     </TableCell>
                   ))}
@@ -156,6 +154,5 @@ export function DataTableRowSelectionDocs() {
         </Table>
       </div>
     </div>
-  )
+  );
 }
-

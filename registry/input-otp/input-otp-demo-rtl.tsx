@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
 import {
   InputOTP,
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function InputOTPDemoDocsRTL() {
   return (
@@ -22,6 +22,5 @@ export function InputOTPDemoDocsRTL() {
         <InputOTPSlot index={5} />
       </InputOTPGroup>
     </InputOTP>
-  )
+  );
 }
-

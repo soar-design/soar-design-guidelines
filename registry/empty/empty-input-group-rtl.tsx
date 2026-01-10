@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { Search } from "lucide-react"
+import { Search } from "lucide-react";
 
 import {
   Empty,
@@ -8,13 +8,13 @@ import {
   EmptyDescription,
   EmptyHeader,
   EmptyTitle,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@soar-design/soar-react-components"
-import { Kbd } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Kbd } from "@soar-design/soar-react-components";
 
 export function EmptyInputGroupDocsRTL() {
   return (
@@ -40,5 +40,5 @@ export function EmptyInputGroupDocsRTL() {
         </EmptyDescription>
       </EmptyContent>
     </Empty>
-  )
+  );
 }

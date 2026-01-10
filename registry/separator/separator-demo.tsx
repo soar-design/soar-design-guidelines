@@ -1,4 +1,4 @@
-import { Separator } from "@soar-design/soar-react-components"
+import { Separator } from "@soar-design/soar-react-components";
 
 export function SeparatorDemoDocs() {
   return (
@@ -18,6 +18,5 @@ export function SeparatorDemoDocs() {
         <div>Source</div>
       </div>
     </div>
-  )
+  );
 }
-

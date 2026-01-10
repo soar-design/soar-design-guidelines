@@ -1,7 +1,7 @@
-import { MinusIcon, PlusIcon } from "lucide-react"
+import { MinusIcon, PlusIcon } from "lucide-react";
 
-import { Button } from "@soar-design/soar-react-components"
-import { ButtonGroup } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
+import { ButtonGroup } from "@soar-design/soar-react-components";
 
 export function ButtonGroupOrientationDocs() {
   return (
@@ -17,5 +17,5 @@ export function ButtonGroupOrientationDocs() {
         <MinusIcon />
       </Button>
     </ButtonGroup>
-  )
+  );
 }

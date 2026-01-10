@@ -1,4 +1,4 @@
-import { Spinner } from "@soar-design/soar-react-components"
+import { Spinner } from "@soar-design/soar-react-components";
 
 export function SpinnerColorDocsRTL() {
   return (
@@ -9,6 +9,5 @@ export function SpinnerColorDocsRTL() {
       <Spinner className="size-6 text-yellow-500" />
       <Spinner className="size-6 text-purple-500" />
     </div>
-  )
+  );
 }
-

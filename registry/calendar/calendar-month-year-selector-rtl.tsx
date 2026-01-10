@@ -1,26 +1,26 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
-import { Calendar } from "@soar-design/soar-react-components"
-import { Label } from "@soar-design/soar-react-components"
-import { CalendarDayButton } from "./calendar-day-button"
+import { Calendar } from "@soar-design/soar-react-components";
+import { Label } from "@soar-design/soar-react-components";
+import { CalendarDayButton } from "./calendar-day-button";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function CalendarMonthYearSelectorDocsRTL() {
   const [dropdown, setDropdown] =
     React.useState<React.ComponentProps<typeof Calendar>["captionLayout"]>(
-      "dropdown"
-    )
+      "dropdown",
+    );
   const [date, setDate] = React.useState<Date | undefined>(
-    new Date(2025, 5, 12)
-  )
+    new Date(2025, 5, 12),
+  );
 
   return (
     <div className="flex flex-col gap-4">
@@ -43,7 +43,7 @@ export function CalendarMonthYearSelectorDocsRTL() {
           value={dropdown}
           onValueChange={(value) =>
             setDropdown(
-              value as React.ComponentProps<typeof Calendar>["captionLayout"]
+              value as React.ComponentProps<typeof Calendar>["captionLayout"],
             )
           }
         >
@@ -62,6 +62,5 @@ export function CalendarMonthYearSelectorDocsRTL() {
         </Select>
       </div>
     </div>
-  )
+  );
 }
-

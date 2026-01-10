@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { Checkbox } from "@soar-design/soar-react-components"
+import { Checkbox } from "@soar-design/soar-react-components";
 import {
   Field,
   FieldDescription,
@@ -8,7 +8,7 @@ import {
   FieldLabel,
   FieldSeparator,
   FieldSet,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function FieldFieldGroupDocsRTL() {
   return (
@@ -17,7 +17,8 @@ export function FieldFieldGroupDocsRTL() {
         <FieldSet>
           <FieldLabel>الردود</FieldLabel>
           <FieldDescription>
-            احصل على إشعارات عندما يرد ChatGPT على الطلبات التي تستغرق وقتاً، مثل البحث أو إنشاء الصور.
+            احصل على إشعارات عندما يرد ChatGPT على الطلبات التي تستغرق وقتاً،
+            مثل البحث أو إنشاء الصور.
           </FieldDescription>
           <FieldGroupComponent data-slot="checkbox-group">
             <Field orientation="horizontal">
@@ -52,5 +53,5 @@ export function FieldFieldGroupDocsRTL() {
         </FieldSet>
       </FieldGroupComponent>
     </div>
-  )
+  );
 }

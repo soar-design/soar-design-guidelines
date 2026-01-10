@@ -1,4 +1,4 @@
-import { Button } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
 import {
   Item,
   ItemActions,
@@ -7,13 +7,16 @@ import {
   ItemFooter,
   ItemMedia,
   ItemTitle,
-} from "@soar-design/soar-react-components"
-import { Progress } from "@soar-design/soar-react-components"
-import { Spinner } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Progress } from "@soar-design/soar-react-components";
+import { Spinner } from "@soar-design/soar-react-components";
 
 export function SpinnerItemDocsRTL() {
   return (
-    <div className="flex w-full max-w-md flex-col gap-4 [--radius:1rem]" dir="rtl">
+    <div
+      className="flex w-full max-w-md flex-col gap-4 [--radius:1rem]"
+      dir="rtl"
+    >
       <Item variant="outline">
         <ItemMedia variant="icon">
           <Spinner />
@@ -32,6 +35,5 @@ export function SpinnerItemDocsRTL() {
         </ItemFooter>
       </Item>
     </div>
-  )
+  );
 }
-

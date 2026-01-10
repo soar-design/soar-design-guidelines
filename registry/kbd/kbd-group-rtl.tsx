@@ -1,4 +1,4 @@
-import { Kbd, KbdGroup } from "@soar-design/soar-react-components"
+import { Kbd, KbdGroup } from "@soar-design/soar-react-components";
 
 export function KbdGroupDocsRTL() {
   return (
@@ -12,6 +12,5 @@ export function KbdGroupDocsRTL() {
         لفتح لوحة الأوامر
       </p>
     </div>
-  )
+  );
 }
-

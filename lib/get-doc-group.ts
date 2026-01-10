@@ -6,7 +6,7 @@ import { docsNavigation } from "./docs-navigation";
 export function getDocGroup(slug: string): string | null {
   // Normalize the slug to match href format (e.g., "introduction" -> "/docs/introduction")
   const normalizedSlug = slug.startsWith("/docs/") ? slug : `/docs/${slug}`;
-  
+
   for (const group of docsNavigation) {
     if (group.items) {
       for (const item of group.items) {
@@ -16,7 +16,6 @@ export function getDocGroup(slug: string): string | null {
       }
     }
   }
-  
+
   return null;
 }
-

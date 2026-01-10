@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   Field,
@@ -6,8 +6,8 @@ import {
   FieldGroup,
   FieldLabel,
   FieldSet,
-} from "@soar-design/soar-react-components"
-import { Input } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Input } from "@soar-design/soar-react-components";
 
 export function FieldInputDocsRTL() {
   return (
@@ -17,19 +17,15 @@ export function FieldInputDocsRTL() {
           <Field>
             <FieldLabel htmlFor="username">اسم المستخدم</FieldLabel>
             <Input id="username" type="text" placeholder="Max Leiter" />
-            <FieldDescription>
-              اختر اسم مستخدم فريد لحسابك.
-            </FieldDescription>
+            <FieldDescription>اختر اسم مستخدم فريد لحسابك.</FieldDescription>
           </Field>
           <Field>
             <FieldLabel htmlFor="password">كلمة المرور</FieldLabel>
-            <FieldDescription>
-              يجب أن تكون 8 أحرف على الأقل.
-            </FieldDescription>
+            <FieldDescription>يجب أن تكون 8 أحرف على الأقل.</FieldDescription>
             <Input id="password" type="password" placeholder="••••••••" />
           </Field>
         </FieldGroup>
       </FieldSet>
     </div>
-  )
+  );
 }

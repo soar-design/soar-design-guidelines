@@ -3,8 +3,8 @@ import {
   ItemContent,
   ItemMedia,
   ItemTitle,
-} from "@soar-design/soar-react-components"
-import { Spinner } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Spinner } from "@soar-design/soar-react-components";
 
 export function SpinnerDemoDocs() {
   return (
@@ -21,6 +21,5 @@ export function SpinnerDemoDocs() {
         </ItemContent>
       </Item>
     </div>
-  )
+  );
 }
-

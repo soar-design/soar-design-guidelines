@@ -17,5 +17,3 @@ export function useCopyToClipboard() {
 
   return { copy, copied };
 }
-
-

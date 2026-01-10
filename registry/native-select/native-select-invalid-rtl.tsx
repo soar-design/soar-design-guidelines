@@ -1,7 +1,7 @@
 import {
   NativeSelect,
   NativeSelectOption,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function NativeSelectInvalidDocsRTL() {
   return (
@@ -12,6 +12,5 @@ export function NativeSelectInvalidDocsRTL() {
       <NativeSelectOption value="viewer">عارض</NativeSelectOption>
       <NativeSelectOption value="guest">ضيف</NativeSelectOption>
     </NativeSelect>
-  )
+  );
 }
-

@@ -1,23 +1,23 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { Check, Copy, Info, Star } from "lucide-react"
+import * as React from "react";
+import { Check, Copy, Info, Star } from "lucide-react";
 
-import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard"
+import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupInput,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function InputGroupButtonDocs() {
-  const { copyToClipboard } = useCopyToClipboard()
+  const { copyToClipboard } = useCopyToClipboard();
 
   return (
     <div className="grid w-full max-w-sm gap-6">
@@ -63,5 +63,5 @@ export function InputGroupButtonDocs() {
         </InputGroupAddon>
       </InputGroup>
     </div>
-  )
+  );
 }

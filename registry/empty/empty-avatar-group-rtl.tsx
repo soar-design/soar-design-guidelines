@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import { Plus } from "lucide-react"
+import { Plus } from "lucide-react";
 
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@soar-design/soar-react-components"
-import { Button } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Button } from "@soar-design/soar-react-components";
 import {
   Empty,
   EmptyContent,
@@ -15,7 +15,7 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function EmptyAvatarGroupDocsRTL() {
   return (
@@ -44,9 +44,7 @@ export function EmptyAvatarGroupDocsRTL() {
           </div>
         </EmptyMedia>
         <EmptyTitle>لا يوجد أعضاء في الفريق</EmptyTitle>
-        <EmptyDescription>
-          ادعُ فريقك للتعاون في هذا المشروع.
-        </EmptyDescription>
+        <EmptyDescription>ادعُ فريقك للتعاون في هذا المشروع.</EmptyDescription>
       </EmptyHeader>
       <EmptyContent>
         <Button size="sm">
@@ -55,5 +53,5 @@ export function EmptyAvatarGroupDocsRTL() {
         </Button>
       </EmptyContent>
     </Empty>
-  )
+  );
 }

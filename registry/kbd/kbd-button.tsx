@@ -1,5 +1,5 @@
-import { Button } from "@soar-design/soar-react-components"
-import { Kbd } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
+import { Kbd } from "@soar-design/soar-react-components";
 
 export function KbdButtonDocs() {
   return (
@@ -11,6 +11,5 @@ export function KbdButtonDocs() {
         Cancel <Kbd>Esc</Kbd>
       </Button>
     </div>
-  )
+  );
 }
-

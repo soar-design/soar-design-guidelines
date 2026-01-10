@@ -1,6 +1,6 @@
-import { Button } from "@soar-design/soar-react-components"
-import { Input } from "@soar-design/soar-react-components"
-import { Label } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
+import { Input } from "@soar-design/soar-react-components";
+import { Label } from "@soar-design/soar-react-components";
 import {
   Sheet,
   SheetClose,
@@ -10,7 +10,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function SheetDemoDocs() {
   return (
@@ -43,6 +43,5 @@ export function SheetDemoDocs() {
         </SheetFooter>
       </SheetContent>
     </Sheet>
-  )
+  );
 }
-

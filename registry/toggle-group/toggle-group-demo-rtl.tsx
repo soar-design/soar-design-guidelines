@@ -1,9 +1,9 @@
-import { BookmarkIcon, HeartIcon, StarIcon } from "lucide-react"
+import { BookmarkIcon, HeartIcon, StarIcon } from "lucide-react";
 
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function ToggleGroupDemoDocsRTL() {
   return (
@@ -33,6 +33,5 @@ export function ToggleGroupDemoDocsRTL() {
         إشارة مرجعية
       </ToggleGroupItem>
     </ToggleGroup>
-  )
+  );
 }
-

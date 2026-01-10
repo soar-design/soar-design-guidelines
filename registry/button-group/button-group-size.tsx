@@ -1,7 +1,7 @@
-import { PlusIcon } from "lucide-react"
+import { PlusIcon } from "lucide-react";
 
-import { Button } from "@soar-design/soar-react-components"
-import { ButtonGroup } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
+import { ButtonGroup } from "@soar-design/soar-react-components";
 
 export function ButtonGroupSizeDocs() {
   return (
@@ -43,5 +43,5 @@ export function ButtonGroupSizeDocs() {
         </Button>
       </ButtonGroup>
     </div>
-  )
+  );
 }

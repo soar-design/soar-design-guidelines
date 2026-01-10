@@ -1,6 +1,6 @@
-import { ArrowUpIcon } from "lucide-react"
+import { ArrowUpIcon } from "lucide-react";
 
-import { Button } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
 
 export function ButtonRoundedDocsRTL() {
   return (
@@ -9,6 +9,5 @@ export function ButtonRoundedDocsRTL() {
         <ArrowUpIcon />
       </Button>
     </div>
-  )
+  );
 }
-

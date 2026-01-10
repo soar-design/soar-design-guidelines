@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   Field,
@@ -8,11 +8,8 @@ import {
   FieldLabel,
   FieldSet,
   FieldTitle,
-} from "@soar-design/soar-react-components"
-import {
-  RadioGroup,
-  RadioGroupItem,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { RadioGroup, RadioGroupItem } from "@soar-design/soar-react-components";
 
 export function FieldChoiceCardDocs() {
   return (
@@ -52,5 +49,5 @@ export function FieldChoiceCardDocs() {
         </FieldSet>
       </FieldGroup>
     </div>
-  )
+  );
 }

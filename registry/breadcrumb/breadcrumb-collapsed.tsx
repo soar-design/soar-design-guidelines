@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from "next/link";
 
 import {
   Breadcrumb,
@@ -8,7 +8,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function BreadcrumbCollapsedDocs() {
   return (
@@ -35,5 +35,5 @@ export function BreadcrumbCollapsedDocs() {
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>
-  )
+  );
 }

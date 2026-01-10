@@ -1,11 +1,11 @@
-import { Button } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
 import {
   Item,
   ItemActions,
   ItemContent,
   ItemDescription,
   ItemTitle,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function ItemVariantDocsRTL() {
   return (
@@ -13,9 +13,7 @@ export function ItemVariantDocsRTL() {
       <Item>
         <ItemContent>
           <ItemTitle>النوع الافتراضي</ItemTitle>
-          <ItemDescription>
-            تصميم قياسي بخلفية وحدود خفيفة.
-          </ItemDescription>
+          <ItemDescription>تصميم قياسي بخلفية وحدود خفيفة.</ItemDescription>
         </ItemContent>
         <ItemActions>
           <Button variant="outline" size="sm">
@@ -26,9 +24,7 @@ export function ItemVariantDocsRTL() {
       <Item variant="outline">
         <ItemContent>
           <ItemTitle>نوع الإطار</ItemTitle>
-          <ItemDescription>
-            نمط بإطار واضح وخلفية شفافة.
-          </ItemDescription>
+          <ItemDescription>نمط بإطار واضح وخلفية شفافة.</ItemDescription>
         </ItemContent>
         <ItemActions>
           <Button variant="outline" size="sm">
@@ -50,6 +46,5 @@ export function ItemVariantDocsRTL() {
         </ItemActions>
       </Item>
     </div>
-  )
+  );
 }
-

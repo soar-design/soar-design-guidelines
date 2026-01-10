@@ -1,19 +1,12 @@
-"use client"
+"use client";
 
-import {
-  Check,
-  CreditCard,
-  Info,
-  Mail,
-  Search,
-  Star,
-} from "lucide-react"
+import { Check, CreditCard, Info, Mail, Search, Star } from "lucide-react";
 
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function InputGroupIconDocsRTL() {
   return (
@@ -47,5 +40,5 @@ export function InputGroupIconDocsRTL() {
         </InputGroupAddon>
       </InputGroup>
     </div>
-  )
+  );
 }

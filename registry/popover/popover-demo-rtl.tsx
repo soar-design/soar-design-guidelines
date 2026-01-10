@@ -1,11 +1,11 @@
-import { Button } from "@soar-design/soar-react-components"
-import { Input } from "@soar-design/soar-react-components"
-import { Label } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
+import { Input } from "@soar-design/soar-react-components";
+import { Label } from "@soar-design/soar-react-components";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function PopoverDemoDocsRTL() {
   return (
@@ -17,9 +17,7 @@ export function PopoverDemoDocsRTL() {
         <div className="grid gap-4">
           <div className="space-y-2">
             <h4 className="leading-none font-medium">الأبعاد</h4>
-            <p className="text-muted-foreground text-sm">
-              حدد الأبعاد للطبقة.
-            </p>
+            <p className="text-muted-foreground text-sm">حدد الأبعاد للطبقة.</p>
           </div>
           <div className="grid gap-2">
             <div className="grid grid-cols-3 items-center gap-4">
@@ -58,6 +56,5 @@ export function PopoverDemoDocsRTL() {
         </div>
       </PopoverContent>
     </Popover>
-  )
+  );
 }
-

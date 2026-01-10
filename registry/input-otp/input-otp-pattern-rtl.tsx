@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { REGEXP_ONLY_DIGITS_AND_CHARS } from "input-otp"
+import { REGEXP_ONLY_DIGITS_AND_CHARS } from "input-otp";
 
 import {
   InputOTP,
   InputOTPGroup,
   InputOTPSlot,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function InputOTPPatternDocsRTL() {
   return (
@@ -20,6 +20,5 @@ export function InputOTPPatternDocsRTL() {
         <InputOTPSlot index={5} />
       </InputOTPGroup>
     </InputOTP>
-  )
+  );
 }
-

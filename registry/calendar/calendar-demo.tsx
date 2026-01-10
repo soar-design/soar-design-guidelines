@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
-import { Calendar } from "@soar-design/soar-react-components"
-import { CalendarDayButton } from "./calendar-day-button"
+import { Calendar } from "@soar-design/soar-react-components";
+import { CalendarDayButton } from "./calendar-day-button";
 
 export function CalendarDemoDocs() {
-  const [date, setDate] = React.useState<Date | undefined>(new Date())
+  const [date, setDate] = React.useState<Date | undefined>(new Date());
 
   return (
     <Calendar
@@ -19,5 +19,5 @@ export function CalendarDemoDocs() {
         DayButton: CalendarDayButton,
       }}
     />
-  )
+  );
 }

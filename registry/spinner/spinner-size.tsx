@@ -1,4 +1,4 @@
-import { Spinner } from "@soar-design/soar-react-components"
+import { Spinner } from "@soar-design/soar-react-components";
 
 export function SpinnerSizeDocs() {
   return (
@@ -8,6 +8,5 @@ export function SpinnerSizeDocs() {
       <Spinner className="size-6" />
       <Spinner className="size-8" />
     </div>
-  )
+  );
 }
-

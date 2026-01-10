@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
 import {
   Field,
   FieldDescription,
   FieldLabel,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function FieldSelectDocsRTL() {
   return (
@@ -33,10 +33,8 @@ export function FieldSelectDocsRTL() {
             <SelectItem value="operations">العمليات</SelectItem>
           </SelectContent>
         </Select>
-        <FieldDescription>
-          اختر قسمك أو مجال عملك.
-        </FieldDescription>
+        <FieldDescription>اختر قسمك أو مجال عملك.</FieldDescription>
       </Field>
     </div>
-  )
+  );
 }

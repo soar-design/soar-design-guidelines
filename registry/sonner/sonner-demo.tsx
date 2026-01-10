@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { toast } from "sonner"
+import { toast } from "sonner";
 
-import { Button } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
 
 export function SonnerDemoDocs() {
   return (
@@ -20,6 +20,5 @@ export function SonnerDemoDocs() {
     >
       Show Toast
     </Button>
-  )
+  );
 }
-

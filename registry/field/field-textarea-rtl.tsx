@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   Field,
@@ -6,8 +6,8 @@ import {
   FieldGroup,
   FieldLabel,
   FieldSet,
-} from "@soar-design/soar-react-components"
-import { Textarea } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Textarea } from "@soar-design/soar-react-components";
 
 export function FieldTextareaDocsRTL() {
   return (
@@ -21,12 +21,10 @@ export function FieldTextareaDocsRTL() {
               placeholder="ملاحظاتك تساعدنا على التحسين..."
               rows={4}
             />
-            <FieldDescription>
-              شاركنا أفكارك حول خدمتنا.
-            </FieldDescription>
+            <FieldDescription>شاركنا أفكارك حول خدمتنا.</FieldDescription>
           </Field>
         </FieldGroup>
       </FieldSet>
     </div>
-  )
+  );
 }

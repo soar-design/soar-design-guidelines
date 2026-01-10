@@ -1,7 +1,7 @@
 import {
   NativeSelect,
   NativeSelectOption,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function NativeSelectInvalidDocs() {
   return (
@@ -12,6 +12,5 @@ export function NativeSelectInvalidDocs() {
       <NativeSelectOption value="viewer">Viewer</NativeSelectOption>
       <NativeSelectOption value="guest">Guest</NativeSelectOption>
     </NativeSelect>
-  )
+  );
 }
-

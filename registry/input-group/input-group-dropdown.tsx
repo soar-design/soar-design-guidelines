@@ -1,19 +1,19 @@
-"use client"
+"use client";
 
-import { ChevronDown } from "lucide-react"
+import { ChevronDown } from "lucide-react";
 
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupInput,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function InputGroupDropdownDocs() {
   return (
@@ -75,5 +75,5 @@ export function InputGroupDropdownDocs() {
         </InputGroupAddon>
       </InputGroup>
     </div>
-  )
+  );
 }

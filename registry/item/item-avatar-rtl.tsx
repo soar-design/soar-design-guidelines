@@ -1,11 +1,11 @@
-import { Plus } from "lucide-react"
+import { Plus } from "lucide-react";
 
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@soar-design/soar-react-components"
-import { Button } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Button } from "@soar-design/soar-react-components";
 import {
   Item,
   ItemActions,
@@ -13,7 +13,7 @@ import {
   ItemDescription,
   ItemMedia,
   ItemTitle,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function ItemAvatarDocsRTL() {
   return (
@@ -65,9 +65,7 @@ export function ItemAvatarDocsRTL() {
         </ItemMedia>
         <ItemContent>
           <ItemTitle>لا يوجد أعضاء في الفريق</ItemTitle>
-          <ItemDescription>
-            ادعُ فريقك للتعاون في هذا المشروع.
-          </ItemDescription>
+          <ItemDescription>ادعُ فريقك للتعاون في هذا المشروع.</ItemDescription>
         </ItemContent>
         <ItemActions>
           <Button size="sm" variant="outline">
@@ -76,6 +74,5 @@ export function ItemAvatarDocsRTL() {
         </ItemActions>
       </Item>
     </div>
-  )
+  );
 }
-

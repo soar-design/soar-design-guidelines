@@ -1,6 +1,6 @@
-import { AlertCircleIcon, BadgeCheckIcon, CheckIcon } from "lucide-react"
+import { AlertCircleIcon, BadgeCheckIcon, CheckIcon } from "lucide-react";
 
-import { Badge } from "@soar-design/soar-react-components"
+import { Badge } from "@soar-design/soar-react-components";
 
 export function BadgeDemoDocs() {
   return (
@@ -36,5 +36,5 @@ export function BadgeDemoDocs() {
         </Badge>
       </div>
     </div>
-  )
+  );
 }

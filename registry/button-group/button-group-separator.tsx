@@ -1,8 +1,8 @@
-import { Button } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
 import {
   ButtonGroup,
   ButtonGroupSeparator,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function ButtonGroupSeparatorDocs() {
   return (
@@ -15,5 +15,5 @@ export function ButtonGroupSeparatorDocs() {
         Paste
       </Button>
     </ButtonGroup>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import { ArrowUpIcon } from "lucide-react"
+import { ArrowUpIcon } from "lucide-react";
 
 import {
   InputGroup,
@@ -6,8 +6,8 @@ import {
   InputGroupButton,
   InputGroupInput,
   InputGroupTextarea,
-} from "@soar-design/soar-react-components"
-import { Spinner } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Spinner } from "@soar-design/soar-react-components";
 
 export function SpinnerInputGroupDocsRTL() {
   return (
@@ -29,6 +29,5 @@ export function SpinnerInputGroupDocsRTL() {
         </InputGroupAddon>
       </InputGroup>
     </div>
-  )
+  );
 }
-

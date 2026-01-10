@@ -1,39 +1,39 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { parseDate } from "chrono-node"
-import { CalendarIcon } from "lucide-react"
+import * as React from "react";
+import { parseDate } from "chrono-node";
+import { CalendarIcon } from "lucide-react";
 
-import { Button } from "@soar-design/soar-react-components"
-import { Calendar } from "@soar-design/soar-react-components"
-import { Input } from "@soar-design/soar-react-components"
-import { Label } from "@soar-design/soar-react-components"
-import { CalendarDayButton } from "./calendar-day-button"
+import { Button } from "@soar-design/soar-react-components";
+import { Calendar } from "@soar-design/soar-react-components";
+import { Input } from "@soar-design/soar-react-components";
+import { Label } from "@soar-design/soar-react-components";
+import { CalendarDayButton } from "./calendar-day-button";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 function formatDate(date: Date | undefined) {
   if (!date) {
-    return ""
+    return "";
   }
 
   return date.toLocaleDateString("en-US", {
     day: "2-digit",
     month: "long",
     year: "numeric",
-  })
+  });
 }
 
 export function CalendarNaturalLanguageDocs() {
-  const [open, setOpen] = React.useState(false)
-  const [value, setValue] = React.useState("In 2 days")
+  const [open, setOpen] = React.useState(false);
+  const [value, setValue] = React.useState("In 2 days");
   const [date, setDate] = React.useState<Date | undefined>(
-    parseDate(value) || undefined
-  )
-  const [month, setMonth] = React.useState<Date | undefined>(date)
+    parseDate(value) || undefined,
+  );
+  const [month, setMonth] = React.useState<Date | undefined>(date);
 
   return (
     <div className="flex flex-col gap-3">
@@ -47,17 +47,17 @@ export function CalendarNaturalLanguageDocs() {
           placeholder="Tomorrow or next week"
           className="bg-background pr-10"
           onChange={(e) => {
-            setValue(e.target.value)
-            const date = parseDate(e.target.value)
+            setValue(e.target.value);
+            const date = parseDate(e.target.value);
             if (date) {
-              setDate(date)
-              setMonth(date)
+              setDate(date);
+              setMonth(date);
             }
           }}
           onKeyDown={(e) => {
             if (e.key === "ArrowDown") {
-              e.preventDefault()
-              setOpen(true)
+              e.preventDefault();
+              setOpen(true);
             }
           }}
         />
@@ -80,9 +80,9 @@ export function CalendarNaturalLanguageDocs() {
               month={month}
               onMonthChange={setMonth}
               onSelect={(date) => {
-                setDate(date)
-                setValue(formatDate(date))
-                setOpen(false)
+                setDate(date);
+                setValue(formatDate(date));
+                setOpen(false);
               }}
               components={{
                 DayButton: CalendarDayButton,
@@ -96,6 +96,5 @@ export function CalendarNaturalLanguageDocs() {
         <span className="font-medium">{formatDate(date)}</span>.
       </div>
     </div>
-  )
+  );
 }
-

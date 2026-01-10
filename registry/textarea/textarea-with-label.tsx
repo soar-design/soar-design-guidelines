@@ -1,5 +1,5 @@
-import { Label } from "@soar-design/soar-react-components"
-import { Textarea } from "@soar-design/soar-react-components"
+import { Label } from "@soar-design/soar-react-components";
+import { Textarea } from "@soar-design/soar-react-components";
 
 export function TextareaWithLabelDocs() {
   return (
@@ -7,6 +7,5 @@ export function TextareaWithLabelDocs() {
       <Label htmlFor="message">Your message</Label>
       <Textarea placeholder="Type your message here." id="message" />
     </div>
-  )
+  );
 }
-

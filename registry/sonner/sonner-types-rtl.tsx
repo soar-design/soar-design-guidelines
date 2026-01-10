@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { toast } from "sonner"
+import { toast } from "sonner";
 
-import { Button } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
 
 export function SonnerTypesDocsRTL() {
   return (
@@ -10,17 +10,12 @@ export function SonnerTypesDocsRTL() {
       <Button variant="outline" onClick={() => toast("تم إنشاء الحدث")}>
         افتراضي
       </Button>
-      <Button
-        variant="outline"
-        onClick={() => toast.success("تم إنشاء الحدث")}
-      >
+      <Button variant="outline" onClick={() => toast.success("تم إنشاء الحدث")}>
         نجاح
       </Button>
       <Button
         variant="outline"
-        onClick={() =>
-          toast.info("كن في المنطقة قبل 10 دقائق من وقت الحدث")
-        }
+        onClick={() => toast.info("كن في المنطقة قبل 10 دقائق من وقت الحدث")}
       >
         معلومات
       </Button>
@@ -44,19 +39,18 @@ export function SonnerTypesDocsRTL() {
           toast.promise<{ name: string }>(
             () =>
               new Promise((resolve) =>
-                setTimeout(() => resolve({ name: "Event" }), 2000)
+                setTimeout(() => resolve({ name: "Event" }), 2000),
               ),
             {
               loading: "جاري التحميل...",
               success: (data) => `تم إنشاء ${data.name}`,
               error: "خطأ",
-            }
-          )
+            },
+          );
         }}
       >
         وعد
       </Button>
     </div>
-  )
+  );
 }
-

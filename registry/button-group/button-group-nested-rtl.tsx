@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react"
+import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
 
-import { Button } from "@soar-design/soar-react-components"
-import { ButtonGroup } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
+import { ButtonGroup } from "@soar-design/soar-react-components";
 
 export function ButtonGroupNestedDocsRTL() {
   return (
@@ -34,5 +34,5 @@ export function ButtonGroupNestedDocsRTL() {
         </Button>
       </ButtonGroup>
     </ButtonGroup>
-  )
+  );
 }

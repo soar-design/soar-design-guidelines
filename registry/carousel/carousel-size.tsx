@@ -1,13 +1,13 @@
-import * as React from "react"
+import * as React from "react";
 
-import { Card, CardContent } from "@soar-design/soar-react-components"
+import { Card, CardContent } from "@soar-design/soar-react-components";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function CarouselSizeDocs() {
   return (
@@ -33,6 +33,5 @@ export function CarouselSizeDocs() {
       <CarouselPrevious />
       <CarouselNext />
     </Carousel>
-  )
+  );
 }
-

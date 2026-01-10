@@ -1,7 +1,7 @@
 import {
   NativeSelect,
   NativeSelectOption,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function NativeSelectDemoDocs() {
   return (
@@ -12,6 +12,5 @@ export function NativeSelectDemoDocs() {
       <NativeSelectOption value="done">Done</NativeSelectOption>
       <NativeSelectOption value="cancelled">Cancelled</NativeSelectOption>
     </NativeSelect>
-  )
+  );
 }
-

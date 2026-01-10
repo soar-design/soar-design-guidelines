@@ -1,4 +1,4 @@
-import { Button } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
 import {
   Card,
   CardContent,
@@ -6,15 +6,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@soar-design/soar-react-components"
-import { Input } from "@soar-design/soar-react-components"
-import { Label } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Input } from "@soar-design/soar-react-components";
+import { Label } from "@soar-design/soar-react-components";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function TabsDemoDocsRTL() {
   return (
@@ -52,7 +52,8 @@ export function TabsDemoDocsRTL() {
             <CardHeader>
               <CardTitle>كلمة المرور</CardTitle>
               <CardDescription>
-                قم بتغيير كلمة المرور الخاصة بك هنا. بعد الحفظ، سيتم تسجيل خروجك.
+                قم بتغيير كلمة المرور الخاصة بك هنا. بعد الحفظ، سيتم تسجيل
+                خروجك.
               </CardDescription>
             </CardHeader>
             <CardContent className="grid gap-6">
@@ -72,6 +73,5 @@ export function TabsDemoDocsRTL() {
         </TabsContent>
       </Tabs>
     </div>
-  )
+  );
 }
-

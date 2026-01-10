@@ -2,7 +2,7 @@ import {
   NativeSelect,
   NativeSelectOptGroup,
   NativeSelectOption,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function NativeSelectGroupsDocsRTL() {
   return (
@@ -23,9 +23,7 @@ export function NativeSelectGroupsDocsRTL() {
         </NativeSelectOption>
       </NativeSelectOptGroup>
       <NativeSelectOptGroup label="العمليات">
-        <NativeSelectOption value="support">
-          دعم العملاء
-        </NativeSelectOption>
+        <NativeSelectOption value="support">دعم العملاء</NativeSelectOption>
         <NativeSelectOption value="product-manager">
           مدير المنتج
         </NativeSelectOption>
@@ -34,6 +32,5 @@ export function NativeSelectGroupsDocsRTL() {
         </NativeSelectOption>
       </NativeSelectOptGroup>
     </NativeSelect>
-  )
+  );
 }
-

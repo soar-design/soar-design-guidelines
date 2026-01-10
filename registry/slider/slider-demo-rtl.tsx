@@ -1,8 +1,8 @@
-import * as React from "react"
-import { cn } from "@/lib/utils"
-import { Slider } from "@soar-design/soar-react-components"
+import * as React from "react";
+import { cn } from "@/lib/utils";
+import { Slider } from "@soar-design/soar-react-components";
 
-type SliderProps = React.ComponentProps<typeof Slider>
+type SliderProps = React.ComponentProps<typeof Slider>;
 
 export function SliderDemoDocsRTL({ className, ...props }: SliderProps) {
   return (
@@ -14,6 +14,5 @@ export function SliderDemoDocsRTL({ className, ...props }: SliderProps) {
       dir="rtl"
       {...props}
     />
-  )
+  );
 }
-

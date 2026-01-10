@@ -1,4 +1,4 @@
-import { Button } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
 import {
   Empty,
   EmptyContent,
@@ -6,8 +6,8 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@soar-design/soar-react-components"
-import { Spinner } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Spinner } from "@soar-design/soar-react-components";
 
 export function SpinnerEmptyDocsRTL() {
   return (
@@ -27,6 +27,5 @@ export function SpinnerEmptyDocsRTL() {
         </Button>
       </EmptyContent>
     </Empty>
-  )
+  );
 }
-

@@ -1,5 +1,5 @@
-import { Badge } from "@soar-design/soar-react-components"
-import { Spinner } from "@soar-design/soar-react-components"
+import { Badge } from "@soar-design/soar-react-components";
+import { Spinner } from "@soar-design/soar-react-components";
 
 export function SpinnerBadgeDocsRTL() {
   return (
@@ -17,6 +17,5 @@ export function SpinnerBadgeDocsRTL() {
         معالجة
       </Badge>
     </div>
-  )
+  );
 }
-

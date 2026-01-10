@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from "react";
 
 import {
   Select,
@@ -8,7 +8,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function SelectScrollableDocs() {
   return (
@@ -71,6 +71,5 @@ export function SelectScrollableDocs() {
         </SelectGroup>
       </SelectContent>
     </Select>
-  )
+  );
 }
-

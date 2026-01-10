@@ -2,7 +2,7 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function AvatarDemoDocs() {
   return (
@@ -39,5 +39,5 @@ export function AvatarDemoDocs() {
         </Avatar>
       </div>
     </div>
-  )
+  );
 }

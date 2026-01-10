@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   InputGroup,
@@ -6,7 +6,7 @@ import {
   InputGroupInput,
   InputGroupText,
   InputGroupTextarea as InputGroupTextareaComponent,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function InputGroupTextDocsRTL() {
   return (
@@ -44,5 +44,5 @@ export function InputGroupTextDocsRTL() {
         </InputGroupAddon>
       </InputGroup>
     </div>
-  )
+  );
 }

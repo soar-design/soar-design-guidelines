@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 import {
   Calculator,
   Calendar,
@@ -8,7 +8,7 @@ import {
   Settings,
   Smile,
   User,
-} from "lucide-react"
+} from "lucide-react";
 
 import {
   CommandDialog as CommandDialogComponent,
@@ -19,26 +19,26 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function CommandDialogDocs() {
-  const [open, setOpen] = React.useState(false)
+  const [open, setOpen] = React.useState(false);
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if (e.key === "j" && (e.metaKey || e.ctrlKey)) {
-        e.preventDefault()
-        setOpen((open) => !open)
+        e.preventDefault();
+        setOpen((open) => !open);
       }
-    }
+    };
 
-    document.addEventListener("keydown", down)
-    return () => document.removeEventListener("keydown", down)
-  }, [])
+    document.addEventListener("keydown", down);
+    return () => document.removeEventListener("keydown", down);
+  }, []);
 
   return (
     <>
-      <p className="text-muted-foreground text-sm flex items-center gap-1">
+      <p className="text-muted-foreground flex items-center gap-1 text-sm">
         Press{" "}
         <kbd className="bg-muted text-muted-foreground pointer-events-none inline-flex h-5 items-center gap-1 rounded border px-1.5 font-mono text-[10px] font-medium opacity-100 select-none">
           <span className="text-xs">⌘</span>J
@@ -83,6 +83,5 @@ export function CommandDialogDocs() {
         </CommandList>
       </CommandDialogComponent>
     </>
-  )
+  );
 }
-

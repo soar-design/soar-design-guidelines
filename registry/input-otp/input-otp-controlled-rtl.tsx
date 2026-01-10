@@ -1,15 +1,15 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
 import {
   InputOTP,
   InputOTPGroup,
   InputOTPSlot,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function InputOTPControlledDocsRTL() {
-  const [value, setValue] = React.useState("")
+  const [value, setValue] = React.useState("");
 
   return (
     <div className="space-y-2">
@@ -35,6 +35,5 @@ export function InputOTPControlledDocsRTL() {
         )}
       </div>
     </div>
-  )
+  );
 }
-

@@ -2,7 +2,7 @@ import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function ResizableDemoDocsRTL() {
   return (
@@ -33,6 +33,5 @@ export function ResizableDemoDocsRTL() {
         </ResizablePanelGroup>
       </ResizablePanel>
     </ResizablePanelGroup>
-  )
+  );
 }
-

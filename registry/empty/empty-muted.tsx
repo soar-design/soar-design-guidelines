@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { Bell, RefreshCcw } from "lucide-react"
+import { Bell, RefreshCcw } from "lucide-react";
 
-import { Button } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
 import {
   Empty,
   EmptyContent,
@@ -10,11 +10,11 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function EmptyMutedDocs() {
   return (
-    <Empty className="h-full bg-gradient-to-b from-muted/50 from-30% to-background">
+    <Empty className="from-muted/50 to-background h-full bg-gradient-to-b from-30%">
       <EmptyHeader>
         <EmptyMedia variant="icon">
           <Bell />
@@ -31,5 +31,5 @@ export function EmptyMutedDocs() {
         </Button>
       </EmptyContent>
     </Empty>
-  )
+  );
 }

@@ -1,5 +1,5 @@
-import { Button } from "@soar-design/soar-react-components"
-import { Input } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
+import { Input } from "@soar-design/soar-react-components";
 
 export function InputWithButtonDocs() {
   return (
@@ -9,6 +9,5 @@ export function InputWithButtonDocs() {
         Subscribe
       </Button>
     </div>
-  )
+  );
 }
-

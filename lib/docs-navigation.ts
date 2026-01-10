@@ -80,126 +80,126 @@ export const docsNavigation: NavItem[] = [
         title: "Context Menu",
         href: "/docs/components/context-menu",
       },
-              {
-                title: "Data Table",
-                href: "/docs/components/data-table",
-              },
-              {
-                title: "Date Picker",
-                href: "/docs/components/date-picker",
-              },
-              {
-                title: "Dialog",
-                href: "/docs/components/dialog",
-              },
-              {
-                title: "Drawer",
-                href: "/docs/components/drawer",
-              },
-              {
-                title: "Dropdown Menu",
-                href: "/docs/components/dropdown-menu",
-              },
-              {
-                title: "Empty",
-                href: "/docs/components/empty",
-              },
-              {
-                title: "Field",
-                href: "/docs/components/field",
-              },
-              {
-                title: "Hover Card",
-                href: "/docs/components/hover-card",
-              },
-              {
-                title: "Input",
-                href: "/docs/components/input",
-              },
-              {
-                title: "Input Group",
-                href: "/docs/components/input-group",
-              },
-              {
-                title: "Input OTP",
-                href: "/docs/components/input-otp",
-              },
-              {
-                title: "Item",
-                href: "/docs/components/item",
-              },
-              {
-                title: "Kbd",
-                href: "/docs/components/kbd",
-              },
-              {
-                title: "Label",
-                href: "/docs/components/label",
-              },
-              {
-                title: "Menubar",
-                href: "/docs/components/menubar",
-              },
-              {
-                title: "Native Select",
-                href: "/docs/components/native-select",
-              },
-              {
-                title: "Navigation Menu",
-                href: "/docs/components/navigation-menu",
-              },
-              {
-                title: "Pagination",
-                href: "/docs/components/pagination",
-              },
-              {
-                title: "Popover",
-                href: "/docs/components/popover",
-              },
-              {
-                title: "Progress",
-                href: "/docs/components/progress",
-              },
-              {
-                title: "Radio Group",
-                href: "/docs/components/radio-group",
-              },
-              {
-                title: "Resizable",
-                href: "/docs/components/resizable",
-              },
-              {
-                title: "Scroll Area",
-                href: "/docs/components/scroll-area",
-              },
-              {
-                title: "Select",
-                href: "/docs/components/select",
-              },
-              {
-                title: "Separator",
-                href: "/docs/components/separator",
-              },
-              {
-                title: "Sheet",
-                href: "/docs/components/sheet",
-              },
-              {
-                title: "Skeleton",
-                href: "/docs/components/skeleton",
-              },
-              {
-                title: "Slider",
-                href: "/docs/components/slider",
-              },
-              {
-                title: "Sonner",
-                href: "/docs/components/sonner",
-              },
-              {
-                title: "Spinner",
-                href: "/docs/components/spinner",
-              },
+      {
+        title: "Data Table",
+        href: "/docs/components/data-table",
+      },
+      {
+        title: "Date Picker",
+        href: "/docs/components/date-picker",
+      },
+      {
+        title: "Dialog",
+        href: "/docs/components/dialog",
+      },
+      {
+        title: "Drawer",
+        href: "/docs/components/drawer",
+      },
+      {
+        title: "Dropdown Menu",
+        href: "/docs/components/dropdown-menu",
+      },
+      {
+        title: "Empty",
+        href: "/docs/components/empty",
+      },
+      {
+        title: "Field",
+        href: "/docs/components/field",
+      },
+      {
+        title: "Hover Card",
+        href: "/docs/components/hover-card",
+      },
+      {
+        title: "Input",
+        href: "/docs/components/input",
+      },
+      {
+        title: "Input Group",
+        href: "/docs/components/input-group",
+      },
+      {
+        title: "Input OTP",
+        href: "/docs/components/input-otp",
+      },
+      {
+        title: "Item",
+        href: "/docs/components/item",
+      },
+      {
+        title: "Kbd",
+        href: "/docs/components/kbd",
+      },
+      {
+        title: "Label",
+        href: "/docs/components/label",
+      },
+      {
+        title: "Menubar",
+        href: "/docs/components/menubar",
+      },
+      {
+        title: "Native Select",
+        href: "/docs/components/native-select",
+      },
+      {
+        title: "Navigation Menu",
+        href: "/docs/components/navigation-menu",
+      },
+      {
+        title: "Pagination",
+        href: "/docs/components/pagination",
+      },
+      {
+        title: "Popover",
+        href: "/docs/components/popover",
+      },
+      {
+        title: "Progress",
+        href: "/docs/components/progress",
+      },
+      {
+        title: "Radio Group",
+        href: "/docs/components/radio-group",
+      },
+      {
+        title: "Resizable",
+        href: "/docs/components/resizable",
+      },
+      {
+        title: "Scroll Area",
+        href: "/docs/components/scroll-area",
+      },
+      {
+        title: "Select",
+        href: "/docs/components/select",
+      },
+      {
+        title: "Separator",
+        href: "/docs/components/separator",
+      },
+      {
+        title: "Sheet",
+        href: "/docs/components/sheet",
+      },
+      {
+        title: "Skeleton",
+        href: "/docs/components/skeleton",
+      },
+      {
+        title: "Slider",
+        href: "/docs/components/slider",
+      },
+      {
+        title: "Sonner",
+        href: "/docs/components/sonner",
+      },
+      {
+        title: "Spinner",
+        href: "/docs/components/spinner",
+      },
       {
         title: "Switch",
         href: "/docs/components/switch",
@@ -228,6 +228,6 @@ export const docsNavigation: NavItem[] = [
         title: "Tooltip",
         href: "/docs/components/tooltip",
       },
-            ],
-          },
-        ];
+    ],
+  },
+];

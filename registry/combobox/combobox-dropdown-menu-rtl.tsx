@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { MoreHorizontal } from "lucide-react"
+import * as React from "react";
+import { MoreHorizontal } from "lucide-react";
 
-import { Button } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
 import {
   Command,
   CommandEmpty,
@@ -11,7 +11,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -24,21 +24,13 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
-const labels = [
-  "ميزة",
-  "خطأ",
-  "تحسين",
-  "توثيق",
-  "تصميم",
-  "سؤال",
-  "صيانة",
-]
+const labels = ["ميزة", "خطأ", "تحسين", "توثيق", "تصميم", "سؤال", "صيانة"];
 
 export function ComboboxDropdownMenuDocsRTL() {
-  const [label, setLabel] = React.useState("ميزة")
-  const [open, setOpen] = React.useState(false)
+  const [label, setLabel] = React.useState("ميزة");
+  const [open, setOpen] = React.useState(false);
 
   return (
     <div className="flex w-full flex-col items-center justify-between rounded-md border px-4 py-3 sm:flex-row sm:items-center">
@@ -77,8 +69,8 @@ export function ComboboxDropdownMenuDocsRTL() {
                           key={label}
                           value={label}
                           onSelect={(value) => {
-                            setLabel(value)
-                            setOpen(false)
+                            setLabel(value);
+                            setOpen(false);
                           }}
                         >
                           {label}
@@ -98,6 +90,5 @@ export function ComboboxDropdownMenuDocsRTL() {
         </DropdownMenuContent>
       </DropdownMenu>
     </div>
-  )
+  );
 }
-

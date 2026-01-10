@@ -1,4 +1,4 @@
-import { Button } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
 import {
   Item,
   ItemActions,
@@ -7,9 +7,9 @@ import {
   ItemFooter,
   ItemMedia,
   ItemTitle,
-} from "@soar-design/soar-react-components"
-import { Progress } from "@soar-design/soar-react-components"
-import { Spinner } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Progress } from "@soar-design/soar-react-components";
+import { Spinner } from "@soar-design/soar-react-components";
 
 export function SpinnerItemDocs() {
   return (
@@ -32,6 +32,5 @@ export function SpinnerItemDocs() {
         </ItemFooter>
       </Item>
     </div>
-  )
+  );
 }
-

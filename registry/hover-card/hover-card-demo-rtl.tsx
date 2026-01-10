@@ -1,16 +1,16 @@
-"use client"
+"use client";
 
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@soar-design/soar-react-components"
-import { Button } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Button } from "@soar-design/soar-react-components";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function HoverCardDemoDocsRTL() {
   return (
@@ -36,5 +36,5 @@ export function HoverCardDemoDocsRTL() {
         </div>
       </HoverCardContent>
     </HoverCard>
-  )
+  );
 }

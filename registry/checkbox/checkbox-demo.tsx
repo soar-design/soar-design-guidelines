@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { Checkbox } from "@soar-design/soar-react-components"
-import { Label } from "@soar-design/soar-react-components"
+import { Checkbox } from "@soar-design/soar-react-components";
+import { Label } from "@soar-design/soar-react-components";
 
 export function CheckboxDemoDocs() {
   return (
@@ -39,5 +39,5 @@ export function CheckboxDemoDocs() {
         </div>
       </Label>
     </div>
-  )
+  );
 }

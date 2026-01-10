@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import TextareaAutosize from "react-textarea-autosize"
+import TextareaAutosize from "react-textarea-autosize";
 
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function InputGroupCustomDocs() {
   return (
@@ -24,5 +24,5 @@ export function InputGroupCustomDocs() {
         </InputGroupAddon>
       </InputGroup>
     </div>
-  )
+  );
 }

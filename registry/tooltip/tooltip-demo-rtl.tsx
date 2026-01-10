@@ -1,9 +1,9 @@
-import { Button } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function TooltipDemoDocsRTL() {
   return (
@@ -15,6 +15,5 @@ export function TooltipDemoDocsRTL() {
         <p>إضافة إلى المكتبة</p>
       </TooltipContent>
     </Tooltip>
-  )
+  );
 }
-

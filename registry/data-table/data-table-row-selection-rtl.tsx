@@ -1,15 +1,15 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 import {
   flexRender,
   getCoreRowModel,
   useReactTable,
   type ColumnDef,
   type RowSelectionState,
-} from "@tanstack/react-table"
+} from "@tanstack/react-table";
 
-import { Checkbox } from "@soar-design/soar-react-components"
+import { Checkbox } from "@soar-design/soar-react-components";
 import {
   Table,
   TableBody,
@@ -17,14 +17,14 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 type Payment = {
-  id: string
-  amount: number
-  status: "pending" | "processing" | "success" | "failed"
-  email: string
-}
+  id: string;
+  amount: number;
+  status: "pending" | "processing" | "success" | "failed";
+  email: string;
+};
 
 const data: Payment[] = [
   {
@@ -45,14 +45,14 @@ const data: Payment[] = [
     status: "processing",
     email: "Monserrat44@example.com",
   },
-]
+];
 
 const statusLabels: Record<string, string> = {
   success: "نجح",
   processing: "قيد المعالجة",
   failed: "فشل",
   pending: "قيد الانتظار",
-}
+};
 
 const columns: ColumnDef<Payment>[] = [
   {
@@ -90,19 +90,17 @@ const columns: ColumnDef<Payment>[] = [
     accessorKey: "amount",
     header: "المبلغ",
     cell: ({ row }) => {
-      const amount = parseFloat(row.getValue("amount"))
+      const amount = parseFloat(row.getValue("amount"));
       return new Intl.NumberFormat("ar-SA", {
         style: "currency",
         currency: "USD",
-      }).format(amount)
+      }).format(amount);
     },
   },
-]
+];
 
 export function DataTableRowSelectionDocsRTL() {
-  const [rowSelection, setRowSelection] = React.useState<RowSelectionState>(
-    {}
-  )
+  const [rowSelection, setRowSelection] = React.useState<RowSelectionState>({});
 
   const table = useReactTable({
     data,
@@ -112,7 +110,7 @@ export function DataTableRowSelectionDocsRTL() {
     state: {
       rowSelection,
     },
-  })
+  });
 
   return (
     <div className="w-full space-y-4">
@@ -132,10 +130,10 @@ export function DataTableRowSelectionDocsRTL() {
                         ? null
                         : flexRender(
                             header.column.columnDef.header,
-                            header.getContext()
+                            header.getContext(),
                           )}
                     </TableHead>
-                  )
+                  );
                 })}
               </TableRow>
             ))}
@@ -151,7 +149,7 @@ export function DataTableRowSelectionDocsRTL() {
                     <TableCell key={cell.id}>
                       {flexRender(
                         cell.column.columnDef.cell,
-                        cell.getContext()
+                        cell.getContext(),
                       )}
                     </TableCell>
                   ))}
@@ -171,6 +169,5 @@ export function DataTableRowSelectionDocsRTL() {
         </Table>
       </div>
     </div>
-  )
+  );
 }
-

@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
-import { Button } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
 import {
   Command,
   CommandEmpty,
@@ -10,17 +10,17 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 type Status = {
-  value: string
-  label: string
-}
+  value: string;
+  label: string;
+};
 
 const statuses: Status[] = [
   {
@@ -43,13 +43,13 @@ const statuses: Status[] = [
     value: "canceled",
     label: "Canceled",
   },
-]
+];
 
 export function ComboboxPopoverDocs() {
-  const [open, setOpen] = React.useState(false)
+  const [open, setOpen] = React.useState(false);
   const [selectedStatus, setSelectedStatus] = React.useState<Status | null>(
-    null
-  )
+    null,
+  );
 
   return (
     <div className="flex items-center space-x-4">
@@ -73,9 +73,9 @@ export function ComboboxPopoverDocs() {
                     onSelect={(value) => {
                       setSelectedStatus(
                         statuses.find((priority) => priority.value === value) ||
-                          null
-                      )
-                      setOpen(false)
+                          null,
+                      );
+                      setOpen(false);
                     }}
                   >
                     {status.label}
@@ -87,6 +87,5 @@ export function ComboboxPopoverDocs() {
         </PopoverContent>
       </Popover>
     </div>
-  )
+  );
 }
-

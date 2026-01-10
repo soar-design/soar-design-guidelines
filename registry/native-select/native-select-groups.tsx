@@ -2,7 +2,7 @@ import {
   NativeSelect,
   NativeSelectOptGroup,
   NativeSelectOption,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function NativeSelectGroupsDocs() {
   return (
@@ -34,6 +34,5 @@ export function NativeSelectGroupsDocs() {
         </NativeSelectOption>
       </NativeSelectOptGroup>
     </NativeSelect>
-  )
+  );
 }
-

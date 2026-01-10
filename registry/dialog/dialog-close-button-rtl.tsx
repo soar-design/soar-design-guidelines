@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { Button } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
 import {
   Dialog,
   DialogClose,
@@ -10,9 +10,9 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@soar-design/soar-react-components"
-import { Input } from "@soar-design/soar-react-components"
-import { Label } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Input } from "@soar-design/soar-react-components";
+import { Label } from "@soar-design/soar-react-components";
 
 export function DialogCloseButtonDocsRTL() {
   return (
@@ -48,6 +48,5 @@ export function DialogCloseButtonDocsRTL() {
         </DialogFooter>
       </DialogContent>
     </Dialog>
-  )
+  );
 }
-

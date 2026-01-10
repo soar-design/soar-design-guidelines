@@ -1,7 +1,11 @@
 import * as React from "react";
 
-export function useIntersectionObserver(setActiveId: React.Dispatch<React.SetStateAction<string>>) {
-  const headingElementsRef = React.useRef<Record<string, IntersectionObserverEntry>>({});
+export function useIntersectionObserver(
+  setActiveId: React.Dispatch<React.SetStateAction<string>>,
+) {
+  const headingElementsRef = React.useRef<
+    Record<string, IntersectionObserverEntry>
+  >({});
 
   React.useEffect(() => {
     const callback = (headings: IntersectionObserverEntry[]) => {
@@ -25,7 +29,7 @@ export function useIntersectionObserver(setActiveId: React.Dispatch<React.SetSta
         setActiveId(visibleHeadings[0].target.id);
       } else if (visibleHeadings.length > 1) {
         const sortedVisibleHeadings = visibleHeadings.sort(
-          (a, b) => getIndexFromId(a.target.id) - getIndexFromId(b.target.id)
+          (a, b) => getIndexFromId(a.target.id) - getIndexFromId(b.target.id),
         );
         setActiveId(sortedVisibleHeadings[0].target.id);
       }

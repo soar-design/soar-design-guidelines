@@ -1,14 +1,14 @@
-import { BotIcon, ChevronDownIcon } from "lucide-react"
+import { BotIcon, ChevronDownIcon } from "lucide-react";
 
-import { Button } from "@soar-design/soar-react-components"
-import { ButtonGroup } from "@soar-design/soar-react-components"
+import { Button } from "@soar-design/soar-react-components";
+import { ButtonGroup } from "@soar-design/soar-react-components";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@soar-design/soar-react-components"
-import { Separator } from "@soar-design/soar-react-components"
-import { Textarea } from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
+import { Separator } from "@soar-design/soar-react-components";
+import { Textarea } from "@soar-design/soar-react-components";
 
 export function ButtonGroupPopoverDocsRTL() {
   return (
@@ -18,7 +18,11 @@ export function ButtonGroupPopoverDocsRTL() {
       </Button>
       <Popover>
         <PopoverTrigger asChild>
-          <Button variant="outline" size="icon" aria-label="فتح النافذة المنبثقة">
+          <Button
+            variant="outline"
+            size="icon"
+            aria-label="فتح النافذة المنبثقة"
+          >
             <ChevronDownIcon />
           </Button>
         </PopoverTrigger>
@@ -41,5 +45,5 @@ export function ButtonGroupPopoverDocsRTL() {
         </PopoverContent>
       </Popover>
     </ButtonGroup>
-  )
+  );
 }

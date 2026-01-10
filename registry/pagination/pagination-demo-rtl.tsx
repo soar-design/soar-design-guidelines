@@ -6,7 +6,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function PaginationDemoDocsRTL() {
   return (
@@ -34,6 +34,5 @@ export function PaginationDemoDocsRTL() {
         </PaginationItem>
       </PaginationContent>
     </Pagination>
-  )
+  );
 }
-

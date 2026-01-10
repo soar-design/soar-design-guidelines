@@ -12,7 +12,7 @@ import {
   MenubarSubContent,
   MenubarSubTrigger,
   MenubarTrigger,
-} from "@soar-design/soar-react-components"
+} from "@soar-design/soar-react-components";
 
 export function MenubarDemoDocsRTL() {
   return (
@@ -71,7 +71,9 @@ export function MenubarDemoDocsRTL() {
       <MenubarMenu>
         <MenubarTrigger>عرض</MenubarTrigger>
         <MenubarContent>
-          <MenubarCheckboxItem>إظهار شريط الإشارات المرجعية دائماً</MenubarCheckboxItem>
+          <MenubarCheckboxItem>
+            إظهار شريط الإشارات المرجعية دائماً
+          </MenubarCheckboxItem>
           <MenubarCheckboxItem checked>
             إظهار عناوين URL الكاملة دائماً
           </MenubarCheckboxItem>
@@ -103,6 +105,5 @@ export function MenubarDemoDocsRTL() {
         </MenubarContent>
       </MenubarMenu>
     </Menubar>
-  )
+  );
 }
-
