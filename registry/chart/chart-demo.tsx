@@ -14,7 +14,6 @@ import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-  type ChartConfig,
 } from "@soar-design/soar-react-components";
 
 export const description = "An interactive bar chart";
@@ -125,7 +124,7 @@ const chartConfig = {
     label: "Mobile",
     color: "var(--chart-1)",
   },
-} satisfies ChartConfig;
+};
 
 export function ChartDemoDocs() {
   const [activeChart, setActiveChart] =

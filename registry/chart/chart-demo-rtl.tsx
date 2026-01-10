@@ -14,7 +14,6 @@ import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-  type ChartConfig,
 } from "@soar-design/soar-react-components";
 
 export const description = "مخطط شريطي تفاعلي";
@@ -125,7 +124,7 @@ const chartConfig = {
     label: "الجوال",
     color: "var(--chart-1)",
   },
-} satisfies ChartConfig;
+};
 
 export function ChartDemoDocsRTL() {
   const [activeChart, setActiveChart] =

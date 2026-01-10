@@ -6,7 +6,6 @@ import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-  type ChartConfig,
 } from "@soar-design/soar-react-components";
 
 const chartData = [
@@ -27,7 +26,7 @@ const chartConfig = {
     label: "الجوال",
     color: "#60a5fa",
   },
-} satisfies ChartConfig;
+};
 
 export function ChartFirstTooltipDocsRTL() {
   return (

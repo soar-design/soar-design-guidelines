@@ -109,7 +109,7 @@ export function DataTableBasicDocsRTL() {
                     if (cell.column.id === "status") {
                       return (
                         <TableCell key={cell.id}>
-                          {statusLabels[cellValue as string] || cellValue}
+                          {statusLabels[cellValue as string] || (cellValue as React.ReactNode)}
                         </TableCell>
                       );
                     }

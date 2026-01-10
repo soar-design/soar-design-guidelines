@@ -17,7 +17,7 @@ import {
 } from "@soar-design/soar-react-components";
 
 export function InputGroupButtonDocsRTL() {
-  const { copyToClipboard } = useCopyToClipboard();
+  const { copy } = useCopyToClipboard();
 
   return (
     <div className="grid w-full max-w-sm gap-6">
@@ -27,7 +27,7 @@ export function InputGroupButtonDocsRTL() {
           <InputGroupButton
             variant="ghost"
             size="icon-xs"
-            onClick={() => copyToClipboard("https://example.com")}
+            onClick={() => copy("https://example.com")}
           >
             <Copy />
             <span className="sr-only">نسخ</span>

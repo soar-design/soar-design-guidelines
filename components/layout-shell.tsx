@@ -110,11 +110,8 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
                   </div>
                   <div>
                     <Badge
-                      size="md"
-                      appearance="light"
                       variant="secondary"
-                      shape="circle"
-                      className="tabular-nums"
+                      className="rounded-full tabular-nums"
                     >
                       <span className="mr-1.5 h-2 w-2 rounded-full bg-current"></span>
                       v{packageJson.version} Alpha
@@ -202,8 +199,6 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
               {mounted && (
                 <Tabs value={theme} onValueChange={setTheme}>
                   <TabsList
-                    variant="button"
-                    size="xs"
                     className="border-border h-9 rounded-full border bg-none! px-1"
                   >
                     <TabsTrigger value="light" className="rounded-full">

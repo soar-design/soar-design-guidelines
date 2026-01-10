@@ -35,10 +35,7 @@ export default function Home() {
           </div>
           <div>
             <Badge
-              size="lg"
-              appearance="light"
               variant="secondary"
-              shape="circle"
               className="tabular-nums"
             >
               <span className="mr-1.5 h-2 w-2 rounded-full bg-current"></span>v

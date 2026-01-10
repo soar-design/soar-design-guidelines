@@ -35,8 +35,7 @@ export function CopyButton({ value }: CopyButtonProps) {
     <Button
       variant="ghost"
       size="icon"
-      radius="full"
-      className="absolute top-2 right-2 z-10"
+      className="absolute top-2 right-2 z-10 rounded-full"
       onClick={handleCopy}
       aria-label={hasCopied ? "Copied" : "Copy code"}
     >

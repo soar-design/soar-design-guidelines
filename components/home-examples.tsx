@@ -7,9 +7,7 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardHeading,
   CardTitle,
-  CardToolbar,
   Input,
   Label,
   Select,
@@ -32,14 +30,10 @@ export function HomeExamples() {
       {/* Payment Method - Takes up 4 columns on large screens */}
       <Card className="shadow-xl lg:col-span-4">
         <CardHeader>
-          <CardHeading>
-            <div>
-              <CardTitle>Payment Method</CardTitle>
-              <CardDescription>
-                All transactions are secure and encrypted
-              </CardDescription>
-            </div>
-          </CardHeading>
+          <CardTitle>Payment Method</CardTitle>
+          <CardDescription>
+            All transactions are secure and encrypted
+          </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="space-y-2">
@@ -108,7 +102,7 @@ export function HomeExamples() {
         </CardContent>
         <CardFooter className="flex justify-end gap-2">
           <Button variant="outline">Cancel</Button>
-          <Button variant="primary">Submit</Button>
+          <Button variant="default">Submit</Button>
         </CardFooter>
       </Card>
 
@@ -117,20 +111,18 @@ export function HomeExamples() {
         {/* Team Members Card */}
         <Card className="shadow-xl">
           <CardHeader>
-            <CardHeading>
+            <div className="flex items-start justify-between">
               <div>
                 <CardTitle>Team Members</CardTitle>
                 <CardDescription>
                   Invite your team to collaborate.
                 </CardDescription>
               </div>
-            </CardHeading>
-            <CardToolbar>
-              <Button size="sm" variant="primary">
+              <Button size="sm" variant="default">
                 <Plus className="mr-2 h-4 w-4" />
                 Invite
               </Button>
-            </CardToolbar>
+            </div>
           </CardHeader>
           <CardContent>
             <div className="flex -space-x-2">
@@ -165,12 +157,8 @@ export function HomeExamples() {
         {/* Settings Card (Cookie/Security style) */}
         <Card className="shadow-xl">
           <CardHeader>
-            <CardHeading>
-              <div>
-                <CardTitle>Settings</CardTitle>
-                <CardDescription>Manage your preferences.</CardDescription>
-              </div>
-            </CardHeading>
+            <CardTitle>Settings</CardTitle>
+            <CardDescription>Manage your preferences.</CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="flex items-center justify-between">
@@ -204,7 +192,7 @@ export function HomeExamples() {
               />
               <Button
                 size="icon"
-                variant="primary"
+                variant="default"
                 className="absolute right-2 bottom-2 h-7 w-7"
               >
                 <Send className="h-3 w-3" />

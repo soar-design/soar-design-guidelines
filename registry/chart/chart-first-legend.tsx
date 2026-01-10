@@ -8,7 +8,6 @@ import {
   ChartLegendContent,
   ChartTooltip,
   ChartTooltipContent,
-  type ChartConfig,
 } from "@soar-design/soar-react-components";
 
 const chartData = [
@@ -29,7 +28,7 @@ const chartConfig = {
     label: "Mobile",
     color: "#60a5fa",
   },
-} satisfies ChartConfig;
+};
 
 export function ChartFirstLegendDocs() {
   return (

@@ -11,15 +11,6 @@ import {
   TableRow,
   TableHead,
   TableCell,
-  Stepper,
-  StepperContent,
-  StepperIndicator,
-  StepperItem,
-  StepperNav,
-  StepperPanel,
-  StepperSeparator,
-  StepperTitle,
-  StepperTrigger,
   Kbd,
   Alert,
   AlertDescription,
@@ -269,57 +260,6 @@ const components = {
       )}
       {...props}
     />
-  ),
-  Stepper: ({ className, ...props }: React.ComponentProps<typeof Stepper>) => (
-    <Stepper className={cn("", className)} {...props} />
-  ),
-  StepperNav: ({
-    className,
-    ...props
-  }: React.ComponentProps<typeof StepperNav>) => (
-    <StepperNav className={cn("", className)} {...props} />
-  ),
-  StepperItem: ({
-    className,
-    ...props
-  }: React.ComponentProps<typeof StepperItem>) => (
-    <StepperItem className={cn("", className)} {...props} />
-  ),
-  StepperTrigger: ({
-    className,
-    ...props
-  }: React.ComponentProps<typeof StepperTrigger>) => (
-    <StepperTrigger className={cn("", className)} {...props} />
-  ),
-  StepperIndicator: ({
-    className,
-    ...props
-  }: React.ComponentProps<typeof StepperIndicator>) => (
-    <StepperIndicator className={cn("", className)} {...props} />
-  ),
-  StepperTitle: ({
-    className,
-    ...props
-  }: React.ComponentProps<typeof StepperTitle>) => (
-    <StepperTitle className={cn("", className)} {...props} />
-  ),
-  StepperSeparator: ({
-    className,
-    ...props
-  }: React.ComponentProps<typeof StepperSeparator>) => (
-    <StepperSeparator className={cn("", className)} {...props} />
-  ),
-  StepperPanel: ({
-    className,
-    ...props
-  }: React.ComponentProps<typeof StepperPanel>) => (
-    <StepperPanel className={cn("", className)} {...props} />
-  ),
-  StepperContent: ({
-    className,
-    ...props
-  }: React.ComponentProps<typeof StepperContent>) => (
-    <StepperContent className={cn("", className)} {...props} />
   ),
 };
 
