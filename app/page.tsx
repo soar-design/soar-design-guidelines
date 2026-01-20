@@ -34,10 +34,7 @@ export default function Home() {
             </span>
           </div>
           <div>
-            <Badge
-              variant="secondary"
-              className="tabular-nums"
-            >
+            <Badge variant="secondary" className="tabular-nums">
               <span className="mr-1.5 h-2 w-2 rounded-full bg-current"></span>v
               {packageJson.version} Alpha
             </Badge>

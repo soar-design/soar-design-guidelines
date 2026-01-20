@@ -155,8 +155,8 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
         </SidebarContent>
       </Sidebar>
       <SidebarInset className="flex flex-col">
-        <header className="bg-background sticky top-0 z-50 lg:pe-72">
-          <div className="mx-auto flex h-16 w-full max-w-5xl items-center justify-between px-6">
+        <header className="bg-background sticky top-0 z-50">
+          <div className="flex h-16 w-full items-center justify-between px-6">
             <div className="flex items-center gap-2">
               <SidebarTrigger />
               <Separator orientation="vertical" className="me-2 h-4" />
@@ -184,7 +184,7 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
               <Button
                 size="sm"
                 variant="outline"
-                className="relative hidden w-full justify-start sm:pe-12 md:flex md:w-40 lg:w-64"
+                className="relative hidden w-full justify-between md:flex md:w-40 lg:w-64"
                 onClick={() => setOpen(true)}
               >
                 <span>Search documentation...</span>
@@ -198,9 +198,7 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
 
               {mounted && (
                 <Tabs value={theme} onValueChange={setTheme}>
-                  <TabsList
-                    className="border-border h-9 rounded-full border bg-none! px-1"
-                  >
+                  <TabsList className="border-border h-9 rounded-full border bg-none! px-1">
                     <TabsTrigger value="light" className="rounded-full">
                       <Sun />
                     </TabsTrigger>

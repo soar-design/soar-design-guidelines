@@ -1,6 +1,12 @@
 @import "@soar-design/soar-react-components/dist/globals.css";
 @import "tailwindcss";
 
+/* Override sidebar background to match app background */
+:root {
+  --sidebar: var(--background);
+  --sidebar-foreground: var(--foreground);
+}
+
 /* Syntax highlighting theme switching - only for code blocks inside <pre> */
 pre code[data-theme*=" "],
 pre code[data-theme*=" "] span {
