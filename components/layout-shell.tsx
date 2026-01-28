@@ -84,10 +84,10 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
             <SidebarMenuItem>
               <SidebarMenuButton
                 size="lg"
-                className="h-auto bg-transparent p-4 hover:bg-transparent active:bg-transparent"
+                className="p-4 h-auto bg-transparent hover:bg-transparent active:bg-transparent"
                 asChild
               >
-                <Link href="/" className="flex flex-col items-start space-y-3">
+                <Link href="/" className="space-y-3 flex flex-col items-start">
                   <div className="flex aspect-square items-center justify-center">
                     <Image
                       src="/soar-logo.svg"
@@ -98,11 +98,11 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
                     />
                   </div>
 
-                  <div className="flex flex-col gap-1">
-                    <span className="text-2xl leading-none font-bold">
+                  <div className="gap-1 flex flex-col">
+                    <span className="text-2xl font-bold leading-none">
                       Soar
                     </span>
-                    <span className="text-muted-foreground text-2xl leading-none font-bold">
+                    <span className="text-muted-foreground text-2xl font-bold leading-none">
                       Design
                       <br />
                       Guidelines
@@ -123,7 +123,7 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
           </SidebarMenu>
         </SidebarHeader>
         <SidebarContent className="bg-background scrollbar-hide px-3 max-lg:rounded-b-2xl">
-          <div className="from-background via-background/50 pointer-events-none sticky top-0 z-10 h-[100px] shrink-0 bg-gradient-to-b to-transparent"></div>
+          <div className="from-background via-background/50 top-0 pointer-events-none sticky z-10 h-[100px] shrink-0 bg-gradient-to-b to-transparent"></div>
           <div className="-mt-[50px]">
             {docsNavigation.map((section) => (
               <SidebarGroup key={section.title}>
@@ -136,7 +136,7 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
                         <SidebarMenuButton asChild isActive={isActive}>
                           <Link
                             href={item.href!}
-                            className="flex items-center gap-2"
+                            className="gap-2 flex items-center"
                           >
                             {isActive && (
                               <span className="bg-primary h-1.5 w-1.5 shrink-0 rounded-full" />
@@ -151,23 +151,23 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
               </SidebarGroup>
             ))}
           </div>
-          <div className="from-background via-background/50 pointer-events-none sticky bottom-0 z-10 -mt-[20px] h-[100px] shrink-0 bg-gradient-to-t to-transparent"></div>
+          <div className="from-background via-background/50 bottom-0 pointer-events-none sticky z-10 -mt-[20px] h-[100px] shrink-0 bg-gradient-to-t to-transparent"></div>
         </SidebarContent>
       </Sidebar>
       <SidebarInset className="flex flex-col">
-        <header className="bg-background sticky top-0 z-50">
-          <div className="flex h-16 w-full items-center justify-between px-6">
-            <div className="flex items-center gap-2">
+        <header className="bg-background top-0 sticky z-50">
+          <div className="h-16 px-6 flex w-full items-center justify-between">
+            <div className="gap-2 flex items-center">
               <SidebarTrigger />
               <Separator orientation="vertical" className="me-2 h-4" />
               <Breadcrumb>
                 <BreadcrumbList>
                   {activeItem ? (
                     <>
-                      <BreadcrumbItem className="hidden md:block">
+                      <BreadcrumbItem className="md:block hidden">
                         {activeItem.section}
                       </BreadcrumbItem>
-                      <BreadcrumbSeparator className="hidden md:block" />
+                      <BreadcrumbSeparator className="md:block hidden" />
                       <BreadcrumbItem>
                         <BreadcrumbPage>{activeItem.title}</BreadcrumbPage>
                       </BreadcrumbItem>
@@ -180,11 +180,11 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
                 </BreadcrumbList>
               </Breadcrumb>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="gap-3 flex items-center">
               <Button
                 size="sm"
                 variant="outline"
-                className="relative hidden w-full justify-between md:flex md:w-40 lg:w-64"
+                className="md:flex md:w-40 lg:w-64 relative hidden w-full justify-between"
                 onClick={() => setOpen(true)}
               >
                 <span>Search documentation...</span>
@@ -198,7 +198,7 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
 
               {mounted && (
                 <Tabs value={theme} onValueChange={setTheme}>
-                  <TabsList className="border-border h-9 rounded-full border bg-none! px-1">
+                  <TabsList className="border-border h-9 px-1 rounded-full border bg-none!">
                     <TabsTrigger value="light" className="rounded-full">
                       <Sun />
                     </TabsTrigger>

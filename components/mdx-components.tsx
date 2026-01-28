@@ -45,12 +45,12 @@ export async function ComponentSource({
   return (
     <div
       className={cn(
-        "overflow-hidden rounded-md border bg-zinc-950 p-4 text-white",
+        "rounded-md bg-zinc-950 p-4 text-white overflow-hidden border",
         className,
       )}
       {...props}
     >
-      <pre className="overflow-x-auto p-4">
+      <pre className="p-4 overflow-x-auto">
         <code className="font-mono text-sm">
           {code || `// Source code not found for ${name}`}
         </code>
@@ -70,7 +70,7 @@ export function Step({ ...props }: React.ComponentProps<"div">) {
 export function PropsTable({ children }: React.ComponentProps<"table">) {
   return (
     <div className="w-full overflow-x-auto">
-      <Table className="w-full text-sm">{children}</Table>
+      <Table className="text-sm w-full">{children}</Table>
     </div>
   );
 }
@@ -98,7 +98,7 @@ const components = {
   h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h2
       className={cn(
-        "font-heading scroll-m-20 border-b pb-2 text-2xl font-semibold tracking-tight",
+        "font-heading scroll-m-20 pb-2 text-2xl font-semibold tracking-tight border-b",
         className,
       )}
       {...props}
@@ -153,17 +153,17 @@ const components = {
     <p className={cn("leading-7", className)} {...props} />
   ),
   ul: ({ className, ...props }: React.HTMLAttributes<HTMLUListElement>) => (
-    <ul className={cn("ms-6 list-disc space-y-2", className)} {...props} />
+    <ul className={cn("ms-6 space-y-2 list-disc", className)} {...props} />
   ),
   ol: ({ className, ...props }: React.HTMLAttributes<HTMLOListElement>) => (
-    <ol className={cn("ms-6 list-decimal space-y-2", className)} {...props} />
+    <ol className={cn("ms-6 space-y-2 list-decimal", className)} {...props} />
   ),
   li: ({ className, ...props }: React.HTMLAttributes<HTMLLIElement>) => (
     <li className={cn("", className)} {...props} />
   ),
   blockquote: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <blockquote
-      className={cn("border-s-2 ps-6 italic", className)}
+      className={cn("ps-6 border-s-2 italic", className)}
       {...props}
     />
   ),
@@ -185,14 +185,14 @@ const components = {
   ),
   tr: ({ className, ...props }: React.HTMLAttributes<HTMLTableRowElement>) => (
     <tr
-      className={cn("even:bg-muted m-0 border-t p-0", className)}
+      className={cn("even:bg-muted m-0 p-0 border-t", className)}
       {...props}
     />
   ),
   th: ({ className, ...props }: React.HTMLAttributes<HTMLTableCellElement>) => (
     <th
       className={cn(
-        "border px-4 py-2 text-left font-bold [[align=center]]:text-center [[align=right]]:text-right",
+        "px-4 py-2 font-bold border text-left [[align=center]]:text-center [[align=right]]:text-right",
         className,
       )}
       {...props}
@@ -201,7 +201,7 @@ const components = {
   td: ({ className, ...props }: React.HTMLAttributes<HTMLTableCellElement>) => (
     <td
       className={cn(
-        "border px-4 py-2 text-left [[align=center]]:text-center [[align=right]]:text-right",
+        "px-4 py-2 border text-left [[align=center]]:text-center [[align=right]]:text-right",
         className,
       )}
       {...props}
@@ -231,7 +231,7 @@ const components = {
   }: React.ComponentProps<typeof TabsList>) => (
     <TabsList
       className={cn(
-        "w-full justify-start rounded-none border-b bg-transparent p-0",
+        "p-0 w-full justify-start rounded-none border-b bg-transparent",
         className,
       )}
       {...props}
@@ -243,7 +243,7 @@ const components = {
   }: React.ComponentProps<typeof TabsTrigger>) => (
     <TabsTrigger
       className={cn(
-        "text-muted-foreground data-[state=active]:border-b-primary data-[state=active]:text-foreground relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pt-2 pb-3 font-semibold shadow-none transition-none data-[state=active]:shadow-none",
+        "text-muted-foreground data-[state=active]:border-b-primary data-[state=active]:text-foreground h-9 px-4 pt-2 pb-3 font-semibold relative rounded-none border-b-2 border-b-transparent bg-transparent shadow-none transition-none data-[state=active]:shadow-none",
         className,
       )}
       {...props}
@@ -255,7 +255,7 @@ const components = {
   }: React.ComponentProps<typeof TabsContent>) => (
     <TabsContent
       className={cn(
-        "relative [&_h3.font-heading]:text-base [&_h3.font-heading]:font-semibold",
+        "[&_h3.font-heading]:text-base [&_h3.font-heading]:font-semibold relative",
         className,
       )}
       {...props}

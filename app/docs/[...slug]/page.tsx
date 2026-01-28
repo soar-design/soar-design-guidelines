@@ -27,8 +27,8 @@ export default async function DocPage({
 
   return (
     <div className="flex items-stretch">
-      <div className="flex min-w-0 flex-1 flex-col">
-        <div className="mx-auto flex w-full max-w-5xl min-w-0 flex-1 flex-col gap-8 px-6 py-6 lg:py-8">
+      <div className="min-w-0 flex flex-1 flex-col">
+        <div className="max-w-5xl min-w-0 gap-8 px-6 py-6 lg:py-8 mx-auto flex w-full flex-1 flex-col">
           <div className="space-y-2">
             {group && (
               <p className="text-muted-foreground text-sm font-medium tracking-wider uppercase">
@@ -40,13 +40,13 @@ export default async function DocPage({
               <p className="text-muted-foreground text-lg">{doc.description}</p>
             )}
             {doc.links && (
-              <div className="flex items-center gap-2 pt-4">
+              <div className="gap-2 pt-4 flex items-center">
                 {doc.links.doc && (
                   <a
                     href={doc.links.doc}
                     target="_blank"
                     rel="noreferrer"
-                    className="focus:ring-ring bg-primary text-primary-foreground hover:bg-primary/80 inline-flex items-center rounded-md border border-transparent px-2.5 py-0.5 text-xs font-semibold transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none"
+                    className="focus:ring-ring bg-primary text-primary-foreground hover:bg-primary/80 rounded-md px-2.5 py-0.5 text-xs font-semibold inline-flex items-center border border-transparent transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none"
                   >
                     Docs
                   </a>
@@ -56,7 +56,7 @@ export default async function DocPage({
                     href={doc.links.api}
                     target="_blank"
                     rel="noreferrer"
-                    className="focus:ring-ring bg-secondary text-secondary-foreground hover:bg-secondary/80 inline-flex items-center rounded-md border border-transparent px-2.5 py-0.5 text-xs font-semibold transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none"
+                    className="focus:ring-ring bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-md px-2.5 py-0.5 text-xs font-semibold inline-flex items-center border border-transparent transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none"
                   >
                     API Reference
                   </a>
@@ -64,7 +64,7 @@ export default async function DocPage({
               </div>
             )}
           </div>
-          <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h3]:mt-8 [&>h4]:mt-8 [&>h5]:mt-8 [&>h6]:mt-8">
+          <div className="prose prose-neutral dark:prose-invert space-y-6 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h3]:mt-8 [&>h4]:mt-8 [&>h5]:mt-8 [&>h6]:mt-8 max-w-none">
             <MDXRemote
               source={doc.content}
               components={components}
@@ -109,9 +109,9 @@ export default async function DocPage({
             />
           </div>
         </div>
-        <div className="from-background via-background/50 pointer-events-none sticky bottom-0 z-10 -mt-[20px] h-[100px] shrink-0 bg-gradient-to-t to-transparent"></div>
+        <div className="from-background via-background/50 bottom-0 pointer-events-none sticky z-10 -mt-[20px] h-[100px] shrink-0 bg-gradient-to-t to-transparent"></div>
       </div>
-      <div className="sticky top-16 z-30 ms-auto hidden h-[calc(100vh-4rem)] w-72 flex-col xl:flex">
+      <div className="top-16 w-72 xl:flex sticky z-30 ms-auto hidden h-[calc(100vh-4rem)] flex-col">
         <DashboardTableOfContents toc={toc} />
       </div>
     </div>

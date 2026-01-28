@@ -26,7 +26,7 @@ import { Plus, CheckCircle2, Info, Star, Send, Search } from "lucide-react";
 
 export function HomeExamples() {
   return (
-    <div className="grid items-start gap-4 md:grid-cols-2 lg:grid-cols-7 lg:gap-8">
+    <div className="gap-4 md:grid-cols-2 lg:grid-cols-7 lg:gap-8 grid items-start">
       {/* Payment Method - Takes up 4 columns on large screens */}
       <Card className="shadow-xl lg:col-span-4">
         <CardHeader>
@@ -40,7 +40,7 @@ export function HomeExamples() {
             <Label htmlFor="name">Name on Card</Label>
             <Input id="name" placeholder="John Doe" defaultValue="John Doe" />
           </div>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="gap-4 grid grid-cols-2">
             <div className="space-y-2">
               <Label htmlFor="card">Card Number</Label>
               <Input id="card" placeholder="1234 5678 9012 3456" />
@@ -53,7 +53,7 @@ export function HomeExamples() {
               <Input id="cvv" placeholder="123" maxLength={3} />
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="gap-4 grid grid-cols-2">
             <div className="space-y-2">
               <Label htmlFor="month">Month</Label>
               <Select defaultValue="12">
@@ -89,18 +89,18 @@ export function HomeExamples() {
             <p className="text-muted-foreground text-sm">
               The billing address associated with your payment method
             </p>
-            <div className="flex items-center space-x-2">
+            <div className="space-x-2 flex items-center">
               <Checkbox id="same-address" defaultChecked />
               <Label
                 htmlFor="same-address"
-                className="cursor-pointer text-sm font-normal"
+                className="text-sm font-normal cursor-pointer"
               >
                 Same as shipping address
               </Label>
             </div>
           </div>
         </CardContent>
-        <CardFooter className="flex justify-end gap-2">
+        <CardFooter className="gap-2 flex justify-end">
           <Button variant="outline">Cancel</Button>
           <Button variant="default">Submit</Button>
         </CardFooter>
@@ -125,7 +125,7 @@ export function HomeExamples() {
             </div>
           </CardHeader>
           <CardContent>
-            <div className="flex -space-x-2">
+            <div className="-space-x-2 flex">
               <Avatar className="border-background border-2">
                 <AvatarImage
                   src="https://api.dicebear.com/7.x/avataaars/svg?seed=John"
@@ -170,7 +170,7 @@ export function HomeExamples() {
               </div>
               <Switch id="2fa" defaultChecked />
             </div>
-            <div className="flex items-center gap-2 text-sm">
+            <div className="gap-2 text-sm flex items-center">
               <CheckCircle2 className="h-4 w-4 text-green-600" />
               <span>Verified profile</span>
             </div>
@@ -178,22 +178,22 @@ export function HomeExamples() {
         </Card>
 
         {/* Search/Chat mockup */}
-        <div className="bg-card text-card-foreground rounded-lg border shadow-xl">
+        <div className="bg-card text-card-foreground rounded-lg shadow-xl border">
           <div className="space-y-4 p-4">
             <div className="relative">
-              <Search className="text-muted-foreground absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2" />
+              <Search className="text-muted-foreground left-3 h-4 w-4 absolute top-1/2 -translate-y-1/2" />
               <Input placeholder="Search..." className="pl-9" />
             </div>
             <div className="relative">
               <Textarea
                 placeholder="Type a message..."
                 rows={2}
-                className="resize-none pr-12"
+                className="pr-12 resize-none"
               />
               <Button
                 size="icon"
                 variant="default"
-                className="absolute right-2 bottom-2 h-7 w-7"
+                className="right-2 bottom-2 h-7 w-7 absolute"
               >
                 <Send className="h-3 w-3" />
               </Button>

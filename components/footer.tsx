@@ -4,10 +4,10 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-background mt-auto px-6 lg:pe-72">
-      <div className="mx-auto max-w-5xl pt-10 pb-16">
-        <div className="text-muted-foreground/50 flex flex-col gap-3 text-sm">
-          <div className="flex aspect-square h-8 w-8 items-center justify-center">
+    <footer className="bg-background px-6 lg:pe-72 mt-auto">
+      <div className="max-w-5xl pt-10 pb-16 mx-auto">
+        <div className="text-muted-foreground/50 gap-3 text-sm flex flex-col">
+          <div className="h-8 w-8 flex aspect-square items-center justify-center">
             <Image
               src="/soar-logo.svg"
               alt="Soar Logo"

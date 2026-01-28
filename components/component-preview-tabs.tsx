@@ -63,10 +63,10 @@ export function ComponentPreviewTabs({
   return (
     <Tabs
       defaultValue="preview"
-      className={cn("group relative my-4 flex flex-col space-y-2", className)}
+      className={cn("group my-4 space-y-2 relative flex flex-col", className)}
       {...props}
     >
-      <div className="mb-3 flex items-center gap-2">
+      <div className="mb-3 gap-2 flex items-center">
         <TabsList>
           <TabsTrigger value="preview">Preview</TabsTrigger>
           <TabsTrigger value="code">Code</TabsTrigger>
@@ -75,7 +75,7 @@ export function ComponentPreviewTabs({
           pressed={isRTL}
           onPressedChange={setIsRTL}
           size="lg"
-          className="ms-auto rounded-full px-3"
+          className="px-3 ms-auto rounded-full"
         >
           RTL
         </Toggle>
@@ -93,8 +93,8 @@ export function ComponentPreviewTabs({
             className={cn(
               "min-h-[350px]",
               isSidebarComponent
-                ? "isolate p-0"
-                : "flex items-center justify-center p-10",
+                ? "p-0 isolate"
+                : "p-10 flex items-center justify-center",
             )}
             dir={isRTL ? "rtl" : "ltr"}
             onKeyDownCapture={

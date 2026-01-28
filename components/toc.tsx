@@ -36,13 +36,13 @@ export function DashboardTableOfContents({
 
   return (
     <div
-      className={cn("flex h-full w-full flex-col gap-2", className)}
+      className={cn("gap-2 flex h-full w-full flex-col", className)}
       {...props}
     >
       <p className="text-foreground px-6 pt-8 text-xs font-medium">
         On This Page
       </p>
-      <div className="scrollbar-hide flex-1 overflow-y-auto px-6 pb-8">
+      <div className="scrollbar-hide px-6 pb-8 flex-1 overflow-y-auto">
         <Tree tree={toc} activeItem={activeHeading} />
       </div>
     </div>
@@ -104,7 +104,7 @@ function Tree({ tree, level = 1, activeItem }: TreeProps) {
   }
 
   return (
-    <ul className={cn("m-0 list-none text-xs", { "ps-4": level !== 1 })}>
+    <ul className={cn("m-0 text-xs list-none", { "ps-4": level !== 1 })}>
       {tree.map((item, index) => {
         return (
           <li key={index} className="mt-0 pt-3">

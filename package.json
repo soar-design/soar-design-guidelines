@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "format": "prettier --write .",
+    "format": "prettier --plugin=prettier-plugin-tailwindcss --write .",
     "update-soar": "npm install @soar-design/soar-react-components",
     "stop": "pkill -f 'next|node.*dev' || true",
     "vercel-install": "node scripts/setup-netrc.js && node scripts/setup-git.js && npm install --verbose"

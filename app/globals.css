@@ -10,13 +10,13 @@
 /* Syntax highlighting theme switching - only for code blocks inside <pre> */
 pre code[data-theme*=" "],
 pre code[data-theme*=" "] span {
-  @apply bg-transparent font-mono text-sm text-(--shiki-light) dark:text-(--shiki-dark);
+  @apply font-mono text-sm bg-transparent text-(--shiki-light) dark:text-(--shiki-dark);
 }
 
 /* Inline code styling - rehype-pretty-code wraps it in span[data-rehype-pretty-code-figure] */
 /* Inline code gets data-language="plaintext" */
 span[data-rehype-pretty-code-figure] > code[data-language="plaintext"] {
-  @apply bg-muted relative rounded px-1.5 py-1 font-mono text-sm before:content-none after:content-none;
+  @apply bg-muted rounded px-1.5 py-1 font-mono text-sm relative before:content-none after:content-none;
 }
 
 /* Inline code should not have syntax highlighting colors */
@@ -32,7 +32,7 @@ code[data-line-numbers] {
 code[data-line-numbers] > [data-line]::before {
   counter-increment: line;
   content: counter(line);
-  @apply text-muted-foreground mr-4 inline-block w-4 text-right;
+  @apply text-muted-foreground mr-4 w-4 inline-block text-right;
 }
 
 /* Hide scrollbar while maintaining scroll functionality */

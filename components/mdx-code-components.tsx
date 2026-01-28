@@ -27,7 +27,7 @@ export const pre = ({
       <CodeBlockWrapper raw={raw} />
       <pre
         className={cn(
-          "bg-muted/40 mb-4 overflow-x-auto rounded-[26px] p-4",
+          "bg-muted/40 mb-4 p-4 overflow-x-auto rounded-[26px]",
           className,
         )}
         {...props}

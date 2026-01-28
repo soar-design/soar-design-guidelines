@@ -8,11 +8,11 @@ import { Footer } from "@/components/footer";
 
 export default function Home() {
   return (
-    <div className="bg-background relative flex min-h-screen flex-col items-start justify-between px-6">
-      <div className="flex w-11/12 flex-col items-start justify-start pt-6 text-left">
+    <div className="bg-background px-6 relative flex min-h-screen flex-col items-start justify-between">
+      <div className="pt-6 flex w-11/12 flex-col items-start justify-start text-left">
         <Link
           href="/docs/components/button"
-          className="flex flex-col items-start space-y-6"
+          className="space-y-6 flex flex-col items-start"
         >
           <div className="flex aspect-square items-center justify-center">
             <Image
@@ -25,11 +25,11 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col">
-            <span className="text-5xl leading-none font-bold">Soar</span>
-            <span className="text-muted-foreground text-5xl leading-none font-bold">
+            <span className="text-5xl font-bold leading-none">Soar</span>
+            <span className="text-muted-foreground text-5xl font-bold leading-none">
               Design
             </span>
-            <span className="text-muted-foreground text-5xl leading-none font-bold">
+            <span className="text-muted-foreground text-5xl font-bold leading-none">
               Guidelines
             </span>
           </div>
