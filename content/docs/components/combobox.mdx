@@ -1,0 +1,277 @@
+---
+title: Combobox
+description: Autocomplete input with a list of suggestions.
+links:
+  api: https://baseui.com/docs/components/combobox
+---
+
+<ComponentPreview name="combobox-demo" />
+
+## Usage
+
+```tsx
+import {
+  Combobox,
+  ComboboxContent,
+  ComboboxEmpty,
+  ComboboxInput,
+  ComboboxItem,
+  ComboboxList,
+} from "@soar-design/soar-react-components"
+
+const frameworks = ["Next.js", "SvelteKit", "Nuxt.js", "Remix", "Astro"]
+
+export function ExampleCombobox() {
+  return (
+    <Combobox items={frameworks}>
+      <ComboboxInput placeholder="Select a framework" />
+      <ComboboxContent>
+        <ComboboxEmpty>No items found.</ComboboxEmpty>
+        <ComboboxList>
+          {(item) => (
+            <ComboboxItem key={item} value={item}>
+              {item}
+            </ComboboxItem>
+          )}
+        </ComboboxList>
+      </ComboboxContent>
+    </Combobox>
+  )
+}
+```
+
+## Examples
+
+### Basic
+
+A simple combobox with a list of frameworks.
+
+<ComponentPreview name="combobox-basic" />
+
+### Multiple
+
+A combobox with multiple selection using `multiple` and `ComboboxChips`.
+
+<ComponentPreview name="combobox-multiple" />
+
+### Clear Button
+
+Use the `showClear` prop to show a clear button.
+
+<ComponentPreview name="combobox-clear" />
+
+### Groups
+
+Use `ComboboxGroup` and `ComboboxSeparator` to group items.
+
+<ComponentPreview name="combobox-groups" />
+
+### Custom Items
+
+You can render custom components inside `ComboboxItem`.
+
+<ComponentPreview name="combobox-custom-items" />
+
+### Invalid
+
+Use the `aria-invalid` prop to make the combobox invalid.
+
+<ComponentPreview name="combobox-invalid" />
+
+### Disabled
+
+Use the `disabled` prop to disable the combobox.
+
+<ComponentPreview name="combobox-disabled" />
+
+### Auto Highlight
+
+Use the `autoHighlight` prop to automatically highlight the first item on filter.
+
+<ComponentPreview name="combobox-auto-highlight" />
+
+### Popup
+
+You can trigger the combobox from a button or any other component by using the `render` prop.
+
+<ComponentPreview name="combobox-popup" />
+
+### Input Group
+
+You can add an addon to the combobox by using the `InputGroupAddon` component inside the `ComboboxInput`.
+
+<ComponentPreview name="combobox-input-group" />
+
+## API Reference
+
+### Combobox
+
+The `Combobox` component is the root container for the combobox.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>items</TableCell>
+      <TableCell>Array&lt;T&gt;</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>value</TableCell>
+      <TableCell>T | T[]</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>defaultValue</TableCell>
+      <TableCell>T | T[]</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>onValueChange</TableCell>
+      <TableCell>(value: T | T[]) => void</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>multiple</TableCell>
+      <TableCell>boolean</TableCell>
+      <TableCell>false</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>itemToStringValue</TableCell>
+      <TableCell>(item: T) => string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>autoHighlight</TableCell>
+      <TableCell>boolean</TableCell>
+      <TableCell>false</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>disabled</TableCell>
+      <TableCell>boolean</TableCell>
+      <TableCell>false</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>className</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+### ComboboxInput
+
+The `ComboboxInput` component displays the input field.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>placeholder</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>showClear</TableCell>
+      <TableCell>boolean</TableCell>
+      <TableCell>false</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>className</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+### ComboboxContent
+
+The `ComboboxContent` component wraps the dropdown content.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>className</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+### ComboboxList
+
+The `ComboboxList` component renders the list of items using a render prop.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>children</TableCell>
+      <TableCell>(item: T) => React.ReactNode</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>className</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+### ComboboxItem
+
+The `ComboboxItem` component represents a single item in the list.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>value</TableCell>
+      <TableCell>T</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>disabled</TableCell>
+      <TableCell>boolean</TableCell>
+      <TableCell>false</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>className</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+For more information, see the [Base UI documentation](https://baseui.com/docs/components/combobox).

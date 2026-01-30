@@ -1,0 +1,191 @@
+---
+title: Carousel
+description: A carousel with motion and swipe built using Embla.
+links:
+  api: https://www.embla-carousel.com/get-started/react/
+---
+
+<ComponentPreview name="carousel-demo" />
+
+## Usage
+
+```tsx
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@soar-design/soar-react-components"
+
+<Carousel>
+  <CarouselContent>
+    <CarouselItem>...</CarouselItem>
+    <CarouselItem>...</CarouselItem>
+    <CarouselItem>...</CarouselItem>
+  </CarouselContent>
+  <CarouselPrevious />
+  <CarouselNext />
+</Carousel>
+```
+
+## Examples
+
+### Sizes
+
+To set the size of the items, you can use the `basis` utility class on the `<CarouselItem />`.
+
+<ComponentPreview name="carousel-sizes" />
+
+### Spacing
+
+To set the spacing between the items, we use a `pl-[VALUE]` utility on the `<CarouselItem />` and a negative `-ml-[VALUE]` on the `<CarouselContent />`.
+
+<ComponentPreview name="carousel-spacing" />
+
+### Orientation
+
+Use the `orientation` prop to set the orientation of the carousel.
+
+<ComponentPreview name="carousel-orientation" />
+
+### API
+
+Use a state and the `setApi` prop to get an instance of the carousel API.
+
+<ComponentPreview name="carousel-api" />
+
+### Plugins
+
+You can use the `plugins` prop to add plugins to the carousel.
+
+<ComponentPreview name="carousel-plugin" />
+
+## API Reference
+
+### Carousel
+
+The `Carousel` component is the root container for the carousel.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>orientation</TableCell>
+      <TableCell>"horizontal" | "vertical"</TableCell>
+      <TableCell>"horizontal"</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>opts</TableCell>
+      <TableCell>EmblaOptionsType</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>plugins</TableCell>
+      <TableCell>EmblaPluginType[]</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>setApi</TableCell>
+      <TableCell>(api: CarouselApi) => void</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>className</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+### CarouselContent
+
+The `CarouselContent` component wraps all carousel items.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>className</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+### CarouselItem
+
+The `CarouselItem` component wraps individual carousel items.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>className</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+### CarouselPrevious
+
+The `CarouselPrevious` component displays the previous button.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>className</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+### CarouselNext
+
+The `CarouselNext` component displays the next button.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>className</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+For more information, see the [Embla Carousel documentation](https://www.embla-carousel.com/get-started/react/).

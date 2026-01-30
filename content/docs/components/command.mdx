@@ -1,0 +1,296 @@
+---
+title: Command
+description: Command menu for search and quick actions.
+links:
+  api: https://cmdk.paco.me/
+---
+
+<ComponentPreview name="command-demo" />
+
+## Usage
+
+```tsx
+import {
+  Command,
+  CommandDialog,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandSeparator,
+  CommandShortcut,
+} from "@soar-design/soar-react-components"
+
+<Command className="max-w-sm rounded-lg border">
+  <CommandInput placeholder="Type a command or search..." />
+  <CommandList>
+    <CommandEmpty>No results found.</CommandEmpty>
+    <CommandGroup heading="Suggestions">
+      <CommandItem>Calendar</CommandItem>
+      <CommandItem>Search Emoji</CommandItem>
+      <CommandItem>Calculator</CommandItem>
+    </CommandGroup>
+    <CommandSeparator />
+    <CommandGroup heading="Settings">
+      <CommandItem>Profile</CommandItem>
+      <CommandItem>Billing</CommandItem>
+      <CommandItem>Settings</CommandItem>
+    </CommandGroup>
+  </CommandList>
+</Command>
+```
+
+## Examples
+
+### Basic
+
+A simple command menu in a dialog.
+
+<ComponentPreview name="command-basic" />
+
+### Shortcuts
+
+A command menu with keyboard shortcuts.
+
+<ComponentPreview name="command-shortcuts" />
+
+### Groups
+
+A command menu with groups, icons and separators.
+
+<ComponentPreview name="command-groups" />
+
+### Scrollable
+
+Scrollable command menu with multiple items.
+
+<ComponentPreview name="command-scrollable" />
+
+## API Reference
+
+### Command
+
+The `Command` component is the root container for the command menu.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>className</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+### CommandDialog
+
+The `CommandDialog` component wraps the command menu in a dialog.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>open</TableCell>
+      <TableCell>boolean</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>onOpenChange</TableCell>
+      <TableCell>(open: boolean) => void</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>className</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+### CommandInput
+
+The `CommandInput` component displays the search input.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>placeholder</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>className</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+### CommandList
+
+The `CommandList` component wraps the command items.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>className</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+### CommandEmpty
+
+The `CommandEmpty` component displays when no results are found.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>className</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+### CommandGroup
+
+The `CommandGroup` component groups related command items.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>heading</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>className</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+### CommandItem
+
+The `CommandItem` component represents a single command item.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>onSelect</TableCell>
+      <TableCell>() => void</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>value</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>disabled</TableCell>
+      <TableCell>boolean</TableCell>
+      <TableCell>false</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>className</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+### CommandSeparator
+
+The `CommandSeparator` component displays a separator between groups.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>className</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+### CommandShortcut
+
+The `CommandShortcut` component displays keyboard shortcuts.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>className</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+For more information, see the [cmdk documentation](https://cmdk.paco.me/).

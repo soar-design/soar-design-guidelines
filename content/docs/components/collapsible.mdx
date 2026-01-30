@@ -1,0 +1,162 @@
+---
+title: Collapsible
+description: An interactive component which expands/collapses a panel.
+links:
+  api: https://www.radix-ui.com/primitives/docs/components/collapsible
+---
+
+<ComponentPreview name="collapsible-demo" />
+
+## Usage
+
+```tsx
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@soar-design/soar-react-components"
+
+<Collapsible>
+  <CollapsibleTrigger>Can I use this in my project?</CollapsibleTrigger>
+  <CollapsibleContent>
+    Yes. Free to use for personal and commercial projects. No attribution
+    required.
+  </CollapsibleContent>
+</Collapsible>
+```
+
+## Controlled State
+
+Use the `open` and `onOpenChange` props to control the state.
+
+```tsx
+import * as React from "react"
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@soar-design/soar-react-components"
+
+export function Example() {
+  const [open, setOpen] = React.useState(false)
+
+  return (
+    <Collapsible open={open} onOpenChange={setOpen}>
+      <CollapsibleTrigger>Toggle</CollapsibleTrigger>
+      <CollapsibleContent>Content</CollapsibleContent>
+    </Collapsible>
+  )
+}
+```
+
+## Examples
+
+### Basic
+
+A simple collapsible component with a trigger and content.
+
+<ComponentPreview name="collapsible-basic" />
+
+### Settings Panel
+
+Use a trigger button to reveal additional settings.
+
+<ComponentPreview name="collapsible-settings" />
+
+### File Tree
+
+Use nested collapsibles to build a file tree.
+
+<ComponentPreview name="collapsible-file-tree" />
+
+## API Reference
+
+### Collapsible
+
+The `Collapsible` component is the root container for the collapsible.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>open</TableCell>
+      <TableCell>boolean</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>defaultOpen</TableCell>
+      <TableCell>boolean</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>onOpenChange</TableCell>
+      <TableCell>(open: boolean) => void</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>disabled</TableCell>
+      <TableCell>boolean</TableCell>
+      <TableCell>false</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>className</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+### CollapsibleTrigger
+
+The `CollapsibleTrigger` component is used to toggle the collapsible.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>asChild</TableCell>
+      <TableCell>boolean</TableCell>
+      <TableCell>false</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>className</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+### CollapsibleContent
+
+The `CollapsibleContent` component contains the collapsible content.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>className</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+For more information, see the [Radix UI documentation](https://www.radix-ui.com/primitives/docs/components/collapsible).

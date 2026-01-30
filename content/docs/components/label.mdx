@@ -1,0 +1,33 @@
+---
+title: Label
+description: Renders an accessible label associated with controls.
+links:
+  api: https://www.radix-ui.com/primitives/docs/components/label
+---
+
+<ComponentPreview name="label-demo" />
+
+## Usage
+
+```tsx
+import { Label } from "@soar-design/soar-react-components"
+
+<Label htmlFor="email">Your email address</Label>
+```
+
+## Label in Field
+
+For form fields, use the `Field` component which includes built-in `FieldLabel`, `FieldDescription`, and `FieldError` components.
+
+```tsx
+<Field>
+  <FieldLabel htmlFor="email">Your email address</FieldLabel>
+  <Input id="email" />
+</Field>
+```
+
+<ComponentPreview name="label-field" />
+
+## API Reference
+
+See the [Radix UI Label](https://www.radix-ui.com/docs/primitives/components/label#api-reference) documentation for more information.

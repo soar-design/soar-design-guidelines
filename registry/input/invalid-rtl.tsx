@@ -1,0 +1,26 @@
+"use client"
+
+import * as React from "react"
+import {
+  DirectionProvider,
+  Field,
+  FieldDescription,
+  FieldLabel,
+  Input,
+} from "@soar-design/soar-react-components"
+
+export function InputInvalid() {
+  return (
+    <DirectionProvider dir="rtl">
+      <div className="w-full max-w-lg mx-auto flex justify-center">
+        <Field className="w-full max-w-xs" data-invalid>
+          <FieldLabel htmlFor="input-invalid">إدخال غير صالح</FieldLabel>
+          <Input id="input-invalid" placeholder="خطأ" aria-invalid />
+          <FieldDescription>
+            يحتوي هذا الحقل على أخطاء التحقق.
+          </FieldDescription>
+        </Field>
+      </div>
+    </DirectionProvider>
+  )
+}

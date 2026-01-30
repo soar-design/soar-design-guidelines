@@ -3,6 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
+  DirectionProvider,
 } from "@soar-design/soar-react-components"
 
 const items = [
@@ -28,17 +29,19 @@ const items = [
 
 export function AccordionMultiple() {
   return (
-    <Accordion
-      type="multiple"
-      className="w-full max-w-lg"
-      defaultValue={["notifications"]}
-    >
-      {items.map((item) => (
-        <AccordionItem key={item.value} value={item.value}>
-          <AccordionTrigger>{item.trigger}</AccordionTrigger>
-          <AccordionContent>{item.content}</AccordionContent>
-        </AccordionItem>
-      ))}
-    </Accordion>
+    <DirectionProvider dir="ltr">
+      <Accordion
+        type="multiple"
+        className="w-full max-w-lg"
+        defaultValue={["notifications"]}
+      >
+        {items.map((item) => (
+          <AccordionItem key={item.value} value={item.value}>
+            <AccordionTrigger>{item.trigger}</AccordionTrigger>
+            <AccordionContent>{item.content}</AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion>
+    </DirectionProvider>
   )
 }

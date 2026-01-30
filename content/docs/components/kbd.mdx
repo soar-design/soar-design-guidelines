@@ -1,0 +1,97 @@
+---
+title: Kbd
+description: Used to display textual user input from keyboard.
+links:
+  api: https://www.radix-ui.com/primitives/docs/components/kbd
+---
+
+<ComponentPreview name="kbd-demo" />
+
+## Usage
+
+```tsx
+import { Kbd } from "@soar-design/soar-react-components"
+
+<Kbd>Ctrl</Kbd>
+```
+
+## Examples
+
+### Group
+
+Use the `KbdGroup` component to group keyboard keys together.
+
+<ComponentPreview name="kbd-group" />
+
+### Button
+
+Use the `Kbd` component inside a `Button` component to display a keyboard key inside a button.
+
+<ComponentPreview name="kbd-button" />
+
+### Tooltip
+
+You can use the `Kbd` component inside a `Tooltip` component to display a tooltip with a keyboard key.
+
+<ComponentPreview name="kbd-tooltip" />
+
+### Input Group
+
+You can use the `Kbd` component inside a `InputGroupAddon` component to display a keyboard key inside an input group.
+
+<ComponentPreview name="kbd-input-group" />
+
+## API Reference
+
+### Kbd
+
+Use the `Kbd` component to display a keyboard key.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>className</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>``</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+```tsx
+<Kbd>Ctrl</Kbd>
+```
+
+### KbdGroup
+
+Use the `KbdGroup` component to group `Kbd` components together.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>className</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>``</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+```tsx
+<KbdGroup>
+  <Kbd>Ctrl</Kbd>
+  <Kbd>B</Kbd>
+</KbdGroup>
+```

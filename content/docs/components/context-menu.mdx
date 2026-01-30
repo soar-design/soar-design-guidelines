@@ -1,0 +1,203 @@
+---
+title: Context Menu
+description: Displays a menu of actions triggered by a right click.
+links:
+  api: https://www.radix-ui.com/primitives/docs/components/context-menu
+---
+
+<ComponentPreview name="context-menu-demo" />
+
+## Usage
+
+```tsx
+import {
+  ContextMenu,
+  ContextMenuContent,
+  ContextMenuItem,
+  ContextMenuTrigger,
+} from "@soar-design/soar-react-components"
+
+<ContextMenu>
+  <ContextMenuTrigger>Right click here</ContextMenuTrigger>
+  <ContextMenuContent>
+    <ContextMenuItem>Profile</ContextMenuItem>
+    <ContextMenuItem>Billing</ContextMenuItem>
+    <ContextMenuItem>Team</ContextMenuItem>
+    <ContextMenuItem>Subscription</ContextMenuItem>
+  </ContextMenuContent>
+</ContextMenu>
+```
+
+## Examples
+
+### Basic
+
+A simple context menu with a few actions.
+
+<ComponentPreview name="context-menu-basic" />
+
+### Submenu
+
+Use `ContextMenuSub` to nest secondary actions.
+
+<ComponentPreview name="context-menu-submenu" />
+
+### Shortcuts
+
+Add `ContextMenuShortcut` to show keyboard hints.
+
+<ComponentPreview name="context-menu-shortcuts" />
+
+### Groups
+
+Group related actions and separate them with dividers.
+
+<ComponentPreview name="context-menu-groups" />
+
+### Icons
+
+Combine icons with labels for quick scanning.
+
+<ComponentPreview name="context-menu-icons" />
+
+### Checkboxes
+
+Use `ContextMenuCheckboxItem` for toggles.
+
+<ComponentPreview name="context-menu-checkboxes" />
+
+### Radio
+
+Use `ContextMenuRadioItem` for exclusive choices.
+
+<ComponentPreview name="context-menu-radio" />
+
+### Destructive
+
+Use `variant="destructive"` to style the menu item as destructive.
+
+<ComponentPreview name="context-menu-destructive" />
+
+### Sides
+
+Control submenu placement with side and align props.
+
+<ComponentPreview name="context-menu-sides" />
+
+## API Reference
+
+### ContextMenu
+
+The `ContextMenu` component is the root container for the context menu.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>className</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+### ContextMenuTrigger
+
+The `ContextMenuTrigger` component triggers the context menu on right click.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>asChild</TableCell>
+      <TableCell>boolean</TableCell>
+      <TableCell>false</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>className</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+### ContextMenuContent
+
+The `ContextMenuContent` component wraps the menu items.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>side</TableCell>
+      <TableCell>"top" | "right" | "bottom" | "left"</TableCell>
+      <TableCell>"bottom"</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>align</TableCell>
+      <TableCell>"start" | "center" | "end"</TableCell>
+      <TableCell>"start"</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>className</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+### ContextMenuItem
+
+The `ContextMenuItem` component represents a single menu item.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>onSelect</TableCell>
+      <TableCell>(event: Event) => void</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>disabled</TableCell>
+      <TableCell>boolean</TableCell>
+      <TableCell>false</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>variant</TableCell>
+      <TableCell>"default" | "destructive"</TableCell>
+      <TableCell>"default"</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>className</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+For more information, see the [Radix UI documentation](https://www.radix-ui.com/primitives/docs/components/context-menu).

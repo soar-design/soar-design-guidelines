@@ -1,0 +1,234 @@
+---
+title: Chart
+description: Beautiful charts built using Recharts.
+links:
+  api: https://recharts.org/en-US/
+---
+
+<ComponentPreview name="chart-demo" />
+
+## Usage
+
+```tsx
+import { Bar, BarChart } from "recharts"
+import {
+  ChartContainer,
+  ChartTooltip,
+  ChartTooltipContent,
+} from "@soar-design/soar-react-components"
+
+<ChartContainer config={chartConfig} className="min-h-[200px] w-full">
+  <BarChart data={chartData}>
+    <Bar dataKey="value" />
+    <ChartTooltip content={<ChartTooltipContent />} />
+  </BarChart>
+</ChartContainer>
+```
+
+## Examples
+
+### Bar Chart
+
+A basic bar chart with grid, axis, tooltip, and legend.
+
+<ComponentPreview name="chart-demo" />
+
+## Chart Config
+
+The chart config is where you define the labels, icons and colors for a chart.
+
+```tsx
+import { type ChartConfig } from "@soar-design/soar-react-components"
+
+const chartConfig = {
+  desktop: {
+    label: "Desktop",
+    color: "#2563eb",
+  },
+  mobile: {
+    label: "Mobile",
+    color: "#60a5fa",
+  },
+} satisfies ChartConfig
+```
+
+## Theming
+
+Charts have built-in support for theming. You can use CSS variables (recommended) or color values in any color format, such as hex, hsl or oklch.
+
+### CSS Variables
+
+Define your colors in your CSS file:
+
+```css
+@layer base {
+  :root {
+    --chart-1: oklch(0.646 0.222 41.116);
+    --chart-2: oklch(0.6 0.118 184.704);
+  }
+
+  .dark {
+    --chart-1: oklch(0.488 0.243 264.376);
+    --chart-2: oklch(0.696 0.17 162.48);
+  }
+}
+```
+
+Then use them in your chart config:
+
+```tsx
+const chartConfig = {
+  desktop: {
+    label: "Desktop",
+    color: "var(--chart-1)",
+  },
+  mobile: {
+    label: "Mobile",
+    color: "var(--chart-2)",
+  },
+} satisfies ChartConfig
+```
+
+## API Reference
+
+### ChartContainer
+
+The `ChartContainer` component wraps your Recharts chart.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>config</TableCell>
+      <TableCell>ChartConfig</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>className</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+### ChartTooltip
+
+The `ChartTooltip` component wraps the Recharts Tooltip component.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>content</TableCell>
+      <TableCell>React.ReactElement</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>labelKey</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>nameKey</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+### ChartTooltipContent
+
+The `ChartTooltipContent` component displays the tooltip content.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>indicator</TableCell>
+      <TableCell>"dot" | "line" | "dashed"</TableCell>
+      <TableCell>"dot"</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>hideLabel</TableCell>
+      <TableCell>boolean</TableCell>
+      <TableCell>false</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>hideIndicator</TableCell>
+      <TableCell>boolean</TableCell>
+      <TableCell>false</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>labelKey</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>nameKey</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+### ChartLegend
+
+The `ChartLegend` component wraps the Recharts Legend component.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>content</TableCell>
+      <TableCell>React.ReactElement</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+### ChartLegendContent
+
+The `ChartLegendContent` component displays the legend content.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>nameKey</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+For more information, see the [Recharts documentation](https://recharts.org/en-US/).

@@ -8,7 +8,6 @@ import {
   TabsTrigger,
   TabsContent,
   Toggle,
-  DirectionProvider,
 } from "@soar-design/soar-react-components";
 import { registry } from "@/registry";
 
@@ -87,45 +86,43 @@ export function ComponentPreviewTabs({
           isSidebarComponent && "overflow-hidden",
         )}
       >
-        <DirectionProvider dir={isRTL ? "rtl" : "ltr"}>
-          <div
-            ref={previewRef}
-            className={cn(
-              "min-h-[350px]",
-              isSidebarComponent
-                ? "p-0 isolate"
-                : "p-10 flex items-center justify-center",
-            )}
-            dir={isRTL ? "rtl" : "ltr"}
-            onKeyDownCapture={
-              isSidebarComponent
-                ? (e) => {
-                    if ((e.metaKey || e.ctrlKey) && e.key === "b") {
-                      e.stopPropagation();
-                    }
+        <div
+          ref={previewRef}
+          className={cn(
+            "min-h-[350px]",
+            isSidebarComponent
+              ? "p-0 isolate"
+              : "p-10 flex items-center justify-center",
+          )}
+          dir={isRTL ? "rtl" : "ltr"}
+          onKeyDownCapture={
+            isSidebarComponent
+              ? (e) => {
+                  if ((e.metaKey || e.ctrlKey) && e.key === "b") {
+                    e.stopPropagation();
                   }
-                : undefined
-            }
-            // For sidebar components, use CSS containment to isolate
-            style={
-              isSidebarComponent
-                ? {
-                    isolation: "isolate",
-                    contain: "layout style paint",
-                  }
-                : undefined
-            }
-          >
-            {Component ? (
-              <Component key={isRTL ? `${name}-rtl` : name} />
-            ) : (
-              <div className="text-muted-foreground text-sm">
-                Component <code className="bg-muted rounded p-1">{name}</code>{" "}
-                not found in registry.
-              </div>
-            )}
-          </div>
-        </DirectionProvider>
+                }
+              : undefined
+          }
+          // For sidebar components, use CSS containment to isolate
+          style={
+            isSidebarComponent
+              ? {
+                  isolation: "isolate",
+                  contain: "layout style paint",
+                }
+              : undefined
+          }
+        >
+          {Component ? (
+            <Component key={isRTL ? `${name}-rtl` : name} />
+          ) : (
+            <div className="text-muted-foreground text-sm">
+              Component <code className="bg-muted rounded p-1">{name}</code>{" "}
+              not found in registry.
+            </div>
+          )}
+        </div>
       </TabsContent>
       <TabsContent value="code" key={`code-${isRTL ? "rtl" : "ltr"}`}>
         {codeBlock}

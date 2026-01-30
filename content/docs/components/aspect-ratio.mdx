@@ -1,0 +1,65 @@
+---
+title: Aspect Ratio
+description: Displays content within a desired ratio.
+links:
+  api: https://www.radix-ui.com/primitives/docs/components/aspect-ratio
+---
+
+<ComponentPreview name="aspect-ratio-demo" />
+
+## Usage
+
+```tsx
+import { AspectRatio } from "@soar-design/soar-react-components"
+
+<AspectRatio ratio={16 / 9}>
+  <Image src="..." alt="Image" className="rounded-md object-cover" />
+</AspectRatio>
+```
+
+## Examples
+
+### Square
+
+A square aspect ratio component using the `ratio={1 / 1}` prop. This is useful for displaying images in a square format.
+
+<ComponentPreview name="aspect-ratio-square" />
+
+### Portrait
+
+A portrait aspect ratio component using the `ratio={9 / 16}` prop. This is useful for displaying images in a portrait format.
+
+<ComponentPreview name="aspect-ratio-portrait" />
+
+## API Reference
+
+### AspectRatio
+
+The `AspectRatio` component displays content within a desired ratio.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+      <TableHead>Required</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>ratio</TableCell>
+      <TableCell>number</TableCell>
+      <TableCell>-</TableCell>
+      <TableCell>Yes</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>className</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+      <TableCell>No</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+For more information, see the Radix UI documentation.

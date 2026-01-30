@@ -1,0 +1,123 @@
+---
+title: Checkbox
+description: A control that allows the user to toggle between checked and not checked.
+links:
+  api: https://www.radix-ui.com/primitives/docs/components/checkbox
+---
+
+<ComponentPreview name="checkbox-demo" />
+
+## Usage
+
+```tsx
+import { Checkbox } from "@soar-design/soar-react-components"
+
+<Checkbox />
+```
+
+## Checked State
+
+Use `defaultChecked` for uncontrolled checkboxes, or `checked` and `onCheckedChange` to control the state.
+
+```tsx
+import * as React from "react"
+import { Checkbox } from "@soar-design/soar-react-components"
+
+export function Example() {
+  const [checked, setChecked] = React.useState(false)
+
+  return <Checkbox checked={checked} onCheckedChange={setChecked} />
+}
+```
+
+## Invalid State
+
+Set `aria-invalid` on the checkbox and `data-invalid` on the field wrapper to show the invalid styles.
+
+<ComponentPreview name="checkbox-invalid" />
+
+## Examples
+
+### Basic
+
+Pair the checkbox with `Field` and `FieldLabel` for proper layout and labeling.
+
+<ComponentPreview name="checkbox-basic" />
+
+### Description
+
+Use `FieldContent` and `FieldDescription` for helper text.
+
+<ComponentPreview name="checkbox-description" />
+
+### Disabled
+
+Use the `disabled` prop to prevent interaction and add the `data-disabled` attribute to the `<Field>` component for disabled styles.
+
+<ComponentPreview name="checkbox-disabled" />
+
+### Group
+
+Use multiple fields to create a checkbox list.
+
+<ComponentPreview name="checkbox-group" />
+
+## API Reference
+
+### Checkbox
+
+The `Checkbox` component is a control that allows the user to toggle between checked and not checked.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>checked</TableCell>
+      <TableCell>boolean</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>defaultChecked</TableCell>
+      <TableCell>boolean</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>onCheckedChange</TableCell>
+      <TableCell>(checked: boolean) => void</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>disabled</TableCell>
+      <TableCell>boolean</TableCell>
+      <TableCell>false</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>required</TableCell>
+      <TableCell>boolean</TableCell>
+      <TableCell>false</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>name</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>value</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>className</TableCell>
+      <TableCell>string</TableCell>
+      <TableCell>-</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+For more information, see the [Radix UI documentation](https://www.radix-ui.com/primitives/docs/components/checkbox).

@@ -1,0 +1,238 @@
+---
+title: Item
+description: A versatile component for displaying content with media, title, description, and actions.
+links:
+  api: https://www.radix-ui.com/primitives/docs/components/item
+---
+
+<ComponentPreview name="item-demo" />
+
+## Usage
+
+```tsx
+import {
+  Item,
+  ItemActions,
+  ItemContent,
+  ItemDescription,
+  ItemMedia,
+  ItemTitle,
+} from "@soar-design/soar-react-components"
+
+<Item>
+  <ItemMedia variant="icon">
+    <Icon />
+  </ItemMedia>
+  <ItemContent>
+    <ItemTitle>Title</ItemTitle>
+    <ItemDescription>Description</ItemDescription>
+  </ItemContent>
+  <ItemActions>
+    <Button>Action</Button>
+  </ItemActions>
+</Item>
+```
+
+## Item vs Field
+
+Use `Field` if you need to display a form input such as a checkbox, input, radio, or select.
+
+If you only need to display content such as a title, description, and actions, use `Item`.
+
+## Variant
+
+Use the `variant` prop to change the visual style of the item.
+
+<ComponentPreview name="item-variant" />
+
+## Size
+
+Use the `size` prop to change the size of the item. Available sizes are `default` and `sm`.
+
+<ComponentPreview name="item-size" />
+
+## Examples
+
+### Icon
+
+Use `ItemMedia` with `variant="icon"` to display an icon.
+
+<ComponentPreview name="item-icon" />
+
+### Avatar
+
+You can use `ItemMedia` with `variant="avatar"` to display an avatar.
+
+<ComponentPreview name="item-avatar" />
+
+### Image
+
+Use `ItemMedia` with `variant="image"` to display an image.
+
+<ComponentPreview name="item-image" />
+
+### Group
+
+Use `ItemGroup` to group related items together.
+
+<ComponentPreview name="item-group" />
+
+### Header
+
+Use `ItemHeader` to add a header above the item content.
+
+<ComponentPreview name="item-header" />
+
+### Link
+
+Use the `asChild` prop to render the item as a link. The hover and focus states will be applied to the anchor element.
+
+<ComponentPreview name="item-link" />
+
+## API Reference
+
+### Item
+
+The main component for displaying content with media, title, description, and actions.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>variant</TableCell>
+      <TableCell>"default" | "outline" | "muted"</TableCell>
+      <TableCell>"default"</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>size</TableCell>
+      <TableCell>"default" | "sm"</TableCell>
+      <TableCell>"default"</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>asChild</TableCell>
+      <TableCell>boolean</TableCell>
+      <TableCell>false</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+### ItemGroup
+
+A container that groups related items together with consistent styling.
+
+```tsx
+<ItemGroup>
+  <Item />
+  <Item />
+</ItemGroup>
+```
+
+### ItemSeparator
+
+A separator between items in a group.
+
+```tsx
+<ItemGroup>
+  <Item />
+  <ItemSeparator />
+  <Item />
+</ItemGroup>
+```
+
+### ItemMedia
+
+Use `ItemMedia` to display media content such as icons, images, or avatars.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>variant</TableCell>
+      <TableCell>"default" | "icon" | "image"</TableCell>
+      <TableCell>"default"</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>
+
+```tsx
+<ItemMedia variant="icon">
+  <Icon />
+</ItemMedia>
+```
+
+```tsx
+<ItemMedia variant="image">
+  <img src="..." alt="..." />
+</ItemMedia>
+```
+
+### ItemContent
+
+Wraps the title and description of the item.
+
+```tsx
+<ItemContent>
+  <ItemTitle>Title</ItemTitle>
+  <ItemDescription>Description</ItemDescription>
+</ItemContent>
+```
+
+### ItemTitle
+
+Displays the title of the item.
+
+```tsx
+<ItemTitle>Item Title</ItemTitle>
+```
+
+### ItemDescription
+
+Displays the description of the item.
+
+```tsx
+<ItemDescription>Item description</ItemDescription>
+```
+
+### ItemActions
+
+Container for action buttons or other interactive elements.
+
+```tsx
+<ItemActions>
+  <Button>Action</Button>
+</ItemActions>
+```
+
+### ItemHeader
+
+Displays a header above the item content.
+
+```tsx
+<Item>
+  <ItemHeader>Header</ItemHeader>
+  <ItemContent>...</ItemContent>
+</Item>
+```
+
+### ItemFooter
+
+Displays a footer below the item content.
+
+```tsx
+<Item>
+  <ItemContent>...</ItemContent>
+  <ItemFooter>Footer</ItemFooter>
+</Item>
+```

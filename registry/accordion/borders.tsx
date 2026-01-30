@@ -3,6 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
+  DirectionProvider,
 } from "@soar-design/soar-react-components"
 
 const items = [
@@ -28,22 +29,24 @@ const items = [
 
 export function AccordionBorders() {
   return (
-    <Accordion
-      type="single"
-      collapsible
-      className="w-full max-w-lg rounded-lg border"
-      defaultValue="billing"
-    >
-      {items.map((item) => (
-        <AccordionItem
-          key={item.value}
-          value={item.value}
-          className="border-b px-4 last:border-b-0"
-        >
-          <AccordionTrigger>{item.trigger}</AccordionTrigger>
-          <AccordionContent>{item.content}</AccordionContent>
-        </AccordionItem>
-      ))}
-    </Accordion>
+    <DirectionProvider dir="ltr">
+      <Accordion
+        type="single"
+        collapsible
+        className="w-full max-w-lg rounded-lg border"
+        defaultValue="billing"
+      >
+        {items.map((item) => (
+          <AccordionItem
+            key={item.value}
+            value={item.value}
+            className="border-b px-4 last:border-b-0"
+          >
+            <AccordionTrigger>{item.trigger}</AccordionTrigger>
+            <AccordionContent>{item.content}</AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion>
+    </DirectionProvider>
   )
 }

@@ -1,0 +1,90 @@
+"use client"
+
+import * as React from "react"
+import {
+  Button,
+  Calendar,
+  CalendarDayButton,
+  Card,
+  CardContent,
+  CardFooter,
+  DirectionProvider,
+} from "@soar-design/soar-react-components"
+import { addDays } from "date-fns"
+import { type DayButton } from "react-day-picker"
+
+function ConsistentDayButton({
+  day,
+  ...props
+}: React.ComponentProps<typeof DayButton>) {
+  const formattedDate = day.date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  })
+
+  return (
+    <CalendarDayButton
+      day={day}
+      {...props}
+      data-day={formattedDate}
+    />
+  )
+}
+
+export function CalendarWithPresets() {
+  const [date, setDate] = React.useState<Date | undefined>(
+    new Date(new Date().getFullYear(), 1, 12)
+  )
+  const [currentMonth, setCurrentMonth] = React.useState<Date>(
+    new Date(new Date().getFullYear(), new Date().getMonth(), 1)
+  )
+
+  return (
+    <DirectionProvider dir="rtl">
+      <div className="w-full max-w-lg mx-auto flex justify-center">
+        <Card className="mx-auto w-fit max-w-[300px]" size="sm">
+          <CardContent>
+            <Calendar
+              mode="single"
+              selected={date}
+              onSelect={setDate}
+              month={currentMonth}
+              onMonthChange={setCurrentMonth}
+              fixedWeeks
+              className="p-0 [--cell-size:--spacing(9.5)]"
+              components={{
+                DayButton: ConsistentDayButton,
+              }}
+            />
+          </CardContent>
+          <CardFooter className="flex flex-wrap gap-2 border-t">
+            {[
+              { label: "اليوم", value: 0 },
+              { label: "غداً", value: 1 },
+              { label: "بعد 3 أيام", value: 3 },
+              { label: "بعد أسبوع", value: 7 },
+              { label: "بعد أسبوعين", value: 14 },
+            ].map((preset) => (
+              <Button
+                key={preset.value}
+                variant="outline"
+                size="sm"
+                className="flex-1"
+                onClick={() => {
+                  const newDate = addDays(new Date(), preset.value)
+                  setDate(newDate)
+                  setCurrentMonth(
+                    new Date(newDate.getFullYear(), newDate.getMonth(), 1)
+                  )
+                }}
+              >
+                {preset.label}
+              </Button>
+            ))}
+          </CardFooter>
+        </Card>
+      </div>
+    </DirectionProvider>
+  )
+}

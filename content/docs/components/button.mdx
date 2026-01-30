@@ -1,0 +1,124 @@
+---
+title: Button
+description: Displays a button or a component that looks like a button.
+links:
+  api: https://www.radix-ui.com/primitives/docs/components/button
+---
+
+<ComponentPreview name="button-demo" />
+
+## Usage
+
+```tsx
+import { Button } from "@soar-design/soar-react-components"
+
+<Button variant="outline">Button</Button>
+```
+
+## Cursor
+
+Tailwind v4 switched from `cursor: pointer` to `cursor: default` for the button component.
+
+If you want to keep the `cursor: pointer` behavior, add the following code to your CSS file:
+
+```css
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+```
+
+## Examples
+
+### Size
+
+Use the `size` prop to change the size of the button.
+
+<ComponentPreview name="button-size" />
+
+### Default
+
+<ComponentPreview name="button-default" />
+
+### Outline
+
+<ComponentPreview name="button-outline" />
+
+### Secondary
+
+<ComponentPreview name="button-secondary" />
+
+### Ghost
+
+<ComponentPreview name="button-ghost" />
+
+### Destructive
+
+<ComponentPreview name="button-destructive" />
+
+### Link
+
+<ComponentPreview name="button-link" />
+
+### Icon
+
+<ComponentPreview name="button-icon" />
+
+### With Icon
+
+Remember to add the `data-icon="inline-start"` or `data-icon="inline-end"` attribute to the icon for the correct spacing.
+
+<ComponentPreview name="button-with-icon" />
+
+### Spinner
+
+Render a `<Spinner />` component inside the button to show a loading state. Remember to add the `data-icon="inline-start"` or `data-icon="inline-end"` attribute to the spinner for the correct spacing.
+
+<ComponentPreview name="button-spinner" />
+
+### Button Group
+
+To create a button group, use the `ButtonGroup` component. See the Button Group documentation for more details.
+
+<ComponentPreview name="button-group" />
+
+### Link
+
+You can use the `asChild` prop on `<Button />` to make another component look like a button. Here's an example of a link that looks like a button.
+
+<ComponentPreview name="button-as-link" />
+
+## API Reference
+
+### Button
+
+The `Button` component is a wrapper around the `button` element that adds a variety of styles and functionality.
+
+<PropsTable>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Prop</TableHead>
+      <TableHead>Type</TableHead>
+      <TableHead>Default</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>variant</TableCell>
+      <TableCell>"default" | "outline" | "ghost" | "destructive" | "secondary" | "link"</TableCell>
+      <TableCell>"default"</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>size</TableCell>
+      <TableCell>"default" | "xs" | "sm" | "lg" | "icon" | "icon-xs" | "icon-sm" | "icon-lg"</TableCell>
+      <TableCell>"default"</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>asChild</TableCell>
+      <TableCell>boolean</TableCell>
+      <TableCell>false</TableCell>
+    </TableRow>
+  </TableBody>
+</PropsTable>

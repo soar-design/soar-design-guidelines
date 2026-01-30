@@ -1,0 +1,17 @@
+import { Alert, AlertDescription, AlertTitle, DirectionProvider } from "@soar-design/soar-react-components"
+import { AlertCircleIcon } from "lucide-react"
+
+export function AlertDestructive() {
+  return (
+    <DirectionProvider dir="ltr">
+      <Alert variant="destructive" className="w-full max-w-md">
+        <AlertCircleIcon />
+        <AlertTitle>Payment failed</AlertTitle>
+        <AlertDescription>
+          Your payment could not be processed. Please check your payment method
+          and try again.
+        </AlertDescription>
+      </Alert>
+    </DirectionProvider>
+  )
+}

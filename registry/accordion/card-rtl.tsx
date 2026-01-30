@@ -3,6 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
+  DirectionProvider,
 } from "@soar-design/soar-react-components"
 import {
   Card,
@@ -35,23 +36,25 @@ const items = [
 
 export function AccordionCard() {
   return (
-    <Card className="w-full max-w-lg">
-      <CardHeader>
-        <CardTitle>الاشتراك والفوترة</CardTitle>
-        <CardDescription>
-          أسئلة شائعة حول حسابك والخطط والمدفوعات والإلغاءات.
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <Accordion type="single" collapsible defaultValue="plans">
-          {items.map((item) => (
-            <AccordionItem key={item.value} value={item.value}>
-              <AccordionTrigger>{item.trigger}</AccordionTrigger>
-              <AccordionContent>{item.content}</AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </CardContent>
-    </Card>
+    <DirectionProvider dir="rtl">
+      <Card className="w-full max-w-lg">
+        <CardHeader>
+          <CardTitle>الاشتراك والفوترة</CardTitle>
+          <CardDescription>
+            أسئلة شائعة حول حسابك والخطط والمدفوعات والإلغاءات.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <Accordion type="single" collapsible defaultValue="plans">
+            {items.map((item) => (
+              <AccordionItem key={item.value} value={item.value}>
+                <AccordionTrigger>{item.trigger}</AccordionTrigger>
+                <AccordionContent>{item.content}</AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </CardContent>
+      </Card>
+    </DirectionProvider>
   )
 }
