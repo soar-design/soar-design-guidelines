@@ -34,7 +34,7 @@ export function CalendarCaption() {
         <Calendar
           mode="single"
           captionLayout="dropdown"
-          className="rounded-lg border"
+          className="rounded-3xl border"
           components={{
             DayButton: ConsistentDayButton,
           }}

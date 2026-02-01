@@ -69,7 +69,7 @@ const countries = [
 export function ComboboxPopup() {
   return (
     <DirectionProvider dir="rtl">
-      <div className="w-full max-w-lg mx-auto">
+      <div className="w-full max-w-lg mx-auto flex justify-center">
         <Combobox items={countries} defaultValue={countries[0]}>
           <ComboboxTrigger render={<Button variant="outline" className="w-64 justify-between font-normal"><ComboboxValue /></Button>} />
           <ComboboxContent>

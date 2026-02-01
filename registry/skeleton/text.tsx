@@ -1,0 +1,18 @@
+"use client"
+
+import {
+  DirectionProvider,
+  Skeleton,
+} from "@soar-design/soar-react-components"
+
+export function SkeletonText() {
+  return (
+    <DirectionProvider dir="ltr">
+      <div className="flex w-full max-w-xs flex-col gap-2">
+        <Skeleton className="h-4 w-full" />
+        <Skeleton className="h-4 w-full" />
+        <Skeleton className="h-4 w-3/4" />
+      </div>
+    </DirectionProvider>
+  )
+}

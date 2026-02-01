@@ -19,7 +19,7 @@ export function MenubarSubmenu() {
   return (
     <DirectionProvider dir="ltr">
       <div className="w-full max-w-lg mx-auto flex justify-center">
-        <Menubar className="w-72">
+        <Menubar>
           <MenubarMenu>
             <MenubarTrigger>File</MenubarTrigger>
             <MenubarContent>

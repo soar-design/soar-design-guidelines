@@ -44,7 +44,7 @@ export function CalendarWithPresets() {
     <DirectionProvider dir="rtl">
       <div className="w-full max-w-lg mx-auto flex justify-center">
         <Card className="mx-auto w-fit max-w-[300px]" size="sm">
-          <CardContent>
+          <CardContent className="p-0">
             <Calendar
               mode="single"
               selected={date}
@@ -52,7 +52,7 @@ export function CalendarWithPresets() {
               month={currentMonth}
               onMonthChange={setCurrentMonth}
               fixedWeeks
-              className="p-0 [--cell-size:--spacing(9.5)]"
+              className="[--cell-size:--spacing(10)]"
               components={{
                 DayButton: ConsistentDayButton,
               }}

@@ -1,0 +1,49 @@
+---
+title: Tooltip
+description: A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.
+links:
+  api: https://www.radix-ui.com/primitives/docs/components/tooltip
+---
+
+<ComponentPreview name="tooltip-demo" />
+
+## Usage
+
+```tsx
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@soar-design/soar-react-components"
+
+<Tooltip>
+  <TooltipTrigger>Hover</TooltipTrigger>
+  <TooltipContent>
+    <p>Add to library</p>
+  </TooltipContent>
+</Tooltip>
+```
+
+## Examples
+
+### Side
+
+Use the `side` prop to change the position of the tooltip.
+
+<ComponentPreview name="tooltip-side" />
+
+### With Keyboard Shortcut
+
+Add keyboard shortcuts to your tooltips using the `Kbd` component.
+
+<ComponentPreview name="tooltip-keyboard-shortcut" />
+
+### Disabled Button
+
+Show a tooltip on a disabled button by wrapping it with a span.
+
+<ComponentPreview name="tooltip-disabled-button" />
+
+## API Reference
+
+See the Radix Tooltip documentation for more information.

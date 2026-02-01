@@ -92,7 +92,7 @@ export function PropertyCard({ property }: PropertyCardProps) {
   };
 
   return (
-    <Card className="rounded-2xl p-2 w-full overflow-hidden">
+    <Card className="p-2 w-full overflow-hidden">
       <CardContent className="p-0">
         {/* Image Section */}
         <div className="bg-muted rounded-xl relative aspect-[4/3] overflow-hidden">
@@ -160,11 +160,10 @@ export function PropertyCard({ property }: PropertyCardProps) {
                 aria-label="Save property"
               >
                 <Bookmark
-                  className={`size-4 ${
-                    isSaved
-                      ? "fill-green-500 text-green-500"
-                      : "text-muted-foreground"
-                  }`}
+                  className={`size-4 ${isSaved
+                    ? "fill-green-500 text-green-500"
+                    : "text-muted-foreground"
+                    }`}
                 />
               </Button>
             </TooltipTrigger>

@@ -33,7 +33,7 @@ export function CalendarBasic() {
       <div className="w-full max-w-lg mx-auto flex justify-center">
         <Calendar
           mode="single"
-          className="rounded-lg border"
+          className="rounded-3xl border"
           components={{
             DayButton: ConsistentDayButton,
           }}

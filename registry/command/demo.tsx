@@ -21,8 +21,8 @@ import {
 export function CommandDemo() {
   return (
     <DirectionProvider dir="ltr">
-      <div className="w-full max-w-lg mx-auto">
-        <Command className="max-w-sm rounded-lg border">
+      <div className="w-full max-w-lg mx-auto flex justify-center">
+        <Command className="max-w-sm border">
           <CommandInput placeholder="Type a command or search..." />
           <CommandList>
             <CommandEmpty>No results found.</CommandEmpty>

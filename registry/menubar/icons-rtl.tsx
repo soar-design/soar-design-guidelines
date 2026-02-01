@@ -25,7 +25,7 @@ export function MenubarIcons() {
   return (
     <DirectionProvider dir="rtl">
       <div className="w-full max-w-lg mx-auto flex justify-center">
-        <Menubar className="w-72">
+        <Menubar>
           <MenubarMenu>
             <MenubarTrigger>ملف</MenubarTrigger>
             <MenubarContent>

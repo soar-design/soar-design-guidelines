@@ -1,303 +1,395 @@
 "use client"
 
 import * as React from "react"
+import Image from "next/image"
+import { useTheme } from "next-themes"
+import { Badge } from "@soar-design/soar-react-components"
 import { Button } from "@soar-design/soar-react-components"
-import { Checkbox } from "@soar-design/soar-react-components"
-import { Input } from "@soar-design/soar-react-components"
-import { Label } from "@soar-design/soar-react-components"
-import { RadioGroup, RadioGroupItem } from "@soar-design/soar-react-components"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@soar-design/soar-react-components"
+import { Tabs, TabsList, TabsTrigger } from "@soar-design/soar-react-components"
+import { Avatar, AvatarFallback, AvatarImage } from "@soar-design/soar-react-components"
 import { Separator } from "@soar-design/soar-react-components"
-import { Field, FieldDescription, FieldLabel } from "@soar-design/soar-react-components"
-import { InputGroup, InputGroupAddon, InputGroupButton, InputGroupInput } from "@soar-design/soar-react-components"
-import { ChevronDown, Trash2 } from "lucide-react"
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+} from "@soar-design/soar-react-components"
+import {
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from "@soar-design/soar-react-components"
+import {
+    DirectionProvider,
+} from "@soar-design/soar-react-components"
+import {
+    Star,
+    Bookmark,
+    BedDouble,
+    Bath,
+    Home,
+    Map,
+    MapPin,
+    EllipsisVertical,
+    Eye,
+    Share,
+    Sun,
+    Moon,
+    Monitor,
+    Languages,
+} from "lucide-react"
+import propertiesData from "../data/properties.json"
 
-interface OrderItem {
-    id: string
+interface Property {
+    id: number
     name: string
-    color: string
-    size: string
+    address: string
+    beds: number
+    baths: number
+    area: string
+    type: string
+    status: string
     price: string
-    quantity: number
+    currency: string
+    terms: string
+    developer: string
+    recentlyAdded: boolean
+    image?: string
+    companyAvatar?: string
 }
 
-interface DeliveryMethod {
-    id: string
-    label: string
-    description: string
+interface AllPropertiesProps {
+    properties?: Property[]
 }
 
-interface PaymentMethod {
-    id: string
-    label: string
+const translations = {
+    en: {
+        title: "All Properties",
+        tabs: {
+            all: "All",
+            ready: "Ready",
+            offPlan: "Off Plan",
+        },
+        recentlyAdded: "Recently Added",
+        bookmark: "Bookmark",
+        viewDetails: "View Details",
+        share: "Share",
+        moreOptions: "More options",
+        currency: "SAR/month",
+        areaUnit: "sqm",
+        status: {
+            "Ready to Move": "Ready to Move",
+            "Off Plan": "Off Plan",
+        },
+        propertyType: {
+            Villa: "Villa",
+            Townhouse: "Townhouse",
+            Apartment: "Apartment",
+            Penthouse: "Penthouse",
+            Duplex: "Duplex",
+        },
+        language: {
+            english: "English",
+            arabic: "العربية",
+        },
+        theme: {
+            light: "Light",
+            dark: "Dark",
+            system: "System",
+        },
+        paymentTerms: {
+            "With 30% down payment over 5 years": "With 30% down payment over 5 years",
+            "With 20% down payment over 7 years": "With 20% down payment over 7 years",
+            "With 25% down payment over 4 years": "With 25% down payment over 4 years",
+            "With 35% down payment over 6 years": "With 35% down payment over 6 years",
+            "With 30% down payment over 4 years": "With 30% down payment over 4 years",
+            "With 20% down payment over 3 years": "With 20% down payment over 3 years",
+            "With 25% down payment over 6 years": "With 25% down payment over 6 years",
+        },
+    },
+    ar: {
+        title: "جميع العقارات",
+        tabs: {
+            all: "الكل",
+            ready: "جاهز",
+            offPlan: "قيد الإنشاء",
+        },
+        recentlyAdded: "مضاف حديثاً",
+        bookmark: "حفظ",
+        viewDetails: "عرض التفاصيل",
+        share: "مشاركة",
+        moreOptions: "خيارات إضافية",
+        currency: "ريال/شهر",
+        areaUnit: "م²",
+        status: {
+            "Ready to Move": "جاهز للسكن",
+            "Off Plan": "قيد الإنشاء",
+        },
+        propertyType: {
+            Villa: "فيلا",
+            Townhouse: "تاونهوس",
+            Apartment: "شقة",
+            Penthouse: "بنتهاوس",
+            Duplex: "دوبلكس",
+        },
+        language: {
+            english: "English",
+            arabic: "العربية",
+        },
+        theme: {
+            light: "فاتح",
+            dark: "داكن",
+            system: "النظام",
+        },
+        paymentTerms: {
+            "With 30% down payment over 5 years": "بدفعة أولية 30% على 5 سنوات",
+            "With 20% down payment over 7 years": "بدفعة أولية 20% على 7 سنوات",
+            "With 25% down payment over 4 years": "بدفعة أولية 25% على 4 سنوات",
+            "With 35% down payment over 6 years": "بدفعة أولية 35% على 6 سنوات",
+            "With 30% down payment over 4 years": "بدفعة أولية 30% على 4 سنوات",
+            "With 20% down payment over 3 years": "بدفعة أولية 20% على 3 سنوات",
+            "With 25% down payment over 6 years": "بدفعة أولية 25% على 6 سنوات",
+        },
+    },
 }
 
-interface BreakpointDesktopProps {
-    orderItems?: OrderItem[]
-    deliveryMethods?: DeliveryMethod[]
-    paymentMethods?: PaymentMethod[]
-}
+// Transform JSON data to match Property interface
+const defaultProperties: Property[] = propertiesData.map((property) => {
+    // Get the first image (either from image or images array)
+    const firstImage = property.image || (property.images && property.images[0]) || "https://ui.shadcn.com/placeholder.svg"
 
-const defaultOrderItems: OrderItem[] = [
-    { id: "1", name: "Urban Runner Pro", color: "Navy Blue", size: "US 10", price: "$89.99", quantity: 1 },
-    { id: "2", name: "Classic Timepiece", color: "Silver", size: "42mm", price: "$149.99", quantity: 1 },
-    { id: "3", name: "Travel Explorer Pack", color: "Charcoal Gray", size: "One Size", price: "$64.99", quantity: 1 },
-    { id: "4", name: "Premium Camera", color: "Black", size: "Standard", price: "$299.99", quantity: 1 },
-    { id: "5", name: "Wireless Headphones", color: "Matte Black", size: "One Size", price: "$79.99", quantity: 1 }
-]
+    return {
+        id: parseInt(property.id),
+        name: property.name,
+        address: property.location,
+        beds: property.bedrooms,
+        baths: property.bathrooms,
+        area: property.area.toString(), // Store as number string, will add unit with translation
+        type: property.type,
+        status: property.status,
+        price: property.price.toLocaleString(),
+        currency: "SAR/month", // Will be overridden with translation
+        terms: property.paymentTerms,
+        developer: property.companyName,
+        recentlyAdded: property.isRecentlyAdded || false,
+        image: firstImage,
+        companyAvatar: property.companyAvatar,
+    }
+})
 
-const defaultDeliveryMethods: DeliveryMethod[] = [
-    { id: "standard", label: "Standard", description: "4–10 business days · $8.00" },
-    { id: "express", label: "Express", description: "2-5 business days · $24.00" }
-]
+export default function AllProperties({
+    properties = defaultProperties,
+}: AllPropertiesProps) {
+    const [mounted, setMounted] = React.useState(false)
+    const [selectedTab, setSelectedTab] = React.useState("all")
+    const [language, setLanguage] = React.useState<"en" | "ar">("en")
+    const { theme, setTheme } = useTheme()
+    const t = translations[language]
+    const isRTL = language === "ar"
 
-const defaultPaymentMethods: PaymentMethod[] = [
-    { id: "credit", label: "Credit card" },
-    { id: "paypal", label: "PayPal" },
-    { id: "crypto", label: "Cryptocurrency" }
-]
+    // Prevent hydration mismatch
+    React.useEffect(() => {
+        setMounted(true)
+    }, [])
 
-export default function BreakpointDesktop({
-    orderItems = defaultOrderItems,
-    deliveryMethods = defaultDeliveryMethods,
-    paymentMethods = defaultPaymentMethods
-}: BreakpointDesktopProps) {
-    const [deliveryMethod, setDeliveryMethod] = React.useState("standard")
-    const [paymentMethod, setPaymentMethod] = React.useState("credit")
-    const [sameAsShipping, setSameAsShipping] = React.useState(true)
+    // Filter properties based on selected tab
+    const filteredProperties = React.useMemo(() => {
+        if (selectedTab === "all") {
+            return properties
+        } else if (selectedTab === "ready") {
+            return properties.filter((property) => property.status === "Ready to Move")
+        } else if (selectedTab === "off-plan") {
+            return properties.filter((property) => property.status === "Off Plan")
+        }
+        return properties
+    }, [properties, selectedTab])
 
     return (
-        <div className="min-h-screen bg-muted/60 py-16">
-            <div className="mx-auto max-w-7xl px-6">
-                <div className="flex gap-10 flex-row lg:items-start lg:gap-16">
-                    <div className="w-full lg:flex-1">
-                        <div className="rounded-3xl border bg-card p-6 shadow-sm">
-                            <div className="flex flex-col gap-7">
-                                <div className="flex flex-col gap-6">
-                                    <div className="flex flex-col">
-                                        <h2 className="pb-3 text-base font-medium leading-6 text-foreground">Contact information</h2>
-                                        <p className="text-sm leading-5 text-muted-foreground">We'll use this email to send you order confirmations and updates</p>
-                                    </div>
-                                    <Field>
-                                        <FieldLabel htmlFor="email">Email address</FieldLabel>
-                                        <Input id="email" placeholder="johndoe@mail.com" />
-                                    </Field>
-                                </div>
-
-                                <Separator />
-
-                                <div className="flex flex-col gap-6">
-                                    <div className="flex flex-col">
-                                        <h2 className="pb-3 text-base font-medium leading-6 text-foreground">Shipping information</h2>
-                                        <p className="text-sm leading-5 text-muted-foreground">Enter the address where you want your order delivered</p>
-                                    </div>
-                                    <div className="flex flex-col gap-6 lg:grid lg:grid-cols-2 lg:gap-4">
-                                        <Field>
-                                            <FieldLabel htmlFor="firstName">First Name</FieldLabel>
-                                            <Input id="firstName" placeholder="John" />
-                                        </Field>
-                                        <Field>
-                                            <FieldLabel htmlFor="lastName">Last Name</FieldLabel>
-                                            <Input id="lastName" placeholder="Doe" />
-                                        </Field>
-                                    </div>
-                                    <Field>
-                                        <FieldLabel htmlFor="company">Company</FieldLabel>
-                                        <Input id="company" />
-                                    </Field>
-                                    <Field>
-                                        <FieldLabel htmlFor="address">Address</FieldLabel>
-                                        <Input id="address" />
-                                    </Field>
-                                    <Field>
-                                        <FieldLabel htmlFor="apartment">Apartment, suite, etc.</FieldLabel>
-                                        <Input id="apartment" />
-                                    </Field>
-                                    <div className="flex flex-col gap-6 lg:grid lg:grid-cols-2 lg:gap-4">
-                                        <Field>
-                                            <FieldLabel htmlFor="city">City</FieldLabel>
-                                            <Input id="city" placeholder="London" />
-                                        </Field>
-                                        <Field>
-                                            <FieldLabel htmlFor="country">Country</FieldLabel>
-                                            <Select defaultValue="uk">
-                                                <SelectTrigger id="country">
-                                                    <SelectValue />
-                                                </SelectTrigger>
-                                                <SelectContent>
-                                                    <SelectItem value="uk">United Kingdom</SelectItem>
-                                                    <SelectItem value="us">United States</SelectItem>
-                                                </SelectContent>
-                                            </Select>
-                                        </Field>
-                                    </div>
-                                    <div className="flex flex-col gap-6 lg:grid lg:grid-cols-2 lg:gap-4">
-                                        <Field>
-                                            <FieldLabel htmlFor="state">State / Province</FieldLabel>
-                                            <Input id="state" />
-                                        </Field>
-                                        <Field>
-                                            <FieldLabel htmlFor="postal">Postal code</FieldLabel>
-                                            <Input id="postal" />
-                                        </Field>
-                                    </div>
-                                    <Field>
-                                        <FieldLabel htmlFor="phone">Phone</FieldLabel>
-                                        <Input id="phone" />
-                                    </Field>
-                                </div>
-
-                                <Separator />
-
-                                <div className="flex flex-col gap-6">
-                                    <div className="flex flex-col">
-                                        <h2 className="pb-3 text-base font-medium leading-6 text-foreground">Billing address</h2>
-                                        <p className="text-sm leading-5 text-muted-foreground">The billing address associated with your payment method</p>
-                                    </div>
+        <DirectionProvider dir={isRTL ? "rtl" : "ltr"}>
+            <div className="flex min-h-screen w-full flex-col items-center bg-background pt-20" dir={isRTL ? "rtl" : "ltr"}>
+                <div className="flex w-full max-w-[1280px] flex-col gap-6 px-4 md:px-0">
+                    <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-start">
+                        <h1 className="text-4xl font-bold leading-[100%] text-foreground">
+                            {t.title}
+                        </h1>
+                        <div className="flex items-center gap-3 w-full md:w-auto">
+                            <Tabs value={selectedTab} onValueChange={setSelectedTab} className="w-full md:w-auto">
+                                <TabsList className="w-full md:w-[400px]">
+                                    <TabsTrigger value="all" className="flex-1 md:w-[161px]">
+                                        {t.tabs.all}
+                                    </TabsTrigger>
+                                    <TabsTrigger value="ready" className="flex-1 md:w-[161px]">
+                                        {t.tabs.ready}
+                                    </TabsTrigger>
+                                    <TabsTrigger value="off-plan" className="flex-1 md:w-[70px]">
+                                        {t.tabs.offPlan}
+                                    </TabsTrigger>
+                                </TabsList>
+                            </Tabs>
+                            <Select value={language} onValueChange={(value) => setLanguage(value as "en" | "ar")}>
+                                <SelectTrigger className="w-[120px]">
                                     <div className="flex items-center gap-2">
-                                        <Checkbox id="sameAddress" checked={sameAsShipping} onCheckedChange={(checked) => setSameAsShipping(checked as boolean)} />
-                                        <Label htmlFor="sameAddress" className="font-normal">Same as shipping address</Label>
+                                        <Languages className="h-4 w-4" />
+                                        <SelectValue />
                                     </div>
-                                </div>
-
-                                <Separator />
-
-                                <div className="flex flex-col gap-3">
-                                    <div className="flex flex-col">
-                                        <h2 className="pb-3 text-base font-medium leading-6 text-foreground">Delivery method</h2>
-                                        <p className="text-sm leading-5 text-muted-foreground">Choose how you want to receive your order</p>
-                                    </div>
-                                    <RadioGroup value={deliveryMethod} onValueChange={setDeliveryMethod}>
-                                        {deliveryMethods.map((method) => (
-                                            <Label key={method.id} htmlFor={method.id} className="cursor-pointer">
-                                                <div className="flex items-start gap-3 rounded-2xl border p-4 data-[state=checked]:border-primary data-[state=checked]:bg-primary/5" data-state={deliveryMethod === method.id ? "checked" : "unchecked"}>
-                                                    <div className="flex flex-1 flex-col gap-1.5">
-                                                        <div className="text-sm font-medium leading-none">{method.label}</div>
-                                                        <div className="text-sm leading-5 text-muted-foreground">{method.description}</div>
-                                                    </div>
-                                                    <RadioGroupItem value={method.id} id={method.id} className="mt-0.5" />
-                                                </div>
-                                            </Label>
-                                        ))}
-                                    </RadioGroup>
-                                </div>
-
-                                <Separator />
-
-                                <div className="flex flex-col gap-6">
-                                    <div className="flex flex-col">
-                                        <h2 className="pb-3 text-base font-medium leading-6 text-foreground">Payment</h2>
-                                        <p className="text-sm leading-5 text-muted-foreground">All transactions are secure and encrypted</p>
-                                    </div>
-                                    <RadioGroup value={paymentMethod} onValueChange={setPaymentMethod}>
-                                        {paymentMethods.map((method) => (
-                                            <Label key={method.id} htmlFor={`payment-${method.id}`} className="cursor-pointer">
-                                                <div className="flex items-center gap-3 rounded-2xl border p-4 data-[state=checked]:border-primary data-[state=checked]:bg-primary/5" data-state={paymentMethod === method.id ? "checked" : "unchecked"}>
-                                                    <div className="flex-1 text-sm font-medium leading-none">{method.label}</div>
-                                                    <RadioGroupItem value={method.id} id={`payment-${method.id}`} />
-                                                </div>
-                                            </Label>
-                                        ))}
-                                    </RadioGroup>
-                                    {paymentMethod === "credit" && (
-                                        <div className="flex flex-col gap-6">
-                                            <Field>
-                                                <FieldLabel htmlFor="cardNumber">Card number</FieldLabel>
-                                                <Input id="cardNumber" />
-                                                <FieldDescription>Enter your 16-digit card number</FieldDescription>
-                                            </Field>
-                                            <Field>
-                                                <FieldLabel htmlFor="cardName">Name on card</FieldLabel>
-                                                <Input id="cardName" placeholder="John Doe" />
-                                            </Field>
-                                            <div className="flex flex-col gap-6 lg:grid lg:gap-4" style={{ gridTemplateColumns: "1fr auto" }}>
-                                                <Field>
-                                                    <FieldLabel htmlFor="expiration">Expiration date (MM/YY)</FieldLabel>
-                                                    <Input id="expiration" />
-                                                </Field>
-                                                <Field>
-                                                    <FieldLabel htmlFor="cvc">CVC</FieldLabel>
-                                                    <Input id="cvc" className="w-full lg:w-24" />
-                                                </Field>
-                                            </div>
-                                        </div>
-                                    )}
-                                </div>
-
-                                <Button size="default" className="w-full lg:hidden">Confirm order</Button>
-                            </div>
+                                </SelectTrigger>
+                                <SelectContent>
+                                    <SelectItem value="en">{translations.en.language.english}</SelectItem>
+                                    <SelectItem value="ar">{translations.en.language.arabic}</SelectItem>
+                                </SelectContent>
+                            </Select>
+                            {mounted && (
+                                <Tabs value={theme || "system"} onValueChange={(value) => setTheme(value)}>
+                                    <TabsList className="h-9 px-1 rounded-full border border-border">
+                                        <TabsTrigger value="light" className="rounded-full" title={t.theme.light}>
+                                            <Sun className="h-4 w-4" />
+                                        </TabsTrigger>
+                                        <TabsTrigger value="dark" className="rounded-full" title={t.theme.dark}>
+                                            <Moon className="h-4 w-4" />
+                                        </TabsTrigger>
+                                        <TabsTrigger value="system" className="rounded-full" title={t.theme.system}>
+                                            <Monitor className="h-4 w-4" />
+                                        </TabsTrigger>
+                                    </TabsList>
+                                </Tabs>
+                            )}
                         </div>
                     </div>
 
-                    <div className="w-full lg:sticky lg:top-16 lg:flex-1">
-                        <div className="flex flex-col">
-                            <h2 className="mb-8 text-xl font-semibold leading-7 tracking-tight text-foreground lg:text-2xl lg:leading-8">Order summary</h2>
-                            <div className="flex flex-col">
-                                <div className="flex flex-col">
-                                    {orderItems.map((item, index) => (
-                                        <div key={item.id} className="flex gap-6 border-b py-4 lg:py-6">
-                                            <img src="https://ui.shadcn.com/placeholder.svg" alt={item.name} className="size-20 shrink-0 rounded-lg object-cover" />
-                                            <div className="flex min-w-0 flex-1 flex-col gap-2">
-                                                <div className="flex items-start gap-4">
-                                                    <div className="flex min-w-0 flex-1 flex-col justify-center gap-1">
-                                                        <div className="text-sm font-medium leading-5 text-foreground">{item.name}</div>
-                                                        <div className="text-xs leading-4 text-muted-foreground">{item.color}</div>
-                                                        <div className="text-xs leading-4 text-muted-foreground">{item.size}</div>
-                                                    </div>
-                                                    <Button variant="ghost" size="icon" className="shrink-0">
-                                                        <Trash2 />
-                                                        <span className="sr-only">Remove item</span>
-                                                    </Button>
-                                                </div>
-                                                <div className="flex items-center justify-between gap-4">
-                                                    <div className="text-sm font-medium leading-5 text-foreground">{item.price}</div>
-                                                    <Select defaultValue={item.quantity.toString()}>
-                                                        <SelectTrigger className="w-16">
-                                                            <SelectValue />
-                                                        </SelectTrigger>
-                                                        <SelectContent>
-                                                            <SelectItem value="1">1</SelectItem>
-                                                            <SelectItem value="2">2</SelectItem>
-                                                            <SelectItem value="3">3</SelectItem>
-                                                        </SelectContent>
-                                                    </Select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                                <div className="border-t pt-4">
-                                    <InputGroup>
-                                        <InputGroupInput placeholder="Enter code" />
-                                        <InputGroupAddon align="inline-end">
-                                            <InputGroupButton size="xs" variant="ghost">Apply</InputGroupButton>
-                                        </InputGroupAddon>
-                                    </InputGroup>
-                                    <div className="flex flex-col gap-4 py-6">
-                                        <div className="flex items-center justify-between gap-2">
-                                            <div className="text-sm leading-5 text-muted-foreground">Subtotal</div>
-                                            <div className="text-sm font-medium leading-5 text-foreground">$683.95</div>
-                                        </div>
-                                        <div className="flex items-center justify-between gap-2">
-                                            <div className="text-sm leading-5 text-muted-foreground">Shipping</div>
-                                            <div className="text-sm font-medium leading-5 text-foreground">$8.00</div>
-                                        </div>
-                                        <div className="flex items-center justify-between gap-2">
-                                            <div className="text-sm leading-5 text-muted-foreground">Taxes</div>
-                                            <div className="text-sm font-medium leading-5 text-foreground">$55.00</div>
-                                        </div>
-                                        <div className="flex items-center justify-between gap-2 border-t pt-4">
-                                            <div className="text-base font-semibold leading-6 text-foreground">Total</div>
-                                            <div className="text-base font-semibold leading-6 text-foreground">$746.95</div>
+                    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                        {filteredProperties.map((property) => (
+                            <div
+                                key={property.id}
+                                className="flex flex-col gap-6 rounded-3xl border border-border bg-card p-4"
+                            >
+                                <div className="flex flex-col gap-4">
+                                    <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
+                                        <Image
+                                            src={property.image || "https://ui.shadcn.com/placeholder.svg"}
+                                            alt={property.name}
+                                            fill
+                                            className="object-cover"
+                                        />
+                                        {property.recentlyAdded && (
+                                            <Badge
+                                                variant="secondary"
+                                                className="absolute start-2 top-2 gap-1"
+                                            >
+                                                {t.recentlyAdded}
+                                                <Star className="h-3 w-3" />
+                                            </Badge>
+                                        )}
+                                        <Button
+                                            variant="outline"
+                                            size="sm"
+                                            className="absolute end-2 top-2 h-8 w-8 p-0"
+                                            aria-label={t.bookmark}
+                                        >
+                                            <Bookmark className="h-4 w-4" />
+                                        </Button>
+                                        <div className="absolute bottom-2 start-2 flex items-center">
+                                            <Badge variant="secondary" className={isRTL ? "rounded-e-full rounded-s-none" : "rounded-l-full rounded-r-none"}>
+                                                <BedDouble className="h-3 w-3" />
+                                                {property.beds}
+                                            </Badge>
+                                            <Separator orientation="vertical" className="h-5" />
+                                            <Badge variant="secondary" className="rounded-none">
+                                                <Bath className="h-3 w-3" />
+                                                {property.baths}
+                                            </Badge>
+                                            <Separator orientation="vertical" className="h-5" />
+                                            <Badge variant="secondary" className={isRTL ? "rounded-e-none rounded-s-full" : "rounded-l-none rounded-r-full"}>
+                                                {property.area} {t.areaUnit}
+                                            </Badge>
                                         </div>
                                     </div>
-                                    <Button size="default" className="hidden w-full lg:flex">Confirm order</Button>
+
+                                    <div className="flex flex-col gap-3">
+                                        <div className="flex flex-col gap-1">
+                                            <h2 className="text-lg font-semibold leading-7 text-foreground">
+                                                {property.name}
+                                            </h2>
+                                            <div className="flex items-center gap-1 text-muted-foreground">
+                                                <MapPin className="h-4 w-4 shrink-0" />
+                                                <p className="text-sm leading-5">{property.address}</p>
+                                            </div>
+                                        </div>
+
+                                        <div className="flex items-center gap-2">
+                                            <Badge variant="secondary">
+                                                <Home className="h-3 w-3" />
+                                                {t.propertyType[property.type as keyof typeof t.propertyType] || property.type}
+                                            </Badge>
+                                            <Badge variant="secondary">
+                                                <Map className="h-3 w-3" />
+                                                {t.status[property.status as keyof typeof t.status] || property.status}
+                                            </Badge>
+                                        </div>
+
+                                        <div className="flex items-center gap-1.5">
+                                            <Avatar className="size-5">
+                                                <AvatarImage src={property.companyAvatar} />
+                                                <AvatarFallback>
+                                                    {property.developer
+                                                        .split(" ")
+                                                        .map((word) => word[0])
+                                                        .join("")
+                                                        .toUpperCase()
+                                                        .slice(0, 2)}
+                                                </AvatarFallback>
+                                            </Avatar>
+                                            <span className="text-sm leading-5 text-muted-foreground">
+                                                {property.developer}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-center justify-between border-t border-border pt-6">
+                                    <div className="flex flex-col gap-0.5">
+                                        <div className="flex items-center gap-1">
+                                            <span className="text-xl font-bold leading-7 text-foreground">
+                                                {property.price}
+                                            </span>
+                                            <span className="text-lg leading-7 text-foreground">
+                                                {t.currency}
+                                            </span>
+                                        </div>
+                                        <p className="text-xs leading-4 text-muted-foreground">
+                                            {t.paymentTerms[property.terms as keyof typeof t.paymentTerms] || property.terms}
+                                        </p>
+                                    </div>
+
+                                    <DropdownMenu>
+                                        <DropdownMenuTrigger asChild>
+                                            <Button
+                                                variant="ghost"
+                                                size="icon"
+                                                className="h-10 w-10 rounded-full"
+                                                aria-label={t.moreOptions}
+                                            >
+                                                <EllipsisVertical />
+                                            </Button>
+                                        </DropdownMenuTrigger>
+                                        <DropdownMenuContent align="end" className="w-52">
+                                            <DropdownMenuItem>
+                                                <Eye />
+                                                {t.viewDetails}
+                                            </DropdownMenuItem>
+                                            <DropdownMenuItem>
+                                                <Share />
+                                                {t.share}
+                                            </DropdownMenuItem>
+                                        </DropdownMenuContent>
+                                    </DropdownMenu>
                                 </div>
                             </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </div>
-        </div>
+        </DirectionProvider>
     )
 }

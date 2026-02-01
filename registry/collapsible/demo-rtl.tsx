@@ -30,16 +30,16 @@ export function CollapsibleDemo() {
               </Button>
             </CollapsibleTrigger>
           </div>
-          <div className="flex items-center justify-between rounded-md border px-4 py-2 text-sm">
+          <div className="flex items-center justify-between rounded-xl border px-4 py-2 text-sm">
             <span className="text-muted-foreground">الحالة</span>
             <span className="font-medium">تم الشحن</span>
           </div>
           <CollapsibleContent className="flex flex-col gap-2">
-            <div className="rounded-md border px-4 py-2 text-sm">
+            <div className="rounded-xl border px-4 py-2 text-sm">
               <p className="font-medium">عنوان الشحن</p>
               <p className="text-muted-foreground">100 Market St, San Francisco</p>
             </div>
-            <div className="rounded-md border px-4 py-2 text-sm">
+            <div className="rounded-xl border px-4 py-2 text-sm">
               <p className="font-medium">العناصر</p>
               <p className="text-muted-foreground">2x سماعات الاستوديو</p>
             </div>

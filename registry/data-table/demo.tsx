@@ -113,7 +113,7 @@ export const columns: ColumnDef<Payment>[] = [
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
           Email
-          <ArrowUpDown className="h-4 w-4 ml-2" />
+          <ArrowUpDown className="h-4 w-4 ms-2" />
         </Button>
       )
     },
@@ -121,7 +121,7 @@ export const columns: ColumnDef<Payment>[] = [
   },
   {
     accessorKey: "amount",
-    header: () => <div className="text-right">Amount</div>,
+    header: () => <div className="text-end">Amount</div>,
     cell: ({ row }) => {
       const amount = parseFloat(row.getValue("amount"))
 
@@ -131,7 +131,7 @@ export const columns: ColumnDef<Payment>[] = [
         currency: "USD",
       }).format(amount)
 
-      return <div className="text-right font-medium">{formatted}</div>
+      return <div className="text-end font-medium">{formatted}</div>
     },
   },
   {
@@ -210,8 +210,8 @@ export function DataTableDemo() {
           />
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline" className="ml-auto">
-                Columns <ChevronDown className="h-4 w-4 ml-2" />
+              <Button variant="outline" className="ms-auto">
+                Columns <ChevronDown className="h-4 w-4 ms-2" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
@@ -237,7 +237,7 @@ export function DataTableDemo() {
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
-        <div className="overflow-hidden rounded-md border">
+        <div className="overflow-hidden rounded-xl border">
           <Table>
             <TableHeader>
               {table.getHeaderGroups().map((headerGroup) => (

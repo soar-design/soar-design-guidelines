@@ -20,7 +20,7 @@ export function MenubarRadio() {
   return (
     <DirectionProvider dir="rtl">
       <div className="w-full max-w-lg mx-auto flex justify-center">
-        <Menubar className="w-72">
+        <Menubar>
           <MenubarMenu>
             <MenubarTrigger>الملفات الشخصية</MenubarTrigger>
             <MenubarContent>

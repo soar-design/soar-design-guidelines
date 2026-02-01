@@ -63,7 +63,7 @@ export function FieldDemo() {
                       الشهر
                     </FieldLabel>
                     <Select defaultValue="">
-                      <SelectTrigger id="checkout-exp-month-ts6">
+                      <SelectTrigger id="checkout-exp-month-ts6" className="w-full">
                         <SelectValue placeholder="MM" />
                       </SelectTrigger>
                       <SelectContent>
@@ -89,7 +89,7 @@ export function FieldDemo() {
                       السنة
                     </FieldLabel>
                     <Select defaultValue="">
-                      <SelectTrigger id="checkout-7j9-exp-year-f59">
+                      <SelectTrigger id="checkout-7j9-exp-year-f59" className="w-full">
                         <SelectValue placeholder="YYYY" />
                       </SelectTrigger>
                       <SelectContent>
@@ -106,7 +106,7 @@ export function FieldDemo() {
                   </Field>
                   <Field>
                     <FieldLabel htmlFor="checkout-7j9-cvv">CVV</FieldLabel>
-                    <Input id="checkout-7j9-cvv" placeholder="123" required />
+                    <Input id="checkout-7j9-cvv" placeholder="123" className="w-full" required />
                   </Field>
                 </div>
               </FieldGroup>

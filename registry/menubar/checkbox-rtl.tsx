@@ -17,7 +17,7 @@ export function MenubarCheckbox() {
   return (
     <DirectionProvider dir="rtl">
       <div className="w-full max-w-lg mx-auto flex justify-center">
-        <Menubar className="w-72">
+        <Menubar>
           <MenubarMenu>
             <MenubarTrigger>عرض</MenubarTrigger>
             <MenubarContent className="w-64">

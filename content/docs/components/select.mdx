@@ -1,0 +1,65 @@
+---
+title: Select
+description: Displays a list of options for the user to pick from—triggered by a button.
+links:
+  api: https://ui.shadcn.com/docs/components/radix/select
+---
+
+<ComponentPreview name="select-demo" />
+
+## Usage
+
+```tsx
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@soar-design/soar-react-components"
+
+<Select>
+  <SelectTrigger className="w-[180px]">
+    <SelectValue placeholder="Theme" />
+  </SelectTrigger>
+  <SelectContent>
+    <SelectItem value="light">Light</SelectItem>
+    <SelectItem value="dark">Dark</SelectItem>
+    <SelectItem value="system">System</SelectItem>
+  </SelectContent>
+</Select>
+```
+
+## Examples
+
+### Align Item With Trigger
+
+Use the `position` prop on `SelectContent` to control alignment. When `position="item-aligned"` (default), the popup positions so the selected item appears over the trigger. When `position="popper"`, the popup aligns to the trigger edge.
+
+<ComponentPreview name="select-align" />
+
+### Groups
+
+Use `SelectGroup`, `SelectLabel`, and `SelectSeparator` to organize items.
+
+<ComponentPreview name="select-groups" />
+
+### Scrollable
+
+A select with many items that scrolls.
+
+<ComponentPreview name="select-scrollable" />
+
+### Disabled
+
+<ComponentPreview name="select-disabled" />
+
+### Invalid
+
+Add the `data-invalid` attribute to the `Field` component and the `aria-invalid` attribute to the `SelectTrigger` component to show an error state.
+
+<ComponentPreview name="select-invalid" />
+
+## API Reference
+
+See the [Radix UI Select](https://www.radix-ui.com/docs/primitives/components/select#api-reference) documentation for more information.

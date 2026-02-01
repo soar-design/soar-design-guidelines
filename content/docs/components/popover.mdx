@@ -1,0 +1,57 @@
+---
+title: Popover
+description: Displays rich content in a portal, triggered by a button.
+links:
+  api: https://ui.shadcn.com/docs/components/radix/popover
+---
+
+<ComponentPreview name="popover-demo" />
+
+## Usage
+
+```tsx
+import {
+  Popover,
+  PopoverContent,
+  PopoverDescription,
+  PopoverHeader,
+  PopoverTitle,
+  PopoverTrigger,
+} from "@soar-design/soar-react-components"
+
+<Popover>
+  <PopoverTrigger asChild>
+    <Button variant="outline">Open Popover</Button>
+  </PopoverTrigger>
+  <PopoverContent>
+    <PopoverHeader>
+      <PopoverTitle>Title</PopoverTitle>
+      <PopoverDescription>Description text here.</PopoverDescription>
+    </PopoverHeader>
+  </PopoverContent>
+</Popover>
+```
+
+## Examples
+
+### Basic
+
+A simple popover with a header, title, and description.
+
+<ComponentPreview name="popover-basic" />
+
+### Align
+
+Use the `align` prop on `PopoverContent` to control the horizontal alignment.
+
+<ComponentPreview name="popover-align" />
+
+### With Form
+
+A popover with form fields inside.
+
+<ComponentPreview name="popover-form" />
+
+## API Reference
+
+See the [Radix UI Popover](https://www.radix-ui.com/docs/primitives/components/popover#api-reference) documentation for more information.

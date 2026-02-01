@@ -28,7 +28,7 @@ export function ComboboxMultiple() {
 
   return (
     <DirectionProvider dir="ltr">
-      <div className="w-full max-w-lg mx-auto">
+      <div className="w-full max-w-lg mx-auto flex justify-center">
         <Combobox
           multiple
           autoHighlight
