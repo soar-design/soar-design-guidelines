@@ -45,7 +45,7 @@ export function CalendarWithTime() {
   return (
     <DirectionProvider dir="rtl">
       <div className="w-full max-w-lg mx-auto flex justify-center">
-        <Card size="sm" className="mx-auto w-fit">
+        <Card className="mx-auto w-fit">
           <CardContent>
             <Calendar
               mode="single"

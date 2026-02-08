@@ -28,7 +28,7 @@ export function EmptyMuted() {
             </EmptyDescription>
           </EmptyHeader>
           <EmptyContent>
-            <Button variant="outline">
+            <Button variant="secondary">
               <RefreshCcwIcon />
               تحديث
             </Button>

@@ -33,7 +33,7 @@ export function InputFieldgroup() {
               </FieldDescription>
             </Field>
             <Field orientation="horizontal">
-              <Button type="reset" variant="outline">
+              <Button type="reset" variant="secondary">
                 إعادة تعيين
               </Button>
               <Button type="submit">إرسال</Button>

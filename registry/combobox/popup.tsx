@@ -71,7 +71,7 @@ export function ComboboxPopup() {
     <DirectionProvider dir="ltr">
       <div className="w-full max-w-lg mx-auto flex justify-center">
         <Combobox items={countries} defaultValue={countries[0]}>
-          <ComboboxTrigger render={<Button variant="outline" className="w-64 justify-between font-normal"><ComboboxValue /></Button>} />
+          <ComboboxTrigger render={<Button variant="secondary" className="w-64 justify-between font-normal"><ComboboxValue /></Button>} />
           <ComboboxContent>
             <ComboboxInput showTrigger={false} placeholder="Search" />
             <ComboboxEmpty>No items found.</ComboboxEmpty>

@@ -18,7 +18,7 @@ export function InputButtonGroup() {
           <FieldLabel htmlFor="input-button-group">بحث</FieldLabel>
           <ButtonGroup>
             <Input id="input-button-group" placeholder="اكتب للبحث..." />
-            <Button variant="outline">بحث</Button>
+            <Button variant="secondary">بحث</Button>
           </ButtonGroup>
         </Field>
       </div>

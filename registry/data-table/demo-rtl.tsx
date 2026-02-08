@@ -217,7 +217,7 @@ export function DataTableDemo() {
           />
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline" className="me-auto">
+              <Button variant="secondary" className="me-auto">
                 الأعمدة <ChevronDown className="h-4 w-4 me-2" />
               </Button>
             </DropdownMenuTrigger>
@@ -308,7 +308,7 @@ export function DataTableDemo() {
           </div>
           <div className="space-x-2">
             <Button
-              variant="outline"
+              variant="secondary"
               size="sm"
               onClick={() => table.previousPage()}
               disabled={!table.getCanPreviousPage()}
@@ -316,7 +316,7 @@ export function DataTableDemo() {
               السابق
             </Button>
             <Button
-              variant="outline"
+              variant="secondary"
               size="sm"
               onClick={() => table.nextPage()}
               disabled={!table.getCanNextPage()}

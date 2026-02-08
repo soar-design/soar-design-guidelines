@@ -25,7 +25,7 @@ export function CollapsibleSettings() {
   return (
     <DirectionProvider dir="ltr">
       <div className="w-full max-w-lg mx-auto">
-        <Card className="mx-auto w-full max-w-xs" size="sm">
+        <Card className="mx-auto w-full max-w-xs">
           <CardHeader>
             <CardTitle>Radius</CardTitle>
             <CardDescription>Set the corner radius of the element.</CardDescription>
@@ -65,7 +65,7 @@ export function CollapsibleSettings() {
                 </CollapsibleContent>
               </FieldGroup>
               <CollapsibleTrigger asChild>
-                <Button variant="outline" size="icon">
+                <Button variant="secondary" size="icon">
                   {isOpen ? <Minimize2 /> : <Maximize2 />}
                 </Button>
               </CollapsibleTrigger>

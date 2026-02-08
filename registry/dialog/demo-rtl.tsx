@@ -23,7 +23,7 @@ export function DialogDemo() {
         <Dialog>
           <form>
             <DialogTrigger asChild>
-              <Button variant="outline">فتح الحوار</Button>
+              <Button variant="secondary">فتح الحوار</Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px]">
               <DialogHeader>
@@ -44,7 +44,7 @@ export function DialogDemo() {
               </div>
               <DialogFooter>
                 <DialogClose asChild>
-                  <Button variant="outline">إلغاء</Button>
+                  <Button variant="secondary">إلغاء</Button>
                 </DialogClose>
                 <Button type="submit">حفظ التغييرات</Button>
               </DialogFooter>

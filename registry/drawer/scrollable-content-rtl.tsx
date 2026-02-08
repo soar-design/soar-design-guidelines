@@ -20,7 +20,7 @@ export function DrawerScrollableContent() {
       <div className="w-full max-w-lg mx-auto flex justify-center">
         <Drawer direction="left">
           <DrawerTrigger asChild>
-            <Button variant="outline">محتوى قابل للتمرير</Button>
+            <Button variant="secondary">محتوى قابل للتمرير</Button>
           </DrawerTrigger>
           <DrawerContent>
             <DrawerHeader>
@@ -46,7 +46,7 @@ export function DrawerScrollableContent() {
             <DrawerFooter>
               <Button>إرسال</Button>
               <DrawerClose asChild>
-                <Button variant="outline">إلغاء</Button>
+                <Button variant="secondary">إلغاء</Button>
               </DrawerClose>
             </DrawerFooter>
           </DrawerContent>

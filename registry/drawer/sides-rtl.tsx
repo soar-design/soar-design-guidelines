@@ -34,7 +34,7 @@ export function DrawerSides() {
               }
             >
               <DrawerTrigger asChild>
-                <Button variant="outline">
+                <Button variant="secondary">
                   {label}
                 </Button>
               </DrawerTrigger>
@@ -65,7 +65,7 @@ export function DrawerSides() {
                 <DrawerFooter>
                   <Button>إرسال</Button>
                   <DrawerClose asChild>
-                    <Button variant="outline">إلغاء</Button>
+                    <Button variant="secondary">إلغاء</Button>
                   </DrawerClose>
                 </DrawerFooter>
               </DrawerContent>

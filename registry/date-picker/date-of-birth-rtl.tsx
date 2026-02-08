@@ -24,7 +24,7 @@ export function DatePickerDateOfBirth() {
           <Popover open={open} onOpenChange={setOpen}>
             <PopoverTrigger asChild>
               <Button
-                variant="outline"
+                variant="secondary"
                 id="date-of-birth-rtl"
                 className="justify-start font-normal"
               >

@@ -21,7 +21,7 @@ export function SheetDemo() {
       <div className="w-full max-w-lg mx-auto flex justify-center">
         <Sheet>
           <SheetTrigger asChild>
-            <Button variant="outline">فتح</Button>
+            <Button variant="secondary">فتح</Button>
           </SheetTrigger>
           <SheetContent>
             <SheetHeader>
@@ -43,7 +43,7 @@ export function SheetDemo() {
             <SheetFooter>
               <Button type="submit">حفظ التغييرات</Button>
               <SheetClose asChild>
-                <Button variant="outline">إغلاق</Button>
+                <Button variant="secondary">إغلاق</Button>
               </SheetClose>
             </SheetFooter>
           </SheetContent>

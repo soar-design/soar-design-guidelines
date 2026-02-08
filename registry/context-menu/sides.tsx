@@ -20,7 +20,7 @@ export function ContextMenuSides() {
               Long press (top)
             </span>
           </ContextMenuTrigger>
-          <ContextMenuContent side="top">
+          <ContextMenuContent>
             <ContextMenuGroup>
               <ContextMenuItem>Back</ContextMenuItem>
               <ContextMenuItem>Forward</ContextMenuItem>
@@ -37,7 +37,7 @@ export function ContextMenuSides() {
               Long press (right)
             </span>
           </ContextMenuTrigger>
-          <ContextMenuContent side="right">
+          <ContextMenuContent>
             <ContextMenuGroup>
               <ContextMenuItem>Back</ContextMenuItem>
               <ContextMenuItem>Forward</ContextMenuItem>
@@ -54,7 +54,7 @@ export function ContextMenuSides() {
               Long press (bottom)
             </span>
           </ContextMenuTrigger>
-          <ContextMenuContent side="bottom">
+          <ContextMenuContent>
             <ContextMenuGroup>
               <ContextMenuItem>Back</ContextMenuItem>
               <ContextMenuItem>Forward</ContextMenuItem>
@@ -71,7 +71,7 @@ export function ContextMenuSides() {
               Long press (left)
             </span>
           </ContextMenuTrigger>
-          <ContextMenuContent side="left">
+          <ContextMenuContent>
             <ContextMenuGroup>
               <ContextMenuItem>Back</ContextMenuItem>
               <ContextMenuItem>Forward</ContextMenuItem>

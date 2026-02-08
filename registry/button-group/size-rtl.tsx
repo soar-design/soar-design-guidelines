@@ -10,38 +10,38 @@ export function ButtonGroupSize() {
     <DirectionProvider dir="rtl">
       <div className="flex w-full max-w-lg flex-col items-center gap-8 mx-auto">
         <ButtonGroup>
-          <Button variant="outline" size="sm">
+          <Button variant="secondary" size="sm">
             صغير
           </Button>
-          <Button variant="outline" size="sm">
+          <Button variant="secondary" size="sm">
             زر
           </Button>
-          <Button variant="outline" size="sm">
+          <Button variant="secondary" size="sm">
             مجموعة
           </Button>
-          <Button variant="outline" size="icon-sm">
+          <Button variant="secondary" size="icon-sm">
             <PlusIcon />
           </Button>
         </ButtonGroup>
         <ButtonGroup>
-          <Button variant="outline">افتراضي</Button>
-          <Button variant="outline">زر</Button>
-          <Button variant="outline">مجموعة</Button>
-          <Button variant="outline" size="icon">
+          <Button variant="secondary">افتراضي</Button>
+          <Button variant="secondary">زر</Button>
+          <Button variant="secondary">مجموعة</Button>
+          <Button variant="secondary" size="icon">
             <PlusIcon />
           </Button>
         </ButtonGroup>
         <ButtonGroup>
-          <Button variant="outline" size="lg">
+          <Button variant="secondary" size="lg">
             كبير
           </Button>
-          <Button variant="outline" size="lg">
+          <Button variant="secondary" size="lg">
             زر
           </Button>
-          <Button variant="outline" size="lg">
+          <Button variant="secondary" size="lg">
             مجموعة
           </Button>
-          <Button variant="outline" size="icon-lg">
+          <Button variant="secondary" size="icon-lg">
             <PlusIcon />
           </Button>
         </ButtonGroup>

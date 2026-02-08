@@ -29,7 +29,7 @@ export function DatePickerTime() {
             <Popover open={open} onOpenChange={setOpen}>
               <PopoverTrigger asChild>
                 <Button
-                  variant="outline"
+                  variant="secondary"
                   id="date-picker-time-rtl"
                   className="w-32 justify-between font-normal"
                 >

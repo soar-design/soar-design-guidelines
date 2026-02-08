@@ -18,7 +18,7 @@ export function ButtonGroupNested() {
       <div className="w-full max-w-lg mx-auto flex justify-center">
         <ButtonGroup>
           <ButtonGroup>
-            <Button variant="outline" size="icon">
+            <Button variant="secondary" size="icon">
               <PlusIcon />
             </Button>
           </ButtonGroup>

@@ -107,7 +107,7 @@ export function CollapsibleFileTree() {
   return (
     <DirectionProvider dir="ltr">
       <div className="w-full max-w-lg mx-auto">
-        <Card className="mx-auto w-full max-w-[16rem] gap-2" size="sm">
+        <Card className="mx-auto w-full max-w-[16rem] gap-2">
           <CardHeader>
             <Tabs defaultValue="explorer">
               <TabsList className="w-full">

@@ -19,7 +19,7 @@ export function DropdownMenuDestructive() {
       <div className="w-full max-w-lg mx-auto flex justify-center">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="outline">الإجراءات</Button>
+            <Button variant="secondary">الإجراءات</Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-48">
             <DropdownMenuGroup>

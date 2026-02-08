@@ -22,7 +22,7 @@ export function SheetSide() {
         {SHEET_SIDES.map((side) => (
           <Sheet key={side}>
             <SheetTrigger asChild>
-              <Button variant="outline" className="capitalize">
+              <Button variant="secondary" className="capitalize">
                 {side}
               </Button>
             </SheetTrigger>
@@ -54,7 +54,7 @@ export function SheetSide() {
               <SheetFooter>
                 <Button type="submit">Save changes</Button>
                 <SheetClose asChild>
-                  <Button variant="outline">Cancel</Button>
+                  <Button variant="secondary">Cancel</Button>
                 </SheetClose>
               </SheetFooter>
             </SheetContent>

@@ -81,7 +81,7 @@ export function ComboboxWithCustomItems() {
             <ComboboxList>
               {(country) => (
                 <ComboboxItem key={country.code} value={country}>
-                  <Item size="xs" className="p-0">
+                  <Item size="sm" className="p-0">
                     <ItemContent>
                       <ItemTitle className="whitespace-nowrap">
                         {country.label}

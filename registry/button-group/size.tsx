@@ -10,38 +10,38 @@ export function ButtonGroupSize() {
     <DirectionProvider dir="ltr">
       <div className="flex w-full max-w-lg flex-col items-center gap-8 mx-auto">
         <ButtonGroup>
-          <Button variant="outline" size="sm">
+          <Button variant="secondary" size="sm">
             Small
           </Button>
-          <Button variant="outline" size="sm">
+          <Button variant="secondary" size="sm">
             Button
           </Button>
-          <Button variant="outline" size="sm">
+          <Button variant="secondary" size="sm">
             Group
           </Button>
-          <Button variant="outline" size="icon-sm">
+          <Button variant="secondary" size="icon-sm">
             <PlusIcon />
           </Button>
         </ButtonGroup>
         <ButtonGroup>
-          <Button variant="outline">Default</Button>
-          <Button variant="outline">Button</Button>
-          <Button variant="outline">Group</Button>
-          <Button variant="outline" size="icon">
+          <Button variant="secondary">Default</Button>
+          <Button variant="secondary">Button</Button>
+          <Button variant="secondary">Group</Button>
+          <Button variant="secondary" size="icon">
             <PlusIcon />
           </Button>
         </ButtonGroup>
         <ButtonGroup>
-          <Button variant="outline" size="lg">
+          <Button variant="secondary" size="lg">
             Large
           </Button>
-          <Button variant="outline" size="lg">
+          <Button variant="secondary" size="lg">
             Button
           </Button>
-          <Button variant="outline" size="lg">
+          <Button variant="secondary" size="lg">
             Group
           </Button>
-          <Button variant="outline" size="icon-lg">
+          <Button variant="secondary" size="icon-lg">
             <PlusIcon />
           </Button>
         </ButtonGroup>

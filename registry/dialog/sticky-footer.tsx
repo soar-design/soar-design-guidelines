@@ -20,7 +20,7 @@ export function DialogStickyFooter() {
       <div className="w-full max-w-lg mx-auto flex justify-center">
         <Dialog>
           <DialogTrigger asChild>
-            <Button variant="outline">Sticky Footer</Button>
+            <Button variant="secondary">Sticky Footer</Button>
           </DialogTrigger>
           <DialogContent>
             <DialogHeader>
@@ -45,7 +45,7 @@ export function DialogStickyFooter() {
             </div>
             <DialogFooter>
               <DialogClose asChild>
-                <Button variant="outline">Close</Button>
+                <Button variant="secondary">Close</Button>
               </DialogClose>
             </DialogFooter>
           </DialogContent>

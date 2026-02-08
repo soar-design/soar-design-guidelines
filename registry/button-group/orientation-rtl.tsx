@@ -14,10 +14,10 @@ export function ButtonGroupOrientation() {
           aria-label="أزرار التحكم في الوسائط"
           className="h-fit"
         >
-          <Button variant="outline" size="icon">
+          <Button variant="secondary" size="icon">
             <PlusIcon />
           </Button>
-          <Button variant="outline" size="icon">
+          <Button variant="secondary" size="icon">
             <MinusIcon />
           </Button>
         </ButtonGroup>

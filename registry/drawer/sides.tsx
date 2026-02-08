@@ -29,7 +29,7 @@ export function DrawerSides() {
               }
             >
               <DrawerTrigger asChild>
-                <Button variant="outline" className="capitalize">
+                <Button variant="secondary" className="capitalize">
                   {side}
                 </Button>
               </DrawerTrigger>
@@ -60,7 +60,7 @@ export function DrawerSides() {
                 <DrawerFooter>
                   <Button>Submit</Button>
                   <DrawerClose asChild>
-                    <Button variant="outline">Cancel</Button>
+                    <Button variant="secondary">Cancel</Button>
                   </DrawerClose>
                 </DrawerFooter>
               </DrawerContent>

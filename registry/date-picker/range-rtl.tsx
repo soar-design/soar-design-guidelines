@@ -29,7 +29,7 @@ export function DatePickerRange() {
           <Popover>
             <PopoverTrigger asChild>
               <Button
-                variant="outline"
+                variant="secondary"
                 id="date-picker-range-rtl"
                 className="justify-start px-2.5 font-normal"
               >

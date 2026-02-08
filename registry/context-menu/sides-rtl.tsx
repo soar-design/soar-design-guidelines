@@ -20,7 +20,7 @@ export function ContextMenuSides() {
               اضغط مطولاً (أعلى)
             </span>
           </ContextMenuTrigger>
-          <ContextMenuContent side="top">
+          <ContextMenuContent>
             <ContextMenuGroup>
               <ContextMenuItem>رجوع</ContextMenuItem>
               <ContextMenuItem>تقدم</ContextMenuItem>
@@ -37,7 +37,7 @@ export function ContextMenuSides() {
               اضغط مطولاً (يمين)
             </span>
           </ContextMenuTrigger>
-          <ContextMenuContent side="right">
+          <ContextMenuContent>
             <ContextMenuGroup>
               <ContextMenuItem>رجوع</ContextMenuItem>
               <ContextMenuItem>تقدم</ContextMenuItem>
@@ -54,7 +54,7 @@ export function ContextMenuSides() {
               اضغط مطولاً (أسفل)
             </span>
           </ContextMenuTrigger>
-          <ContextMenuContent side="bottom">
+          <ContextMenuContent>
             <ContextMenuGroup>
               <ContextMenuItem>رجوع</ContextMenuItem>
               <ContextMenuItem>تقدم</ContextMenuItem>
@@ -71,7 +71,7 @@ export function ContextMenuSides() {
               اضغط مطولاً (يسار)
             </span>
           </ContextMenuTrigger>
-          <ContextMenuContent side="left">
+          <ContextMenuContent>
             <ContextMenuGroup>
               <ContextMenuItem>رجوع</ContextMenuItem>
               <ContextMenuItem>تقدم</ContextMenuItem>

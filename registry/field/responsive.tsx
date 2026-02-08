@@ -34,7 +34,7 @@ export function FieldResponsive() {
               </Field>
               <Field orientation="responsive">
                 <Button type="submit">Submit</Button>
-                <Button type="button" variant="outline">
+                <Button type="button" variant="secondary">
                   Cancel
                 </Button>
               </Field>

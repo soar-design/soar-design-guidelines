@@ -22,7 +22,7 @@ export function DialogCustomCloseButton() {
       <div className="w-full max-w-lg mx-auto flex justify-center">
         <Dialog>
           <DialogTrigger asChild>
-            <Button variant="outline">مشاركة</Button>
+            <Button variant="secondary">مشاركة</Button>
           </DialogTrigger>
           <DialogContent className="sm:max-w-md">
             <DialogHeader>

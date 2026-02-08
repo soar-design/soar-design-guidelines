@@ -24,7 +24,7 @@ export function DatePickerBasic() {
           <Popover>
             <PopoverTrigger asChild>
               <Button
-                variant="outline"
+                variant="secondary"
                 id="date-picker-basic-rtl"
                 className="justify-start font-normal"
               >

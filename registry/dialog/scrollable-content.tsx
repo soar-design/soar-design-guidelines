@@ -18,7 +18,7 @@ export function DialogScrollableContent() {
       <div className="w-full max-w-lg mx-auto flex justify-center">
         <Dialog>
           <DialogTrigger asChild>
-            <Button variant="outline">Scrollable Content</Button>
+            <Button variant="secondary">Scrollable Content</Button>
           </DialogTrigger>
           <DialogContent>
             <DialogHeader>

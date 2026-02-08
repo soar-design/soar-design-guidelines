@@ -29,7 +29,7 @@ export function EmptyDemo() {
           </EmptyHeader>
           <EmptyContent className="flex-row justify-center gap-2">
             <Button>إنشاء مشروع</Button>
-            <Button variant="outline">استيراد مشروع</Button>
+            <Button variant="secondary">استيراد مشروع</Button>
           </EmptyContent>
           <Button
             variant="link"

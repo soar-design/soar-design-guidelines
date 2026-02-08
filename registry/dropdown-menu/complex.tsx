@@ -61,7 +61,7 @@ export function DropdownMenuComplex() {
       <div className="w-full max-w-lg mx-auto flex justify-center">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="outline">Complex Menu</Button>
+            <Button variant="secondary">Complex Menu</Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-52">
             <DropdownMenuGroup>

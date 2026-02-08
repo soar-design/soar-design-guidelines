@@ -20,12 +20,12 @@ export function ButtonGroupPopover() {
     <DirectionProvider dir="rtl">
       <div className="w-full max-w-lg mx-auto flex justify-center">
         <ButtonGroup>
-          <Button variant="outline">
+          <Button variant="secondary">
             <BotIcon /> Copilot
           </Button>
           <Popover>
             <PopoverTrigger asChild>
-              <Button variant="outline" size="icon" aria-label="فتح النافذة المنبثقة">
+              <Button variant="secondary" size="icon" aria-label="فتح النافذة المنبثقة">
                 <ChevronDownIcon />
               </Button>
             </PopoverTrigger>

@@ -27,7 +27,7 @@ export function SheetSide() {
         {SHEET_SIDES.map(({ side, label }) => (
           <Sheet key={side}>
             <SheetTrigger asChild>
-              <Button variant="outline">{label}</Button>
+              <Button variant="secondary">{label}</Button>
             </SheetTrigger>
             <SheetContent
               side={side}
@@ -57,7 +57,7 @@ export function SheetSide() {
               <SheetFooter>
                 <Button type="submit">حفظ التغييرات</Button>
                 <SheetClose asChild>
-                  <Button variant="outline">إلغاء</Button>
+                  <Button variant="secondary">إلغاء</Button>
                 </SheetClose>
               </SheetFooter>
             </SheetContent>

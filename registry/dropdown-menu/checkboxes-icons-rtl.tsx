@@ -25,7 +25,7 @@ export function DropdownMenuCheckboxesIcons() {
       <div className="w-full max-w-lg mx-auto flex justify-center">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="outline">الإشعارات</Button>
+            <Button variant="secondary">الإشعارات</Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-56">
             <DropdownMenuGroup>

@@ -21,7 +21,7 @@ export function DropdownMenuRadioGroupDemo() {
       <div className="w-full max-w-lg mx-auto flex justify-center">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="outline">فتح</Button>
+            <Button variant="secondary">فتح</Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-40">
             <DropdownMenuGroup>

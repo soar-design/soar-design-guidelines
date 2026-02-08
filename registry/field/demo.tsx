@@ -148,7 +148,7 @@ export function FieldDemo() {
             </FieldSet>
             <Field orientation="horizontal">
               <Button type="submit">Submit</Button>
-              <Button variant="outline" type="button">
+              <Button variant="secondary" type="button">
                 Cancel
               </Button>
             </Field>

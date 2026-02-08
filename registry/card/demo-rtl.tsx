@@ -57,7 +57,7 @@ export function CardDemo() {
             <Button type="submit" className="w-full">
               تسجيل الدخول
             </Button>
-            <Button variant="outline" className="w-full">
+            <Button variant="secondary" className="w-full">
               تسجيل الدخول باستخدام Google
             </Button>
           </CardFooter>

@@ -34,7 +34,7 @@ export function DrawerResponsiveDialog() {
         <div className="w-full max-w-lg mx-auto flex justify-center">
           <Dialog open={open} onOpenChange={setOpen}>
             <DialogTrigger asChild>
-              <Button variant="outline">Edit Profile</Button>
+              <Button variant="secondary">Edit Profile</Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px]">
               <DialogHeader>
@@ -57,7 +57,7 @@ export function DrawerResponsiveDialog() {
       <div className="w-full max-w-lg mx-auto flex justify-center">
         <Drawer open={open} onOpenChange={setOpen}>
           <DrawerTrigger asChild>
-            <Button variant="outline">Edit Profile</Button>
+            <Button variant="secondary">Edit Profile</Button>
           </DrawerTrigger>
           <DrawerContent>
             <DrawerHeader className="text-left">
@@ -69,7 +69,7 @@ export function DrawerResponsiveDialog() {
             <ProfileForm className="px-4" />
             <DrawerFooter className="pt-2">
               <DrawerClose asChild>
-                <Button variant="outline">Cancel</Button>
+                <Button variant="secondary">Cancel</Button>
               </DrawerClose>
             </DrawerFooter>
           </DrawerContent>

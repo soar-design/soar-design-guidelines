@@ -43,7 +43,7 @@ export function CalendarWithPresets() {
   return (
     <DirectionProvider dir="rtl">
       <div className="w-full max-w-lg mx-auto flex justify-center">
-        <Card className="mx-auto w-fit max-w-[300px]" size="sm">
+        <Card className="mx-auto w-fit max-w-[300px]">
           <CardContent className="p-0">
             <Calendar
               mode="single"

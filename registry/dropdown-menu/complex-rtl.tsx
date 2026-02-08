@@ -61,7 +61,7 @@ export function DropdownMenuComplex() {
       <div className="w-full max-w-lg mx-auto flex justify-center">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="outline">قائمة معقدة</Button>
+            <Button variant="secondary">قائمة معقدة</Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-52">
             <DropdownMenuGroup>

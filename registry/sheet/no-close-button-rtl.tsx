@@ -16,7 +16,7 @@ export function SheetNoCloseButton() {
     <DirectionProvider dir="rtl">
       <Sheet>
         <SheetTrigger asChild>
-          <Button variant="outline">فتح اللوحة</Button>
+          <Button variant="secondary">فتح اللوحة</Button>
         </SheetTrigger>
         <SheetContent showCloseButton={false}>
           <SheetHeader>

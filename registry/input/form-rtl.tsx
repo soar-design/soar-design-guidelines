@@ -62,7 +62,7 @@ export function InputForm() {
               <Input id="form-address" type="text" placeholder="123 Main St" />
             </Field>
             <Field orientation="horizontal">
-              <Button type="button" variant="outline">
+              <Button type="button" variant="secondary">
                 إلغاء
               </Button>
               <Button type="submit">إرسال</Button>

@@ -22,7 +22,7 @@ export function DropdownMenuRadioIcons() {
       <div className="w-full max-w-lg mx-auto flex justify-center">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="outline">طريقة الدفع</Button>
+            <Button variant="secondary">طريقة الدفع</Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent className="min-w-72">
             <DropdownMenuGroup>

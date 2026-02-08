@@ -28,7 +28,7 @@ export function EmptyOutline() {
             </EmptyDescription>
           </EmptyHeader>
           <EmptyContent>
-            <Button variant="outline" size="sm">
+            <Button variant="secondary" size="sm">
               رفع الملفات
             </Button>
           </EmptyContent>

@@ -29,7 +29,7 @@ export function CommandWithGroups() {
   return (
     <DirectionProvider dir="rtl">
       <div className="flex flex-col gap-4">
-        <Button onClick={() => setOpen(true)} variant="outline" className="w-fit">
+        <Button onClick={() => setOpen(true)} variant="secondary" className="w-fit">
           فتح القائمة
         </Button>
         <CommandDialog open={open} onOpenChange={setOpen}>

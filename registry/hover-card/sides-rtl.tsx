@@ -33,7 +33,7 @@ export function HoverCardSides() {
           {HOVER_CARD_SIDES.map((side) => (
             <HoverCard key={side} openDelay={100} closeDelay={100}>
               <HoverCardTrigger asChild>
-                <Button variant="outline" className="capitalize">
+                <Button variant="secondary" className="capitalize">
                   {SIDE_LABELS[side]}
                 </Button>
               </HoverCardTrigger>

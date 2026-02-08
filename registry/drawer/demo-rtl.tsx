@@ -70,7 +70,7 @@ export function DrawerDemo() {
       <div className="w-full max-w-lg mx-auto flex justify-center">
         <Drawer>
           <DrawerTrigger asChild>
-            <Button variant="outline">فتح الدرج</Button>
+            <Button variant="secondary">فتح الدرج</Button>
           </DrawerTrigger>
           <DrawerContent>
             <div className="mx-auto w-full max-w-sm">
@@ -81,7 +81,7 @@ export function DrawerDemo() {
               <div className="p-4 pb-0">
                 <div className="flex items-center justify-center space-x-2">
                   <Button
-                    variant="outline"
+                    variant="secondary"
                     size="icon"
                     className="h-8 w-8 shrink-0 rounded-full"
                     onClick={() => onClick(-10)}
@@ -99,7 +99,7 @@ export function DrawerDemo() {
                     </div>
                   </div>
                   <Button
-                    variant="outline"
+                    variant="secondary"
                     size="icon"
                     className="h-8 w-8 shrink-0 rounded-full"
                     onClick={() => onClick(10)}
@@ -127,7 +127,7 @@ export function DrawerDemo() {
               <DrawerFooter>
                 <Button>إرسال</Button>
                 <DrawerClose asChild>
-                  <Button variant="outline">إلغاء</Button>
+                  <Button variant="secondary">إلغاء</Button>
                 </DrawerClose>
               </DrawerFooter>
             </div>

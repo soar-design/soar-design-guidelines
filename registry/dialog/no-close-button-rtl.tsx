@@ -18,7 +18,7 @@ export function DialogNoCloseButton() {
       <div className="w-full max-w-lg mx-auto flex justify-center">
         <Dialog>
           <DialogTrigger asChild>
-            <Button variant="outline">بدون زر إغلاق</Button>
+            <Button variant="secondary">بدون زر إغلاق</Button>
           </DialogTrigger>
           <DialogContent showCloseButton={false}>
             <DialogHeader>
