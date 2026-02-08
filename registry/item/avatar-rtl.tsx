@@ -35,7 +35,7 @@ export function ItemAvatar() {
             <ItemActions>
               <Button
                 size="icon-sm"
-                variant="outline"
+                variant="secondary"
                 className="rounded-full"
                 aria-label="دعوة"
               >
@@ -73,7 +73,7 @@ export function ItemAvatar() {
               </ItemDescription>
             </ItemContent>
             <ItemActions>
-              <Button size="sm" variant="outline">
+              <Button size="sm" variant="secondary">
                 دعوة
               </Button>
             </ItemActions>

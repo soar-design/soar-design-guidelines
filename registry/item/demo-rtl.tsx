@@ -26,7 +26,7 @@ export function ItemDemo() {
               </ItemDescription>
             </ItemContent>
             <ItemActions>
-              <Button variant="outline" size="sm">
+              <Button variant="secondary" size="sm">
                 إجراء
               </Button>
             </ItemActions>

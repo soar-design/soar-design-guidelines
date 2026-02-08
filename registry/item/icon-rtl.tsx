@@ -29,7 +29,7 @@ export function ItemIcon() {
               </ItemDescription>
             </ItemContent>
             <ItemActions>
-              <Button size="sm" variant="outline">
+              <Button size="sm" variant="secondary">
                 مراجعة
               </Button>
             </ItemActions>
