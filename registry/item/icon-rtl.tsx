@@ -18,7 +18,7 @@ export function ItemIcon() {
     <DirectionProvider dir="rtl">
       <div className="w-full max-w-lg mx-auto flex justify-center">
         <div className="flex w-full max-w-lg flex-col gap-6">
-          <Item variant="outline">
+          <Item variant="muted">
             <ItemMedia variant="icon">
               <ShieldAlertIcon />
             </ItemMedia>

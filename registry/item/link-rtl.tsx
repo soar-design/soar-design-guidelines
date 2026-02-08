@@ -16,7 +16,7 @@ export function ItemLink() {
     <DirectionProvider dir="rtl">
       <div className="w-full max-w-lg mx-auto flex justify-center">
         <div className="flex w-full max-w-md flex-col gap-4">
-          <Item asChild>
+          <Item variant="muted" asChild>
             <a href="#">
               <ItemContent>
                 <ItemTitle>زيارة وثائقنا</ItemTitle>
@@ -29,7 +29,7 @@ export function ItemLink() {
               </ItemActions>
             </a>
           </Item>
-          <Item variant="outline" asChild>
+          <Item variant="muted" asChild>
             <a href="#" target="_blank" rel="noopener noreferrer">
               <ItemContent>
                 <ItemTitle>مورد خارجي</ItemTitle>

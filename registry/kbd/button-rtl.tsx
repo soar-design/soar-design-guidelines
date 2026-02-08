@@ -11,7 +11,7 @@ export function KbdButton() {
   return (
     <DirectionProvider dir="rtl">
       <div className="w-full max-w-lg mx-auto flex justify-center">
-        <Button variant="outline">
+        <Button variant="secondary">
           قبول{" "}
           <Kbd data-icon="inline-end" className="translate-x-0.5">
             ⏎

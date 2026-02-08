@@ -149,7 +149,7 @@ export function LabelField() {
               </FieldSet>
               <Field orientation="horizontal">
                 <Button type="submit">إرسال</Button>
-                <Button variant="outline" type="button">
+                <Button variant="secondary" type="button">
                   إلغاء
                 </Button>
               </Field>

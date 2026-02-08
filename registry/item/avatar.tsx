@@ -21,7 +21,7 @@ export function ItemAvatar() {
     <DirectionProvider dir="ltr">
       <div className="w-full max-w-lg mx-auto flex justify-center">
         <div className="flex w-full max-w-lg flex-col gap-6">
-          <Item variant="outline">
+          <Item variant="muted">
             <ItemMedia>
               <Avatar className="size-10">
                 <AvatarImage src="https://github.com/evilrabbit.png" />
@@ -43,7 +43,7 @@ export function ItemAvatar() {
               </Button>
             </ItemActions>
           </Item>
-          <Item variant="outline">
+          <Item variant="muted">
             <ItemMedia>
               <div className="*:data-[slot=avatar]:ring-background flex -space-x-2 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:grayscale">
                 <Avatar className="hidden sm:flex">

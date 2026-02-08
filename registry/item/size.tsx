@@ -16,7 +16,7 @@ export function ItemSizeDemo() {
     <DirectionProvider dir="ltr">
       <div className="w-full max-w-lg mx-auto flex justify-center">
         <div className="flex w-full max-w-md flex-col gap-6">
-          <Item variant="outline">
+          <Item variant="muted">
             <ItemMedia variant="icon">
               <InboxIcon />
             </ItemMedia>
@@ -27,7 +27,7 @@ export function ItemSizeDemo() {
               </ItemDescription>
             </ItemContent>
           </Item>
-          <Item variant="outline" size="sm">
+          <Item variant="muted" size="sm">
             <ItemMedia variant="icon">
               <InboxIcon />
             </ItemMedia>

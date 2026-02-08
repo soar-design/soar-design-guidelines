@@ -42,7 +42,7 @@ export function ItemGroupExample() {
       <div className="w-full max-w-lg mx-auto flex justify-center">
         <ItemGroup className="max-w-sm">
           {people.map((person, index) => (
-            <Item key={person.username} variant="outline">
+            <Item key={person.username} variant="muted">
               <ItemMedia>
                 <Avatar>
                   <AvatarImage src={person.avatar} className="grayscale" />

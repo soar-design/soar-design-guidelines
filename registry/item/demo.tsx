@@ -18,7 +18,7 @@ export function ItemDemo() {
     <DirectionProvider dir="ltr">
       <div className="w-full max-w-lg mx-auto flex justify-center">
         <div className="flex w-full max-w-md flex-col gap-6">
-          <Item variant="outline">
+          <Item variant="muted">
             <ItemContent>
               <ItemTitle>Basic Item</ItemTitle>
               <ItemDescription>
@@ -31,7 +31,7 @@ export function ItemDemo() {
               </Button>
             </ItemActions>
           </Item>
-          <Item variant="outline" size="sm" asChild>
+          <Item variant="muted" size="sm" asChild>
             <a href="#">
               <ItemMedia>
                 <BadgeCheckIcon className="size-5" />

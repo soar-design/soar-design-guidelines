@@ -20,7 +20,7 @@ export function KbdTooltip() {
           <ButtonGroup>
             <Tooltip>
               <TooltipTrigger asChild>
-                <Button variant="outline">Save</Button>
+                <Button variant="secondary">Save</Button>
               </TooltipTrigger>
               <TooltipContent className="pr-1.5">
                 <div className="flex items-center gap-2">
@@ -30,7 +30,7 @@ export function KbdTooltip() {
             </Tooltip>
             <Tooltip>
               <TooltipTrigger asChild>
-                <Button variant="outline">Print</Button>
+                <Button variant="secondary">Print</Button>
               </TooltipTrigger>
               <TooltipContent className="pr-1.5">
                 <div className="flex items-center gap-2">
