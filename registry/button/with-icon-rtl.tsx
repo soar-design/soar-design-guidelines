@@ -5,7 +5,7 @@ export function ButtonWithIcon() {
   return (
     <DirectionProvider dir="rtl">
       <div className="w-full max-w-lg mx-auto flex justify-center">
-        <Button variant="outline" size="sm">
+        <Button variant="secondary" size="sm">
           <GitBranch data-icon="inline-start" /> فرع جديد
         </Button>
       </div>

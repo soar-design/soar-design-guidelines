@@ -27,10 +27,10 @@ export function ButtonGroupDropdown() {
     <DirectionProvider dir="ltr">
       <div className="w-full max-w-lg mx-auto flex justify-center">
         <ButtonGroup>
-          <Button variant="outline">Follow</Button>
+          <Button variant="secondary">Follow</Button>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline" className="!pl-2">
+              <Button variant="secondary" className="!pl-2">
                 <ChevronDownIcon />
               </Button>
             </DropdownMenuTrigger>

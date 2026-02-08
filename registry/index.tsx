@@ -151,8 +151,6 @@ import { CalendarWeekNumbers } from "./calendar/week-numbers";
 import { CalendarWeekNumbers as CalendarWeekNumbersRTL } from "./calendar/week-numbers-rtl";
 import { CardDemo } from "./card/demo";
 import { CardDemo as CardDemoRTL } from "./card/demo-rtl";
-import { CardSmall } from "./card/size";
-import { CardSmall as CardSmallRTL } from "./card/size-rtl";
 import { CardImage } from "./card/image";
 import { CardImage as CardImageRTL } from "./card/image-rtl";
 import { CarouselDemo } from "./carousel/demo";
@@ -585,8 +583,6 @@ import { SwitchDisabled } from "./switch/disabled";
 import { SwitchDisabled as SwitchDisabledRTL } from "./switch/disabled-rtl";
 import { SwitchInvalid } from "./switch/invalid";
 import { SwitchInvalid as SwitchInvalidRTL } from "./switch/invalid-rtl";
-import { SwitchSizes } from "./switch/size";
-import { SwitchSizes as SwitchSizesRTL } from "./switch/size-rtl";
 import { TableDemo } from "./table/demo";
 import { TableDemo as TableDemoRTL } from "./table/demo-rtl";
 import { TableFooterExample } from "./table/footer";
@@ -1137,8 +1133,6 @@ export const registry: Record<string, React.ComponentType> = {
   "switch-disabled-rtl": SwitchDisabledRTL,
   "switch-invalid": SwitchInvalid,
   "switch-invalid-rtl": SwitchInvalidRTL,
-  "switch-size": SwitchSizes,
-  "switch-size-rtl": SwitchSizesRTL,
   "table-demo": TableDemo,
   "table-demo-rtl": TableDemoRTL,
   "table-footer": TableFooterExample,
@@ -1197,8 +1191,6 @@ export const registry: Record<string, React.ComponentType> = {
   "tooltip-disabled-button-rtl": TooltipDisabledRTL,
   "card-demo": CardDemo,
   "card-demo-rtl": CardDemoRTL,
-  "card-size": CardSmall,
-  "card-size-rtl": CardSmallRTL,
   "card-image": CardImage,
   "card-image-rtl": CardImageRTL,
   "carousel-demo": CarouselDemo,

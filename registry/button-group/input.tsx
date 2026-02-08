@@ -12,7 +12,7 @@ export function ButtonGroupInput() {
       <div className="w-full max-w-lg mx-auto flex justify-center">
         <ButtonGroup>
           <Input placeholder="Search..." />
-          <Button variant="outline" aria-label="Search">
+          <Button variant="secondary" aria-label="Search">
             <SearchIcon />
           </Button>
         </ButtonGroup>

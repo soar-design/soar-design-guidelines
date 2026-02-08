@@ -4,7 +4,7 @@ export function ButtonSpinner() {
   return (
     <DirectionProvider dir="ltr">
       <div className="flex w-full max-w-lg justify-center gap-2">
-        <Button variant="outline" disabled>
+        <Button variant="secondary" disabled>
           <Spinner data-icon="inline-start" />
           Generating
         </Button>

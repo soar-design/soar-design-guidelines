@@ -8,7 +8,6 @@ export function BadgeVariants() {
         <Badge variant="secondary">ثانوي</Badge>
         <Badge variant="destructive">تدميري</Badge>
         <Badge variant="outline">مخطط</Badge>
-        <Badge variant="ghost">شبح</Badge>
       </div>
     </DirectionProvider>
   )

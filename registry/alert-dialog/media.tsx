@@ -19,7 +19,7 @@ export function AlertDialogWithMedia() {
     <DirectionProvider dir="ltr">
       <AlertDialog>
         <AlertDialogTrigger asChild>
-          <Button variant="outline">Share Project</Button>
+          <Button variant="secondary">Share Project</Button>
         </AlertDialogTrigger>
         <AlertDialogContent>
           <AlertDialogHeader>

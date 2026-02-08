@@ -17,7 +17,7 @@ export function AlertDialogSmall() {
     <DirectionProvider dir="rtl">
       <AlertDialog>
         <AlertDialogTrigger asChild>
-          <Button variant="outline">عرض الحوار</Button>
+          <Button variant="secondary">عرض الحوار</Button>
         </AlertDialogTrigger>
         <AlertDialogContent size="sm">
           <AlertDialogHeader>

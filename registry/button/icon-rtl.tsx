@@ -5,7 +5,7 @@ export function ButtonIcon() {
   return (
     <DirectionProvider dir="rtl">
       <div className="w-full max-w-lg mx-auto flex justify-center">
-        <Button variant="outline" size="icon">
+        <Button variant="secondary" size="icon">
           <CircleFadingArrowUpIcon />
         </Button>
       </div>

@@ -182,7 +182,6 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
             </div>
             <div className="gap-3 flex items-center">
               <Button
-                size="sm"
                 variant="outline"
                 className="md:flex md:w-40 lg:w-64 relative hidden w-full justify-between"
                 onClick={() => setOpen(true)}
@@ -198,7 +197,7 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
 
               {mounted && (
                 <Tabs value={theme} onValueChange={setTheme}>
-                  <TabsList className="border-border h-9 px-1 rounded-full border bg-none!">
+                  <TabsList>
                     <TabsTrigger value="light" className="rounded-full">
                       <Sun />
                     </TabsTrigger>

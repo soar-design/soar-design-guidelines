@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Image from "next/image";
 import {
   ChevronDown,
   Filter,
@@ -45,12 +46,18 @@ import {
   InputGroupAddon,
   InputGroupButton,
   InputGroupInput,
+  Item,
+  ItemContent,
+  ItemDescription,
+  ItemMedia,
+  ItemTitle,
   Separator,
   Slider,
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
+  Toggle,
   Tooltip,
   TooltipContent,
   TooltipTrigger,
@@ -120,6 +127,9 @@ export default function ExamplePage() {
   const [selectedPropertyTypes, setSelectedPropertyTypes] = React.useState<
     string[]
   >(() => ["all"]);
+  const [savedPropertyIds, setSavedPropertyIds] = React.useState<Set<string>>(
+    new Set()
+  );
 
   // Get icon for property type
   const getPropertyTypeIcon = (type: string) => {
@@ -236,13 +246,48 @@ export default function ExamplePage() {
   }, []);
 
   const cities = [
-    "Dubai",
-    "Abu Dhabi",
-    "Sharjah",
-    "Ajman",
-    "Ras Al Khaimah",
-    "Fujairah",
-    "Umm Al Quwain",
+    {
+      id: "dubai",
+      name: "Dubai",
+      description: "Modern metropolis with world-class infrastructure",
+      image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=64&h=64&fit=crop",
+    },
+    {
+      id: "abu-dhabi",
+      name: "Abu Dhabi",
+      description: "Capital city with cultural heritage sites",
+      image: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=64&h=64&fit=crop",
+    },
+    {
+      id: "sharjah",
+      name: "Sharjah",
+      description: "Cultural capital of the UAE",
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=64&h=64&fit=crop",
+    },
+    {
+      id: "ajman",
+      name: "Ajman",
+      description: "Smallest emirate with beautiful beaches",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=64&h=64&fit=crop",
+    },
+    {
+      id: "ras-al-khaimah",
+      name: "Ras Al Khaimah",
+      description: "Mountainous emirate with natural beauty",
+      image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=64&h=64&fit=crop",
+    },
+    {
+      id: "fujairah",
+      name: "Fujairah",
+      description: "Eastern emirate on the Gulf of Oman",
+      image: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=64&h=64&fit=crop",
+    },
+    {
+      id: "umm-al-quwain",
+      name: "Umm Al Quwain",
+      description: "Peaceful emirate with traditional charm",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=64&h=64&fit=crop",
+    },
   ];
 
   // Filter properties based on all filters
@@ -362,17 +407,31 @@ export default function ExamplePage() {
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <InputGroupButton variant="ghost" size="sm">
-                      {selectedCity || "City/Area"}
-                      <ChevronDown className="size-4" />
+                      {selectedCity || "Area"}
+                      <ChevronDown />
                     </InputGroupButton>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end">
+                  <DropdownMenuContent align="end" className="w-80">
                     {cities.map((city) => (
                       <DropdownMenuItem
-                        key={city}
-                        onSelect={() => setSelectedCity(city)}
+                        key={city.id}
+                        onSelect={() => setSelectedCity(city.name)}
                       >
-                        {city}
+                        <Item variant="outline" size="sm" className="w-full border-0 p-2">
+                          <ItemMedia variant="image">
+                            <Image
+                              src={city.image}
+                              alt={city.name}
+                              width={40}
+                              height={40}
+                              className="rounded-md object-cover"
+                            />
+                          </ItemMedia>
+                          <ItemContent>
+                            <ItemTitle>{city.name}</ItemTitle>
+                            <ItemDescription className="text-xs">{city.description}</ItemDescription>
+                          </ItemContent>
+                        </Item>
                       </DropdownMenuItem>
                     ))}
                   </DropdownMenuContent>
@@ -384,7 +443,7 @@ export default function ExamplePage() {
                   size="icon-sm"
                   onClick={() => setIsFilterDialogOpen(true)}
                 >
-                  <Filter className="size-4" />
+                  <Filter />
                   <span className="sr-only">Filters</span>
                 </InputGroupButton>
               </InputGroupAddon>
@@ -406,8 +465,21 @@ export default function ExamplePage() {
             {/* Saved Icon */}
             <Tooltip>
               <TooltipTrigger asChild>
-                <Button variant="ghost" size="icon" className="rounded-full">
-                  <Bookmark className="size-5" />
+                <Button variant="ghost" size="icon" className="rounded-full relative">
+                  <Bookmark
+                    className={`size-5 ${savedPropertyIds.size > 0
+                      ? "fill-brand-primary stroke-brand-border"
+                      : ""
+                      }`}
+                  />
+                  {savedPropertyIds.size > 0 && (
+                    <Badge
+                      variant="default"
+                      className="absolute -top-1 -end-1 h-5 min-w-5 flex items-center justify-center px-1 text-xs"
+                    >
+                      {savedPropertyIds.size}
+                    </Badge>
+                  )}
                   <span className="sr-only">Saved</span>
                 </Button>
               </TooltipTrigger>
@@ -596,32 +668,20 @@ export default function ExamplePage() {
                 <FieldTitle className="mb-3 text-base font-semibold">
                   Bedrooms
                 </FieldTitle>
-                <div className="bg-accent border-border p-1 rounded-full border">
+                <div className="bg-accent p-1 rounded-full">
                   <div className="gap-1 flex">
                     {(["any", 1, 2, 3, 4, 5, 6, "7+"] as const).map((value) => {
                       const isSelected = selectedBedrooms.includes(value);
                       return (
-                        <Button
+                        <Toggle
                           key={value}
                           variant="outline"
-                          className={`flex-1 rounded-full ${isSelected
-                            ? "bg-primary text-primary-foreground border-primary"
-                            : ""
-                            }`}
-                          onClick={() => {
+                          pressed={isSelected}
+                          className="flex-1"
+                          onPressedChange={(pressed) => {
                             if (value === "any") {
                               setSelectedBedrooms(["any"]);
-                            } else if (isSelected) {
-                              const newSelection = selectedBedrooms.filter(
-                                (b) => b !== value,
-                              );
-                              // If no selections left, default to "any"
-                              if (newSelection.length === 0) {
-                                setSelectedBedrooms(["any"]);
-                              } else {
-                                setSelectedBedrooms(newSelection);
-                              }
-                            } else {
+                            } else if (pressed) {
                               // Remove "any" if selecting specific values
                               const newSelection = selectedBedrooms.filter(
                                 (b) => b !== "any",
@@ -630,6 +690,14 @@ export default function ExamplePage() {
                                 ...newSelection,
                                 value as number | "7+",
                               ]);
+                            } else {
+                              const newSelection = selectedBedrooms.filter(
+                                (b) => b !== value,
+                              );
+                              // If no selections left, default to "any"
+                              setSelectedBedrooms(
+                                newSelection.length > 0 ? newSelection : ["any"],
+                              );
                             }
                           }}
                         >
@@ -638,7 +706,7 @@ export default function ExamplePage() {
                             : value === "7+"
                               ? "7+"
                               : value}
-                        </Button>
+                        </Toggle>
                       );
                     })}
                   </div>
@@ -650,32 +718,20 @@ export default function ExamplePage() {
                 <FieldTitle className="mb-3 text-base font-semibold">
                   Bathrooms
                 </FieldTitle>
-                <div className="bg-accent border-border p-1 rounded-full border">
+                <div className="bg-accent p-1 rounded-full">
                   <div className="gap-1 flex">
                     {(["any", 1, 2, 3, 4, 5, 6, "7+"] as const).map((value) => {
                       const isSelected = selectedBathrooms.includes(value);
                       return (
-                        <Button
+                        <Toggle
                           key={value}
                           variant="outline"
-                          className={`flex-1 rounded-full ${isSelected
-                            ? "bg-primary text-primary-foreground border-primary"
-                            : ""
-                            }`}
-                          onClick={() => {
+                          pressed={isSelected}
+                          className="flex-1"
+                          onPressedChange={(pressed) => {
                             if (value === "any") {
                               setSelectedBathrooms(["any"]);
-                            } else if (isSelected) {
-                              const newSelection = selectedBathrooms.filter(
-                                (b) => b !== value,
-                              );
-                              // If no selections left, default to "any"
-                              if (newSelection.length === 0) {
-                                setSelectedBathrooms(["any"]);
-                              } else {
-                                setSelectedBathrooms(newSelection);
-                              }
-                            } else {
+                            } else if (pressed) {
                               // Remove "any" if selecting specific values
                               const newSelection = selectedBathrooms.filter(
                                 (b) => b !== "any",
@@ -684,6 +740,14 @@ export default function ExamplePage() {
                                 ...newSelection,
                                 value as number | "7+",
                               ]);
+                            } else {
+                              const newSelection = selectedBathrooms.filter(
+                                (b) => b !== value,
+                              );
+                              // If no selections left, default to "any"
+                              setSelectedBathrooms(
+                                newSelection.length > 0 ? newSelection : ["any"],
+                              );
                             }
                           }}
                         >
@@ -692,7 +756,7 @@ export default function ExamplePage() {
                             : value === "7+"
                               ? "7+"
                               : value}
-                        </Button>
+                        </Toggle>
                       );
                     })}
                   </div>
@@ -724,38 +788,34 @@ export default function ExamplePage() {
                   ).map((value) => {
                     const isSelected = selectedPropertyTypes.includes(value);
                     return (
-                      <Button
+                      <Toggle
                         key={value}
                         variant="outline"
-                        className={`gap-2 flex items-center rounded-full ${isSelected
-                          ? "bg-primary text-primary-foreground border-primary"
-                          : ""
-                          }`}
-                        onClick={() => {
+                        pressed={isSelected}
+                        className="gap-2 flex items-center"
+                        onPressedChange={(pressed) => {
                           if (value === "all") {
                             setSelectedPropertyTypes(["all"]);
-                          } else if (isSelected) {
-                            const newSelection = selectedPropertyTypes.filter(
-                              (t) => t !== value,
-                            );
-                            // If no selections left, default to "all"
-                            if (newSelection.length === 0) {
-                              setSelectedPropertyTypes(["all"]);
-                            } else {
-                              setSelectedPropertyTypes(newSelection);
-                            }
-                          } else {
+                          } else if (pressed) {
                             // Remove "all" if selecting specific types
                             const newSelection = selectedPropertyTypes.filter(
                               (t) => t !== "all",
                             );
                             setSelectedPropertyTypes([...newSelection, value]);
+                          } else {
+                            const newSelection = selectedPropertyTypes.filter(
+                              (t) => t !== value,
+                            );
+                            // If no selections left, default to "all"
+                            setSelectedPropertyTypes(
+                              newSelection.length > 0 ? newSelection : ["all"],
+                            );
                           }
                         }}
                       >
                         {getPropertyTypeIcon(value)}
                         <span>{value === "all" ? "All" : value}</span>
-                      </Button>
+                      </Toggle>
                     );
                   })}
                 </div>
@@ -786,7 +846,7 @@ export default function ExamplePage() {
           description="Browse our collection of premium properties"
           toolbar={
             <Tabs value={filterStatus} onValueChange={setFilterStatus}>
-              <TabsList>
+              <TabsList className="w-[400px]">
                 <TabsTrigger value="all">All</TabsTrigger>
                 <TabsTrigger value="Ready to Move">Ready to Move</TabsTrigger>
                 <TabsTrigger value="Off Plan">Off Plan</TabsTrigger>
@@ -797,7 +857,22 @@ export default function ExamplePage() {
         {/* Property Grid */}
         <div className="md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 grid w-full grid-cols-1">
           {filteredProperties.map((property) => (
-            <PropertyCard key={property.id} property={property} />
+            <PropertyCard
+              key={property.id}
+              property={property}
+              isSaved={savedPropertyIds.has(property.id)}
+              onSaveChange={(saved) => {
+                setSavedPropertyIds((prev) => {
+                  const newSet = new Set(prev);
+                  if (saved) {
+                    newSet.add(property.id);
+                  } else {
+                    newSet.delete(property.id);
+                  }
+                  return newSet;
+                });
+              }}
+            />
           ))}
         </div>
       </div>

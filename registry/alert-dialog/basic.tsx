@@ -17,7 +17,7 @@ export function AlertDialogBasic() {
     <DirectionProvider dir="ltr">
       <AlertDialog>
         <AlertDialogTrigger asChild>
-          <Button variant="outline">Show Dialog</Button>
+          <Button variant="secondary">Show Dialog</Button>
         </AlertDialogTrigger>
         <AlertDialogContent>
           <AlertDialogHeader>

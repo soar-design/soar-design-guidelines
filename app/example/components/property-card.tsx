@@ -33,6 +33,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  Separator,
   Tooltip,
   TooltipContent,
   TooltipTrigger,
@@ -59,10 +60,22 @@ export interface Property {
 
 interface PropertyCardProps {
   property: Property;
+  isSaved?: boolean;
+  onSaveChange?: (saved: boolean) => void;
 }
 
-export function PropertyCard({ property }: PropertyCardProps) {
-  const [isSaved, setIsSaved] = React.useState(false);
+export function PropertyCard({ property, isSaved: isSavedProp, onSaveChange }: PropertyCardProps) {
+  const [isSavedLocal, setIsSavedLocal] = React.useState(false);
+  const isSaved = isSavedProp !== undefined ? isSavedProp : isSavedLocal;
+  
+  const handleSaveToggle = () => {
+    const newSavedState = !isSaved;
+    if (onSaveChange) {
+      onSaveChange(newSavedState);
+    } else {
+      setIsSavedLocal(newSavedState);
+    }
+  };
 
   // Determine if we should use carousel or single image
   // Explicitly check if images array exists and has multiple items
@@ -95,7 +108,7 @@ export function PropertyCard({ property }: PropertyCardProps) {
     <Card className="p-2 w-full overflow-hidden">
       <CardContent className="p-0">
         {/* Image Section */}
-        <div className="bg-muted rounded-xl relative aspect-[4/3] overflow-hidden">
+        <div className="bg-muted rounded-2xl relative aspect-[4/3] overflow-hidden group">
           {hasMultipleImages ? (
             <Carousel
               className="inset-0 absolute h-full w-full"
@@ -117,8 +130,8 @@ export function PropertyCard({ property }: PropertyCardProps) {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="left-2 z-20" />
-              <CarouselNext className="right-2 z-20" />
+              <CarouselPrevious className="start-2 z-30 border-none bg-popover/80! hover:bg-popover! text-foreground backdrop-blur-sm backdrop-saturate-[1.5] backdrop-brightness-[1.5]" />
+              <CarouselNext className="end-2 z-30 border-none bg-popover/80! hover:bg-popover! text-foreground backdrop-blur-sm backdrop-saturate-[1.5] backdrop-brightness-[1.5]" />
             </Carousel>
           ) : (
             images.length > 0 && (
@@ -136,14 +149,12 @@ export function PropertyCard({ property }: PropertyCardProps) {
           {/* Top-left Badge */}
           <div className="top-3 left-3 absolute z-10">
             {property.isRecentlyAdded && (
-              <Badge className="bg-background/90 text-foreground backdrop-blur-sm">
-                <Play className="mr-1 size-3" />
-                Recently Added
+              <Badge className="bg-popover/80 font-bold text-foreground backdrop-blur-md backdrop-saturate-[1.5]">
+                New
               </Badge>
             )}
             {property.isFeatured && (
-              <Badge className="bg-background/90 text-foreground backdrop-blur-sm">
-                <Star className="mr-1 size-3 fill-green-500 text-green-500" />
+              <Badge className="bg-popover/80 font-bold text-foreground backdrop-blur-md backdrop-saturate-[1.5]">
                 Featured
               </Badge>
             )}
@@ -153,16 +164,15 @@ export function PropertyCard({ property }: PropertyCardProps) {
           <Tooltip>
             <TooltipTrigger asChild>
               <Button
-                onClick={() => setIsSaved(!isSaved)}
-                variant="ghost"
+                onClick={handleSaveToggle}
                 size="icon-sm"
-                className="bg-background/90 top-3 right-3 backdrop-blur-sm absolute z-10 rounded-full"
+                className="top-3 right-3 absolute z-10 bg-popover/80 hover:bg-popover text-accent-foreground backdrop-blur-xl backdrop-saturate-[1.5] backdrop-brightness-[1.5]"
                 aria-label="Save property"
               >
                 <Bookmark
                   className={`size-4 ${isSaved
                     ? "fill-green-500 text-green-500"
-                    : "text-muted-foreground"
+                    : "text-foreground"
                     }`}
                 />
               </Button>
@@ -172,19 +182,30 @@ export function PropertyCard({ property }: PropertyCardProps) {
 
           {/* Stats Overlay - Bottom-left */}
           <div className="right-0 bottom-0 left-0 from-black/70 p-3 absolute z-10 bg-gradient-to-t to-transparent">
-            <Badge className="bg-background/80 text-foreground backdrop-blur-md border-0">
-              <Bed className="mr-1 size-3" />
-              {property.bedrooms}
-              <Bath className="mx-1 size-3" />
-              {property.bathrooms}
-              <Square className="mx-1 size-3" />
-              {property.area} sqm
+            <Badge className="px-0.5 py-1.5 bg-popover text-foreground backdrop-blur-md backdrop-saturate-[1.5] backdrop-brightness-[1.5]">
+              <div className="flex divide-x divide-secondary">
+                <div className="flex items-center px-3">
+                  <Bed className="me-1 size-4" />
+                  {property.bedrooms}
+                </div>
+                <div className="flex items-center px-3">
+                  <Bath className="me-1 size-4" />
+                  {property.bathrooms}
+                </div>
+                <div className="flex items-center px-3">
+                  <Square className="me-1 size-4" />
+                  {property.area} sqm
+                </div>
+              </div>
             </Badge>
           </div>
         </div>
 
         <div className="space-y-3 p-4">
           <div className="space-y-2">
+            <span className="text-muted-foreground text-xs font-medium">
+              {property.companyName}
+            </span>
             {/* Property Name */}
             <h3 className="text-base leading-tight font-semibold tracking-tight">
               {property.name}
@@ -199,12 +220,12 @@ export function PropertyCard({ property }: PropertyCardProps) {
 
           {/* Property Type/Status Tags */}
           <div className="gap-2 flex flex-wrap">
-            <Badge variant="secondary" className="text-xs">
+            <Badge variant="secondary">
               {getPropertyTypeIcon(property.type)}
               <span className="ms-1">{property.type}</span>
             </Badge>
             {property.status && (
-              <Badge variant="outline" className="text-xs">
+              <Badge variant="outline">
                 {property.status}
               </Badge>
             )}
@@ -212,7 +233,7 @@ export function PropertyCard({ property }: PropertyCardProps) {
 
           {/* Company Info */}
           <div className="gap-2 flex items-center">
-            <Avatar className="size-5">
+            <Avatar className="size-4">
               <AvatarImage
                 src={property.companyAvatar}
                 alt={property.companyName}
@@ -221,7 +242,7 @@ export function PropertyCard({ property }: PropertyCardProps) {
                 {property.companyName.charAt(0)}
               </AvatarFallback>
             </Avatar>
-            <span className="text-foreground text-xs">
+            <span className="text-muted-foreground text-xs font-medium">
               {property.companyName}
             </span>
           </div>

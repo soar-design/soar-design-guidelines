@@ -5,8 +5,8 @@ export function ButtonDemo() {
   return (
     <DirectionProvider dir="rtl">
       <div className="flex w-full max-w-lg flex-wrap items-center justify-center gap-2 md:flex-row">
-        <Button variant="outline">زر</Button>
-        <Button variant="outline" size="icon" aria-label="إرسال">
+        <Button variant="secondary">زر</Button>
+        <Button variant="secondary" size="icon" aria-label="إرسال">
           <ArrowUpIcon />
         </Button>
       </div>

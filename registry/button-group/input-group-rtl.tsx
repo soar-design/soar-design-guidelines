@@ -23,7 +23,7 @@ export function ButtonGroupInputGroup() {
       <div className="w-full max-w-lg mx-auto flex justify-center">
         <ButtonGroup className="[--radius:9999rem]">
           <ButtonGroup>
-            <Button variant="outline" size="icon">
+            <Button variant="secondary" size="icon">
               <PlusIcon />
             </Button>
           </ButtonGroup>

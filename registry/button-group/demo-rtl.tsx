@@ -37,19 +37,19 @@ export function ButtonGroupDemo() {
       <div className="w-full max-w-lg mx-auto flex justify-center">
         <ButtonGroup>
           <ButtonGroup className="hidden sm:flex">
-            <Button variant="outline" size="icon" aria-label="رجوع">
+            <Button variant="secondary" size="icon" aria-label="رجوع">
               <ArrowLeftIcon />
             </Button>
           </ButtonGroup>
           <ButtonGroup>
-            <Button variant="outline">أرشفة</Button>
-            <Button variant="outline">إبلاغ</Button>
+            <Button variant="secondary">أرشفة</Button>
+            <Button variant="secondary">إبلاغ</Button>
           </ButtonGroup>
           <ButtonGroup>
-            <Button variant="outline">تأجيل</Button>
+            <Button variant="secondary">تأجيل</Button>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="icon" aria-label="خيارات أكثر">
+                <Button variant="secondary" size="icon" aria-label="خيارات أكثر">
                   <MoreHorizontalIcon />
                 </Button>
               </DropdownMenuTrigger>
