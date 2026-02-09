@@ -70,7 +70,7 @@ export function Step({ ...props }: React.ComponentProps<"div">) {
 export function PropsTable({ children }: React.ComponentProps<"table">) {
   return (
     <div className="w-full overflow-x-auto">
-      <Table className="text-sm w-full">{children}</Table>
+      <Table className="text-sm w-full [&_tbody]:font-mono">{children}</Table>
     </div>
   );
 }
