@@ -184,6 +184,7 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
               <Button
                 variant="secondary"
                 onClick={() => setOpen(true)}
+                className="hidden md:inline-flex"
               >
                 <span>Search documentation...</span>
                 <KbdGroup>
