@@ -13,7 +13,7 @@ export function InputBadge() {
   return (
     <DirectionProvider dir="ltr">
       <div className="w-full max-w-lg mx-auto flex justify-center">
-        <Field className="w-full max-w-xs">
+        <Field className="w-full max-w-md">
           <FieldLabel htmlFor="input-badge">
             Webhook URL{" "}
             <Badge variant="secondary" className="ml-auto">

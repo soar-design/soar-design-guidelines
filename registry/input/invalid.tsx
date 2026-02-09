@@ -13,7 +13,7 @@ export function InputInvalid() {
   return (
     <DirectionProvider dir="ltr">
       <div className="w-full max-w-lg mx-auto flex justify-center">
-        <Field className="w-full max-w-xs" data-invalid>
+        <Field className="w-full max-w-md" data-invalid>
           <FieldLabel htmlFor="input-invalid">Invalid Input</FieldLabel>
           <Input id="input-invalid" placeholder="Error" aria-invalid />
           <FieldDescription>

@@ -13,7 +13,7 @@ export function InputFile() {
   return (
     <DirectionProvider dir="ltr">
       <div className="w-full max-w-lg mx-auto flex justify-center">
-        <Field className="w-full max-w-xs">
+        <Field className="w-full max-w-md">
           <FieldLabel htmlFor="picture">Picture</FieldLabel>
           <Input id="picture" type="file" />
           <FieldDescription>Select a picture to upload.</FieldDescription>

@@ -15,7 +15,7 @@ export function InputFieldgroup() {
   return (
     <DirectionProvider dir="rtl">
       <div className="w-full max-w-lg mx-auto flex justify-center">
-        <form className="w-full max-w-xs">
+        <form className="w-full max-w-md">
           <FieldGroup>
             <Field>
               <FieldLabel htmlFor="fieldgroup-name">الاسم</FieldLabel>

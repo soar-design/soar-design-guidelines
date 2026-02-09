@@ -13,7 +13,7 @@ export function InputDemo() {
   return (
     <DirectionProvider dir="ltr">
       <div className="w-full max-w-lg mx-auto flex justify-center">
-        <Field className="w-full max-w-xs">
+        <Field className="w-full max-w-md">
           <FieldLabel htmlFor="input-demo-api-key">API Key</FieldLabel>
           <Input
             id="input-demo-api-key"

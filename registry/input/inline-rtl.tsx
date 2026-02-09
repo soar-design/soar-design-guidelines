@@ -12,7 +12,7 @@ export function InputInline() {
   return (
     <DirectionProvider dir="rtl">
       <div className="w-full max-w-lg mx-auto flex justify-center">
-        <Field orientation="horizontal" className="w-full max-w-xs">
+        <Field orientation="horizontal" className="w-full max-w-md">
           <Input type="search" placeholder="بحث..." />
           <Button>بحث</Button>
         </Field>

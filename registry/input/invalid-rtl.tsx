@@ -13,7 +13,7 @@ export function InputInvalid() {
   return (
     <DirectionProvider dir="rtl">
       <div className="w-full max-w-lg mx-auto flex justify-center">
-        <Field className="w-full max-w-xs" data-invalid>
+        <Field className="w-full max-w-md" data-invalid>
           <FieldLabel htmlFor="input-invalid">إدخال غير صالح</FieldLabel>
           <Input id="input-invalid" placeholder="خطأ" aria-invalid />
           <FieldDescription>

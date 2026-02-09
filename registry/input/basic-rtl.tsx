@@ -7,7 +7,9 @@ export function InputBasic() {
   return (
     <DirectionProvider dir="rtl">
       <div className="w-full max-w-lg mx-auto flex justify-center">
-        <Input placeholder="أدخل النص" />
+        <div className="w-full max-w-md">
+          <Input placeholder="أدخل النص" />
+        </div>
       </div>
     </DirectionProvider>
   )

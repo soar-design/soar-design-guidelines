@@ -20,7 +20,7 @@ export function InputForm() {
   return (
     <DirectionProvider dir="ltr">
       <div className="w-full max-w-lg mx-auto flex justify-center">
-        <form className="w-full max-w-sm">
+        <form className="w-full max-w-md">
           <FieldGroup>
             <Field>
               <FieldLabel htmlFor="form-name">Name</FieldLabel>

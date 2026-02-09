@@ -13,7 +13,7 @@ export function InputGrid() {
   return (
     <DirectionProvider dir="ltr">
       <div className="w-full max-w-lg mx-auto flex justify-center">
-        <FieldGroup className="grid max-w-sm grid-cols-2">
+        <FieldGroup className="grid max-w-md grid-cols-2">
           <Field>
             <FieldLabel htmlFor="first-name">First Name</FieldLabel>
             <Input id="first-name" placeholder="Jordan" />

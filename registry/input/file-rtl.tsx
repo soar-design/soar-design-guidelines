@@ -13,7 +13,7 @@ export function InputFile() {
   return (
     <DirectionProvider dir="rtl">
       <div className="w-full max-w-lg mx-auto flex justify-center">
-        <Field className="w-full max-w-xs">
+        <Field className="w-full max-w-md">
           <FieldLabel htmlFor="picture">صورة</FieldLabel>
           <Input id="picture" type="file" />
           <FieldDescription>اختر صورة للرفع.</FieldDescription>

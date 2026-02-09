@@ -13,7 +13,7 @@ export function InputRequired() {
   return (
     <DirectionProvider dir="ltr">
       <div className="w-full max-w-lg mx-auto flex justify-center">
-        <Field className="w-full max-w-xs">
+        <Field className="w-full max-w-md">
           <FieldLabel htmlFor="input-required">
             Required Field <span className="text-destructive">*</span>
           </FieldLabel>
