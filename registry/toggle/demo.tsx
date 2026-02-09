@@ -9,7 +9,7 @@ import { BookmarkIcon } from "lucide-react"
 export function ToggleDemo() {
   return (
     <DirectionProvider dir="ltr">
-      <Toggle aria-label="Toggle bookmark" size="sm" variant="outline">
+      <Toggle aria-label="Toggle bookmark" size="sm">
         <BookmarkIcon className="group-data-[state=on]/toggle:fill-foreground" />
         Bookmark
       </Toggle>

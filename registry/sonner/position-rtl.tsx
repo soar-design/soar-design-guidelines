@@ -22,7 +22,7 @@ export function SonnerPosition() {
         {POSITIONS.map(({ position, label }) => (
           <Button
             key={position}
-            variant="outline"
+            variant="secondary"
             onClick={() =>
               toast("تم إنشاء الحدث", { position: position as typeof position })
             }

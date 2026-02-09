@@ -15,7 +15,7 @@ export function TooltipKeyboard() {
     <DirectionProvider dir="rtl">
       <Tooltip>
         <TooltipTrigger asChild>
-          <Button variant="outline" size="icon-sm">
+          <Button variant="secondary" size="icon-sm">
             <SaveIcon />
           </Button>
         </TooltipTrigger>

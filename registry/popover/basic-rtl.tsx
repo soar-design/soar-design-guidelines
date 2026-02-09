@@ -17,7 +17,7 @@ export function PopoverBasic() {
       <div className="w-full max-w-lg mx-auto flex justify-center">
         <Popover>
           <PopoverTrigger asChild>
-            <Button variant="outline">فتح النافذة المنبثقة</Button>
+            <Button variant="secondary">فتح النافذة المنبثقة</Button>
           </PopoverTrigger>
           <PopoverContent align="start">
             <PopoverHeader>

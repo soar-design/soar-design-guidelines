@@ -10,17 +10,17 @@ export function SonnerTypes() {
   return (
     <DirectionProvider dir="ltr">
       <div className="flex flex-wrap gap-2">
-        <Button variant="outline" onClick={() => toast("Event has been created")}>
+        <Button variant="secondary" onClick={() => toast("Event has been created")}>
           Default
         </Button>
         <Button
-          variant="outline"
+          variant="secondary"
           onClick={() => toast.success("Event has been created")}
         >
           Success
         </Button>
         <Button
-          variant="outline"
+          variant="secondary"
           onClick={() =>
             toast.info("Be at the area 10 minutes before the event time")
           }
@@ -28,7 +28,7 @@ export function SonnerTypes() {
           Info
         </Button>
         <Button
-          variant="outline"
+          variant="secondary"
           onClick={() =>
             toast.warning("Event start time cannot be earlier than 8am")
           }
@@ -36,13 +36,13 @@ export function SonnerTypes() {
           Warning
         </Button>
         <Button
-          variant="outline"
+          variant="secondary"
           onClick={() => toast.error("Event has not been created")}
         >
           Error
         </Button>
         <Button
-          variant="outline"
+          variant="secondary"
           onClick={() => {
             toast.promise<{ name: string }>(
               () =>

@@ -10,14 +10,16 @@ import {
 export function TextareaDisabled() {
   return (
     <DirectionProvider dir="ltr">
-      <Field data-disabled>
-        <FieldLabel htmlFor="textarea-disabled">Message</FieldLabel>
-        <Textarea
-          id="textarea-disabled"
-          placeholder="Type your message here."
-          disabled
-        />
-      </Field>
+      <div className="w-full max-w-lg mx-auto flex justify-center">
+        <Field className="w-full max-w-md" data-disabled>
+          <FieldLabel htmlFor="textarea-disabled">Message</FieldLabel>
+          <Textarea
+            id="textarea-disabled"
+            placeholder="Type your message here."
+            disabled
+          />
+        </Field>
+      </div>
     </DirectionProvider>
   )
 }

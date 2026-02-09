@@ -11,15 +11,17 @@ import {
 export function TextareaInvalid() {
   return (
     <DirectionProvider dir="ltr">
-      <Field data-invalid>
-        <FieldLabel htmlFor="textarea-invalid">Message</FieldLabel>
-        <Textarea
-          id="textarea-invalid"
-          placeholder="Type your message here."
-          aria-invalid
-        />
-        <FieldDescription>Please enter a valid message.</FieldDescription>
-      </Field>
+      <div className="w-full max-w-lg mx-auto flex justify-center">
+        <Field className="w-full max-w-md" data-invalid>
+          <FieldLabel htmlFor="textarea-invalid">Message</FieldLabel>
+          <Textarea
+            id="textarea-invalid"
+            placeholder="Type your message here."
+            aria-invalid
+          />
+          <FieldDescription>Please enter a valid message.</FieldDescription>
+        </Field>
+      </div>
     </DirectionProvider>
   )
 }

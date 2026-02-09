@@ -9,7 +9,7 @@ import { BookmarkIcon } from "lucide-react"
 export function ToggleDemo() {
   return (
     <DirectionProvider dir="rtl">
-      <Toggle aria-label="تبديل الإشارة المرجعية" size="sm" variant="outline">
+      <Toggle aria-label="تبديل الإشارة المرجعية" size="sm" >
         <BookmarkIcon className="group-data-[state=on]/toggle:fill-foreground" />
         إشارة مرجعية
       </Toggle>

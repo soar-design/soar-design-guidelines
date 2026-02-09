@@ -26,7 +26,7 @@ export function SpinnerEmpty() {
           </EmptyDescription>
         </EmptyHeader>
         <EmptyContent>
-          <Button variant="outline" size="sm">
+          <Button variant="secondary" size="sm">
             إلغاء
           </Button>
         </EmptyContent>

@@ -10,7 +10,7 @@ export function SonnerDemo() {
   return (
     <DirectionProvider dir="rtl">
       <Button
-        variant="outline"
+        variant="secondary"
         onClick={() =>
           toast("تم إنشاء الحدث", {
             description: "الأحد، 3 ديسمبر 2023 الساعة 9:00 صباحاً",

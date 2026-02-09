@@ -12,7 +12,7 @@ export function ToggleDisabled() {
         <Toggle aria-label="تبديل معطل" disabled>
           معطل
         </Toggle>
-        <Toggle variant="outline" aria-label="تبديل معطل مخطط" disabled>
+        <Toggle aria-label="تبديل معطل مخطط" disabled>
           معطل
         </Toggle>
       </div>

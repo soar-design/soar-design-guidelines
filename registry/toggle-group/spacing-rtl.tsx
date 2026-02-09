@@ -13,7 +13,6 @@ export function ToggleGroupSpacing() {
         type="single"
         size="sm"
         defaultValue="top"
-        variant="outline"
         spacing={2}
       >
         <ToggleGroupItem value="top" aria-label="تبديل أعلى">

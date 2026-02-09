@@ -15,7 +15,7 @@ export function SonnerDescription() {
             description: "Monday, January 3rd at 6:00pm",
           })
         }
-        variant="outline"
+        variant="secondary"
         className="w-fit"
       >
         Show Toast

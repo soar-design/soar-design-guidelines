@@ -14,7 +14,7 @@ export function TooltipDisabled() {
       <Tooltip>
         <TooltipTrigger asChild>
           <span className="inline-block w-fit">
-            <Button variant="outline" disabled>
+            <Button variant="secondary" disabled>
               Disabled
             </Button>
           </span>

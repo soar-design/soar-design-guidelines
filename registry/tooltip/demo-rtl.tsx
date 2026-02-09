@@ -13,7 +13,7 @@ export function TooltipDemo() {
     <DirectionProvider dir="rtl">
       <Tooltip>
         <TooltipTrigger asChild>
-          <Button variant="outline">مرر</Button>
+          <Button variant="secondary">مرر</Button>
         </TooltipTrigger>
         <TooltipContent>
           <p>أضف إلى المكتبة</p>

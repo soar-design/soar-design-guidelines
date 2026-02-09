@@ -15,7 +15,7 @@ export function SonnerDescription() {
             description: "الاثنين، 3 يناير الساعة 6:00 مساءً",
           })
         }
-        variant="outline"
+        variant="secondary"
         className="w-fit"
       >
         عرض الإشعار

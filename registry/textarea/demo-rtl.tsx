@@ -8,7 +8,9 @@ import {
 export function TextareaDemo() {
   return (
     <DirectionProvider dir="rtl">
-      <Textarea placeholder="اكتب رسالتك هنا." />
+      <div className="w-full max-w-lg mx-auto flex justify-center">
+        <Textarea placeholder="اكتب رسالتك هنا." className="w-full max-w-md" />
+      </div>
     </DirectionProvider>
   )
 }

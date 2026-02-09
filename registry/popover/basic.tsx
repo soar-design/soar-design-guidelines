@@ -17,7 +17,7 @@ export function PopoverBasic() {
       <div className="w-full max-w-lg mx-auto flex justify-center">
         <Popover>
           <PopoverTrigger asChild>
-            <Button variant="outline">Open Popover</Button>
+            <Button variant="secondary">Open Popover</Button>
           </PopoverTrigger>
           <PopoverContent align="start">
             <PopoverHeader>

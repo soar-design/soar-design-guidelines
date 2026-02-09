@@ -38,7 +38,7 @@ export function InputOTPForm() {
                 <FieldLabel htmlFor="otp-verification">
                   رمز التحقق
                 </FieldLabel>
-                <Button variant="outline" size="xs">
+                <Button variant="secondary" size="xs">
                   <RefreshCwIcon />
                   إعادة إرسال الرمز
                 </Button>

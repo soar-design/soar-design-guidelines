@@ -15,7 +15,7 @@ export function PopoverAlign() {
         <div className="flex gap-6">
           <Popover>
             <PopoverTrigger asChild>
-              <Button variant="outline" size="sm">
+              <Button variant="secondary" size="sm">
                 البداية
               </Button>
             </PopoverTrigger>
@@ -25,7 +25,7 @@ export function PopoverAlign() {
           </Popover>
           <Popover>
             <PopoverTrigger asChild>
-              <Button variant="outline" size="sm">
+              <Button variant="secondary" size="sm">
                 الوسط
               </Button>
             </PopoverTrigger>
@@ -35,7 +35,7 @@ export function PopoverAlign() {
           </Popover>
           <Popover>
             <PopoverTrigger asChild>
-              <Button variant="outline" size="sm">
+              <Button variant="secondary" size="sm">
                 النهاية
               </Button>
             </PopoverTrigger>

@@ -22,7 +22,7 @@ export function TooltipSides() {
         {(["left", "top", "bottom", "right"] as const).map((side) => (
           <Tooltip key={side}>
             <TooltipTrigger asChild>
-              <Button variant="outline" className="w-fit">
+              <Button variant="secondary" className="w-fit">
                 {sideLabels[side]}
               </Button>
             </TooltipTrigger>
