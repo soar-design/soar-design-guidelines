@@ -17,6 +17,12 @@ import { AlertBasic } from "./alert/basic";
 import { AlertBasic as AlertBasicRTL } from "./alert/basic-rtl";
 import { AlertDestructive } from "./alert/destructive";
 import { AlertDestructive as AlertDestructiveRTL } from "./alert/destructive-rtl";
+import { AlertWarning } from "./alert/warning";
+import { AlertWarning as AlertWarningRTL } from "./alert/warning-rtl";
+import { AlertInfo } from "./alert/info";
+import { AlertInfo as AlertInfoRTL } from "./alert/info-rtl";
+import { AlertSuccess } from "./alert/success";
+import { AlertSuccess as AlertSuccessRTL } from "./alert/success-rtl";
 import { AlertActionExample } from "./alert/action";
 import { AlertActionExample as AlertActionExampleRTL } from "./alert/action-rtl";
 import { AlertColors } from "./alert/custom-colors";
@@ -659,6 +665,12 @@ export const registry: Record<string, React.ComponentType> = {
   "alert-basic-rtl": AlertBasicRTL,
   "alert-destructive": AlertDestructive,
   "alert-destructive-rtl": AlertDestructiveRTL,
+  "alert-warning": AlertWarning,
+  "alert-warning-rtl": AlertWarningRTL,
+  "alert-info": AlertInfo,
+  "alert-info-rtl": AlertInfoRTL,
+  "alert-success": AlertSuccess,
+  "alert-success-rtl": AlertSuccessRTL,
   "alert-action": AlertActionExample,
   "alert-action-rtl": AlertActionExampleRTL,
   "alert-custom-colors": AlertColors,

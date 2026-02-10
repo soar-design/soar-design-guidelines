@@ -4,7 +4,7 @@ import { AlertTriangleIcon } from "lucide-react"
 export function AlertColors() {
   return (
     <DirectionProvider dir="rtl">
-      <Alert className="w-full max-w-md border-amber-200 bg-amber-50 text-amber-900 dark:border-amber-900 dark:bg-amber-950 dark:text-amber-50">
+      <Alert className="w-full max-w-md border-purple-200 bg-purple-50 text-purple-900 dark:border-purple-900 dark:bg-purple-950 dark:text-purple-50">
         <AlertTriangleIcon />
         <AlertTitle>سينتهي اشتراكك خلال 3 أيام.</AlertTitle>
         <AlertDescription>
