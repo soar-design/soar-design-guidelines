@@ -113,7 +113,7 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
                       variant="secondary"
                       className="rounded-full tabular-nums"
                     >
-                      <span className="mr-1.5 h-2 w-2 rounded-full bg-current"></span>
+                      <span className="mr-1.5 h-2 w-2 rounded-full bg-destructive"></span>
                       v{packageJson.version} Alpha
                     </Badge>
                   </div>
@@ -139,7 +139,7 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
                             className="gap-2 flex items-center"
                           >
                             {isActive && (
-                              <span className="bg-primary h-1.5 w-1.5 shrink-0 rounded-full" />
+                              <span className="bg-brand-primary h-2 w-2 shrink-0 rounded-full" />
                             )}
                             <span>{item.title}</span>
                           </Link>
