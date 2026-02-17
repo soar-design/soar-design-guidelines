@@ -11,9 +11,7 @@ import {
   Home,
   MapPin,
   MoreVertical,
-  Play,
   Square,
-  Star,
 } from "lucide-react";
 import {
   Avatar,
@@ -33,30 +31,14 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-  Separator,
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@soar-design/soar-react-components";
+import { PropertyDetailsDialog } from "./property-details-dialog";
+import type { Property } from "../types";
 
-export interface Property {
-  id: string;
-  image?: string;
-  images?: string[];
-  name: string;
-  location: string;
-  bedrooms: number;
-  bathrooms: number;
-  area: number;
-  price: number;
-  paymentTerms: string;
-  type: string;
-  status?: string;
-  companyName: string;
-  companyAvatar: string;
-  isFeatured?: boolean;
-  isRecentlyAdded?: boolean;
-}
+export type { Property };
 
 interface PropertyCardProps {
   property: Property;
@@ -66,6 +48,7 @@ interface PropertyCardProps {
 
 export function PropertyCard({ property, isSaved: isSavedProp, onSaveChange }: PropertyCardProps) {
   const [isSavedLocal, setIsSavedLocal] = React.useState(false);
+  const [isDetailsDialogOpen, setIsDetailsDialogOpen] = React.useState(false);
   const isSaved = isSavedProp !== undefined ? isSavedProp : isSavedLocal;
   
   const handleSaveToggle = () => {
@@ -105,6 +88,7 @@ export function PropertyCard({ property, isSaved: isSavedProp, onSaveChange }: P
   };
 
   return (
+  <>
     <Card className="p-2 w-full overflow-hidden">
       <CardContent className="p-0">
         {/* Image Section */}
@@ -275,7 +259,9 @@ export function PropertyCard({ property, isSaved: isSavedProp, onSaveChange }: P
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              <DropdownMenuItem>View Details</DropdownMenuItem>
+              <DropdownMenuItem onSelect={() => setIsDetailsDialogOpen(true)}>
+                View Details
+              </DropdownMenuItem>
               <DropdownMenuItem>Share</DropdownMenuItem>
               <DropdownMenuItem>Report</DropdownMenuItem>
             </DropdownMenuContent>
@@ -283,5 +269,11 @@ export function PropertyCard({ property, isSaved: isSavedProp, onSaveChange }: P
         </div>
       </CardFooter>
     </Card>
+    <PropertyDetailsDialog
+      property={property}
+      open={isDetailsDialogOpen}
+      onOpenChange={setIsDetailsDialogOpen}
+    />
+  </>
   );
 }
